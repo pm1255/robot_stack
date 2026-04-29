@@ -477,8 +477,13 @@ def main():
         robot_state = load_retract_robot_state(args.curobo_robot_config)
         print("[STATE] robot_state joint_names:", robot_state.get("joint_names", []), flush=True)
 
+        # Important:
+        # In plan-only mode, do NOT initialize A2D replay controller.
+        # init_a2d_replay_controller may patch articulation root and trigger PhysX snapping.
+        replay_enabled = (args.execution_mode == "a2d_replay" and not args.plan_only)
+
         replay_controller = None
-        if args.execution_mode == "a2d_replay":
+        if replay_enabled:
             print("[6] init A2D replay controller", flush=True)
             replay_controller = init_a2d_replay_controller(
                 stage=stage,
@@ -487,6 +492,10 @@ def main():
                 curobo_joint_names=robot_state.get("joint_names", []),
             )
             print("[6] A2D replay controller ready", flush=True)
+        elif args.plan_only:
+            print("[6] PLAN_ONLY: skip A2D replay controller init", flush=True)
+        else:
+            print("[6] replay controller disabled", flush=True)
 
         initial_robot_world = np.asarray(get_prim_world_matrix(stage, args.robot_path), dtype=float).copy()
         initial_target_world = np.asarray(get_prim_world_matrix(stage, target_path), dtype=float).copy()
@@ -521,13 +530,15 @@ def main():
 
             wait_frames(simulation_app, 10)
 
-            if args.execution_mode == "a2d_replay" and not args.no_reset_joints:
+            if replay_enabled and not args.no_reset_joints:
                 reset_a2d_joints_to_robot_state(
                     simulation_app=simulation_app,
                     replay_controller=replay_controller,
                     robot_state=robot_state,
                     hold_frames=60,
                 )
+            elif args.plan_only:
+                print("[PLAN_ONLY] skip reset_a2d_joints_to_robot_state", flush=True)
             elif args.no_reset_joints:
                 print("[NO_RESET_JOINTS] skip reset_a2d_joints_to_robot_state", flush=True)
 
@@ -663,7 +674,7 @@ def main():
             wait_frames(simulation_app, 20)
 
             target_offset = None
-            if args.execution_mode == "a2d_replay" and args.attach_target_during_place:
+            if replay_enabled and args.attach_target_during_place:
                 target_offset = compute_cup_to_ee_translation_offset(
                     stage,
                     replay_controller,
@@ -671,6 +682,8 @@ def main():
                     ee_path=args.ee_path,
                 )
                 print("[ATTACH] target attached to EE by translation following", flush=True)
+            elif args.plan_only and args.attach_target_during_place:
+                print("[PLAN_ONLY] skip target attachment offset computation", flush=True)
 
             print("[10] cuRobo plan place", flush=True)
             place_plan = _plan_curobo(
@@ -733,7 +746,7 @@ def main():
                 "trajectory_files": {},
             }
 
-            if args.save_executed_trajectory and args.execution_mode == "a2d_replay":
+            if args.save_executed_trajectory and replay_enabled:
                 pickup_traj_path = ep_dir / f"ep_{ep:04d}_pickup_executed_trajectory.json"
                 place_traj_path = ep_dir / f"ep_{ep:04d}_place_executed_trajectory.json"
                 save_json(pickup_traj_path, pickup_executed)

@@ -1,12 +1,45 @@
-__pycache__/
-*.pyc
-.vscode/
-.idea/
-assets/
+# generated outputs
+generate/
+outputs/
 results/
 logs/
 runs/
-*.obj
-*.usd
-*.urdf
-*.mtl
+tmp/
+cache/
+__pycache__/
+*.pyc
+
+# robot pipeline data
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.avi
+*.ply
+*.pcd
+
+# model weights / checkpoints
+*.tar
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+
+# large assets / third party repos
+assets/
+third_party/
+
+# Isaac / simulation caches
+*.usd.bak
+*.usdc
+*.log
+.omniverse/
+
+# local backup files
+*.bak*
+*.backup*
