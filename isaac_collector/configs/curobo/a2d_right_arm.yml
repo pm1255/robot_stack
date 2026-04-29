@@ -1,0 +1,53 @@
+robot_cfg:
+  kinematics:
+    use_usd_kinematics: true
+
+    usd_path: "/opt/Assets/isaacsim_assets/Assets/Isaac/5.1/Isaac/Robots/Agibot/A2D/A2D.usd"
+    usd_robot_root: "/A2D"
+
+    base_link: "link_pitch_body"
+    ee_link: "Link7_r"
+
+    cspace:
+      joint_names:
+        - "right_arm_joint1"
+        - "right_arm_joint2"
+        - "right_arm_joint3"
+        - "right_arm_joint4"
+        - "right_arm_joint5"
+        - "right_arm_joint6"
+        - "right_arm_joint7"
+
+      retract_config:
+        - 0.0
+        - 0.2
+        - 0.0
+        - -1.2
+        - 0.0
+        - 0.8
+        - 0.0
+
+      null_space_weight:
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+
+      cspace_distance_weight:
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+
+      max_jerk: 500.0
+      max_acceleration: 15.0
+
+    collision_link_names: null
+    collision_spheres: null
+    collision_sphere_buffer: 0.005

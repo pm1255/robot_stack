@@ -1,0 +1,47 @@
+# 编译缓存与 Python 临时文件
+__pycache__/
+*.pyc
+build/
+devel/
+dist/
+*.egg-info/
+
+# 生成的输出文件
+generate/
+outputs/
+logs/
+runs/
+tmp/
+cache/
+
+# 机器人数据（数据集/图像）
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.avi
+*.ply
+*.pcd
+
+# 模型权重与 Checkpoints (重点)
+*.tar
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+checkpoint.tar
+
+# 第三方源码或克隆的仓库
+third_party/
+graspnet-baseline/
+
+# Isaac / 仿真缓存
+*.usd.bak
+*.usdc
+*.log
+.omniverse/

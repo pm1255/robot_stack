@@ -1,0 +1,347 @@
+from __future__ import annotations
+
+from dataclasses import dataclass, asdict
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+import json
+import re
+
+
+def _norm(x: Any) -> str:
+    s = str(x).lower().replace("-", "_").replace(" ", "_")
+    return re.sub(r"[^a-z0-9_]+", "_", s).strip("_")
+
+
+def _as_list(x: Any) -> List[Any]:
+    if x is None:
+        return []
+    if isinstance(x, list):
+        return x
+    return [x]
+
+
+@dataclass
+class OperableObject:
+    object_id: str
+    class_name: str
+    prim_path: str
+    aliases: List[str]
+    affordances: List[str]
+    source: str
+    metadata: Dict[str, Any]
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class OperableSceneQueryResult:
+    success: bool
+    status: str
+    requested_class: str
+    selected: Optional[OperableObject]
+    candidates: List[OperableObject]
+    all_operable_objects: List[OperableObject]
+    message: str
+    registry_json: str
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "success": self.success,
+            "status": self.status,
+            "requested_class": self.requested_class,
+            "selected": None if self.selected is None else self.selected.to_dict(),
+            "candidates": [x.to_dict() for x in self.candidates],
+            "all_operable_objects": [x.to_dict() for x in self.all_operable_objects],
+            "message": self.message,
+            "registry_json": self.registry_json,
+        }
+
+
+def _load_json(path: str | Path) -> Dict[str, Any]:
+    p = Path(path).expanduser().resolve()
+    if not p.exists():
+        raise FileNotFoundError(f"Operable scene registry json not found: {p}")
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def _extract_paths(node: Any) -> List[str]:
+    paths: List[str] = []
+    if isinstance(node, str):
+        if node.startswith("/"):
+            paths.append(node)
+    elif isinstance(node, list):
+        for item in node:
+            paths.extend(_extract_paths(item))
+    elif isinstance(node, dict):
+        for key in ("path", "prim_path", "usd_path", "target_path"):
+            v = node.get(key)
+            if isinstance(v, str) and v.startswith("/"):
+                paths.append(v)
+        for key in ("paths", "prim_paths", "usd_paths", "candidates"):
+            if key in node:
+                paths.extend(_extract_paths(node[key]))
+    return paths
+
+
+def _object_from_node(
+    *,
+    object_id: str,
+    class_name: str,
+    node: Any,
+    inherited_aliases: List[str],
+    source: str,
+) -> List[OperableObject]:
+    paths = _extract_paths(node)
+    if not paths:
+        return []
+
+    aliases = list(inherited_aliases)
+    affordances: List[str] = ["pick", "place"]
+    metadata: Dict[str, Any] = {}
+
+    if isinstance(node, dict):
+        aliases.extend(str(x) for x in _as_list(node.get("aliases")))
+        affordances = [str(x) for x in _as_list(node.get("affordances"))] or affordances
+        metadata = {
+            k: v for k, v in node.items()
+            if k not in {
+                "path", "paths", "prim_path", "prim_paths", "usd_path", "usd_paths",
+                "target_path", "candidates", "aliases", "affordances"
+            }
+        }
+
+    aliases = sorted({_norm(class_name), _norm(object_id), *[_norm(a) for a in aliases if a]})
+
+    objects: List[OperableObject] = []
+    for i, path in enumerate(paths):
+        oid = object_id if len(paths) == 1 else f"{object_id}_{i:02d}"
+        objects.append(
+            OperableObject(
+                object_id=oid,
+                class_name=class_name,
+                prim_path=path,
+                aliases=aliases,
+                affordances=affordances,
+                source=source,
+                metadata=dict(metadata),
+            )
+        )
+    return objects
+
+
+def _parse_new_operable_objects(registry: Dict[str, Any]) -> List[OperableObject]:
+    out: List[OperableObject] = []
+    section = registry.get("operable_objects", [])
+    if not isinstance(section, list):
+        return out
+
+    global_aliases = registry.get("aliases", {})
+    for i, item in enumerate(section):
+        if not isinstance(item, dict):
+            continue
+
+        class_name = (
+            item.get("class")
+            or item.get("class_name")
+            or item.get("category")
+            or item.get("semantic_class")
+            or item.get("label")
+            or item.get("name")
+            or f"object_{i}"
+        )
+        object_id = str(item.get("id") or item.get("object_id") or item.get("name") or f"{_norm(class_name)}_{i}")
+
+        inherited_aliases: List[str] = []
+        if isinstance(global_aliases, dict):
+            inherited_aliases.extend(str(x) for x in _as_list(global_aliases.get(str(class_name))))
+            inherited_aliases.extend(str(x) for x in _as_list(global_aliases.get(_norm(class_name))))
+
+        out.extend(
+            _object_from_node(
+                object_id=object_id,
+                class_name=str(class_name),
+                node=item,
+                inherited_aliases=inherited_aliases,
+                source=f"operable_objects[{i}]",
+            )
+        )
+
+    return out
+
+
+def _parse_legacy_objects(registry: Dict[str, Any]) -> List[OperableObject]:
+    out: List[OperableObject] = []
+    global_aliases = registry.get("aliases", {})
+
+    def aliases_for(cls: str) -> List[str]:
+        aliases = [cls]
+        if isinstance(global_aliases, dict):
+            aliases.extend(str(x) for x in _as_list(global_aliases.get(cls)))
+            aliases.extend(str(x) for x in _as_list(global_aliases.get(_norm(cls))))
+        return aliases
+
+    section = registry.get("objects", {})
+    if isinstance(section, dict):
+        for key, node in section.items():
+            out.extend(
+                _object_from_node(
+                    object_id=str(key),
+                    class_name=str(key),
+                    node=node,
+                    inherited_aliases=aliases_for(str(key)),
+                    source=f"objects.{key}",
+                )
+            )
+
+    section = registry.get("targets", {})
+    if isinstance(section, dict):
+        for key, node in section.items():
+            out.extend(
+                _object_from_node(
+                    object_id=str(key),
+                    class_name=str(key),
+                    node=node,
+                    inherited_aliases=aliases_for(str(key)),
+                    source=f"targets.{key}",
+                )
+            )
+
+    reserved = {
+        "aliases", "objects", "targets", "classes", "semantic_objects",
+        "operable_objects", "scene", "robot", "metadata"
+    }
+    for key, node in registry.items():
+        if key in reserved:
+            continue
+        paths = _extract_paths(node)
+        if paths:
+            out.extend(
+                _object_from_node(
+                    object_id=str(key),
+                    class_name=str(key),
+                    node=node,
+                    inherited_aliases=aliases_for(str(key)),
+                    source=f"top_level.{key}",
+                )
+            )
+
+    return out
+
+
+def _prim_has_mesh_descendant(stage, prim_path: str) -> bool:
+    prim = stage.GetPrimAtPath(prim_path)
+    if not prim or not prim.IsValid():
+        return False
+
+    from pxr import UsdGeom
+
+    def rec(p) -> bool:
+        if p.IsA(UsdGeom.Mesh):
+            return True
+        for child in p.GetChildren():
+            if rec(child):
+                return True
+        return False
+
+    return rec(prim)
+
+
+def load_operable_objects_from_registry(
+    *,
+    stage,
+    registry_json: str | Path,
+    validate_in_stage: bool = True,
+    require_mesh: bool = True,
+) -> List[OperableObject]:
+    registry = _load_json(registry_json)
+
+    objects: List[OperableObject] = []
+    objects.extend(_parse_new_operable_objects(registry))
+    objects.extend(_parse_legacy_objects(registry))
+
+    deduped: List[OperableObject] = []
+    seen_paths = set()
+    for obj in objects:
+        if obj.prim_path in seen_paths:
+            continue
+        seen_paths.add(obj.prim_path)
+        deduped.append(obj)
+
+    if not validate_in_stage:
+        return deduped
+
+    valid: List[OperableObject] = []
+    for obj in deduped:
+        prim = stage.GetPrimAtPath(obj.prim_path)
+        exists = bool(prim and prim.IsValid())
+        has_mesh = _prim_has_mesh_descendant(stage, obj.prim_path) if exists and require_mesh else exists
+        if exists and has_mesh:
+            valid.append(obj)
+
+    return valid
+
+
+def query_operable_object(
+    *,
+    stage,
+    registry_json: str | Path,
+    target_class: str,
+    explicit_object_id: str | None = None,
+    explicit_path: str | None = None,
+    required_affordance: str = "pick",
+) -> OperableSceneQueryResult:
+    all_objects = load_operable_objects_from_registry(
+        stage=stage,
+        registry_json=registry_json,
+        validate_in_stage=True,
+        require_mesh=True,
+    )
+
+    requested = _norm(target_class)
+
+    candidates: List[OperableObject] = []
+    for obj in all_objects:
+        if required_affordance and required_affordance not in obj.affordances:
+            continue
+
+        if explicit_path and obj.prim_path == explicit_path:
+            candidates.append(obj)
+            continue
+
+        if explicit_object_id and _norm(obj.object_id) == _norm(explicit_object_id):
+            candidates.append(obj)
+            continue
+
+        keys = {_norm(obj.class_name), _norm(obj.object_id), *[_norm(a) for a in obj.aliases]}
+        if requested in keys:
+            candidates.append(obj)
+
+    if candidates:
+        selected = candidates[0]
+        return OperableSceneQueryResult(
+            success=True,
+            status="ok",
+            requested_class=target_class,
+            selected=selected,
+            candidates=candidates,
+            all_operable_objects=all_objects,
+            message=f"Resolved {target_class!r} from registered operable objects.",
+            registry_json=str(registry_json),
+        )
+
+    available = sorted({obj.class_name for obj in all_objects})
+    return OperableSceneQueryResult(
+        success=False,
+        status="target_not_found",
+        requested_class=target_class,
+        selected=None,
+        candidates=[],
+        all_operable_objects=all_objects,
+        message=(
+            f"Target {target_class!r} is not registered as an operable object in this Isaac scene. "
+            f"Available operable classes: {available}. "
+            "Upper-level planner should replan, ask for a different object, or skip this task."
+        ),
+        registry_json=str(registry_json),
+    )

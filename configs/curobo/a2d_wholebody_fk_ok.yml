@@ -1,0 +1,109 @@
+robot_cfg:
+  kinematics:
+    use_usd_kinematics: False
+    urdf_path: "/home/pm/Desktop/Project/robot_stack/assets/a2d/a2d_wholebody_simplified.urdf"
+    asset_root_path: "/home/pm/Desktop/Project/robot_stack/assets/a2d"
+    base_link: "base_link"
+    ee_link: "gripper_center"
+    link_names: null
+    extra_links: null
+    lock_joints: null
+
+    collision_link_names:
+      - "link_up_down_body"
+      - "link_pitch_body"
+      - "Link1_l"
+      - "Link2_l"
+      - "Link3_l"
+      - "Link4_l"
+      - "Link5_l"
+      - "Link6_l"
+      - "Link7_l"
+      - "Link1_r"
+      - "Link2_r"
+      - "Link3_r"
+      - "Link4_r"
+      - "Link5_r"
+      - "Link6_r"
+      - "Link7_r"
+
+    collision_spheres:
+      link_up_down_body:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.18
+      link_pitch_body:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.18
+      Link1_l:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link2_l:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link3_l:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link4_l:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link5_l:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link6_l:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link7_l:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link1_r:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link2_r:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link3_r:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link4_r:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link5_r:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link6_r:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+      Link7_r:
+        - center: [0.0, 0.0, 0.0]
+          radius: 0.06
+
+    collision_sphere_buffer: 0.005
+    extra_collision_spheres: {}
+    self_collision_ignore: {}
+    self_collision_buffer: {}
+    use_global_cumul: True
+    mesh_link_names: null
+
+    cspace:
+      joint_names:
+        - "joint_lift_body"
+        - "joint_body_pitch"
+        - "left_arm_joint1"
+        - "left_arm_joint2"
+        - "left_arm_joint3"
+        - "left_arm_joint4"
+        - "left_arm_joint5"
+        - "left_arm_joint6"
+        - "left_arm_joint7"
+        - "right_arm_joint1"
+        - "right_arm_joint2"
+        - "right_arm_joint3"
+        - "right_arm_joint4"
+        - "right_arm_joint5"
+        - "right_arm_joint6"
+        - "right_arm_joint7"
+      retract_config: [0.1995, 0.6025, -1.0817, 0.5907, 0.3442, -1.2819, 0.6928, 1.4725, -0.1599, 1.0817, -0.5907, -0.3442, 1.2819, -0.6928, -0.7, 0.0]
+      null_space_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+      cspace_distance_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+      max_jerk: 500.0
+      max_acceleration: 15.0

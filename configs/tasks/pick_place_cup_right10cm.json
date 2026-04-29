@@ -1,0 +1,18 @@
+{
+  "instruction": "pick up the cup and place down the right 10cm",
+  "actions": [
+    {
+      "name": "pick",
+      "target_class": "cup"
+    },
+    {
+      "name": "place",
+      "target_class": "cup",
+      "offset_robot": [0.0, 0.10, 0.0]
+    }
+  ],
+  "metadata": {
+    "reference_frame": "robot",
+    "note": "Change offset_robot sign if your A2D robot-frame right direction is -Y instead of +Y."
+  }
+}
