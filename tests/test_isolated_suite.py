@@ -31,3 +31,19 @@ class IsolatedSuiteContracts(unittest.TestCase):
             self.assertEqual(row['status'],'error')
             self.assertFalse(row['qualified_correction'])
             self.assertIn('20 seconds',row['error'])
+
+    def test_python_recovery_error_keeps_verified_source(self):
+        with tempfile.TemporaryDirectory() as root:
+            folder=Path(root)/'case'
+            def failed_recovery(command, **kwargs):
+                source=folder/'ep_0003';source.mkdir(parents=True)
+                (source/'source_episode_result.json').write_text(json.dumps(dict(success=True)))
+                (folder/'summary.json').write_text(json.dumps({'results':[
+                    dict(status='error',qualified_correction=False,error='planner failure')]}))
+                return subprocess.CompletedProcess(command,1)
+            with patch('robot_stack.suite.subprocess.run',side_effect=failed_recovery):
+                row=run_isolated('native','task',3,folder,budget=30,
+                    schedule={},options={},timeout=20)
+            self.assertTrue(row['source_success'])
+            self.assertFalse(row['qualified_correction'])
+            self.assertEqual(row['error'],'planner failure')

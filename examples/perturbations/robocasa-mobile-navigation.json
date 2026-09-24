@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "event": "navigate_sink"
+      },
+      "type": "base_yaw",
+      "steps": 20
+    }
+  ]
+}

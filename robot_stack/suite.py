@@ -35,9 +35,12 @@ def run_isolated(backend, task, seed, folder, *, budget, schedule, options, time
     else:
         row = dict(backend=backend, task=task, seed=seed, status='error',
                    qualified_correction=False, error=error)
-        source = folder/f'ep_{seed:04d}'/'source_episode_result.json'
-        if source.exists():
-            row['source_success'] = json.loads(source.read_text(encoding='utf-8')).get('success') is True
+    source = folder/f'ep_{seed:04d}'/'source_episode_result.json'
+    if 'source_success' not in row and source.exists():
+        row['source_success'] = json.loads(source.read_text(encoding='utf-8')).get('success') is True
+    row.setdefault('backend', backend)
+    row.setdefault('task', task)
+    row.setdefault('seed', seed)
     row['worker_log'] = log.name
     row['isolated_worker'] = True
     return row

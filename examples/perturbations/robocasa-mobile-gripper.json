@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "event": "object_lifted"
+      },
+      "type": "gripper_open",
+      "steps": 25
+    }
+  ]
+}

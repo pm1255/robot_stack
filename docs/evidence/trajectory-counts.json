@@ -1,0 +1,220 @@
+{
+  "as_of": "2026-09-24",
+  "schema": "robot_stack.trajectory_inventory.v1",
+  "raw": {
+    "files": 1624,
+    "contained_trajectories": 1625,
+    "byte_unique_files": 1321,
+    "byte_unique_trajectories": 1322,
+    "by_backend": {
+      "ai2thor": 18,
+      "metaworld": 969,
+      "robosuite_lift": 64,
+      "maniskill": 92,
+      "mimicgen": 22,
+      "robocasa": 37,
+      "robotwin": 120
+    }
+  },
+  "published": {
+    "attempts": 340,
+    "successful_sources": 327,
+    "qualified_corrections": 248,
+    "saved_trajectories": 989,
+    "byte_unique_trajectories": 989,
+    "by_backend": {
+      "ai2thor": {
+        "attempts": 6,
+        "successful_sources": 6,
+        "qualified_corrections": 6,
+        "saved_trajectories": 18
+      },
+      "metaworld": {
+        "attempts": 286,
+        "successful_sources": 278,
+        "qualified_corrections": 221,
+        "saved_trajectories": 842
+      },
+      "maniskill": {
+        "attempts": 28,
+        "successful_sources": 23,
+        "qualified_corrections": 9,
+        "saved_trajectories": 70
+      },
+      "robocasa": {
+        "attempts": 9,
+        "successful_sources": 9,
+        "qualified_corrections": 8,
+        "saved_trajectories": 27
+      },
+      "robotwin": {
+        "attempts": 11,
+        "successful_sources": 11,
+        "qualified_corrections": 4,
+        "saved_trajectories": 32
+      }
+    },
+    "runs": [
+      {
+        "run": "ai2thor_long_scheduled_v1",
+        "report": "evidence/ai2thor-long-summary.json",
+        "backend": "ai2thor",
+        "attempts": 3,
+        "successful_sources": 3,
+        "qualified_corrections": 3,
+        "saved_trajectories": 9
+      },
+      {
+        "run": "ai2thor_nav_20260924_v1",
+        "report": "evidence/ai2thor-navigation-summary.json",
+        "backend": "ai2thor",
+        "attempts": 3,
+        "successful_sources": 3,
+        "qualified_corrections": 3,
+        "saved_trajectories": 9
+      },
+      {
+        "run": "corrections_cached_50_pick-place-v3_20260924",
+        "report": "evidence/corrections_cached_50_pick-place-v3_20260924-summary.json",
+        "backend": "metaworld",
+        "attempts": 50,
+        "successful_sources": 50,
+        "qualified_corrections": 50,
+        "saved_trajectories": 150
+      },
+      {
+        "run": "corrections_cached_50_push-v3_20260924",
+        "report": "evidence/corrections_cached_50_push-v3_20260924-summary.json",
+        "backend": "metaworld",
+        "attempts": 50,
+        "successful_sources": 50,
+        "qualified_corrections": 50,
+        "saved_trajectories": 150
+      },
+      {
+        "run": "corrections_pickplace_20260924_v2",
+        "report": "evidence/corrections_pickplace_20260924_v2-summary.json",
+        "backend": "metaworld",
+        "attempts": 5,
+        "successful_sources": 5,
+        "qualified_corrections": 5,
+        "saved_trajectories": 15
+      },
+      {
+        "run": "corrections_push_20260924_v2",
+        "report": "evidence/corrections_push_20260924_v2-summary.json",
+        "backend": "metaworld",
+        "attempts": 5,
+        "successful_sources": 5,
+        "qualified_corrections": 5,
+        "saved_trajectories": 15
+      },
+      {
+        "run": "metaworld_diversity_v2",
+        "report": "evidence/metaworld-diversity-summary.json",
+        "backend": "metaworld",
+        "attempts": 36,
+        "successful_sources": 36,
+        "qualified_corrections": 24,
+        "saved_trajectories": 108
+      },
+      {
+        "run": "metaworld_scheduled50_v1",
+        "report": "evidence/metaworld50-scheduled-summary.json",
+        "backend": "metaworld",
+        "attempts": 100,
+        "successful_sources": 98,
+        "qualified_corrections": 69,
+        "saved_trajectories": 296
+      },
+      {
+        "run": "metaworld_tools_v1",
+        "report": "evidence/metaworld-tools-summary.json",
+        "backend": "metaworld",
+        "attempts": 40,
+        "successful_sources": 34,
+        "qualified_corrections": 18,
+        "saved_trajectories": 108
+      },
+      {
+        "run": "maniskill_all_planners_v2",
+        "report": "evidence/maniskill-all-summary.json",
+        "backend": "maniskill",
+        "attempts": 24,
+        "successful_sources": 19,
+        "qualified_corrections": 8,
+        "saved_trajectories": 58
+      },
+      {
+        "run": "maniskill_corrections_v1",
+        "report": "evidence/maniskill-smoke-summary.json",
+        "backend": "maniskill",
+        "attempts": 4,
+        "successful_sources": 4,
+        "qualified_corrections": 1,
+        "saved_trajectories": 12
+      },
+      {
+        "run": "robocasa_nav_20260924_v4",
+        "report": "evidence/robocasa-nav-summary.json",
+        "backend": "robocasa",
+        "attempts": 3,
+        "successful_sources": 3,
+        "qualified_corrections": 3,
+        "saved_trajectories": 9
+      },
+      {
+        "run": "robotwin_correction_v1",
+        "report": "evidence/robotwin-smoke-summary.json",
+        "backend": "robotwin",
+        "attempts": 1,
+        "successful_sources": 1,
+        "qualified_corrections": 0,
+        "saved_trajectories": 3
+      },
+      {
+        "run": "robotwin_carry_v4",
+        "report": "evidence/robotwin-carry-summary.json",
+        "backend": "robotwin",
+        "attempts": 4,
+        "successful_sources": 4,
+        "qualified_corrections": 3,
+        "saved_trajectories": 12
+      },
+      {
+        "run": "robotwin_more_corrections_v1",
+        "report": "evidence/robotwin-more-summary.json",
+        "backend": "robotwin",
+        "attempts": 6,
+        "successful_sources": 6,
+        "qualified_corrections": 1,
+        "saved_trajectories": 17
+      },
+      {
+        "run": "robocasa_mobile_corrections_v2",
+        "report": "evidence/robocasa-mobile-initial-summary.json",
+        "backend": "robocasa",
+        "attempts": 3,
+        "successful_sources": 3,
+        "qualified_corrections": 2,
+        "saved_trajectories": 9
+      },
+      {
+        "run": "robocasa_mobile_corrections_v3",
+        "report": "evidence/robocasa-mobile-summary.json",
+        "backend": "robocasa",
+        "attempts": 3,
+        "successful_sources": 3,
+        "qualified_corrections": 3,
+        "saved_trajectories": 9
+      }
+    ]
+  },
+  "notes": [
+    "Raw inventory includes diagnostics, failures, older versions and augmentation; it is not a training-ready count.",
+    "Deduplication uses SHA256 of entire HDF5 files, not logical episode identity. Distinct files can share initial state or source actions.",
+    "Qualified correction requires successful source, effective intervention, failed perturbed control, successful recovery and paired-state checks.",
+    "The 3 final RoboCasa mobile schedules share seed 1100 and one initial scene; the earlier 3 cases also use this scene. Keep the shared split_group in one dataset split.",
+    "Videos and replays are not additional trajectories."
+  ]
+}

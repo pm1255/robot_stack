@@ -22,7 +22,7 @@
       "backend": "robocasa",
       "version": "1.0.1",
       "task_count": 317,
-      "registered_expert_count": 1,
+      "registered_expert_count": 2,
       "scope": "installed native registry, not complete literature coverage",
       "additional_adapter_tasks": []
     },
@@ -74,11 +74,11 @@
     "robocasa": {
       "tasks": 317,
       "registered": 317,
-      "expert_available": 1,
-      "source_success": 1,
-      "induced_error": 1,
-      "recovery_success": 1,
-      "qualified_correction": 1
+      "expert_available": 2,
+      "source_success": 2,
+      "induced_error": 2,
+      "recovery_success": 2,
+      "qualified_correction": 2
     },
     "robodojo": {
       "tasks": 54,
@@ -94,9 +94,9 @@
       "registered": 50,
       "expert_available": 50,
       "source_success": 50,
-      "induced_error": 1,
-      "recovery_success": 1,
-      "qualified_correction": 1
+      "induced_error": 4,
+      "recovery_success": 3,
+      "qualified_correction": 2
     }
   },
   "tasks": [
@@ -384,8 +384,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/maniskill-smoke-summary.json",
-        "evidence/maniskill-all-summary.json"
+        "evidence/maniskill-all-summary.json",
+        "evidence/maniskill-smoke-summary.json"
       ]
     },
     {
@@ -431,8 +431,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/maniskill-smoke-summary.json",
-        "evidence/maniskill-all-summary.json"
+        "evidence/maniskill-all-summary.json",
+        "evidence/maniskill-smoke-summary.json"
       ]
     },
     {
@@ -495,8 +495,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/maniskill-smoke-summary.json",
-        "evidence/maniskill-all-summary.json"
+        "evidence/maniskill-all-summary.json",
+        "evidence/maniskill-smoke-summary.json"
       ]
     },
     {
@@ -773,8 +773,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/maniskill-smoke-summary.json",
-        "evidence/maniskill-all-summary.json"
+        "evidence/maniskill-all-summary.json",
+        "evidence/maniskill-smoke-summary.json"
       ]
     },
     {
@@ -1160,8 +1160,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/metaworld50-scheduled-summary.json",
-        "evidence/metaworld-diversity-summary.json"
+        "evidence/metaworld-diversity-summary.json",
+        "evidence/metaworld50-scheduled-summary.json"
       ]
     },
     {
@@ -1239,8 +1239,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/metaworld50-scheduled-summary.json",
-        "evidence/metaworld-diversity-summary.json"
+        "evidence/metaworld-diversity-summary.json",
+        "evidence/metaworld50-scheduled-summary.json"
       ]
     },
     {
@@ -1370,8 +1370,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/metaworld50-scheduled-summary.json",
-        "evidence/metaworld-diversity-summary.json"
+        "evidence/metaworld-diversity-summary.json",
+        "evidence/metaworld50-scheduled-summary.json"
       ]
     },
     {
@@ -1462,8 +1462,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/metaworld50-scheduled-summary.json",
-        "evidence/metaworld-diversity-summary.json"
+        "evidence/metaworld-diversity-summary.json",
+        "evidence/metaworld50-scheduled-summary.json"
       ]
     },
     {
@@ -1541,8 +1541,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/metaworld50-scheduled-summary.json",
-        "evidence/metaworld-tools-summary.json"
+        "evidence/metaworld-tools-summary.json",
+        "evidence/metaworld50-scheduled-summary.json"
       ]
     },
     {
@@ -1555,8 +1555,8 @@
       "recovery_success": true,
       "qualified_correction": true,
       "evidence": [
-        "evidence/metaworld50-scheduled-summary.json",
-        "evidence/metaworld-tools-summary.json"
+        "evidence/metaworld-tools-summary.json",
+        "evidence/metaworld50-scheduled-summary.json"
       ]
     },
     {
@@ -3465,12 +3465,15 @@
       "backend": "robocasa",
       "task": "PickPlaceCounterToSink",
       "registered": true,
-      "expert_available": false,
-      "source_success": false,
-      "induced_error": false,
-      "recovery_success": false,
-      "qualified_correction": false,
-      "evidence": []
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/robocasa-mobile-initial-summary.json",
+        "evidence/robocasa-mobile-summary.json"
+      ]
     },
     {
       "backend": "robocasa",
@@ -5805,11 +5808,12 @@
       "registered": true,
       "expert_available": true,
       "source_success": true,
-      "induced_error": false,
+      "induced_error": true,
       "recovery_success": false,
       "qualified_correction": false,
       "evidence": [
-        "evidence/robotwin-all-summary.json"
+        "evidence/robotwin-all-summary.json",
+        "evidence/robotwin-more-summary.json"
       ]
     },
     {
@@ -5929,8 +5933,8 @@
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-1-summary.json",
-        "evidence/robotwin-bootstrap-summary.json"
+        "evidence/robotwin-bootstrap-summary.json",
+        "evidence/robotwin-followup-1-summary.json"
       ]
     },
     {
@@ -5944,8 +5948,8 @@
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-0-summary.json",
-        "evidence/robotwin-bootstrap-summary.json"
+        "evidence/robotwin-bootstrap-summary.json",
+        "evidence/robotwin-followup-0-summary.json"
       ]
     },
     {
@@ -6013,8 +6017,8 @@
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-1-summary.json",
-        "evidence/robotwin-bootstrap-summary.json"
+        "evidence/robotwin-bootstrap-summary.json",
+        "evidence/robotwin-followup-1-summary.json"
       ]
     },
     {
@@ -6041,8 +6045,8 @@
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-0-summary.json",
-        "evidence/robotwin-bootstrap-summary.json"
+        "evidence/robotwin-bootstrap-summary.json",
+        "evidence/robotwin-followup-0-summary.json"
       ]
     },
     {
@@ -6090,13 +6094,14 @@
       "registered": true,
       "expert_available": true,
       "source_success": true,
-      "induced_error": false,
-      "recovery_success": false,
-      "qualified_correction": false,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
       "evidence": [
         "evidence/robotwin-all-summary.json",
         "evidence/robotwin-earlier-summary.json",
-        "evidence/robotwin-followup-1-summary.json"
+        "evidence/robotwin-followup-1-summary.json",
+        "evidence/robotwin-more-summary.json"
       ]
     },
     {
@@ -6228,8 +6233,8 @@
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-1-summary.json",
-        "evidence/robotwin-bootstrap-summary.json"
+        "evidence/robotwin-bootstrap-summary.json",
+        "evidence/robotwin-followup-1-summary.json"
       ]
     },
     {
@@ -6291,11 +6296,12 @@
       "registered": true,
       "expert_available": true,
       "source_success": true,
-      "induced_error": false,
-      "recovery_success": false,
+      "induced_error": true,
+      "recovery_success": true,
       "qualified_correction": false,
       "evidence": [
-        "evidence/robotwin-all-summary.json"
+        "evidence/robotwin-all-summary.json",
+        "evidence/robotwin-more-summary.json"
       ]
     },
     {
@@ -6309,9 +6315,9 @@
       "qualified_correction": true,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-smoke-summary.json",
         "evidence/robotwin-carry-summary.json",
-        "evidence/robotwin-earlier-summary.json"
+        "evidence/robotwin-earlier-summary.json",
+        "evidence/robotwin-smoke-summary.json"
       ]
     },
     {

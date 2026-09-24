@@ -2,7 +2,7 @@
   "backend": "robocasa",
   "version": "1.0.1",
   "task_count": 317,
-  "registered_expert_count": 1,
+  "registered_expert_count": 2,
   "scope": "installed native registry, not complete literature coverage",
   "tasks": [
     {
@@ -1520,7 +1520,7 @@
     {
       "task": "PickPlaceCounterToSink",
       "registered": true,
-      "expert_available": false,
+      "expert_available": true,
       "source_success_verified": false,
       "perturbation_verified": false,
       "recovery_success_verified": false,

@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "backends": [
+    {
+      "backend": "metaworld",
+      "title": "MetaWorld · 单臂操作",
+      "scope": "50 类任务已有合格纠错样本；不表示每种扰动都在每类任务上有效。",
+      "recovery": "原生专家读取当前仿真状态重新选择动作。",
+      "types": [
+        {
+          "type": "cartesian_offset",
+          "effect": "沿指定方向推离末端，夹爪命令可同时配置",
+          "parameters": "direction:[x,y,z]；gripper∈[-1,1]",
+          "units": "归一化动作，乘以 strength",
+          "where": "接近、抓取、搬运或放置"
+        },
+        {
+          "type": "random_cartesian",
+          "effect": "逐步采样末端平移噪声，种子固定",
+          "parameters": "使用 episode seed 派生随机序列",
+          "units": "每步各轴∈[-strength,strength]",
+          "where": "任何仍有恢复预算的阶段"
+        },
+        {
+          "type": "gripper_open",
+          "effect": "停住末端平移并张开夹爪",
+          "parameters": "无",
+          "units": "负夹爪动作，幅度 strength",
+          "where": "已接触或抓持后"
+        },
+        {
+          "type": "gripper_close",
+          "effect": "停住末端平移并闭合夹爪",
+          "parameters": "无",
+          "units": "正夹爪动作，幅度 strength",
+          "where": "尚未到位、需要张爪时"
+        },
+        {
+          "type": "action_reverse",
+          "effect": "反向执行当前专家建议的平移动作",
+          "parameters": "无",
+          "units": "归一化平移动作取反并缩放",
+          "where": "推、拉、接近阶段"
+        },
+        {
+          "type": "action_hold",
+          "effect": "平移命令置零，保留当前专家的夹爪命令",
+          "parameters": "无",
+          "units": "控制动作步",
+          "where": "作为停顿对照；未必产生错误"
+        }
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "title": "RoboTwin · 双臂操作",
+      "scope": "50 类成功源视频；合格纠错目前覆盖 stack_blocks_two 与 place_empty_cup。当前内置只有 joint_offset，不把不同参数包装成多种已验证故障。",
+      "recovery": "撤销原生规划调用栈，从当前物体姿态重新执行 play_once；脚本可能假定初始场景，恢复能力仍是实验性的。",
+      "types": [
+        {
+          "type": "joint_offset",
+          "effect": "双臂指定关节的电机目标偏移，可同时张开双夹爪；遵守原生关节限位",
+          "parameters": "joint；offset；open_grippers（默认 true）",
+          "units": "offset 为关节弧度；steps 是物理步",
+          "where": "第一次或后续持物、双臂交接、堆叠阶段"
+        }
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "title": "ManiSkill · 原生规划专家",
+      "scope": "10 类成功源、7 类合格纠错任务；12 个注册专家不等于 74 个环境 ID 都能解决。",
+      "recovery": "停止原生动作流，从当前状态重新调用运动规划；max_replans 限制重规划次数。",
+      "types": [
+        {
+          "type": "joint_offset",
+          "effect": "指定关节目标偏移，同时打开夹爪",
+          "parameters": "joint；offset",
+          "units": "offset 为关节弧度；steps 是控制步",
+          "where": "持物或接近目标时"
+        },
+        {
+          "type": "gripper_open",
+          "effect": "保持机械臂目标，张开夹爪",
+          "parameters": "无；棍式机器人不支持夹爪",
+          "units": "归一化夹爪命令",
+          "where": "抓持后"
+        },
+        {
+          "type": "gripper_close",
+          "effect": "保持机械臂目标，闭合夹爪",
+          "parameters": "无；棍式机器人不支持夹爪",
+          "units": "归一化夹爪命令",
+          "where": "抓取前"
+        },
+        {
+          "type": "joint_hold",
+          "effect": "保持机械臂关节目标，夹爪维持打开",
+          "parameters": "无",
+          "units": "控制步",
+          "where": "停顿或失去抓持的对照"
+        }
+      ]
+    },
+    {
+      "backend": "robocasa",
+      "title": "RoboCasa · 底盘与移动操作",
+      "scope": "NavigateKitchen 的底盘纠错已有证据；PickPlaceCounterToSink 已完成移动＋操作，固定 layout/style=1、apple、seed=1100 的三类扰动均得到合格纠错。arm_* 与 gripper_* 仅适用于移动操作适配器；其他配置需继续验证。",
+      "recovery": "底盘根据当前位置与朝向闭环导航；移动操作根据原生接触判定选择重新抓取、抬升、搬运和放置。",
+      "types": [
+        {
+          "type": "base_yaw",
+          "effect": "错误转向；保持当前夹爪命令",
+          "parameters": "无",
+          "units": "归一化底盘角速度 × strength",
+          "where": "导航或持物移动"
+        },
+        {
+          "type": "base_translation",
+          "effect": "沿底盘控制坐标系施加平移速度",
+          "parameters": "direction:[x,y]",
+          "units": "归一化底盘速度 × strength",
+          "where": "导航或持物移动"
+        },
+        {
+          "type": "base_reverse",
+          "effect": "沿默认底盘控制轴的负方向移动，不是逐步倒放轨迹",
+          "parameters": "无",
+          "units": "归一化底盘速度",
+          "where": "导航"
+        },
+        {
+          "type": "base_hold",
+          "effect": "底盘速度置零",
+          "parameters": "无",
+          "units": "控制步",
+          "where": "停顿对照，可能无有效错误"
+        },
+        {
+          "type": "arm_offset",
+          "effect": "机械臂平移命令偏移，保持夹爪",
+          "parameters": "direction:[x,y,z]",
+          "units": "机械臂基座参考系中的归一化 OSC 增量",
+          "where": "接近、持物、放置"
+        },
+        {
+          "type": "gripper_open",
+          "effect": "末端平移命令置零并张开夹爪",
+          "parameters": "无",
+          "units": "归一化夹爪命令",
+          "where": "抓取完成或刚刚抬起"
+        },
+        {
+          "type": "gripper_close",
+          "effect": "末端平移命令置零并闭合夹爪",
+          "parameters": "无",
+          "units": "归一化夹爪命令",
+          "where": "抓取前"
+        },
+        {
+          "type": "arm_hold",
+          "effect": "机械臂增量置零，保持夹爪命令",
+          "parameters": "无",
+          "units": "控制步",
+          "where": "停顿对照"
+        }
+      ]
+    },
+    {
+      "backend": "ai2thor",
+      "title": "AI2-THOR · PointNav",
+      "scope": "FloorPlan1 自定义目标点导航，含六个连续目的地；未声称全场景 ObjectNav 或导航加操作已验证。",
+      "recovery": "使用原生可达网格，从当前朝向与位置重新规划路径。",
+      "types": [
+        {
+          "type": "wrong_heading",
+          "effect": "原生 RotateRight，每次转 90°",
+          "parameters": "strength 必须为 1",
+          "units": "离散旋转次数",
+          "where": "路口或抵达某个源里程碑时"
+        },
+        {
+          "type": "backtrack",
+          "effect": "原生 MoveBack，按当前朝向后退",
+          "parameters": "moveMagnitude 使用适配器 grid",
+          "units": "网格移动次数",
+          "where": "移动阶段"
+        },
+        {
+          "type": "lateral_drift",
+          "effect": "原生 MoveRight，向机器人右侧移动",
+          "parameters": "moveMagnitude 使用适配器 grid",
+          "units": "网格移动次数",
+          "where": "移动阶段"
+        },
+        {
+          "type": "navigation_hold",
+          "effect": "原生 Pass，不移动",
+          "parameters": "无",
+          "units": "离散动作次数",
+          "where": "停顿对照，通常不构成位姿偏差"
+        }
+      ]
+    },
+    {
+      "backend": "robodojo",
+      "title": "RoboDojo · 接口桥接",
+      "scope": "只完成原生 reset 与物理步验证。尚无内置、已验证的通用扰动类型或恢复策略。",
+      "recovery": "调用方必须提供原生 policy、state_reader、feature_reader 和实际执行动作的 perturbation 回调。",
+      "types": []
+    },
+    {
+      "backend": "mimicgen",
+      "title": "MimicGen · 轨迹扩增工具",
+      "scope": "Lift 原生扩增 10 条、7 条成功。对象坐标变换及轨迹迁移是数据增强，不等同于故意注入错误。",
+      "recovery": "先标注任务与恢复子段、对象坐标系和源轨迹关系；扩增结果仍需经过独立的扰动／恢复采集与审计才能算纠错对。",
+      "types": []
+    }
+  ]
+}

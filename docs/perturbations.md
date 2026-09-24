@@ -137,3 +137,7 @@ MimicGen's verified Lift example remains available in [mimicgen.md](mimicgen.md)
 The same JSON schedule now supports ManiSkill (`joint_offset`, `gripper_open`, `gripper_close`, `joint_hold`) and experimental RoboTwin (`joint_offset`). Native experts are streamed into the collector one action at a time; after an intervention, replanning starts from current state. RoboTwin durations count individual physics steps; ManiSkill durations count control steps. The web configurator exposes both backends, JSON parameters, adapter options, budgets, episode counts and seeds. [Installation, all-expert commands and measured coverage](task-coverage.md).
 
 Use `examples/perturbations/maniskill-late.json`, `robotwin-carry.json` or `robotwin-first-carry.json` as task-specific starting points. A different task may require a different insertion time or recovery policy. Original experts are collection policies, not proof of arbitrary-error recovery.
+
+## RoboCasa mobile manipulation
+
+`PickPlaceCounterToSink` combines base navigation and arm manipulation, with eight action intervention options. [Three launch examples, milestones, initialization compatibility and task limits](robocasa-mobile.md). The web configurator includes a separate mobile-manipulation preset; the native navigation preset keeps its four base-only types.

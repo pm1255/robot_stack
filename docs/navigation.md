@@ -18,6 +18,10 @@ The current server originally lacked Lightwheel fixtures; reset failed before an
 
 The original uncompensated controller failed seed 220 after 500 real actions. With the same layout/style, seed and budget, the corrected controller succeeded. A fixed three-seed check (220–222, layout/style 1, 20 perturbation actions, 500 total actions) then produced **3/3 qualified correction pairs**: all sources/recoveries succeeded and all open-loop perturbed controls failed. Prefix and paired error states matched exactly. Independent action replay of seed 220's source, perturbed and recovery trajectories had zero integration-state error and identical success labels (136/156/183 actions). Video rendering samples every five actions; replay still verifies every state. This is a three-seed smoke check, not an all-layout navigation benchmark.
 
+## RoboCasa mobile manipulation
+
+The experimental `PickPlaceCounterToSink` adapter now combines walking, grasping, carrying and placement with native success checks. [Measured outcomes, three intervention types, reproducible initialization and launch commands](robocasa-mobile.md).
+
 ## AI2-THOR 5.0.0
 
 `AI2ThorNavigationAdapter` uses a native FloorPlan scene and CloudRendering. It obtains a privileged reachable grid, chooses a seeded distant goal, plans a grid path, and executes only movement/rotation actions. The error injection rotates the heading; recovery replans from the current agent pose. No teleportation occurs in the recorded trajectory.

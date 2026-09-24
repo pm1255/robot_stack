@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "fraction": 0.75
+      },
+      "type": "arm_offset",
+      "steps": 20,
+      "strength": 0.6,
+      "parameters": {
+        "direction": [
+          1,
+          0,
+          0
+        ]
+      }
+    }
+  ]
+}

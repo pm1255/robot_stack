@@ -1,6 +1,10 @@
 # Robot Stack
 
-**新增 ManiSkill 原生专家接入、RoboTwin 实验性逐步驱动、逐任务覆盖报告，以及下方直接展示的 132 个真实动图。** [覆盖边界与启动命令](docs/task-coverage.md)。
+**数据盘点：1,322 条保存轨迹，248 组合格纠错。** 总量含历史、调试和失败，已去除完全相同的文件副本。[逐环境数量与统计口径](docs/trajectory-counts.md)。RoboCasa 已跑通移动＋抓取＋搬运＋放置，三类扰动在固定场景中均纠错成功。[视频与启动命令](https://pm1255.github.io/robot_stack/robocasa-mobile.html)。
+
+**RoboTwin 视频库：50 类任务直接播放。** [视频、纠错与失败案例](https://pm1255.github.io/robot_stack/robotwin.html) · [各 benchmark 的扰动类型、单位与恢复方式](https://pm1255.github.io/robot_stack/perturbations.html) · [参数说明](docs/benchmark-perturbations.md)。
+
+**新增 ManiSkill 原生专家接入、RoboTwin 实验性逐步驱动、逐任务覆盖报告，以及下方直接展示的 144 个真实动图。** [覆盖边界与启动命令](docs/task-coverage.md)。
 
 **统一多扰动调度。** 支持插入步数、比例、源轨迹阶段事件，以及类型、强度、持续步数、次数和间隔。[配置器与真实案例](https://pm1255.github.io/robot_stack/playground.html) · [启动命令与 Python 接口](docs/perturbations.md)。MetaWorld 首轮 100 次尝试得到 69 组有效纠错，覆盖 48 类任务；独立工具任务补测 18/40，补齐其余两类，累计 50 类任务均有有效样本。这是任务类别覆盖，不代表所有任务实例、所有错误都能恢复，也不代表所有 benchmark 已全面适配。
 
@@ -10,7 +14,7 @@
 
 项目的核心是可复查的纠错数据，而不是仅让函数返回 `success=True`。环境接口负责动作与任务判定，策略负责选择动作，共用采集引擎负责预算、分叉、记录和配对。
 
-**RoboTwin 成功源覆盖已达 50/50 类。** 首轮固定种子 37/50；独立补测 11/26；最后限次补采 5/13，保留全部失败。纠错覆盖仍为双臂堆叠一类，不能从源覆盖外推。 [Evidence](docs/task-coverage.md).
+**RoboTwin 成功源覆盖已达 50/50 类。** 首轮固定种子 37/50；独立补测 11/26；最后限次补采 5/13，保留全部失败。合格纠错目前覆盖双臂堆叠与放杯子两类，不能从源覆盖外推。 [Evidence](docs/task-coverage.md).
 
 ## 现在代码还绑定具体任务吗？
 
@@ -185,3 +189,15 @@ python -m unittest discover -s tests -v
 网页展示真实结果和视频，CI 检查轻量契约。后续优先完善碰撞感知导航、任务策略、自然失败的状态反馈恢复，以及 MimicGen 的环境/子任务标注。**MimicGen 已通过原生 Lift 验证：2 条源示范生成 10 条新轨迹，7 条成功，3 条失败保留，全部 10 条通过独立动作重放。** 详见 [复现命令与适用边界](docs/mimicgen.md)。这些扩增示范尚不属于新的纠错对。AI2-THOR FloorPlan1 也已完成 3/3 组原生导航纠错验证。
 
 上游项目、完整边界与贡献方式见 [英文首页](README.md)。
+
+### RoboTwin · cup placement: source / error / recovery
+
+Seed 1100: 1,984 / 2,224 / 3,722 real physics steps. Source succeeds, perturbed control fails, replanning succeeds. All three independent replays have zero state error. [Six-attempt report, including failures](docs/evidence/robotwin-more-summary.json).
+
+<table><tr><td><b>source</b><br><img width="280" src="docs/media/gallery/robotwin-more-place_empty_cup-source.gif" alt="RoboTwin cup source"></td><td><b>perturbed</b><br><img width="280" src="docs/media/gallery/robotwin-more-place_empty_cup-perturbed.gif" alt="RoboTwin cup perturbed"></td><td><b>recovery</b><br><img width="280" src="docs/media/gallery/robotwin-more-place_empty_cup-recovery.gif" alt="RoboTwin cup recovery"></td></tr></table>
+
+## RoboCasa · navigation and manipulation with three error types
+
+Native PandaOmron, PickPlaceCounterToSink, layout/style 1, apple, seed 1100. Three schedules share one scene: source succeeds, perturbed control fails, feedback recovery succeeds. All nine trajectories independently replay with zero state error. [Videos and reproduction](https://pm1255.github.io/robot_stack/robocasa-mobile.html) · [All outcomes, including the earlier failed recovery](docs/robocasa-mobile.md).
+
+<table><tr><th colspan="3">移动中错误转向</th></tr><tr><td><b>正常执行 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/navigation-source.gif" alt="RoboCasa navigation source"></td><td><b>错误后原动作 · 失败</b><br><img width="280" src="docs/media/robocasa-mobile/navigation-perturbed.gif" alt="RoboCasa navigation perturbed"></td><td><b>当前状态恢复 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/navigation-recovery.gif" alt="RoboCasa navigation recovery"></td></tr><tr><th colspan="3">持物时机械臂偏移</th></tr><tr><td><b>正常执行 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/arm-source.gif" alt="RoboCasa arm source"></td><td><b>错误后原动作 · 失败</b><br><img width="280" src="docs/media/robocasa-mobile/arm-perturbed.gif" alt="RoboCasa arm perturbed"></td><td><b>当前状态恢复 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/arm-recovery.gif" alt="RoboCasa arm recovery"></td></tr><tr><th colspan="3">抬起后故意张爪</th></tr><tr><td><b>正常执行 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/gripper-source.gif" alt="RoboCasa gripper source"></td><td><b>错误后原动作 · 失败</b><br><img width="280" src="docs/media/robocasa-mobile/gripper-perturbed.gif" alt="RoboCasa gripper perturbed"></td><td><b>当前状态恢复 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/gripper-recovery.gif" alt="RoboCasa gripper recovery"></td></tr></table>

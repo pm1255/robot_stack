@@ -1,0 +1,141 @@
+{
+  "backend": "robotwin",
+  "task_count": 3,
+  "attempts": 6,
+  "successful_sources": 6,
+  "qualified_corrections": 1,
+  "errors": 1,
+  "wall_seconds": 822.4780500908382,
+  "results": [
+    {
+      "seed": 1100,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v6/robot_stack/collect.py\", line 71, in main\n    result = collect_triplet(adapter, seed, args.output / f'ep_{seed:04d}',\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v6/robot_stack/core.py\", line 135, in collect_triplet\n    return collect_scheduled(adapter, seed, folder, schedule=schedule, budget=budget,\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v6/robot_stack/scheduled.py\", line 94, in collect_scheduled\n    action, phase = adapter.expert_action(), 'recovery'\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v6/robot_stack/adapters/robotwin.py\", line 110, in expert_action\n    command=self.stream.next_action(None)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v6/robot_stack/action_stream.py\", line 46, in next_action\n    value = self.worker.switch(previous_result) if self.started else self.worker.switch()\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v6/robot_stack/action_stream.py\", line 40, in _run\n    result = self.solve(self, seed=self.seed, debug=False, vis=False)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v6/robot_stack/adapters/robotwin.py\", line 109, in <lambda>\n    self.stream=ActionStream(self.env,lambda proxy,**kw:self.env.play_once(),self.seed,lambda:(None,{}))\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/stack_blocks_three.py\", line 74, in play_once\n    arm_tag3 = self.pick_and_place_block(self.block3)\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/stack_blocks_three.py\", line 97, in pick_and_place_block\n    self.move(self.grasp_actor(block, arm_tag=arm_tag, pre_grasp_dis=0.09))  # arm_tag\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "worker_log": "case_1100_worker.log",
+      "isolated_worker": true,
+      "schedule_name": "robotwin-carry",
+      "backend": "robotwin",
+      "task": "stack_blocks_three",
+      "source_success": true,
+      "source_verification": "robotwin-more-stack-three-source-result.json"
+    },
+    {
+      "backend": "robotwin",
+      "task": "stack_blocks_three",
+      "seed": 1100,
+      "source_demo_id": "714ee630752bc47f7a02",
+      "split_group": "320a5964f2c5914b71ea",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 1809,
+      "recovery_steps": 7251,
+      "worker_log": "case_1100_worker.log",
+      "isolated_worker": true,
+      "schedule_name": "robotwin-first-carry"
+    },
+    {
+      "backend": "robotwin",
+      "task": "handover_block",
+      "seed": 1100,
+      "source_demo_id": "0159fde0427cbba48334",
+      "split_group": "c60057d18372034d5100",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 2911,
+      "recovery_steps": 3590,
+      "worker_log": "case_1100_worker.log",
+      "isolated_worker": true,
+      "schedule_name": "robotwin-carry"
+    },
+    {
+      "backend": "robotwin",
+      "task": "handover_block",
+      "seed": 1100,
+      "source_demo_id": "99a909341c2b75ce32a8",
+      "split_group": "c60057d18372034d5100",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 1129,
+      "recovery_steps": 2158,
+      "worker_log": "case_1100_worker.log",
+      "isolated_worker": true,
+      "schedule_name": "robotwin-first-carry"
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_empty_cup",
+      "seed": 1100,
+      "source_demo_id": "c12848396b96943d33f3",
+      "split_group": "49215dc7aeb2e180ce05",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 1626,
+      "recovery_steps": 3722,
+      "worker_log": "case_1100_worker.log",
+      "isolated_worker": true,
+      "schedule_name": "robotwin-carry"
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_empty_cup",
+      "seed": 1100,
+      "source_demo_id": "3dbb7e2534a5c115b32f",
+      "split_group": "49215dc7aeb2e180ce05",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 634,
+      "recovery_steps": 2675,
+      "worker_log": "case_1100_worker.log",
+      "isolated_worker": true,
+      "schedule_name": "robotwin-first-carry"
+    }
+  ],
+  "accounting_note": "Source count recovered from saved native source result after recovery planner exception. Original worker summary is retained separately; qualification labels unchanged."
+}

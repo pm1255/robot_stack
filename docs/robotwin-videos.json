@@ -1,0 +1,452 @@
+[
+  {
+    "task": "adjust_bottle",
+    "seed": 900,
+    "frames": 82,
+    "video": "media/robotwin/adjust_bottle.mp4",
+    "poster": "media/robotwin/posters/adjust_bottle.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "beat_block_hammer",
+    "seed": 900,
+    "frames": 65,
+    "video": "media/robotwin/beat_block_hammer.mp4",
+    "poster": "media/robotwin/posters/beat_block_hammer.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "blocks_ranking_rgb",
+    "seed": 900,
+    "frames": 254,
+    "video": "media/robotwin/blocks_ranking_rgb.mp4",
+    "poster": "media/robotwin/posters/blocks_ranking_rgb.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "blocks_ranking_size",
+    "seed": 900,
+    "frames": 264,
+    "video": "media/robotwin/blocks_ranking_size.mp4",
+    "poster": "media/robotwin/posters/blocks_ranking_size.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "click_alarmclock",
+    "seed": 900,
+    "frames": 52,
+    "video": "media/robotwin/click_alarmclock.mp4",
+    "poster": "media/robotwin/posters/click_alarmclock.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "click_bell",
+    "seed": 900,
+    "frames": 44,
+    "video": "media/robotwin/click_bell.mp4",
+    "poster": "media/robotwin/posters/click_bell.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "dump_bin_bigbin",
+    "seed": 902,
+    "frames": 190,
+    "video": "media/robotwin/dump_bin_bigbin.mp4",
+    "poster": "media/robotwin/posters/dump_bin_bigbin.jpg",
+    "report": "evidence/robotwin-followup-0-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "grab_roller",
+    "seed": 900,
+    "frames": 52,
+    "video": "media/robotwin/grab_roller.mp4",
+    "poster": "media/robotwin/posters/grab_roller.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "handover_block",
+    "seed": 900,
+    "frames": 169,
+    "video": "media/robotwin/handover_block.mp4",
+    "poster": "media/robotwin/posters/handover_block.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "handover_mic",
+    "seed": 900,
+    "frames": 124,
+    "video": "media/robotwin/handover_mic.mp4",
+    "poster": "media/robotwin/posters/handover_mic.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "hanging_mug",
+    "seed": 900,
+    "frames": 196,
+    "video": "media/robotwin/hanging_mug.mp4",
+    "poster": "media/robotwin/posters/hanging_mug.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "lift_pot",
+    "seed": 900,
+    "frames": 61,
+    "video": "media/robotwin/lift_pot.mp4",
+    "poster": "media/robotwin/posters/lift_pot.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "move_can_pot",
+    "seed": 900,
+    "frames": 83,
+    "video": "media/robotwin/move_can_pot.mp4",
+    "poster": "media/robotwin/posters/move_can_pot.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "move_pillbottle_pad",
+    "seed": 901,
+    "frames": 85,
+    "video": "media/robotwin/move_pillbottle_pad.mp4",
+    "poster": "media/robotwin/posters/move_pillbottle_pad.jpg",
+    "report": "evidence/robotwin-followup-1-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "move_playingcard_away",
+    "seed": 900,
+    "frames": 63,
+    "video": "media/robotwin/move_playingcard_away.mp4",
+    "poster": "media/robotwin/posters/move_playingcard_away.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "move_stapler_pad",
+    "seed": 900,
+    "frames": 80,
+    "video": "media/robotwin/move_stapler_pad.mp4",
+    "poster": "media/robotwin/posters/move_stapler_pad.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "open_laptop",
+    "seed": 901,
+    "frames": 84,
+    "video": "media/robotwin/open_laptop.mp4",
+    "poster": "media/robotwin/posters/open_laptop.jpg",
+    "report": "evidence/robotwin-followup-0-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "open_microwave",
+    "seed": 903,
+    "frames": 293,
+    "video": "media/robotwin/open_microwave.mp4",
+    "poster": "media/robotwin/posters/open_microwave.jpg",
+    "report": "evidence/robotwin-bootstrap-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "pick_diverse_bottles",
+    "seed": 905,
+    "frames": 68,
+    "video": "media/robotwin/pick_diverse_bottles.mp4",
+    "poster": "media/robotwin/posters/pick_diverse_bottles.jpg",
+    "report": "evidence/robotwin-bootstrap-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "pick_dual_bottles",
+    "seed": 900,
+    "frames": 70,
+    "video": "media/robotwin/pick_dual_bottles.mp4",
+    "poster": "media/robotwin/posters/pick_dual_bottles.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_a2b_left",
+    "seed": 901,
+    "frames": 82,
+    "video": "media/robotwin/place_a2b_left.mp4",
+    "poster": "media/robotwin/posters/place_a2b_left.jpg",
+    "report": "evidence/robotwin-followup-1-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_a2b_right",
+    "seed": 900,
+    "frames": 81,
+    "video": "media/robotwin/place_a2b_right.mp4",
+    "poster": "media/robotwin/posters/place_a2b_right.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_bread_basket",
+    "seed": 901,
+    "frames": 128,
+    "video": "media/robotwin/place_bread_basket.mp4",
+    "poster": "media/robotwin/posters/place_bread_basket.jpg",
+    "report": "evidence/robotwin-followup-0-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_bread_skillet",
+    "seed": 903,
+    "frames": 96,
+    "video": "media/robotwin/place_bread_skillet.mp4",
+    "poster": "media/robotwin/posters/place_bread_skillet.jpg",
+    "report": "evidence/robotwin-bootstrap-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_burger_fries",
+    "seed": 900,
+    "frames": 132,
+    "video": "media/robotwin/place_burger_fries.mp4",
+    "poster": "media/robotwin/posters/place_burger_fries.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_can_basket",
+    "seed": 903,
+    "frames": 136,
+    "video": "media/robotwin/place_can_basket.mp4",
+    "poster": "media/robotwin/posters/place_can_basket.jpg",
+    "report": "evidence/robotwin-bootstrap-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_cans_plasticbox",
+    "seed": 900,
+    "frames": 159,
+    "video": "media/robotwin/place_cans_plasticbox.mp4",
+    "poster": "media/robotwin/posters/place_cans_plasticbox.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_container_plate",
+    "seed": 900,
+    "frames": 89,
+    "video": "media/robotwin/place_container_plate.mp4",
+    "poster": "media/robotwin/posters/place_container_plate.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_dual_shoes",
+    "seed": 900,
+    "frames": 128,
+    "video": "media/robotwin/place_dual_shoes.mp4",
+    "poster": "media/robotwin/posters/place_dual_shoes.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_empty_cup",
+    "seed": 902,
+    "frames": 102,
+    "video": "media/robotwin/place_empty_cup.mp4",
+    "poster": "media/robotwin/posters/place_empty_cup.jpg",
+    "report": "evidence/robotwin-followup-1-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_fan",
+    "seed": 900,
+    "frames": 87,
+    "video": "media/robotwin/place_fan.mp4",
+    "poster": "media/robotwin/posters/place_fan.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_mouse_pad",
+    "seed": 900,
+    "frames": 86,
+    "video": "media/robotwin/place_mouse_pad.mp4",
+    "poster": "media/robotwin/posters/place_mouse_pad.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 900,
+    "frames": 139,
+    "video": "media/robotwin/place_object_basket.mp4",
+    "poster": "media/robotwin/posters/place_object_basket.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_object_scale",
+    "seed": 900,
+    "frames": 80,
+    "video": "media/robotwin/place_object_scale.mp4",
+    "poster": "media/robotwin/posters/place_object_scale.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_object_stand",
+    "seed": 900,
+    "frames": 77,
+    "video": "media/robotwin/place_object_stand.mp4",
+    "poster": "media/robotwin/posters/place_object_stand.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_phone_stand",
+    "seed": 900,
+    "frames": 71,
+    "video": "media/robotwin/place_phone_stand.mp4",
+    "poster": "media/robotwin/posters/place_phone_stand.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "place_shoe",
+    "seed": 901,
+    "frames": 102,
+    "video": "media/robotwin/place_shoe.mp4",
+    "poster": "media/robotwin/posters/place_shoe.jpg",
+    "report": "evidence/robotwin-followup-0-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "press_stapler",
+    "seed": 900,
+    "frames": 65,
+    "video": "media/robotwin/press_stapler.mp4",
+    "poster": "media/robotwin/posters/press_stapler.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "put_bottles_dustbin",
+    "seed": 900,
+    "frames": 364,
+    "video": "media/robotwin/put_bottles_dustbin.mp4",
+    "poster": "media/robotwin/posters/put_bottles_dustbin.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "put_object_cabinet",
+    "seed": 909,
+    "frames": 149,
+    "video": "media/robotwin/put_object_cabinet.mp4",
+    "poster": "media/robotwin/posters/put_object_cabinet.jpg",
+    "report": "evidence/robotwin-bootstrap-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "rotate_qrcode",
+    "seed": 900,
+    "frames": 85,
+    "video": "media/robotwin/rotate_qrcode.mp4",
+    "poster": "media/robotwin/posters/rotate_qrcode.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "scan_object",
+    "seed": 902,
+    "frames": 92,
+    "video": "media/robotwin/scan_object.mp4",
+    "poster": "media/robotwin/posters/scan_object.jpg",
+    "report": "evidence/robotwin-followup-0-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "shake_bottle",
+    "seed": 900,
+    "frames": 136,
+    "video": "media/robotwin/shake_bottle.mp4",
+    "poster": "media/robotwin/posters/shake_bottle.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "shake_bottle_horizontally",
+    "seed": 900,
+    "frames": 154,
+    "video": "media/robotwin/shake_bottle_horizontally.mp4",
+    "poster": "media/robotwin/posters/shake_bottle_horizontally.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "stack_blocks_three",
+    "seed": 900,
+    "frames": 254,
+    "video": "media/robotwin/stack_blocks_three.mp4",
+    "poster": "media/robotwin/posters/stack_blocks_three.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "stack_blocks_two",
+    "seed": 900,
+    "frames": 173,
+    "video": "media/robotwin/stack_blocks_two.mp4",
+    "poster": "media/robotwin/posters/stack_blocks_two.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "stack_bowls_three",
+    "seed": 900,
+    "frames": 270,
+    "video": "media/robotwin/stack_bowls_three.mp4",
+    "poster": "media/robotwin/posters/stack_bowls_three.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "stack_bowls_two",
+    "seed": 900,
+    "frames": 183,
+    "video": "media/robotwin/stack_bowls_two.mp4",
+    "poster": "media/robotwin/posters/stack_bowls_two.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "stamp_seal",
+    "seed": 900,
+    "frames": 77,
+    "video": "media/robotwin/stamp_seal.mp4",
+    "poster": "media/robotwin/posters/stamp_seal.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  },
+  {
+    "task": "turn_switch",
+    "seed": 900,
+    "frames": 53,
+    "video": "media/robotwin/turn_switch.mp4",
+    "poster": "media/robotwin/posters/turn_switch.jpg",
+    "report": "evidence/robotwin-all-summary.json",
+    "kind": "source"
+  }
+]

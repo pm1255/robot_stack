@@ -1,0 +1,74 @@
+{
+  "backend": "robocasa",
+  "task_count": 1,
+  "attempts": 3,
+  "successful_sources": 3,
+  "qualified_corrections": 2,
+  "errors": 0,
+  "wall_seconds": 137.21612371131778,
+  "results": [
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToSink",
+      "seed": 1100,
+      "source_demo_id": "79176586652bb334ca2b",
+      "split_group": "c61bf3b6245df11d8574",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 139,
+      "recovery_steps": 700,
+      "schedule_name": "robocasa-mobile-navigation"
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToSink",
+      "seed": 1100,
+      "source_demo_id": "e4a577a6bb3fec3e8534",
+      "split_group": "c61bf3b6245df11d8574",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 145,
+      "recovery_steps": 223,
+      "schedule_name": "robocasa-mobile-arm"
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToSink",
+      "seed": 1100,
+      "source_demo_id": "4a64c236f058c52207fc",
+      "split_group": "c61bf3b6245df11d8574",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 136,
+      "recovery_steps": 266,
+      "schedule_name": "robocasa-mobile-gripper"
+    }
+  ]
+}

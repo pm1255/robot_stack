@@ -117,7 +117,11 @@ def audit(root):
         if bool(eligible)!=verdict['qualified_correction']:
             raise ValueError('Correction verdict disagrees with saved evidence')
         qualified+=int(eligible)
-    return {'hdf5_verified':len(records),'source_attempts':total,'qualified_corrections':qualified,
+    sources = [Path(name).parent for name, row in records.items() if row.get('label') == 'source']
+    incomplete = sum(not (root/folder/'correction.json').exists() for folder in sources)
+    return {'hdf5_verified':len(records),'source_attempts':len(sources),
+            'completed_correction_verdicts':total, 'incomplete_source_attempts':incomplete,
+            'qualified_corrections':qualified,
             'checks':['SHA256','finite_states','T+1_alignment','native_success_trace','budget','paired_error_state','provenance'],
             'passed':True}
 

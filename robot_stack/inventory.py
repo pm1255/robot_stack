@@ -38,7 +38,7 @@ def discover(backend, root=None):
         from robocasa.utils.dataset_registry import ATOMIC_TASK_DATASETS, COMPOSITE_TASK_DATASETS
         # Official dataset tasks, excluding helper/base environment classes.
         tasks = sorted(set(ATOMIC_TASK_DATASETS) | set(COMPOSITE_TASK_DATASETS))
-        experts, revision = ['NavigateKitchen'], robocasa.__version__
+        experts, revision = ['NavigateKitchen', 'PickPlaceCounterToSink'], robocasa.__version__
     elif backend in {'robotwin','robodojo'}:
         if root is None:
             raise ValueError('A local official source root is required')

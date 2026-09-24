@@ -25,6 +25,8 @@ def load_adapter(backend, task, options):
     if backend not in names:
         raise ValueError(f'{backend} requires an adapter_factory and a verified native recovery policy')
     module, cls = names[backend]
+    if backend == 'robocasa' and task == 'PickPlaceCounterToSink':
+        module, cls = 'robocasa_mobile', 'RoboCasaMobileManipulationAdapter'
     adapter = getattr(importlib.import_module('robot_stack.adapters.' + module), cls)(task, **options)
     adapter.metadata['adapter_options'] = options
     return adapter

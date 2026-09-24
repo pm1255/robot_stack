@@ -53,6 +53,21 @@ class CorrectionContracts(unittest.TestCase):
             self.assertFalse(result['qualified_correction'])
             self.assertFalse(result['induced_error'])
 
+    def test_audit_counts_source_when_recovery_crashes(self):
+        class BrokenRecovery(LineWorld):
+            def after_intervention(self):
+                raise RuntimeError('planner failed')
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)/'run'
+            with self.assertRaisesRegex(RuntimeError,'planner failed'):
+                collect_triplet(BrokenRecovery(),0,root,budget=20,perturb_steps=2)
+            from robot_stack.audit import audit
+            report=audit(root)
+            self.assertEqual(report['source_attempts'],1)
+            self.assertEqual(report['incomplete_source_attempts'],1)
+            self.assertEqual(report['completed_correction_verdicts'],0)
+            self.assertEqual(report['qualified_corrections'],0)
+
     def test_identical_initial_states_share_split_despite_different_seeds(self):
         with tempfile.TemporaryDirectory() as d:
             a=collect_triplet(LineWorld(),10,Path(d)/'a',budget=20,perturb_steps=2)

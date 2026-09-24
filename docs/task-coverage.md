@@ -2,7 +2,7 @@
 
 Robot Stack aims to collect three related kinds of data for every supported task: successful source demonstrations, deliberate execution errors, and successful recovery from those errors. An adapter alone does not solve a task. The task needs a source policy, a native success oracle and a policy that can act from a disturbed state. The same collector, storage format, schedule and audit run across adapters; a separate collection pipeline is not required for every task.
 
-[Search the live coverage table and 132 animations](https://pm1255.github.io/robot_stack/gallery.html) · [Machine-readable coverage](evidence/task-coverage.json) · [Schedule API](perturbations.md)
+[Search the live coverage table and native animations](https://pm1255.github.io/robot_stack/gallery.html) · [Machine-readable coverage](evidence/task-coverage.json) · [Schedule API](perturbations.md)
 
 ## What “all tasks” means
 
@@ -101,7 +101,7 @@ The initial stack_blocks_two trial collected a successful source, effective dist
 
 ## Navigation, RoboDojo and MimicGen
 
-RoboCasa currently has evidence for native NavigateKitchen; AI2-THOR has evidence for custom PointNav in FloorPlan1, including six sequential destinations and three interventions. Neither establishes general mobile manipulation, ObjectNav or complete scene/task coverage. [Navigation interfaces](navigation.md).
+RoboCasa now has native NavigateKitchen and PickPlaceCounterToSink mobile-manipulation evidence. The mobile task uses layout/style 1, apple and seed 1100; three distinct schedules qualify after a placement-policy fix. AI2-THOR has custom PointNav evidence in FloorPlan1, including six sequential destinations and three interventions. These do not establish arbitrary mobile manipulation, ObjectNav or complete scene/task coverage. [Mobile policy, compatibility and launch commands](robocasa-mobile.md). [Navigation interfaces](navigation.md).
 
 RoboDojo has an `EvalEnv` bridge and a real stack_bowls reset/physics smoke test. It still needs a capable policy and task-specific state/perturbation readers. Its initial `success=True` flag is not task-completion evidence. A source policy checkpoint or planner is a substantive dependency, not something the collector can invent.
 
@@ -119,3 +119,7 @@ python -m robot_stack.coverage \
 ```
 
 Pass final summaries once, not both progress files and summaries from the same run. Registry-only entries never become verified just because they have an expert. Keep all attempts when calculating rates. The dashboard's green cells count task classes with evidence and are deliberately distinct from episode counts.
+
+## Trajectory counts and playable videos
+
+[1,322 saved trajectories and 248 qualified groups: exact definitions](trajectory-counts.md). [RoboTwin 50-task MP4 library and correction outcomes](https://pm1255.github.io/robot_stack/robotwin.html). [Per-benchmark intervention semantics](benchmark-perturbations.md).

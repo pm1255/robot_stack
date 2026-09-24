@@ -1,6 +1,10 @@
 # Robot Stack
 
-**New: native ManiSkill / experimental RoboTwin action streaming, task-level coverage, and 132 real animations embedded below.** [Coverage and launch commands](docs/task-coverage.md).
+**Inventory: 1,322 saved trajectory records; 248 qualified correction groups in the published experiments.** The raw count excludes exact file copies and includes earlier versions, diagnostics and failures. [Definitions and per-environment counts](docs/trajectory-counts.md). Native RoboCasa now combines navigation, grasping, carrying and placement, with three successful recovery schedules in one fixed scene. [Videos and launch commands](https://pm1255.github.io/robot_stack/robocasa-mobile.html).
+
+**RoboTwin video library: 50 task classes and 62 playable clips.** [Sources, corrections and failed recoveries](https://pm1255.github.io/robot_stack/robotwin.html) · [Per-benchmark perturbation types, units and recovery methods](https://pm1255.github.io/robot_stack/perturbations.html) · [Parameter reference](docs/benchmark-perturbations.md).
+
+**New: native ManiSkill / experimental RoboTwin action streaming, task-level coverage, and 144 real animations embedded below.** [Coverage and launch commands](docs/task-coverage.md).
 
 **Configurable multi-error schedules.** Choose source step / fraction / milestone, type, strength, duration, repetition and gap. [Interactive configuration & examples](https://pm1255.github.io/robot_stack/playground.html) · [10 launch recipes and Python API](docs/perturbations.md). All 50 MetaWorld task classes now have at least one verified correction sample across the documented experiments: the first sweep gave 69/100 qualified pairs across 48 tasks; a separate tool-task follow-up gave 18/40 and covered the remaining two. This is task-class coverage, not universal recovery or an MT50 benchmark score.
 
@@ -18,7 +22,21 @@ Robot Stack is a research collection toolkit for **paired error-and-recovery dat
 Native MetaWorld action replay: source / perturbed control / recovery. Rendered at a viewing frame rate; not physical-time playback.
 
 
-**RoboTwin now has successful sources for all 50 task classes.** Initial fixed-seed sweep: 37/50; separate follow-up: 11/26; final bounded bootstrapping: 5/13, retaining all failures. Recovery coverage remains one dual-arm stacking task, not all 50. [Evidence](docs/task-coverage.md).
+**RoboTwin now has successful sources for all 50 task classes.** Initial fixed-seed sweep: 37/50; separate follow-up: 11/26; final bounded bootstrapping: 5/13, retaining all failures. Qualified recovery now covers dual-arm stacking and cup placement, not all 50. [Evidence](docs/task-coverage.md).
+
+
+### RoboTwin · cup placement: source / error / recovery
+
+Seed 1100: 1,984 / 2,224 / 3,722 real physics steps. Source succeeds, perturbed control fails, replanning succeeds. All three independent replays have zero state error. [Six-attempt report, including failures](docs/evidence/robotwin-more-summary.json).
+
+<table><tr><td><b>source</b><br><img width="280" src="docs/media/gallery/robotwin-more-place_empty_cup-source.gif" alt="RoboTwin cup source"></td><td><b>perturbed</b><br><img width="280" src="docs/media/gallery/robotwin-more-place_empty_cup-perturbed.gif" alt="RoboTwin cup perturbed"></td><td><b>recovery</b><br><img width="280" src="docs/media/gallery/robotwin-more-place_empty_cup-recovery.gif" alt="RoboTwin cup recovery"></td></tr></table>
+
+
+## RoboCasa · navigation and manipulation with three error types
+
+Native PandaOmron, PickPlaceCounterToSink, layout/style 1, apple, seed 1100. Three schedules share one scene: source succeeds, perturbed control fails, feedback recovery succeeds. All nine trajectories independently replay with zero state error. [Videos and reproduction](https://pm1255.github.io/robot_stack/robocasa-mobile.html) · [All outcomes, including the earlier failed recovery](docs/robocasa-mobile.md).
+
+<table><tr><th colspan="3">移动中错误转向</th></tr><tr><td><b>正常执行 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/navigation-source.gif" alt="RoboCasa navigation source"></td><td><b>错误后原动作 · 失败</b><br><img width="280" src="docs/media/robocasa-mobile/navigation-perturbed.gif" alt="RoboCasa navigation perturbed"></td><td><b>当前状态恢复 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/navigation-recovery.gif" alt="RoboCasa navigation recovery"></td></tr><tr><th colspan="3">持物时机械臂偏移</th></tr><tr><td><b>正常执行 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/arm-source.gif" alt="RoboCasa arm source"></td><td><b>错误后原动作 · 失败</b><br><img width="280" src="docs/media/robocasa-mobile/arm-perturbed.gif" alt="RoboCasa arm perturbed"></td><td><b>当前状态恢复 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/arm-recovery.gif" alt="RoboCasa arm recovery"></td></tr><tr><th colspan="3">抬起后故意张爪</th></tr><tr><td><b>正常执行 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/gripper-source.gif" alt="RoboCasa gripper source"></td><td><b>错误后原动作 · 失败</b><br><img width="280" src="docs/media/robocasa-mobile/gripper-perturbed.gif" alt="RoboCasa gripper perturbed"></td><td><b>当前状态恢复 · 成功</b><br><img width="280" src="docs/media/robocasa-mobile/gripper-recovery.gif" alt="RoboCasa gripper recovery"></td></tr></table>
 
 ## Watch real results directly in this repository
 

@@ -1,0 +1,66 @@
+{
+  "state_kind": "actor_and_articulation_poses_velocities_and_joints",
+  "error_features": "robot_joint_positions_radians",
+  "perturbation_type": "native_motor_joint_offset",
+  "action_unit": "one_native_physics_step",
+  "policy": "upstream play_once streamed; restart from current state after intervention",
+  "experimental": true,
+  "versions": {
+    "sapien": "3.0.0b1",
+    "torch": "2.4.1",
+    "numpy": "1.26.4",
+    "mplib": "0.2.1",
+    "greenlet": "3.2.4"
+  },
+  "source_hashes": {
+    "envs/stack_blocks_three.py": "b19f1f1c5a3a2c7c7312a4e1b2e577ccd269ebb0c444c287fecbc16ff5b47fb9",
+    "envs/_base_task.py": "448f7152b65cb9102217cf5463aa821d72810ca56f63d5a797ec7bd43e23e101",
+    "envs/robot/robot.py": "3dcd80acc8cab489a4c5edb507cc460dab1724be0226b8d5c4c1b218dee605cb"
+  },
+  "motor_layout": "one_vector_per_unique_articulation",
+  "adapter_options": {
+    "root": "/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin"
+  },
+  "shared_articulation": true,
+  "physics_timestep": 0.004000000189989805,
+  "backend": "robotwin",
+  "task": "stack_blocks_three",
+  "seed": 1100,
+  "max_steps": 22000,
+  "protocol": "scheduled_interventions.v1",
+  "schedule": {
+    "version": 1,
+    "events": [
+      {
+        "at": {
+          "fraction": 0.82
+        },
+        "type": "joint_offset",
+        "steps": 240,
+        "strength": 1,
+        "parameters": {
+          "joint": 0,
+          "offset": 0.5,
+          "open_grippers": true
+        }
+      }
+    ]
+  },
+  "oracle_policy": true,
+  "standard_benchmark_score": false,
+  "split_group": "320a5964f2c5914b71ea",
+  "replay_tolerance": 1e-07,
+  "state_reconstruction": "same_seed_real_action_prefix",
+  "source_demo_id": "b557ced1eab7f75d46c4",
+  "label": "source",
+  "success": true,
+  "task_success": true,
+  "control_success": true,
+  "execution_success": true,
+  "validation_version": 1,
+  "debug": false,
+  "status": "success",
+  "steps": 5641,
+  "trajectory_file": "source.hdf5",
+  "trajectory_sha256": "7910dd4d77c4ae11a748b7f1147f008076690b6f3d163dbb9b50e8ba9f24b517"
+}
