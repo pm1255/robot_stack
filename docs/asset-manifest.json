@@ -1,0 +1,22 @@
+{
+  "purpose": "Runtime asset download provenance; assets are not redistributed here",
+  "fixtures_lightwheel": {
+    "mirror_repo": "IIFAN/robocasa365-lightwheel-fixtures",
+    "revision": "0cf51d45ab07fce13c4733ee1fe20bb01399768c",
+    "filename": "fixtures_lightwheel.zip",
+    "bytes": 529745465,
+    "sha256": "62c1c87776edda9b7c42dda7b00781a1e5a7f90acc3e49d06c39c9545cbd6c3e"
+  },
+  "objects_lightwheel": {
+    "mirror_repo": "IIFAN/robocasa365-lightwheel-objects",
+    "revision": "3f7f7aee8ef4367dfdc85a86778467cf8527f8fb",
+    "filename": "objects_lightwheel.zip",
+    "bytes": 791939656,
+    "sha256": "a1db739b0e80fc4d56d4be27d89dba3aa60000e9648c5607874700e0f14b7955"
+  },
+  "ai2thor_cloud_rendering": {
+    "official_url": "https://ai2-thor-public.s3-us-west-2.amazonaws.com/builds/thor-CloudRendering-f0825767cd50d69f666c7f282e54abfe58f1e917.zip",
+    "bytes": 835983275,
+    "sha256": "1fd5f998644a6dd522a4cf6604c05360a75a5c27f450a7486c20e52dc2b67bb9"
+  }
+}

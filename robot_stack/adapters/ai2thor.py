@@ -14,10 +14,11 @@ import numpy as np
 class AI2ThorNavigationAdapter:
     backend = 'ai2thor'
 
-    def __init__(self, task, *, cache_dir=None, render=False, grid_size=.25):
+    def __init__(self, task, *, cache_dir=None, executable_path=None, render=False, grid_size=.25):
         if not task.startswith('FloorPlan'):
             raise ValueError('task must be a native FloorPlan scene name')
         self.task, self.grid, self.controller = task, grid_size, None
+        self.executable_path = executable_path
         self.cache_dir = Path(cache_dir or os.environ.get('AI2THOR_CACHE_DIR', '.runtime/ai2thor')).resolve()
         self.metadata = {'versions': {'ai2thor': version('ai2thor')},
                          'task_protocol': 'oracle PointNav on reachable grid, stop within 0.10m',
@@ -30,6 +31,10 @@ class AI2ThorNavigationAdapter:
     def reset(self, seed):
         from ai2thor.controller import Controller
         from ai2thor.platform import CloudRendering
+        import ai2thor.build
+        # ai2thor 5.0.0 ships an HTTP URL; use the same official public bucket over TLS.
+        if ai2thor.build.base_url == 'http://s3-us-west-2.amazonaws.com/ai2-thor-public/':
+            ai2thor.build.base_url = 'https://ai2-thor-public.s3-us-west-2.amazonaws.com/'
         cache = self.cache_dir
         class LocalCacheController(Controller):
             @property
@@ -37,6 +42,7 @@ class AI2ThorNavigationAdapter:
                 return str(cache)
         if self.controller is None:
             self.controller = LocalCacheController(platform=CloudRendering, scene=self.task,
+                local_executable_path=self.executable_path,
                 width=320, height=240, gridSize=self.grid, rotateStepDegrees=90,
                 snapToGrid=True, visibilityDistance=1.5, renderDepthImage=False,
                 renderInstanceSegmentation=False)

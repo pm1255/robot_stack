@@ -3,7 +3,7 @@
 **Collect successful demonstrations, induce execution errors, and verify recovery in real simulator dynamics.**
 
 [![Collector contracts](https://github.com/pm1255/robot_stack/actions/workflows/ci.yml/badge.svg)](https://github.com/pm1255/robot_stack/actions/workflows/ci.yml)
-[中文](README.zh-CN.md) · [Correction protocol](docs/correction-protocol.md) · [Collection results](docs/benchmarks.md) · [Contributing](CONTRIBUTING.md)
+[Live dashboard](https://pm1255.github.io/robot_stack/) · [中文](README.zh-CN.md) · [Correction protocol](docs/correction-protocol.md) · [Collection results](docs/benchmarks.md) · [Contributing](CONTRIBUTING.md)
 
 Robot Stack is a research collection toolkit for **paired error-and-recovery data**. It separates simulator adapters, task policies, native success checks and dataset bookkeeping. It retains failed attempts, counts every injected/recovery action, and checks that both branches start from the same perturbed state.
 

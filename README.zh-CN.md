@@ -2,7 +2,7 @@
 
 **在真实仿真动力学中采集成功示范、注入执行错误，并验证恢复。**
 
-[English](README.md) · [纠错协议与数据结构](docs/correction-protocol.md) · [多环境实测](docs/benchmarks.md) · [贡献指南](CONTRIBUTING.md)
+[在线可视化](https://pm1255.github.io/robot_stack/) · [English](README.md) · [纠错协议与数据结构](docs/correction-protocol.md) · [多环境实测](docs/benchmarks.md) · [贡献指南](CONTRIBUTING.md)
 
 项目的核心是可复查的纠错数据，而不是仅让函数返回 `success=True`。环境接口负责动作与任务判定，策略负责选择动作，共用采集引擎负责预算、分叉、记录和配对。
 
