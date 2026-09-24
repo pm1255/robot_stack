@@ -1,5 +1,7 @@
 # Robot Stack
 
+任务覆盖率不等于执行成功率。参见[成功率与规划器诊断](docs/success-rates-and-planners.md)：已使用的原生工具、可选 MPlib 规划回退、失败原因及同条件实验的统计口径。
+
 **数据盘点：1,322 条保存轨迹，248 组合格纠错。** 总量含历史、调试和失败，已去除完全相同的文件副本。[逐环境数量与统计口径](docs/trajectory-counts.md)。RoboCasa 已跑通移动＋抓取＋搬运＋放置，三类扰动在固定场景中均纠错成功。[视频与启动命令](https://pm1255.github.io/robot_stack/robocasa-mobile.html)。
 
 **RoboTwin 视频库：50 类任务直接播放。** [视频、纠错与失败案例](https://pm1255.github.io/robot_stack/robotwin.html) · [各 benchmark 的扰动类型、单位与恢复方式](https://pm1255.github.io/robot_stack/perturbations.html) · [参数说明](docs/benchmark-perturbations.md)。

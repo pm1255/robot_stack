@@ -1,5 +1,7 @@
 # Robot Stack
 
+Planner tools, task coverage and execution success are separate. See [success rates and planner diagnostics](docs/success-rates-and-planners.md) for the native tools already used, the optional MPlib planner portfolio and matched-run measurement.
+
 **Inventory: 1,322 saved trajectory records; 248 qualified correction groups in the published experiments.** The raw count excludes exact file copies and includes earlier versions, diagnostics and failures. [Definitions and per-environment counts](docs/trajectory-counts.md). Native RoboCasa now combines navigation, grasping, carrying and placement, with three successful recovery schedules in one fixed scene. [Videos and launch commands](https://pm1255.github.io/robot_stack/robocasa-mobile.html).
 
 **RoboTwin video library: 50 task classes and 62 playable clips.** [Sources, corrections and failed recoveries](https://pm1255.github.io/robot_stack/robotwin.html) · [Per-benchmark perturbation types, units and recovery methods](https://pm1255.github.io/robot_stack/perturbations.html) · [Parameter reference](docs/benchmark-perturbations.md).

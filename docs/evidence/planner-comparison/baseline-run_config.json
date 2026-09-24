@@ -1,0 +1,38 @@
+{
+  "backend": "maniskill",
+  "tasks": [
+    "PickCube-v1",
+    "PlaceSphere-v1",
+    "LiftPegUpright-v1",
+    "PullCubeTool-v1",
+    "PlugCharger-v1"
+  ],
+  "schedules": {
+    "maniskill-late": {
+      "version": 1,
+      "events": [
+        {
+          "at": {
+            "fraction": 0.6
+          },
+          "type": "joint_offset",
+          "steps": 15,
+          "strength": 1,
+          "parameters": {
+            "joint": 0,
+            "offset": 0.8
+          }
+        }
+      ]
+    }
+  },
+  "episodes": 2,
+  "seed_start": 810,
+  "max_steps": 1000,
+  "adapter_options": {
+    "native_horizon": 1200,
+    "max_replans": 4
+  },
+  "isolated_workers": true,
+  "case_timeout": 180
+}

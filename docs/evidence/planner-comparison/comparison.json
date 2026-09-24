@@ -1,0 +1,219 @@
+{
+  "baseline": {
+    "attempts": 10,
+    "infrastructure_or_policy_errors": 0,
+    "source_success_per_attempt": {
+      "numerator": 9,
+      "denominator": 10,
+      "rate": 0.9
+    },
+    "completed_verdicts_per_successful_source": {
+      "numerator": 9,
+      "denominator": 9,
+      "rate": 1.0
+    },
+    "recovery_success_after_failed_control": {
+      "numerator": 2,
+      "denominator": 9,
+      "rate": 0.2222222222222222
+    },
+    "qualified_correction_per_attempt": {
+      "numerator": 2,
+      "denominator": 10,
+      "rate": 0.2
+    }
+  },
+  "candidate": {
+    "attempts": 10,
+    "infrastructure_or_policy_errors": 0,
+    "source_success_per_attempt": {
+      "numerator": 9,
+      "denominator": 10,
+      "rate": 0.9
+    },
+    "completed_verdicts_per_successful_source": {
+      "numerator": 9,
+      "denominator": 9,
+      "rate": 1.0
+    },
+    "recovery_success_after_failed_control": {
+      "numerator": 2,
+      "denominator": 9,
+      "rate": 0.2222222222222222
+    },
+    "qualified_correction_per_attempt": {
+      "numerator": 2,
+      "denominator": 10,
+      "rate": 0.2
+    }
+  },
+  "cases": [
+    {
+      "task": "LiftPegUpright-v1",
+      "seed": 810,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": true,
+        "qualified_correction": true
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": true,
+        "qualified_correction": true
+      }
+    },
+    {
+      "task": "LiftPegUpright-v1",
+      "seed": 811,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      }
+    },
+    {
+      "task": "PickCube-v1",
+      "seed": 810,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": true,
+        "qualified_correction": true
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": true,
+        "qualified_correction": true
+      }
+    },
+    {
+      "task": "PickCube-v1",
+      "seed": 811,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      }
+    },
+    {
+      "task": "PlaceSphere-v1",
+      "seed": 810,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      }
+    },
+    {
+      "task": "PlaceSphere-v1",
+      "seed": 811,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      }
+    },
+    {
+      "task": "PlugCharger-v1",
+      "seed": 810,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      }
+    },
+    {
+      "task": "PlugCharger-v1",
+      "seed": 811,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": false,
+        "qualified_correction": false
+      },
+      "candidate": {
+        "source_success": false,
+        "qualified_correction": false
+      }
+    },
+    {
+      "task": "PullCubeTool-v1",
+      "seed": 810,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      }
+    },
+    {
+      "task": "PullCubeTool-v1",
+      "seed": 811,
+      "schedule": "maniskill-late",
+      "baseline": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      },
+      "candidate": {
+        "source_success": true,
+        "perturbed_success": false,
+        "recovery_success": false,
+        "qualified_correction": false
+      }
+    }
+  ],
+  "limitations": "Matched task/seed/schedule names only. Verify run_config, budgets, native versions and saved branch states before causal interpretation. Aggregate conditional rates can have different denominators. These results are not whole-benchmark success rates."
+}

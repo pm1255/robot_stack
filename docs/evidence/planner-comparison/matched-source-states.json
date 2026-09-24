@@ -1,0 +1,79 @@
+[
+  {
+    "task": "LiftPegUpright-v1",
+    "seed": 810,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  },
+  {
+    "task": "LiftPegUpright-v1",
+    "seed": 811,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  },
+  {
+    "task": "PickCube-v1",
+    "seed": 810,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  },
+  {
+    "task": "PickCube-v1",
+    "seed": 811,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  },
+  {
+    "task": "PlaceSphere-v1",
+    "seed": 810,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  },
+  {
+    "task": "PlaceSphere-v1",
+    "seed": 811,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  },
+  {
+    "task": "PlugCharger-v1",
+    "seed": 810,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  },
+  {
+    "task": "PlugCharger-v1",
+    "seed": 811,
+    "both_sources_succeeded": false
+  },
+  {
+    "task": "PullCubeTool-v1",
+    "seed": 810,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  },
+  {
+    "task": "PullCubeTool-v1",
+    "seed": 811,
+    "both_sources_succeeded": true,
+    "source_actions_identical": true,
+    "source_states_max_abs_error": 0.0,
+    "first_error_state_max_abs_error": 0.0
+  }
+]

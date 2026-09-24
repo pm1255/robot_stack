@@ -1,0 +1,65 @@
+[
+  {
+    "task": "LiftPegUpright-v1",
+    "seed": 810,
+    "success": true,
+    "steps": 579,
+    "planning_diagnostics": null
+  },
+  {
+    "task": "LiftPegUpright-v1",
+    "seed": 811,
+    "success": false,
+    "steps": 1000,
+    "planning_diagnostics": null
+  },
+  {
+    "task": "PickCube-v1",
+    "seed": 810,
+    "success": true,
+    "steps": 159,
+    "planning_diagnostics": null
+  },
+  {
+    "task": "PickCube-v1",
+    "seed": 811,
+    "success": false,
+    "steps": 1000,
+    "planning_diagnostics": null
+  },
+  {
+    "task": "PlaceSphere-v1",
+    "seed": 810,
+    "success": false,
+    "steps": 1000,
+    "planning_diagnostics": null
+  },
+  {
+    "task": "PlaceSphere-v1",
+    "seed": 811,
+    "success": false,
+    "steps": 1000,
+    "planning_diagnostics": null
+  },
+  {
+    "task": "PlugCharger-v1",
+    "seed": 810,
+    "success": false,
+    "steps": 775,
+    "planning_diagnostics": null
+  },
+  {
+    "task": "PullCubeTool-v1",
+    "seed": 810,
+    "success": false,
+    "steps": 1000,
+    "planning_diagnostics": null
+  },
+  {
+    "task": "PullCubeTool-v1",
+    "seed": 811,
+    "success": false,
+    "steps": 159,
+    "planning_diagnostics": null
+  }
+]

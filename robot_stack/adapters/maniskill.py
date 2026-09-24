@@ -50,12 +50,18 @@ def flatten(value):
 class ManiSkillAdapter:
     backend = 'maniskill'
 
-    def __init__(self, task, *, render=False, native_horizon=1000, max_replans=3, env_options=None):
+    def __init__(self, task, *, render=False, native_horizon=1000, max_replans=3,
+                 env_options=None, planner_fallback=False):
         policies = discover_tasks()
         if task not in policies:
             raise ValueError(f'No installed native planner for {task}')
         self.task = task
         self.solve, compatibility = compatible_policy(policies[task])
+        self.planner_fallback = planner_fallback
+        from .maniskill_planning import new_diagnostics, with_planner_fallback
+        self.planning_diagnostics = new_diagnostics()
+        if planner_fallback:
+            self.solve = with_planner_fallback(self.solve, self.planning_diagnostics)
         self.render_enabled, self.native_horizon = render, native_horizon
         self.max_replans, self.env_options = max_replans, dict(env_options or {})
         if max_replans < 1 or native_horizon < 1:
@@ -69,6 +75,8 @@ class ManiSkillAdapter:
             'policy':'upstream synchronous planner streamed; current-state restart after intervention',
             'planner_source_sha256':hashlib.sha256(inspect.getsource(self.solve).encode()).hexdigest(),
             'native_horizon':native_horizon, 'max_replans':max_replans,
+            'planner_fallback':planner_fallback,
+            'planning_diagnostics':self.planning_diagnostics,
             'compatibility_adjustment':compatibility,
             'setup_reset_behavior':'planner reset returns current observation; never resets physics',
         }
@@ -85,6 +93,9 @@ class ManiSkillAdapter:
         self.seed, self.replans, self.steps = seed, 0, 0
         self.obs, self.info = self.env.reset(seed=seed)
         self.last_result, self.pending = None, None
+        self.last_gripper = 1.
+        from .maniskill_planning import new_diagnostics
+        self.planning_diagnostics.update(new_diagnostics())
         self.flag, self.done = False, False
         self.policy_exhausted = False
         self.metadata['initial_state_dimension'] = len(self.state())
@@ -100,12 +111,12 @@ class ManiSkillAdapter:
     def events(self):
         return []
 
-    def hold_action(self):
+    def hold_action(self, *, preserve_gripper=False):
         qpos = array(self.env.unwrapped.agent.robot.get_qpos()).reshape(-1)
         n = self.env.action_space.shape[-1]
         if n == len(qpos):  # Panda stick (no gripper)
             return qpos.copy()
-        return np.r_[qpos[:n-1], 1.]
+        return np.r_[qpos[:n-1], self.last_gripper if preserve_gripper else 1.]
 
     def expert_action(self):
         if self.pending is not None:
@@ -113,15 +124,20 @@ class ManiSkillAdapter:
         if self.stream is None:
             if self.replans >= self.max_replans:
                 self.policy_exhausted = True
-                return self.hold_action()
+                return self.hold_action(preserve_gripper=True)
             self.stream = ActionStream(self.env, self.solve, self.seed,
                                        lambda: (self.obs,self.info))
             self.replans += 1
-        action = self.stream.next_action(self.last_result)
+        from .maniskill_planning import PlanningFailure
+        try:
+            action = self.stream.next_action(self.last_result)
+        except PlanningFailure:
+            self.planning_diagnostics['aborted_scripts'] += 1
+            action = None
         if action is None:
             self.stream.close(); self.stream = None
             # Replanning is bounded; no reset or recursion over empty planners.
-            return self.hold_action()
+            return self.hold_action(preserve_gripper=True)
         self.pending = np.asarray(action,dtype=float)
         return self.pending.copy()
 
@@ -137,6 +153,8 @@ class ManiSkillAdapter:
         self.flag = bool(array(self.env.unwrapped.evaluate()['success']).item())
         self.done = bool(array(terminated).item() or array(truncated).item())
         self.steps += 1
+        if len(action) == 8:
+            self.last_gripper = float(action[-1])
         self.pending = None
 
     def after_intervention(self):

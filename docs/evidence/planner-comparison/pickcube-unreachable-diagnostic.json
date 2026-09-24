@@ -1,0 +1,49 @@
+{
+  "task": "PickCube-v1",
+  "seed": 811,
+  "branch": "recovery",
+  "trajectory_sha256": "3d44760b5640f1954572cf5484df507ed5cc9a1944c2b4042a0c86d38996e3a3",
+  "state_encoding": "native get_state_dict sorted keys; actors/cube is first actor, xyz is its first three values",
+  "positions": [
+    {
+      "after_actions": 0,
+      "cube_xyz": [
+        0.08716819435358047,
+        0.00035740435123443604,
+        0.019999999552965164
+      ]
+    },
+    {
+      "after_actions": 43,
+      "cube_xyz": [
+        0.0866229459643364,
+        0.0012749318266287446,
+        0.02007199451327324
+      ]
+    },
+    {
+      "after_actions": 58,
+      "cube_xyz": [
+        -0.44259127974510193,
+        1.639979362487793,
+        -0.20635899901390076
+      ]
+    },
+    {
+      "after_actions": 100,
+      "cube_xyz": [
+        -0.8368873000144958,
+        2.7580254077911377,
+        -0.899642825126648
+      ]
+    },
+    {
+      "after_actions": 1000,
+      "cube_xyz": [
+        -0.8368873000144958,
+        2.7580254077911377,
+        -0.899642825126648
+      ]
+    }
+  ]
+}
