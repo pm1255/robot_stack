@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "task": "DrawTriangle-v1",
+      "seed": 820,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "RuntimeError('pybind11::handle::inc_ref() PyGILState_Check() failure.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v2/robot_stack/suite.py\", line 57, in main\n    row = collect_triplet(adapter, seed, args.output/task/name/f'ep_{seed:04d}',\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v2/robot_stack/core.py\", line 135, in collect_triplet\n    return collect_scheduled(adapter, seed, folder, schedule=schedule, budget=budget,\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v2/robot_stack/scheduled.py\", line 94, in collect_scheduled\n    action, phase = adapter.expert_action(), 'recovery'\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v2/robot_stack/adapters/maniskill.py\", line 120, in expert_action\n    action = self.stream.next_action(self.last_result)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v2/robot_stack/action_stream.py\", line 46, in next_action\n    value = self.worker.switch(previous_result) if self.started else self.worker.switch()\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v2/robot_stack/action_stream.py\", line 40, in _run\n    result = self.solve(self, seed=self.seed, debug=False, vis=False)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/examples/motionplanning/panda/solutions/draw_triangle.py\", line 9, in solve\n    planner = PandaStickMotionPlanningSolver(\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v2/robot_stack/adapters/maniskill.py\", line 30, in __init__\n    super().__init__(env, debug=debug, vis=vis, base_pose=base_pose,\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/examples/motionplanning/base_motionplanner/motionplanner.py\", line 32, in __init__\n    self.planner = self.setup_planner()\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/examples/motionplanning/base_motionplanner/motionplanner.py\", line 59, in setup_planner\n    planner = mplib.Planner(\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mplib/planner.py\", line 65, in __init__\n    self.robot = ArticulatedModel(\nRuntimeError: pybind11::handle::inc_ref() PyGILState_Check() failure.\n",
+      "schedule_name": "maniskill-late"
+    }
+  ]
+}

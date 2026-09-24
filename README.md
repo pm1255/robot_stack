@@ -1,5 +1,7 @@
 # Robot Stack
 
+[Success-source gaps and repair priorities](docs/source-backlog.md)
+
 [Per-task baselines and calibrated perturbations](https://pm1255.github.io/robot_stack/readiness.html) · [Calibration CLI and acceptance rules](docs/task-calibration.md)
 
 Latest per-task calibration: 55 task classes measured; 28 passed the recorded small-sample held-out gate (25 MetaWorld, 3 ManiSkill). Another 23 MetaWorld classes require a fuller scene-identity check, 3 classes miss the baseline target, and 1 has no qualifying perturbation. This is not completion of the 546-class inventory.

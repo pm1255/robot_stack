@@ -69,20 +69,23 @@
       "validation": null,
       "selected": null,
       "evidence": [
-        "evidence/maniskill-all-summary.json"
+        "evidence/maniskill-all-summary.json",
+        "evidence/maniskill-drawing-baseline-summary.json"
       ]
     },
     {
       "backend": "maniskill",
       "task": "DrawTriangle-v1",
-      "historical_source_evidence": false,
+      "historical_source_evidence": true,
       "historical_correction_evidence": false,
       "status": "awaiting_calibration",
       "clean_baseline": null,
       "validation": null,
       "selected": null,
       "evidence": [
-        "evidence/maniskill-all-summary.json"
+        "evidence/maniskill-all-summary.json",
+        "evidence/maniskill-drawing-baseline-summary.json",
+        "evidence/maniskill-drawing-partial-summary.json"
       ]
     },
     {
@@ -182,6 +185,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/maniskill-summary.json",
         "evidence/maniskill-all-summary.json"
       ],
       "levels": [
@@ -501,6 +505,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/maniskill-summary.json",
         "evidence/maniskill-all-summary.json",
         "evidence/maniskill-smoke-summary.json"
       ],
@@ -666,6 +671,7 @@
       "validation": null,
       "selected": null,
       "evidence": [
+        "evidence/calibration/maniskill-summary.json",
         "evidence/maniskill-all-summary.json",
         "evidence/maniskill-smoke-summary.json"
       ],
@@ -798,6 +804,7 @@
       "validation": null,
       "selected": null,
       "evidence": [
+        "evidence/calibration/maniskill-summary.json",
         "evidence/maniskill-all-summary.json"
       ],
       "levels": [],
@@ -836,7 +843,7 @@
       "backend": "maniskill",
       "task": "PullCubeTool-v1",
       "historical_source_evidence": true,
-      "historical_correction_evidence": false,
+      "historical_correction_evidence": true,
       "status": "passed_configured_validation",
       "clean_baseline": {
         "attempts": 2,
@@ -896,6 +903,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/maniskill-summary.json",
         "evidence/maniskill-all-summary.json"
       ],
       "levels": [
@@ -1544,6 +1552,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -1734,6 +1743,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -1924,6 +1934,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -2114,6 +2125,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -2304,6 +2316,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -2494,6 +2507,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -2684,6 +2698,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -2874,6 +2889,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -3064,6 +3080,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -3254,6 +3271,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -3444,6 +3462,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -3634,6 +3653,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -3824,6 +3844,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -4014,6 +4035,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -4204,6 +4226,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -4394,6 +4417,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld-diversity-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
@@ -4585,6 +4609,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -4775,6 +4800,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -4965,6 +4991,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -5155,6 +5182,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -5345,6 +5373,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -5535,6 +5564,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld-diversity-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
@@ -5726,6 +5756,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -5916,6 +5947,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -6106,6 +6138,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -6296,6 +6329,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -6486,6 +6520,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -6676,6 +6711,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -6866,6 +6902,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -7056,6 +7093,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -7246,6 +7284,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -7436,6 +7475,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld-diversity-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
@@ -7627,6 +7667,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -7817,6 +7858,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -8007,6 +8049,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -8197,6 +8240,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -8387,6 +8431,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -8577,6 +8622,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -8767,6 +8813,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld-diversity-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
@@ -8958,6 +9005,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -9148,6 +9196,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -9338,6 +9387,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -9528,6 +9578,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -9671,6 +9722,7 @@
       "validation": null,
       "selected": null,
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [],
@@ -9702,6 +9754,7 @@
       "validation": null,
       "selected": null,
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld-tools-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
@@ -9781,6 +9834,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld-tools-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
@@ -9972,6 +10026,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -10162,6 +10217,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -10352,6 +10408,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [
@@ -10542,6 +10599,7 @@
         }
       },
       "evidence": [
+        "evidence/calibration/metaworld-summary.json",
         "evidence/metaworld50-scheduled-summary.json"
       ],
       "levels": [

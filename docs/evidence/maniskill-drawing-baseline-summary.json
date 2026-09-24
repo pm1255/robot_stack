@@ -1,0 +1,69 @@
+{
+  "backend": "maniskill",
+  "scope": "Clean source-only diagnostics; all six seeds retained. No recovery claim.",
+  "results": [
+    {
+      "backend": "maniskill",
+      "task": "DrawTriangle-v1",
+      "seed": 820,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "Native worker exceeded 120 seconds",
+      "worker_log": "case_820_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "DrawTriangle-v1",
+      "seed": 821,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "Native worker exceeded 120 seconds",
+      "worker_log": "case_821_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "DrawTriangle-v1",
+      "seed": 822,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "Native worker exceeded 120 seconds",
+      "worker_log": "case_822_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "DrawSVG-v1",
+      "seed": 820,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "Native worker exceeded 120 seconds",
+      "worker_log": "case_820_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "DrawSVG-v1",
+      "seed": 821,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "Native worker exceeded 120 seconds",
+      "worker_log": "case_821_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "DrawSVG-v1",
+      "seed": 822,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "Native worker exceeded 120 seconds",
+      "worker_log": "case_822_worker.log",
+      "isolated_worker": true
+    }
+  ],
+  "attempts": 6,
+  "successful_sources": 0,
+  "errors": 6
+}

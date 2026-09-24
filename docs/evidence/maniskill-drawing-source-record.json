@@ -1,0 +1,63 @@
+{
+  "versions": {
+    "mani_skill": "3.0.1",
+    "sapien": "3.0.3",
+    "mplib": "0.1.1",
+    "torch": "2.4.1",
+    "numpy": "1.26.4",
+    "greenlet": "3.2.4"
+  },
+  "state_kind": "native_get_state_dict_sorted_numeric_leaves",
+  "error_features": "tcp_xyz_metres_and_robot_joint_positions_radians",
+  "perturbation_type": "bounded_joint_target_offset",
+  "policy": "upstream synchronous planner streamed; current-state restart after intervention",
+  "planner_source_sha256": "16405ddfe14189bc295ca469027a7079c8d5e2ec603e5997166c9a9dacc2ecaa",
+  "native_horizon": 1200,
+  "max_replans": 3,
+  "compatibility_adjustment": "ManiSkill 3.0.1 stick constructor: omit obsolete visualization argument",
+  "setup_reset_behavior": "planner reset returns current observation; never resets physics",
+  "adapter_options": {
+    "native_horizon": 1200,
+    "max_replans": 3
+  },
+  "initial_state_dimension": 3953,
+  "backend": "maniskill",
+  "task": "DrawTriangle-v1",
+  "seed": 820,
+  "max_steps": 1000,
+  "protocol": "scheduled_interventions.v1",
+  "schedule": {
+    "version": 1,
+    "events": [
+      {
+        "at": {
+          "fraction": 0.6
+        },
+        "type": "joint_offset",
+        "steps": 15,
+        "strength": 1,
+        "parameters": {
+          "joint": 0,
+          "offset": 0.8
+        }
+      }
+    ]
+  },
+  "oracle_policy": true,
+  "standard_benchmark_score": false,
+  "split_group": "870249d5102369db0ea4",
+  "replay_tolerance": 1e-07,
+  "state_reconstruction": "same_seed_real_action_prefix",
+  "source_demo_id": "7cec488148d5d9cc3872",
+  "label": "source",
+  "success": true,
+  "task_success": true,
+  "control_success": true,
+  "execution_success": true,
+  "validation_version": 1,
+  "debug": false,
+  "status": "success",
+  "steps": 205,
+  "trajectory_file": "source.hdf5",
+  "trajectory_sha256": "713886a9eb179f62818c732a820039c48a611f01680d2abe3e6394f14062e010"
+}

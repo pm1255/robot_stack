@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    "DrawTriangle-v1",
+    "DrawSVG-v1"
+  ],
+  "seeds": [
+    820,
+    821,
+    822
+  ],
+  "max_steps": 300,
+  "adapter_options": {
+    "native_horizon": 300,
+    "max_replans": 1
+  },
+  "scope": "clean source only; no perturbation or recovery"
+}

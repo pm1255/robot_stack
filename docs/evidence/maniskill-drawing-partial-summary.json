@@ -1,0 +1,18 @@
+{
+  "backend": "maniskill",
+  "scope": "Recovered source evidence from an incomplete drawing correction attempt. Source success is audited; recovery crashed and no correction verdict exists. This is not a completed triplet or independent replay.",
+  "source_record": "evidence/maniskill-drawing-source-record.json",
+  "audit": "evidence/maniskill-drawing-partial-audit.json",
+  "progress": "evidence/maniskill-drawing-partial-progress.json",
+  "results": [
+    {
+      "task": "DrawTriangle-v1",
+      "seed": 820,
+      "source_success": true,
+      "qualified_correction": false,
+      "status": "incomplete_recovery_error",
+      "source_steps": 205,
+      "source_sha256": "713886a9eb179f62818c732a820039c48a611f01680d2abe3e6394f14062e010"
+    }
+  ]
+}
