@@ -1,0 +1,82 @@
+{
+  "backend": "robocasa",
+  "results": [
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1102,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "c850e21ec7fc5cff13b1",
+      "protocol": "clean_baseline.v1",
+      "steps": 224,
+      "worker_log": "case_1102_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "CheesyBread",
+      "seed": 1101,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "fc954aae95124ca6f184",
+      "protocol": "clean_baseline.v1",
+      "steps": 228,
+      "worker_log": "case_1101_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1101,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "c51315f99a643cdccb2f",
+      "protocol": "clean_baseline.v1",
+      "steps": 1200,
+      "worker_log": "case_1101_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PackDessert",
+      "seed": 1101,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "28465a0b42cb132b9d13",
+      "protocol": "clean_baseline.v1",
+      "steps": 1200,
+      "worker_log": "case_1101_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "CheesyBread",
+      "seed": 1102,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "0e02ed364c38d1f547ae",
+      "protocol": "clean_baseline.v1",
+      "steps": 1200,
+      "worker_log": "case_1102_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PackDessert",
+      "seed": 1102,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "e3c619a00f8da3027a6e",
+      "protocol": "clean_baseline.v1",
+      "steps": 253,
+      "worker_log": "case_1102_worker.log",
+      "isolated_worker": true
+    }
+  ],
+  "attempts": 6,
+  "successful_sources": 3,
+  "errors": 0,
+  "wall_seconds": 111.22851152718067,
+  "scope": "New project experts; fixed seeds with all failures retained; success sources only, no correction claim"
+}

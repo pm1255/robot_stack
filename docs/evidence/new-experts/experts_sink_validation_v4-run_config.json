@@ -1,0 +1,24 @@
+{
+  "backend": "robocasa",
+  "tasks": [
+    "PickPlaceSinkToCounter"
+  ],
+  "seeds": [
+    1102,
+    1107,
+    1110,
+    1111,
+    1112,
+    1113,
+    1114
+  ],
+  "budget": 1200,
+  "timeout": 600,
+  "workers": 4,
+  "adapter_options": {
+    "layout": 1,
+    "style": 1,
+    "obj_groups": "apple"
+  },
+  "protocol": "source_only_fixed_seeds"
+}

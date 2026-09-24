@@ -1,10 +1,12 @@
 # Robot Stack
 
+**补上 5 个任务专家，均已有原生成功源。** YCB 抓取在新种子上 4/5；RoboCasa 新增任务仍属实验性。[实测结果与视频](https://pm1255.github.io/robot_stack/experts.html) · [启动示例](docs/new-experts.md)。
+
 [尚无成功源的任务与修复优先级](docs/source-backlog.md)
 
 [逐任务基线与扰动验收](https://pm1255.github.io/robot_stack/readiness.html) · [校准命令与规则](docs/task-calibration.md)
 
-最新逐任务校准：实测 55 类任务，其中 28 类通过本轮小样本独立验证（MetaWorld 25、ManiSkill 3）。另有 23 类 MetaWorld 需完善场景指纹核验、3 类基线未达标、1 类尚无合格扰动；尚未完成全部 546 类任务。
+最新逐任务校准：实测 56 类任务，其中 28 类通过本轮小样本独立验证（MetaWorld 25、ManiSkill 3）。另有 23 类 MetaWorld 需完善场景指纹核验、3 类基线未达标、2 类尚无合格扰动；尚未完成全部 546 类任务。
 
 任务覆盖率不等于执行成功率。参见[成功率与规划器诊断](docs/success-rates-and-planners.md)：已使用的原生工具、可选 MPlib 规划回退、失败原因及同条件实验的统计口径。
 

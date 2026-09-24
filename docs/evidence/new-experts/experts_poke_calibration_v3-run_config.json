@@ -1,0 +1,93 @@
+{
+  "backend": "maniskill",
+  "tasks": [
+    "PokeCube-v1"
+  ],
+  "train_seeds": [
+    4100,
+    4101
+  ],
+  "validation_seeds": [
+    4105,
+    4106,
+    4107,
+    4108,
+    4109
+  ],
+  "levels": [
+    {
+      "name": "level_00",
+      "scale": 0.125,
+      "schedule": {
+        "version": 1,
+        "events": [
+          {
+            "at": {
+              "fraction": 0.6
+            },
+            "type": "joint_offset",
+            "steps": 15,
+            "strength": 0.125,
+            "parameters": {
+              "joint": 0,
+              "offset": 0.8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "level_01",
+      "scale": 0.25,
+      "schedule": {
+        "version": 1,
+        "events": [
+          {
+            "at": {
+              "fraction": 0.6
+            },
+            "type": "joint_offset",
+            "steps": 15,
+            "strength": 0.25,
+            "parameters": {
+              "joint": 0,
+              "offset": 0.8
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "level_02",
+      "scale": 0.5,
+      "schedule": {
+        "version": 1,
+        "events": [
+          {
+            "at": {
+              "fraction": 0.6
+            },
+            "type": "joint_offset",
+            "steps": 15,
+            "strength": 0.5,
+            "parameters": {
+              "joint": 0,
+              "offset": 0.8
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "axis": "strength",
+  "max_steps": 1000,
+  "adapter_options": {
+    "native_horizon": 1200,
+    "max_replans": 3
+  },
+  "workers": 3,
+  "case_timeout": 600,
+  "min_source_rate": 0.8,
+  "min_recovery_rate": 0.5,
+  "min_validation_episodes": 5
+}

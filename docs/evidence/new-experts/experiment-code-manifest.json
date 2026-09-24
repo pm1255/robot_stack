@@ -1,0 +1,74 @@
+{
+  "experts_maniskill_v1": {
+    "server_output": "/user/panmiao/workspace/robot_stack/outputs/experts_maniskill_v1",
+    "release": "experts_v1",
+    "files": {
+      "robot_stack/experts/maniskill.py": "538f32b4b9dd4d3dbf1327b2bec89fdb375aa2f36094d3e1d64bb5c9d3b8c7a1",
+      "robot_stack/adapters/robocasa_mobile.py": "88c5db434aa8b80f85c293928b9ba8253fbe1e47cb0f8e13f4f360517ae27793",
+      "robot_stack/adapters/maniskill.py": "a325d097abf1dbc1213b4591a9ce9277692561f23c4ac482a38ac0761394b521"
+    }
+  },
+  "experts_robocasa_v1": {
+    "server_output": "/user/panmiao/workspace/robot_stack/outputs/experts_robocasa_v1",
+    "release": "experts_v1",
+    "files": {
+      "robot_stack/experts/maniskill.py": "538f32b4b9dd4d3dbf1327b2bec89fdb375aa2f36094d3e1d64bb5c9d3b8c7a1",
+      "robot_stack/adapters/robocasa_mobile.py": "88c5db434aa8b80f85c293928b9ba8253fbe1e47cb0f8e13f4f360517ae27793",
+      "robot_stack/adapters/maniskill.py": "a325d097abf1dbc1213b4591a9ce9277692561f23c4ac482a38ac0761394b521"
+    }
+  },
+  "experts_robocasa_v2": {
+    "server_output": "/user/panmiao/workspace/robot_stack/outputs/experts_robocasa_v2",
+    "release": "experts_v2",
+    "files": {
+      "robot_stack/experts/maniskill.py": "538f32b4b9dd4d3dbf1327b2bec89fdb375aa2f36094d3e1d64bb5c9d3b8c7a1",
+      "robot_stack/adapters/robocasa_mobile.py": "e7cb6c800bedf559b39970410d3298ed000b973586009bc2ed4bcc4cb5ea792c",
+      "robot_stack/adapters/maniskill.py": "67b4053f2593f4d0b4637117a8600f946d013440069dfbff3550e2de6f6a6dc3"
+    }
+  },
+  "experts_robocasa_v3": {
+    "server_output": "/user/panmiao/workspace/robot_stack/outputs/experts_robocasa_v3",
+    "release": "experts_v3",
+    "files": {
+      "robot_stack/experts/maniskill.py": "538f32b4b9dd4d3dbf1327b2bec89fdb375aa2f36094d3e1d64bb5c9d3b8c7a1",
+      "robot_stack/adapters/robocasa_mobile.py": "2db51ad679e17efec725fd1653f234880d2820eda6b08200b91abdb864f34f74",
+      "robot_stack/adapters/maniskill.py": "67b4053f2593f4d0b4637117a8600f946d013440069dfbff3550e2de6f6a6dc3"
+    }
+  },
+  "experts_sink_v4": {
+    "server_output": "/user/panmiao/workspace/robot_stack/outputs/experts_sink_v4",
+    "release": "experts_v4",
+    "files": {
+      "robot_stack/experts/maniskill.py": "538f32b4b9dd4d3dbf1327b2bec89fdb375aa2f36094d3e1d64bb5c9d3b8c7a1",
+      "robot_stack/adapters/robocasa_mobile.py": "13d55b3c6061c92466d00e74e4d06ee02292df97255f26a829001ec73d68d0cd",
+      "robot_stack/adapters/maniskill.py": "67b4053f2593f4d0b4637117a8600f946d013440069dfbff3550e2de6f6a6dc3"
+    }
+  },
+  "experts_sink_validation_v4": {
+    "server_output": "/user/panmiao/workspace/robot_stack/outputs/experts_sink_validation_v4",
+    "release": "experts_v4",
+    "files": {
+      "robot_stack/experts/maniskill.py": "538f32b4b9dd4d3dbf1327b2bec89fdb375aa2f36094d3e1d64bb5c9d3b8c7a1",
+      "robot_stack/adapters/robocasa_mobile.py": "13d55b3c6061c92466d00e74e4d06ee02292df97255f26a829001ec73d68d0cd",
+      "robot_stack/adapters/maniskill.py": "67b4053f2593f4d0b4637117a8600f946d013440069dfbff3550e2de6f6a6dc3"
+    }
+  },
+  "experts_ycb_v3": {
+    "server_output": "/user/panmiao/workspace/robot_stack/outputs/experts_ycb_v3",
+    "release": "experts_v3",
+    "files": {
+      "robot_stack/experts/maniskill.py": "538f32b4b9dd4d3dbf1327b2bec89fdb375aa2f36094d3e1d64bb5c9d3b8c7a1",
+      "robot_stack/adapters/robocasa_mobile.py": "2db51ad679e17efec725fd1653f234880d2820eda6b08200b91abdb864f34f74",
+      "robot_stack/adapters/maniskill.py": "67b4053f2593f4d0b4637117a8600f946d013440069dfbff3550e2de6f6a6dc3"
+    }
+  },
+  "experts_poke_calibration_v3": {
+    "server_output": "/user/panmiao/workspace/robot_stack/outputs/experts_poke_calibration_v3",
+    "release": "experts_v3",
+    "files": {
+      "robot_stack/experts/maniskill.py": "538f32b4b9dd4d3dbf1327b2bec89fdb375aa2f36094d3e1d64bb5c9d3b8c7a1",
+      "robot_stack/adapters/robocasa_mobile.py": "2db51ad679e17efec725fd1653f234880d2820eda6b08200b91abdb864f34f74",
+      "robot_stack/adapters/maniskill.py": "67b4053f2593f4d0b4637117a8600f946d013440069dfbff3550e2de6f6a6dc3"
+    }
+  }
+}

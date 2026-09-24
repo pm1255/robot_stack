@@ -1,0 +1,16 @@
+....{"task": "supported", "seed": 10, "source_success": true, "qualified_correction": false, "split_group": "10", "stage": "baseline", "schedule_name": "clean", "scale": null, "evidence": "supported/baseline/clean/case_0010"}
+{"task": "supported", "seed": 10, "source_success": true, "qualified_correction": true, "induced_error": true, "perturbed_success": false, "recovery_success": true, "split_group": "10", "stage": "calibration", "schedule_name": "level_00", "scale": 0.25, "evidence": "supported/calibration/level_00/case_0010"}
+{"task": "supported", "seed": 10, "source_success": true, "qualified_correction": true, "induced_error": true, "perturbed_success": false, "recovery_success": true, "split_group": "10", "stage": "calibration", "schedule_name": "level_01", "scale": 1.0, "evidence": "supported/calibration/level_01/case_0010"}
+{"task": "supported", "seed": 20, "source_success": true, "qualified_correction": true, "induced_error": true, "perturbed_success": false, "recovery_success": true, "split_group": "20", "stage": "validation", "schedule_name": "level_00", "scale": 0.25, "evidence": "supported/validation/level_00/case_0020"}
+{"task_count": 2, "passed_tasks": 1, "statuses": {"missing": "missing_expert", "supported": "passed_configured_validation"}}
+....[FEASIBILITY] GraspNet candidates: 2
+[FEASIBILITY] try candidate 0: score=1 width=None pickup_xyz=[0.0, 0.0, 0.0]
+[FEASIBILITY] candidate 0 pickup plan: {'success': True}
+[FEASIBILITY] try candidate 1: score=0.5 width=None pickup_xyz=[0.0, 0.0, 0.0]
+[FEASIBILITY] candidate 1 pickup plan: {'success': True}
+[FEASIBILITY] selected candidate 1
+........................................................
+----------------------------------------------------------------------
+Ran 64 tests in 0.952s
+
+OK

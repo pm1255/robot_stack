@@ -1,0 +1,56 @@
+{
+  "backend": "maniskill",
+  "results": [
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4101,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "93be8a75cc6849ecc400",
+      "protocol": "clean_baseline.v1",
+      "steps": 331,
+      "worker_log": "case_4101_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4100,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "5be0176acd7470d74c01",
+      "protocol": "clean_baseline.v1",
+      "steps": 302,
+      "worker_log": "case_4100_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "seed": 4100,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "EOFError('EOF when reading a line')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/experts_v1/robot_stack/collect.py\", line 77, in main\n    result = collect_source(adapter, seed, args.output / f'ep_{seed:04d}', budget=args.max_steps)\n  File \"/user/panmiao/workspace/robot_stack/releases/experts_v1/robot_stack/core.py\", line 137, in collect_source\n    adapter.reset(seed)\n  File \"/user/panmiao/workspace/robot_stack/releases/experts_v1/robot_stack/adapters/maniskill.py\", line 94, in reset\n    self.env = gym.make(self.task, obs_mode='state', control_mode='pd_joint_pos',\n  File \"/user/chenzilong/envs/robotwin/lib/python3.10/site-packages/gymnasium/envs/registration.py\", line 802, in make\n    env = env_creator(**env_spec_kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/registration.py\", line 182, in make\n    env = env_spec.make(**kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/registration.py\", line 70, in make\n    response = download_asset.prompt_yes_no(\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/download_asset.py\", line 28, in prompt_yes_no\n    answer = input(\"(y|n): \")\nEOFError: EOF when reading a line\n",
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "worker_log": "case_4100_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "seed": 4101,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "EOFError('EOF when reading a line')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/experts_v1/robot_stack/collect.py\", line 77, in main\n    result = collect_source(adapter, seed, args.output / f'ep_{seed:04d}', budget=args.max_steps)\n  File \"/user/panmiao/workspace/robot_stack/releases/experts_v1/robot_stack/core.py\", line 137, in collect_source\n    adapter.reset(seed)\n  File \"/user/panmiao/workspace/robot_stack/releases/experts_v1/robot_stack/adapters/maniskill.py\", line 94, in reset\n    self.env = gym.make(self.task, obs_mode='state', control_mode='pd_joint_pos',\n  File \"/user/chenzilong/envs/robotwin/lib/python3.10/site-packages/gymnasium/envs/registration.py\", line 802, in make\n    env = env_creator(**env_spec_kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/registration.py\", line 182, in make\n    env = env_spec.make(**kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/registration.py\", line 70, in make\n    response = download_asset.prompt_yes_no(\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/download_asset.py\", line 28, in prompt_yes_no\n    answer = input(\"(y|n): \")\nEOFError: EOF when reading a line\n",
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "worker_log": "case_4101_worker.log",
+      "isolated_worker": true
+    }
+  ],
+  "attempts": 4,
+  "successful_sources": 2,
+  "errors": 2,
+  "wall_seconds": 119.24757469096221,
+  "scope": "New project experts; fixed seeds with all failures retained; success sources only, no correction claim"
+}

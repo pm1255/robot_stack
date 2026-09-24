@@ -3,17 +3,28 @@ import numpy as np
 from .robocasa import RoboCasaNavigationAdapter
 
 
+MOBILE_TASKS = {
+    'PickPlaceCounterToSink': ('obj', None),
+    'PickPlaceSinkToCounter': ('obj', 'container'),
+    'CheesyBread': ('cheese', 'bread'),
+    'PackDessert': ('dessert', 'cooked_food_container'),
+}
+
+
 class RoboCasaMobileManipulationAdapter(RoboCasaNavigationAdapter):
     def __init__(self, task='PickPlaceCounterToSink', *, layout=1, style=1,
                  obj_groups='apple', render=False):
         super().__init__('NavigateKitchen',layout=layout,style=style,render=render)
-        if task != 'PickPlaceCounterToSink':
-            raise ValueError('Mobile manipulation currently supports PickPlaceCounterToSink')
+        if task not in MOBILE_TASKS:
+            raise ValueError('No bundled mobile manipulation expert for '+task)
+        self.object_name,self.destination_name=MOBILE_TASKS[task]
         self.task,self.obj_groups=task,obj_groups
         self.metadata.update(policy='privileged base-feedback and Cartesian manipulation state machine',
                              error_features='base_xy_eef_xyz_object_xyz_gripper_aperture',
                              perturbation_type='scheduled_native_base_arm_and_gripper_commands',
-                             obj_groups=obj_groups,experimental=True,
+                             obj_groups=(obj_groups if task.startswith('PickPlace') else 'native_task_default'),experimental=True,
+                             expert_provider='robot_stack',skill_family='mobile_grasp_transport_place',
+                             manipulated_object=self.object_name,destination_object=self.destination_name,
                              reset_compatibility="stable_counter_region_geometry_order_and_scoped_fixture_rng_v1")
 
     def reset(self,seed):
@@ -28,15 +39,18 @@ class RoboCasaMobileManipulationAdapter(RoboCasaNavigationAdapter):
                 has_renderer=False,has_offscreen_renderer=False,use_camera_obs=False,
                 use_object_obs=True,seed=seed,layout_ids=self.layout,style_ids=self.style,
                 generative_textures=None,randomize_cameras=False,control_freq=20,ignore_done=True,
-                obj_registries=('objaverse','lightwheel'),obj_groups=self.obj_groups)
+                obj_registries=('objaverse','lightwheel'),
+                **({'obj_groups':self.obj_groups} if self.task.startswith('PickPlace') else {}))
             self.env.reset()
         self.robot=self.env.robots[0]
         self.body=self.env.sim.model.body_name2id('mobilebase0_base')
-        self.eef_id=self.robot.eef_site_id['right'];self.obj_id=self.env.obj_body_id['obj']
+        self.eef_id=self.robot.eef_site_id['right'];self.obj_id=self.env.obj_body_id[self.object_name]
         self.arm=self.robot.composite_controller.part_controllers['right']
         self.yaw=float(self.env.counter.rot+np.pi/2)
-        self.place=np.asarray(self.env.sink.pos).copy()+[.20,0,.17]
+        self.place=self.placement_target()
+        self.metadata['placement_target']=self.place.tolist()
         self.initial_object=self.object_pos().copy();self.initial_base=self.pose().copy()
+        self.transit_height=max(1.10,self.initial_object[2]+.15)
         self.stage='navigate_pick';self.stage_steps=0;self.gripper=-1.;self.total_steps=0
         self.metadata.update(robocasa_version=robocasa.__version__,robosuite_version=robosuite.__version__,
                              language=self.env.get_ep_meta()['lang'],episode_meta=self.env.get_ep_meta(),
@@ -57,9 +71,21 @@ class RoboCasaMobileManipulationAdapter(RoboCasaNavigationAdapter):
             self._overview.azimuth = 90
             self._overview.elevation = -25
 
+    def placement_target(self):
+        if self.destination_name is None:
+            return np.asarray(self.env.sink.pos).copy()+[.20,0,.17]
+        target_id=self.env.obj_body_id[self.destination_name]
+        target=self.env.sim.data.body_xpos[target_id].copy()
+        if self.task=='PackDessert':
+            food=self.env.sim.data.body_xpos[self.env.obj_body_id['cooked_food']]
+            away=target[:2]-food[:2]
+            if np.linalg.norm(away)<.01:away=np.array([1.,0.])
+            target[:2]+=.045*away/np.linalg.norm(away)
+        return target+[0,0,.10]
+
     def object_pos(self):return self.env.sim.data.body_xpos[self.obj_id].copy()
     def eef_pos(self):return self.env.sim.data.site_xpos[self.eef_id].copy()
-    def grasped(self):return bool(self.env._check_grasp(self.robot.gripper['right'],self.env.objects['obj']))
+    def grasped(self):return bool(self.env._check_grasp(self.robot.gripper['right'],self.env.objects[self.object_name]))
     def error_features(self):
         return np.r_[self.pose()[:2],self.eef_pos(),self.object_pos(),self.env._get_observations()['robot0_gripper_qpos']]
     def action(self,velocity):
@@ -69,6 +95,11 @@ class RoboCasaMobileManipulationAdapter(RoboCasaNavigationAdapter):
         from scipy.spatial.transform import Rotation
         self.gripper=gripper
         desired=np.diag([1.,-1.,-1.])
+        if self.task=='PickPlaceSinkToCounter':
+            # Approach below the faucet from the front instead of driving the
+            # wrist vertically through the spout over deeper sink objects.
+            left=np.array([-np.sin(self.yaw),np.cos(self.yaw),0.])
+            desired=Rotation.from_rotvec(-.6*left).as_matrix()@desired
         current=self.env.sim.data.site_xmat[self.eef_id].reshape(3,3)
         rot=Rotation.from_matrix(desired@current.T).as_rotvec()
         origin=self.arm.origin_ori
@@ -81,20 +112,30 @@ class RoboCasaMobileManipulationAdapter(RoboCasaNavigationAdapter):
         return super().expert_action()
     def transition(self,stage):self.stage=stage;self.stage_steps=0
     def expert_action(self):
+        self.place=self.placement_target()
         obj=self.object_pos();eef=self.eef_pos()
         forward=np.array([np.cos(self.yaw),np.sin(self.yaw)])
         if self.stage=='navigate_pick':
             self.gripper=-1.
             goal=obj[:2]-forward*.55
-            if np.linalg.norm(self.pose()[:2]-goal)<.035:self.transition('approach')
+            distance=np.linalg.norm(self.pose()[:2]-goal)
+            reachable=(self.task!='PickPlaceCounterToSink' and self.stage_steps>70 and distance<.18)
+            if distance<.035 or reachable:self.transition('approach' if self.task=='PickPlaceCounterToSink' else 'clear_pick')
             else:return self.navigate(goal)
+        if self.stage=='clear_pick':
+            if eef[2]>=self.transit_height-.025:self.transition('approach')
+            else:return self.arm_action(np.r_[eef[:2],self.transit_height],-1)
         if self.stage=='approach':
             target=obj+[0,0,.15]
+            if self.task!='PickPlaceCounterToSink':target[2]=self.transit_height
+            if self.task=='PickPlaceSinkToCounter':
+                target=obj+np.r_[-forward*.12,.16]
             if np.linalg.norm(eef-target)<.025:self.transition('descend')
             else:return self.arm_action(target,-1)
         if self.stage=='descend':
             target=obj+[0,0,.005]
-            if np.linalg.norm(eef-target)<.013:self.transition('grasp')
+            tolerance=.013 if self.task=='PickPlaceCounterToSink' else .035
+            if np.linalg.norm(eef-target)<tolerance:self.transition('grasp')
             else:return self.arm_action(target,-1)
         if self.stage=='grasp':
             if self.stage_steps>=20:self.transition('lift')
@@ -108,7 +149,9 @@ class RoboCasaMobileManipulationAdapter(RoboCasaNavigationAdapter):
         if self.stage=='navigate_sink':
             self.gripper=1.
             goal=self.place[:2]-forward*.55
-            if np.linalg.norm(self.pose()[:2]-goal)<.035:self.transition('place')
+            distance=np.linalg.norm(self.pose()[:2]-goal)
+            reachable=(self.task!='PickPlaceCounterToSink' and self.stage_steps>70 and distance<.18)
+            if distance<.035 or reachable:self.transition('place')
             else:return self.navigate(goal)
         if self.stage=='place':
             # Placement is above the bowl; a 5 cm waypoint tolerance avoids
@@ -119,7 +162,10 @@ class RoboCasaMobileManipulationAdapter(RoboCasaNavigationAdapter):
         if self.stage=='release':
             if self.stage_steps>=20:self.transition('retreat')
             else:return self.arm_action(self.place,-1)
-        if self.stage=='retreat':return self.arm_action(self.place+[0,0,.25],-1)
+        if self.stage=='retreat':
+            if self.task!='PickPlaceCounterToSink' and self.stage_steps>60 and not self.success():
+                self.transition('navigate_pick')
+            return self.arm_action(self.place+[0,0,.25],-1)
         return self.action([0,0,0])
     def step(self,action):
         super().step(action);self.stage_steps+=1;self.total_steps+=1

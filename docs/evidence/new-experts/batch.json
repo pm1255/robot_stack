@@ -1,0 +1,93 @@
+{
+  "schema": "robot_stack.new_expert_batch.v1",
+  "scope": "Five implementations with native successful source examples; small-sample evidence, not completion or universal success guarantees.",
+  "tasks": [
+    {
+      "backend": "ManiSkill",
+      "task": "PickSingleYCB-v1",
+      "development": "2/2",
+      "validation_success": 4,
+      "validation_attempts": 5,
+      "validation_seeds": [
+        4105,
+        4106,
+        4107,
+        4108,
+        4109
+      ],
+      "validation_label": "新种子",
+      "limitation": "抓取/规划仍有失败；纠错未测",
+      "report": "evidence/new-experts/experts_ycb_v3-summary.json"
+    },
+    {
+      "backend": "ManiSkill",
+      "task": "PokeCube-v1",
+      "development": "2/2",
+      "validation_success": 0,
+      "validation_attempts": 0,
+      "validation_seeds": [],
+      "validation_label": "未测",
+      "limitation": "三档错误对照仍成功；合格纠错 0/6",
+      "report": "evidence/new-experts/experts_poke_calibration_v3-summary.json"
+    },
+    {
+      "backend": "RoboCasa",
+      "task": "PickPlaceSinkToCounter",
+      "development": "调试 1/2；回归 1/2",
+      "validation_success": 2,
+      "validation_attempts": 5,
+      "validation_seeds": [
+        1110,
+        1111,
+        1112,
+        1113,
+        1114
+      ],
+      "validation_label": "v4 新种子",
+      "limitation": "实验性；遮挡失败，seed 1102 出现退化",
+      "report": "evidence/new-experts/experts_sink_validation_v4-summary.json"
+    },
+    {
+      "backend": "RoboCasa",
+      "task": "CheesyBread",
+      "development": "1/2",
+      "validation_success": 0,
+      "validation_attempts": 5,
+      "validation_seeds": [
+        1105,
+        1106,
+        1107,
+        1108,
+        1109
+      ],
+      "validation_label": "v3 新种子",
+      "limitation": "抓取与放置接触不稳定",
+      "report": "evidence/new-experts/experts_robocasa_v3-summary.json"
+    },
+    {
+      "backend": "RoboCasa",
+      "task": "PackDessert",
+      "development": "1/2",
+      "validation_success": 1,
+      "validation_attempts": 5,
+      "validation_seeds": [
+        1105,
+        1106,
+        1107,
+        1108,
+        1109
+      ],
+      "validation_label": "v3 新种子",
+      "limitation": "容器占用和物体形状会导致失败",
+      "report": "evidence/new-experts/experts_robocasa_v3-summary.json"
+    }
+  ],
+  "coverage": {
+    "scope": "Tasks with no positive source evidence in linked reports; not all are attempted failures. Separate from calibration gate status.",
+    "total_tasks": 546,
+    "source_verified_tasks": 119,
+    "missing_source_tasks": 427,
+    "missing_registered_expert": 426
+  },
+  "tests": 64
+}

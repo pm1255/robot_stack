@@ -1,0 +1,20 @@
+{
+  "backend": "robocasa",
+  "tasks": [
+    "PickPlaceSinkToCounter",
+    "CheesyBread",
+    "PackDessert"
+  ],
+  "seeds": [
+    1101,
+    1102
+  ],
+  "budget": 1200,
+  "timeout": 600,
+  "workers": 3,
+  "adapter_options": {
+    "layout": 1,
+    "style": 1
+  },
+  "protocol": "source_only_fixed_seeds"
+}

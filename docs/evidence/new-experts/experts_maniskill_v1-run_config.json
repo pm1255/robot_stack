@@ -1,0 +1,19 @@
+{
+  "backend": "maniskill",
+  "tasks": [
+    "PokeCube-v1",
+    "PickSingleYCB-v1"
+  ],
+  "seeds": [
+    4100,
+    4101
+  ],
+  "budget": 650,
+  "timeout": 600,
+  "workers": 2,
+  "adapter_options": {
+    "native_horizon": 800,
+    "max_replans": 2
+  },
+  "protocol": "source_only_fixed_seeds"
+}

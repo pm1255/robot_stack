@@ -2,13 +2,15 @@
 from importlib.metadata import version
 import hashlib
 import inspect
+from pathlib import Path
 import numpy as np
 from robot_stack.action_stream import ActionStream
 
 
 def discover_tasks():
     from mani_skill.examples.motionplanning.panda.run import MP_SOLUTIONS
-    return dict(MP_SOLUTIONS)
+    from robot_stack.experts.maniskill import EXPERTS
+    return dict(MP_SOLUTIONS, **EXPERTS)
 
 
 
@@ -52,6 +54,7 @@ class ManiSkillAdapter:
 
     def __init__(self, task, *, render=False, native_horizon=1000, max_replans=3,
                  env_options=None, planner_fallback=False):
+        from robot_stack.experts.maniskill import EXPERTS, EXPERT_SPECS
         policies = discover_tasks()
         if task not in policies:
             raise ValueError(f'No installed native planner for {task}')
@@ -64,6 +67,8 @@ class ManiSkillAdapter:
             self.solve = with_planner_fallback(self.solve, self.planning_diagnostics)
         self.render_enabled, self.native_horizon = render, native_horizon
         self.max_replans, self.env_options = max_replans, dict(env_options or {})
+        if task in EXPERTS and self.env_options.get('robot_uids','panda') not in ('panda','panda_wristcam'):
+            raise ValueError('Project ManiSkill experts currently require a Panda embodiment')
         if max_replans < 1 or native_horizon < 1:
             raise ValueError('Positive planning and native action budgets required')
         self.env, self.stream = None, None
@@ -72,7 +77,10 @@ class ManiSkillAdapter:
             'state_kind':'native_get_state_dict_sorted_numeric_leaves',
             'error_features':'tcp_xyz_metres_and_robot_joint_positions_radians',
             'perturbation_type':'bounded_joint_target_offset',
-            'policy':'upstream synchronous planner streamed; current-state restart after intervention',
+            'policy':'synchronous task expert streamed; current-state restart after intervention',
+            'expert_provider':('robot_stack' if task in EXPERTS else 'upstream'),
+            'expert_spec':EXPERT_SPECS.get(task),
+            'expert_module_sha256':(hashlib.sha256(Path(inspect.getfile(EXPERTS[task])).read_bytes()).hexdigest() if task in EXPERTS else None),
             'planner_source_sha256':hashlib.sha256(inspect.getsource(self.solve).encode()).hexdigest(),
             'native_horizon':native_horizon, 'max_replans':max_replans,
             'planner_fallback':planner_fallback,

@@ -1,10 +1,12 @@
 # Robot Stack
 
+**Five new task experts now have native successful sources.** YCB grasping: 4/5 new seeds; RoboCasa additions remain experimental. [Measured results and videos](https://pm1255.github.io/robot_stack/experts.html) · [Launch examples](docs/new-experts.md).
+
 [Success-source gaps and repair priorities](docs/source-backlog.md)
 
 [Per-task baselines and calibrated perturbations](https://pm1255.github.io/robot_stack/readiness.html) · [Calibration CLI and acceptance rules](docs/task-calibration.md)
 
-Latest per-task calibration: 55 task classes measured; 28 passed the recorded small-sample held-out gate (25 MetaWorld, 3 ManiSkill). Another 23 MetaWorld classes require a fuller scene-identity check, 3 classes miss the baseline target, and 1 has no qualifying perturbation. This is not completion of the 546-class inventory.
+Latest per-task calibration: 56 task classes measured; 28 passed the recorded small-sample held-out gate (25 MetaWorld, 3 ManiSkill). Another 23 MetaWorld classes require a fuller scene-identity check, 3 classes miss the baseline target, and 2 have no qualifying perturbation. This is not completion of the 546-class inventory.
 
 Planner tools, task coverage and execution success are separate. See [success rates and planner diagnostics](docs/success-rates-and-planners.md) for the native tools already used, the optional MPlib planner portfolio and matched-run measurement.
 

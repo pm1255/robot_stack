@@ -1,9 +1,9 @@
 {
-  "scope": "Tasks with no positive source evidence in the linked reports; not all are attempted failures. Separate from calibration gate status.",
+  "scope": "Tasks with no positive source evidence in linked reports; not all are attempted failures. Separate from calibration gate status.",
   "total_tasks": 546,
-  "source_verified_tasks": 114,
-  "missing_source_tasks": 432,
-  "missing_registered_expert": 431,
+  "source_verified_tasks": 119,
+  "missing_source_tasks": 427,
+  "missing_registered_expert": 426,
   "tasks": [
     {
       "backend": "maniskill",
@@ -242,28 +242,6 @@
     {
       "backend": "maniskill",
       "task": "PickCubeWidowXAI-v1",
-      "registered": true,
-      "expert_available": false,
-      "source_success": false,
-      "induced_error": false,
-      "recovery_success": false,
-      "qualified_correction": false,
-      "evidence": []
-    },
-    {
-      "backend": "maniskill",
-      "task": "PickSingleYCB-v1",
-      "registered": true,
-      "expert_available": false,
-      "source_success": false,
-      "induced_error": false,
-      "recovery_success": false,
-      "qualified_correction": false,
-      "evidence": []
-    },
-    {
-      "backend": "maniskill",
-      "task": "PokeCube-v1",
       "registered": true,
       "expert_available": false,
       "source_success": false,
@@ -1078,17 +1056,6 @@
     {
       "backend": "robocasa",
       "task": "CerealAndBowl",
-      "registered": true,
-      "expert_available": false,
-      "source_success": false,
-      "induced_error": false,
-      "recovery_success": false,
-      "qualified_correction": false,
-      "evidence": []
-    },
-    {
-      "backend": "robocasa",
-      "task": "CheesyBread",
       "registered": true,
       "expert_available": false,
       "source_success": false,
@@ -2408,17 +2375,6 @@
     },
     {
       "backend": "robocasa",
-      "task": "PackDessert",
-      "registered": true,
-      "expert_available": false,
-      "source_success": false,
-      "induced_error": false,
-      "recovery_success": false,
-      "qualified_correction": false,
-      "evidence": []
-    },
-    {
-      "backend": "robocasa",
       "task": "PackFoodByTemp",
       "registered": true,
       "expert_available": false,
@@ -2607,17 +2563,6 @@
     {
       "backend": "robocasa",
       "task": "PickPlaceMicrowaveToCounter",
-      "registered": true,
-      "expert_available": false,
-      "source_success": false,
-      "induced_error": false,
-      "recovery_success": false,
-      "qualified_correction": false,
-      "evidence": []
-    },
-    {
-      "backend": "robocasa",
-      "task": "PickPlaceSinkToCounter",
       "registered": true,
       "expert_available": false,
       "source_success": false,

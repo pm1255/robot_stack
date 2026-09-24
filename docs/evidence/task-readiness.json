@@ -642,13 +642,16 @@
     {
       "backend": "maniskill",
       "task": "PickSingleYCB-v1",
-      "historical_source_evidence": false,
+      "historical_source_evidence": true,
       "historical_correction_evidence": false,
-      "status": "missing_expert",
+      "status": "awaiting_calibration",
       "clean_baseline": null,
       "validation": null,
       "selected": null,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_maniskill_v1-summary.json",
+        "evidence/new-experts/experts_ycb_v3-summary.json"
+      ]
     },
     {
       "backend": "maniskill",
@@ -818,13 +821,134 @@
     {
       "backend": "maniskill",
       "task": "PokeCube-v1",
-      "historical_source_evidence": false,
+      "historical_source_evidence": true,
       "historical_correction_evidence": false,
-      "status": "missing_expert",
-      "clean_baseline": null,
+      "status": "no_qualified_profile",
+      "clean_baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
       "validation": null,
       "selected": null,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_maniskill_v1-summary.json",
+        "evidence/new-experts/experts_poke_calibration_v3-summary.json"
+      ],
+      "levels": [
+        {
+          "name": "level_00",
+          "scale": 0.125,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.125,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 0,
+            "recovery_successes": 0,
+            "recovery_success_rate": null,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_01",
+          "scale": 0.25,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.25,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 0,
+            "recovery_successes": 0,
+            "recovery_success_rate": null,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_02",
+          "scale": 0.5,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.5,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 0,
+            "recovery_successes": 0,
+            "recovery_success_rate": null,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        }
+      ],
+      "criteria": {
+        "min_source_rate": 0.8,
+        "min_recovery_rate": 0.5,
+        "min_validation_episodes": 5
+      },
+      "calibration_report": "evidence/new-experts/experts_poke_calibration_v3-summary.json"
     },
     {
       "backend": "maniskill",
@@ -11110,13 +11234,17 @@
     {
       "backend": "robocasa",
       "task": "CheesyBread",
-      "historical_source_evidence": false,
+      "historical_source_evidence": true,
       "historical_correction_evidence": false,
-      "status": "missing_expert",
+      "status": "awaiting_calibration",
       "clean_baseline": null,
       "validation": null,
       "selected": null,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_robocasa_v1-summary.json",
+        "evidence/new-experts/experts_robocasa_v2-summary.json",
+        "evidence/new-experts/experts_robocasa_v3-summary.json"
+      ]
     },
     {
       "backend": "robocasa",
@@ -12443,13 +12571,17 @@
     {
       "backend": "robocasa",
       "task": "PackDessert",
-      "historical_source_evidence": false,
+      "historical_source_evidence": true,
       "historical_correction_evidence": false,
-      "status": "missing_expert",
+      "status": "awaiting_calibration",
       "clean_baseline": null,
       "validation": null,
       "selected": null,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_robocasa_v1-summary.json",
+        "evidence/new-experts/experts_robocasa_v2-summary.json",
+        "evidence/new-experts/experts_robocasa_v3-summary.json"
+      ]
     },
     {
       "backend": "robocasa",
@@ -12666,13 +12798,19 @@
     {
       "backend": "robocasa",
       "task": "PickPlaceSinkToCounter",
-      "historical_source_evidence": false,
+      "historical_source_evidence": true,
       "historical_correction_evidence": false,
-      "status": "missing_expert",
+      "status": "awaiting_calibration",
       "clean_baseline": null,
       "validation": null,
       "selected": null,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_robocasa_v1-summary.json",
+        "evidence/new-experts/experts_robocasa_v2-summary.json",
+        "evidence/new-experts/experts_robocasa_v3-summary.json",
+        "evidence/new-experts/experts_sink_v4-summary.json",
+        "evidence/new-experts/experts_sink_validation_v4-summary.json"
+      ]
     },
     {
       "backend": "robocasa",
@@ -15487,10 +15625,10 @@
   ],
   "task_count": 546,
   "status_counts": {
-    "awaiting_calibration": 60,
-    "missing_expert": 431,
+    "awaiting_calibration": 64,
+    "missing_expert": 426,
     "passed_configured_validation": 28,
-    "no_qualified_profile": 1,
+    "no_qualified_profile": 2,
     "baseline_below_target": 3,
     "scene_overlap_with_calibration": 23
   }

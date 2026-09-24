@@ -1,0 +1,94 @@
+{
+  "backend": "maniskill",
+  "results": [
+    {
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "seed": 4101,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "ad9691506763ac57a936",
+      "protocol": "clean_baseline.v1",
+      "steps": 129,
+      "worker_log": "case_4101_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "seed": 4100,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "f0a5dc32102e30b58fed",
+      "protocol": "clean_baseline.v1",
+      "steps": 137,
+      "worker_log": "case_4100_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "seed": 4105,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "bc52dff0d9c098464fa4",
+      "protocol": "clean_baseline.v1",
+      "steps": 154,
+      "worker_log": "case_4105_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "seed": 4108,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "b9521430a7ff1af0463d",
+      "protocol": "clean_baseline.v1",
+      "steps": 133,
+      "worker_log": "case_4108_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "seed": 4106,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "0fec78aa28b8b8581b2b",
+      "protocol": "clean_baseline.v1",
+      "steps": 140,
+      "worker_log": "case_4106_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "seed": 4107,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "aab8ebf6ba0b2458a71f",
+      "protocol": "clean_baseline.v1",
+      "steps": 456,
+      "worker_log": "case_4107_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "seed": 4109,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "9f588adb5e7a9b2c8835",
+      "protocol": "clean_baseline.v1",
+      "steps": 101,
+      "worker_log": "case_4109_worker.log",
+      "isolated_worker": true
+    }
+  ],
+  "attempts": 7,
+  "successful_sources": 6,
+  "errors": 0,
+  "wall_seconds": 151.21348442998715,
+  "scope": "New project experts; fixed seeds with all failures retained; success sources only, no correction claim"
+}

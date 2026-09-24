@@ -6,9 +6,9 @@
       "backend": "maniskill",
       "version": "3.0.1",
       "task_count": 74,
-      "registered_expert_count": 12,
-      "scope": "installed native registry, not complete literature coverage",
-      "additional_adapter_tasks": []
+      "registered_expert_count": 14,
+      "additional_adapter_tasks": [],
+      "scope": "installed native registry, not complete literature coverage"
     },
     {
       "backend": "metaworld",
@@ -22,9 +22,9 @@
       "backend": "robocasa",
       "version": "1.0.1",
       "task_count": 317,
-      "registered_expert_count": 2,
-      "scope": "installed native registry, not complete literature coverage",
-      "additional_adapter_tasks": []
+      "registered_expert_count": 5,
+      "additional_adapter_tasks": [],
+      "scope": "installed native registry, not complete literature coverage"
     },
     {
       "backend": "robodojo",
@@ -56,10 +56,10 @@
     "maniskill": {
       "tasks": 74,
       "registered": 74,
-      "expert_available": 12,
-      "source_success": 11,
-      "induced_error": 10,
-      "recovery_success": 9,
+      "expert_available": 14,
+      "source_success": 13,
+      "induced_error": 11,
+      "recovery_success": 10,
       "qualified_correction": 8
     },
     "metaworld": {
@@ -74,8 +74,8 @@
     "robocasa": {
       "tasks": 317,
       "registered": 317,
-      "expert_available": 2,
-      "source_success": 2,
+      "expert_available": 5,
+      "source_success": 5,
       "induced_error": 2,
       "recovery_success": 2,
       "qualified_correction": 2
@@ -419,12 +419,15 @@
       "backend": "maniskill",
       "task": "PickSingleYCB-v1",
       "registered": true,
-      "expert_available": false,
-      "source_success": false,
+      "expert_available": true,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_maniskill_v1-summary.json",
+        "evidence/new-experts/experts_ycb_v3-summary.json"
+      ]
     },
     {
       "backend": "maniskill",
@@ -459,12 +462,15 @@
       "backend": "maniskill",
       "task": "PokeCube-v1",
       "registered": true,
-      "expert_available": false,
-      "source_success": false,
-      "induced_error": false,
-      "recovery_success": false,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
       "qualified_correction": false,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_maniskill_v1-summary.json",
+        "evidence/new-experts/experts_poke_calibration_v3-summary.json"
+      ]
     },
     {
       "backend": "maniskill",
@@ -2058,12 +2064,16 @@
       "backend": "robocasa",
       "task": "CheesyBread",
       "registered": true,
-      "expert_available": false,
-      "source_success": false,
+      "expert_available": true,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_robocasa_v1-summary.json",
+        "evidence/new-experts/experts_robocasa_v2-summary.json",
+        "evidence/new-experts/experts_robocasa_v3-summary.json"
+      ]
     },
     {
       "backend": "robocasa",
@@ -3391,12 +3401,16 @@
       "backend": "robocasa",
       "task": "PackDessert",
       "registered": true,
-      "expert_available": false,
-      "source_success": false,
+      "expert_available": true,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_robocasa_v1-summary.json",
+        "evidence/new-experts/experts_robocasa_v2-summary.json",
+        "evidence/new-experts/experts_robocasa_v3-summary.json"
+      ]
     },
     {
       "backend": "robocasa",
@@ -3614,12 +3628,18 @@
       "backend": "robocasa",
       "task": "PickPlaceSinkToCounter",
       "registered": true,
-      "expert_available": false,
-      "source_success": false,
+      "expert_available": true,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
-      "evidence": []
+      "evidence": [
+        "evidence/new-experts/experts_robocasa_v1-summary.json",
+        "evidence/new-experts/experts_robocasa_v2-summary.json",
+        "evidence/new-experts/experts_robocasa_v3-summary.json",
+        "evidence/new-experts/experts_sink_v4-summary.json",
+        "evidence/new-experts/experts_sink_validation_v4-summary.json"
+      ]
     },
     {
       "backend": "robocasa",

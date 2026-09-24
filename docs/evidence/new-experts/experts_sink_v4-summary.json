@@ -1,0 +1,34 @@
+{
+  "backend": "robocasa",
+  "results": [
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1105,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "dbd4681914b76e452f91",
+      "protocol": "clean_baseline.v1",
+      "steps": 389,
+      "worker_log": "case_1105_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1101,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "c51315f99a643cdccb2f",
+      "protocol": "clean_baseline.v1",
+      "steps": 1000,
+      "worker_log": "case_1101_worker.log",
+      "isolated_worker": true
+    }
+  ],
+  "attempts": 2,
+  "successful_sources": 1,
+  "errors": 0,
+  "wall_seconds": 57.82888824492693,
+  "scope": "New project experts; fixed seeds with all failures retained; success sources only, no correction claim"
+}

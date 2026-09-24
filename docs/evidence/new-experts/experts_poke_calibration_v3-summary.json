@@ -1,0 +1,410 @@
+{
+  "schema": "robot_stack.task_calibration.v1",
+  "backend": "maniskill",
+  "semantics": "Empirical task/severity profiles, not universal benchmark guarantees. Selection uses calibration only; all attempts including failures are retained.",
+  "config": {
+    "backend": "maniskill",
+    "tasks": [
+      "PokeCube-v1"
+    ],
+    "train_seeds": [
+      4100,
+      4101
+    ],
+    "validation_seeds": [
+      4105,
+      4106,
+      4107,
+      4108,
+      4109
+    ],
+    "levels": [
+      {
+        "name": "level_00",
+        "scale": 0.125,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.125,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "level_01",
+        "scale": 0.25,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.25,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "level_02",
+        "scale": 0.5,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.5,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "axis": "strength",
+    "max_steps": 1000,
+    "adapter_options": {
+      "native_horizon": 1200,
+      "max_replans": 3
+    },
+    "workers": 3,
+    "case_timeout": 600,
+    "min_source_rate": 0.8,
+    "min_recovery_rate": 0.5,
+    "min_validation_episodes": 5
+  },
+  "tasks": {
+    "PokeCube-v1": {
+      "task": "PokeCube-v1",
+      "status": "no_qualified_profile",
+      "levels": [
+        {
+          "name": "level_00",
+          "scale": 0.125,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.125,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 0,
+            "recovery_successes": 0,
+            "recovery_success_rate": null,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_01",
+          "scale": 0.25,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.25,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 0,
+            "recovery_successes": 0,
+            "recovery_success_rate": null,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_02",
+          "scale": 0.5,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.5,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 0,
+            "recovery_successes": 0,
+            "recovery_success_rate": null,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        }
+      ],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4100,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "5be0176acd7470d74c01",
+      "protocol": "clean_baseline.v1",
+      "steps": 302,
+      "worker_log": "case_4100_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PokeCube-v1/baseline/clean/case_4100"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4101,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "93be8a75cc6849ecc400",
+      "protocol": "clean_baseline.v1",
+      "steps": 331,
+      "worker_log": "case_4101_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PokeCube-v1/baseline/clean/case_4101"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4100,
+      "source_demo_id": "7802c3fb60bef2f3be32",
+      "split_group": "5be0176acd7470d74c01",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 181,
+      "recovery_steps": 384,
+      "worker_log": "case_4100_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PokeCube-v1/calibration/level_00/case_4100"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4101,
+      "source_demo_id": "b64fffeeeba6ef4575bc",
+      "split_group": "93be8a75cc6849ecc400",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 198,
+      "recovery_steps": 415,
+      "worker_log": "case_4101_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PokeCube-v1/calibration/level_00/case_4101"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4100,
+      "source_demo_id": "2826787b58fa7bd1b620",
+      "split_group": "5be0176acd7470d74c01",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 181,
+      "recovery_steps": 392,
+      "worker_log": "case_4100_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PokeCube-v1/calibration/level_01/case_4100"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4101,
+      "source_demo_id": "83da91d5cf14767e8a2e",
+      "split_group": "93be8a75cc6849ecc400",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 198,
+      "recovery_steps": 410,
+      "worker_log": "case_4101_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PokeCube-v1/calibration/level_01/case_4101"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4100,
+      "source_demo_id": "b86394c177ee8e7c607c",
+      "split_group": "5be0176acd7470d74c01",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 181,
+      "recovery_steps": 424,
+      "worker_log": "case_4100_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "PokeCube-v1/calibration/level_02/case_4100"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "seed": 4101,
+      "source_demo_id": "f676bf6c6304c90e9fad",
+      "split_group": "93be8a75cc6849ecc400",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 198,
+      "recovery_steps": 439,
+      "worker_log": "case_4101_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "PokeCube-v1/calibration/level_02/case_4101"
+    }
+  ],
+  "wall_seconds": 127.82612212211825,
+  "task_count": 1,
+  "passed_tasks": 0
+}

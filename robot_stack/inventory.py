@@ -38,7 +38,8 @@ def discover(backend, root=None):
         from robocasa.utils.dataset_registry import ATOMIC_TASK_DATASETS, COMPOSITE_TASK_DATASETS
         # Official dataset tasks, excluding helper/base environment classes.
         tasks = sorted(set(ATOMIC_TASK_DATASETS) | set(COMPOSITE_TASK_DATASETS))
-        experts, revision = ['NavigateKitchen', 'PickPlaceCounterToSink'], robocasa.__version__
+        from .adapters.robocasa_mobile import MOBILE_TASKS
+        experts, revision = ['NavigateKitchen', *MOBILE_TASKS], robocasa.__version__
     elif backend in {'robotwin','robodojo'}:
         if root is None:
             raise ValueError('A local official source root is required')
@@ -50,10 +51,14 @@ def discover(backend, root=None):
             for t in tasks).encode()).hexdigest()
     else:
         raise ValueError('Supported inventories: metaworld, maniskill, robocasa, robotwin, robodojo')
+    from .experts.catalog import project_specs
+    owned=project_specs(backend)
     return dict(backend=backend, version=revision, task_count=len(tasks),
                 registered_expert_count=sum(t in experts for t in tasks),
                 additional_adapter_tasks=sorted(set(experts)-set(tasks)), scope='installed native registry, not complete literature coverage',
                 tasks=[dict(task=t,registered=True,expert_available=t in experts,
+                            expert_provider=('robot_stack' if t in owned else 'upstream' if t in experts else None),
+                            expert_spec=owned.get(t),
                             source_success_verified=False,perturbation_verified=False,
                             recovery_success_verified=False,status='not_evaluated_by_inventory') for t in tasks])
 

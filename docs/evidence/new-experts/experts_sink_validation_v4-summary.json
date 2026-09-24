@@ -1,0 +1,94 @@
+{
+  "backend": "robocasa",
+  "results": [
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1111,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "0ef5da6627ad07961124",
+      "protocol": "clean_baseline.v1",
+      "steps": 305,
+      "worker_log": "case_1111_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1107,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "18fd05099de6f2701c85",
+      "protocol": "clean_baseline.v1",
+      "steps": 320,
+      "worker_log": "case_1107_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1102,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "c850e21ec7fc5cff13b1",
+      "protocol": "clean_baseline.v1",
+      "steps": 1200,
+      "worker_log": "case_1102_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1110,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "847fb17a7f2d74b65a67",
+      "protocol": "clean_baseline.v1",
+      "steps": 1200,
+      "worker_log": "case_1110_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1112,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "5c1fc3d5a3858de4f857",
+      "protocol": "clean_baseline.v1",
+      "steps": 1200,
+      "worker_log": "case_1112_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1113,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "50965a657803a273f270",
+      "protocol": "clean_baseline.v1",
+      "steps": 1200,
+      "worker_log": "case_1113_worker.log",
+      "isolated_worker": true
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "seed": 1114,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "d71d201544153024616d",
+      "protocol": "clean_baseline.v1",
+      "steps": 947,
+      "worker_log": "case_1114_worker.log",
+      "isolated_worker": true
+    }
+  ],
+  "attempts": 7,
+  "successful_sources": 3,
+  "errors": 0,
+  "wall_seconds": 110.40040237642825,
+  "scope": "New project experts; fixed seeds with all failures retained; success sources only, no correction claim"
+}

@@ -1,0 +1,23 @@
+{
+  "backend": "maniskill",
+  "tasks": [
+    "PickSingleYCB-v1"
+  ],
+  "seeds": [
+    4100,
+    4101,
+    4105,
+    4106,
+    4107,
+    4108,
+    4109
+  ],
+  "budget": 800,
+  "timeout": 600,
+  "workers": 3,
+  "adapter_options": {
+    "native_horizon": 1000,
+    "max_replans": 3
+  },
+  "protocol": "source_only_fixed_seeds"
+}
