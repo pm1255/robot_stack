@@ -1,0 +1,1027 @@
+{
+  "backend": "robotwin",
+  "by_task": {
+    "move_pillbottle_pad": {
+      "episodes": 2,
+      "successes": 1,
+      "errors": 0
+    },
+    "open_microwave": {
+      "episodes": 2,
+      "successes": 0,
+      "errors": 2
+    },
+    "place_a2b_left": {
+      "episodes": 2,
+      "successes": 1,
+      "errors": 1
+    },
+    "place_bread_skillet": {
+      "episodes": 2,
+      "successes": 0,
+      "errors": 0
+    },
+    "place_empty_cup": {
+      "episodes": 2,
+      "successes": 1,
+      "errors": 0
+    },
+    "put_object_cabinet": {
+      "episodes": 2,
+      "successes": 0,
+      "errors": 0
+    }
+  },
+  "episodes": 12,
+  "successes": 3,
+  "errors": 3,
+  "wall_seconds": 507.63618083670735,
+  "results": [
+    {
+      "backend": "robotwin",
+      "task": "move_pillbottle_pad",
+      "seed": 901,
+      "label": "RoboTwin / move_pillbottle_pad",
+      "validation_version": 1,
+      "debug": false,
+      "success": true,
+      "status": "success",
+      "planning_success": true,
+      "control_success": true,
+      "execution_success": true,
+      "task_success": true,
+      "native_frames": 85,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          85,
+          7
+        ],
+        "endpose/left_gripper": [
+          85
+        ],
+        "endpose/right_endpose": [
+          85,
+          7
+        ],
+        "endpose/right_gripper": [
+          85
+        ],
+        "joint_action/left_arm": [
+          85,
+          6
+        ],
+        "joint_action/left_gripper": [
+          85
+        ],
+        "joint_action/right_arm": [
+          85,
+          6
+        ],
+        "joint_action/right_gripper": [
+          85
+        ],
+        "joint_action/vector": [
+          85,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          85,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          85,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          85,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          85
+        ],
+        "observation/head_camera/cam2world_gl": [
+          85,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          85,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          85,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          85
+        ],
+        "pointcloud": [
+          85,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0901/data/episode0.hdf5",
+      "trajectory_sha256": "d9d959458507ae17c4627125d3b2c6ec50891c43909616afdb2e50a1d7da6833",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "080_pillbottle/base1",
+          "{a}": "right"
+        }
+      },
+      "duration_seconds": 147.638649886474
+    },
+    {
+      "backend": "robotwin",
+      "task": "move_pillbottle_pad",
+      "seed": 902,
+      "label": "RoboTwin / move_pillbottle_pad",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "task_failed",
+      "planning_success": false,
+      "control_success": false,
+      "execution_success": true,
+      "task_success": false,
+      "native_frames": 46,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          46,
+          7
+        ],
+        "endpose/left_gripper": [
+          46
+        ],
+        "endpose/right_endpose": [
+          46,
+          7
+        ],
+        "endpose/right_gripper": [
+          46
+        ],
+        "joint_action/left_arm": [
+          46,
+          6
+        ],
+        "joint_action/left_gripper": [
+          46
+        ],
+        "joint_action/right_arm": [
+          46,
+          6
+        ],
+        "joint_action/right_gripper": [
+          46
+        ],
+        "joint_action/vector": [
+          46,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          46,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          46,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          46,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          46
+        ],
+        "observation/head_camera/cam2world_gl": [
+          46,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          46,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          46,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          46
+        ],
+        "pointcloud": [
+          46,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0902/data/episode0.hdf5",
+      "trajectory_sha256": "78286425eec06bd68b2f1da890e8f15352ff3078fba08c398362d364f479cfb2",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "080_pillbottle/base4",
+          "{a}": "right"
+        }
+      },
+      "duration_seconds": 33.68567995354533
+    },
+    {
+      "backend": "robotwin",
+      "task": "open_microwave",
+      "seed": 901,
+      "label": "RoboTwin / open_microwave",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "error",
+      "planning_success": false,
+      "control_success": false,
+      "execution_success": false,
+      "task_success": false,
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v4/benchmark_collector/robotwin.py\", line 103, in main\n    native_info = env.play_once()\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/open_microwave.py\", line 65, in play_once\n    self.move(self.grasp_actor(self.microwave, arm_tag=arm_tag, contact_point_id=1))\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "duration_seconds": 42.98720778338611
+    },
+    {
+      "backend": "robotwin",
+      "task": "open_microwave",
+      "seed": 902,
+      "label": "RoboTwin / open_microwave",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "error",
+      "planning_success": false,
+      "control_success": false,
+      "execution_success": false,
+      "task_success": false,
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v4/benchmark_collector/robotwin.py\", line 103, in main\n    native_info = env.play_once()\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/open_microwave.py\", line 65, in play_once\n    self.move(self.grasp_actor(self.microwave, arm_tag=arm_tag, contact_point_id=1))\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "duration_seconds": 35.46385687403381
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_a2b_left",
+      "seed": 901,
+      "label": "RoboTwin / place_a2b_left",
+      "validation_version": 1,
+      "debug": false,
+      "success": true,
+      "status": "success",
+      "planning_success": true,
+      "control_success": true,
+      "execution_success": true,
+      "task_success": true,
+      "native_frames": 82,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          82,
+          7
+        ],
+        "endpose/left_gripper": [
+          82
+        ],
+        "endpose/right_endpose": [
+          82,
+          7
+        ],
+        "endpose/right_gripper": [
+          82
+        ],
+        "joint_action/left_arm": [
+          82,
+          6
+        ],
+        "joint_action/left_gripper": [
+          82
+        ],
+        "joint_action/right_arm": [
+          82,
+          6
+        ],
+        "joint_action/right_gripper": [
+          82
+        ],
+        "joint_action/vector": [
+          82,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          82,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          82,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          82,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          82
+        ],
+        "observation/head_camera/cam2world_gl": [
+          82,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          82,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          82,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          82
+        ],
+        "pointcloud": [
+          82,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0901/data/episode0.hdf5",
+      "trajectory_sha256": "4e9fa6770b397354262dc101e502adee5a194d834d36bbddbaef48e08f1b0e41",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "075_bread/base5",
+          "{B}": "112_tea-box/base4",
+          "{a}": "left"
+        }
+      },
+      "duration_seconds": 30.640752086415887
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_a2b_left",
+      "seed": 902,
+      "label": "RoboTwin / place_a2b_left",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "error",
+      "planning_success": false,
+      "control_success": false,
+      "execution_success": false,
+      "task_success": false,
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v4/benchmark_collector/robotwin.py\", line 103, in main\n    native_info = env.play_once()\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/place_a2b_left.py\", line 128, in play_once\n    self.move(self.grasp_actor(self.object, arm_tag=arm_tag, pre_grasp_dis=0.1))\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/user/panmiao/workspace/robodojo-data-windtunnel/runtime/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "duration_seconds": 16.828255012631416
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_bread_skillet",
+      "seed": 901,
+      "label": "RoboTwin / place_bread_skillet",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "task_failed",
+      "planning_success": true,
+      "control_success": false,
+      "execution_success": true,
+      "task_success": false,
+      "native_frames": 92,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          92,
+          7
+        ],
+        "endpose/left_gripper": [
+          92
+        ],
+        "endpose/right_endpose": [
+          92,
+          7
+        ],
+        "endpose/right_gripper": [
+          92
+        ],
+        "joint_action/left_arm": [
+          92,
+          6
+        ],
+        "joint_action/left_gripper": [
+          92
+        ],
+        "joint_action/right_arm": [
+          92,
+          6
+        ],
+        "joint_action/right_gripper": [
+          92
+        ],
+        "joint_action/vector": [
+          92,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          92,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          92,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          92,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          92
+        ],
+        "observation/head_camera/cam2world_gl": [
+          92,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          92,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          92,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          92
+        ],
+        "pointcloud": [
+          92,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0901/data/episode0.hdf5",
+      "trajectory_sha256": "f3f243e137b38030df8959dc5b3ca3ddb3cd9ee2342b46e546991b20eaafdc11",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "106_skillet/base3",
+          "{B}": "075_bread/base1",
+          "{a}": "left"
+        }
+      },
+      "duration_seconds": 31.20340927131474
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_bread_skillet",
+      "seed": 902,
+      "label": "RoboTwin / place_bread_skillet",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "task_failed",
+      "planning_success": false,
+      "control_success": false,
+      "execution_success": true,
+      "task_success": false,
+      "native_frames": 62,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          62,
+          7
+        ],
+        "endpose/left_gripper": [
+          62
+        ],
+        "endpose/right_endpose": [
+          62,
+          7
+        ],
+        "endpose/right_gripper": [
+          62
+        ],
+        "joint_action/left_arm": [
+          62,
+          6
+        ],
+        "joint_action/left_gripper": [
+          62
+        ],
+        "joint_action/right_arm": [
+          62,
+          6
+        ],
+        "joint_action/right_gripper": [
+          62
+        ],
+        "joint_action/vector": [
+          62,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          62,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          62,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          62,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          62
+        ],
+        "observation/head_camera/cam2world_gl": [
+          62,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          62,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          62,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          62
+        ],
+        "pointcloud": [
+          62,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0902/data/episode0.hdf5",
+      "trajectory_sha256": "3335d66ad1df91f7eda21bd3bcd17cfaf4bc86f60ffa880e33355a73dffd1c22",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "106_skillet/base2",
+          "{B}": "075_bread/base5",
+          "{a}": "right"
+        }
+      },
+      "duration_seconds": 29.83935152925551
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_empty_cup",
+      "seed": 901,
+      "label": "RoboTwin / place_empty_cup",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "task_failed",
+      "planning_success": false,
+      "control_success": false,
+      "execution_success": true,
+      "task_success": true,
+      "native_frames": 93,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          93,
+          7
+        ],
+        "endpose/left_gripper": [
+          93
+        ],
+        "endpose/right_endpose": [
+          93,
+          7
+        ],
+        "endpose/right_gripper": [
+          93
+        ],
+        "joint_action/left_arm": [
+          93,
+          6
+        ],
+        "joint_action/left_gripper": [
+          93
+        ],
+        "joint_action/right_arm": [
+          93,
+          6
+        ],
+        "joint_action/right_gripper": [
+          93
+        ],
+        "joint_action/vector": [
+          93,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          93,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          93,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          93,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          93
+        ],
+        "observation/head_camera/cam2world_gl": [
+          93,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          93,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          93,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          93
+        ],
+        "pointcloud": [
+          93,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0901/data/episode0.hdf5",
+      "trajectory_sha256": "c690b61ad427848d7b2654ef872cedc524ffa5a12cc7be5c1297ae1acb57b9a5",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "021_cup/base0",
+          "{B}": "019_coaster/base0"
+        }
+      },
+      "duration_seconds": 30.611313873901963
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_empty_cup",
+      "seed": 902,
+      "label": "RoboTwin / place_empty_cup",
+      "validation_version": 1,
+      "debug": false,
+      "success": true,
+      "status": "success",
+      "planning_success": true,
+      "control_success": true,
+      "execution_success": true,
+      "task_success": true,
+      "native_frames": 102,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          102,
+          7
+        ],
+        "endpose/left_gripper": [
+          102
+        ],
+        "endpose/right_endpose": [
+          102,
+          7
+        ],
+        "endpose/right_gripper": [
+          102
+        ],
+        "joint_action/left_arm": [
+          102,
+          6
+        ],
+        "joint_action/left_gripper": [
+          102
+        ],
+        "joint_action/right_arm": [
+          102,
+          6
+        ],
+        "joint_action/right_gripper": [
+          102
+        ],
+        "joint_action/vector": [
+          102,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          102,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          102,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          102,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          102
+        ],
+        "observation/head_camera/cam2world_gl": [
+          102,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          102,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          102,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          102
+        ],
+        "pointcloud": [
+          102,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0902/data/episode0.hdf5",
+      "trajectory_sha256": "5e75ddf7b140fabc94814cb5160fa1180a4ab5c3c056f2b02506e6e4cdc93ba2",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "021_cup/base0",
+          "{B}": "019_coaster/base0"
+        }
+      },
+      "duration_seconds": 30.690410625189543
+    },
+    {
+      "backend": "robotwin",
+      "task": "put_object_cabinet",
+      "seed": 901,
+      "label": "RoboTwin / put_object_cabinet",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "task_failed",
+      "planning_success": false,
+      "control_success": false,
+      "execution_success": true,
+      "task_success": false,
+      "native_frames": 113,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          113,
+          7
+        ],
+        "endpose/left_gripper": [
+          113
+        ],
+        "endpose/right_endpose": [
+          113,
+          7
+        ],
+        "endpose/right_gripper": [
+          113
+        ],
+        "joint_action/left_arm": [
+          113,
+          6
+        ],
+        "joint_action/left_gripper": [
+          113
+        ],
+        "joint_action/right_arm": [
+          113,
+          6
+        ],
+        "joint_action/right_gripper": [
+          113
+        ],
+        "joint_action/vector": [
+          113,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          113,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          113,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          113,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          113
+        ],
+        "observation/head_camera/cam2world_gl": [
+          113,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          113,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          113,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          113
+        ],
+        "pointcloud": [
+          113,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0901/data/episode0.hdf5",
+      "trajectory_sha256": "cc7e18f13e9944ae1285c356c232fc17b933e6b319870e767153ce9f49531c76",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "113_coffee-box/base5",
+          "{B}": "036_cabinet/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "duration_seconds": 38.73956974968314
+    },
+    {
+      "backend": "robotwin",
+      "task": "put_object_cabinet",
+      "seed": 902,
+      "label": "RoboTwin / put_object_cabinet",
+      "validation_version": 1,
+      "debug": false,
+      "success": false,
+      "status": "task_failed",
+      "planning_success": false,
+      "control_success": false,
+      "execution_success": true,
+      "task_success": false,
+      "native_frames": 114,
+      "dataset_shapes": {
+        "endpose/left_endpose": [
+          114,
+          7
+        ],
+        "endpose/left_gripper": [
+          114
+        ],
+        "endpose/right_endpose": [
+          114,
+          7
+        ],
+        "endpose/right_gripper": [
+          114
+        ],
+        "joint_action/left_arm": [
+          114,
+          6
+        ],
+        "joint_action/left_gripper": [
+          114
+        ],
+        "joint_action/right_arm": [
+          114,
+          6
+        ],
+        "joint_action/right_gripper": [
+          114
+        ],
+        "joint_action/vector": [
+          114,
+          14
+        ],
+        "observation/front_camera/cam2world_gl": [
+          114,
+          4,
+          4
+        ],
+        "observation/front_camera/extrinsic_cv": [
+          114,
+          3,
+          4
+        ],
+        "observation/front_camera/intrinsic_cv": [
+          114,
+          3,
+          3
+        ],
+        "observation/front_camera/rgb": [
+          114
+        ],
+        "observation/head_camera/cam2world_gl": [
+          114,
+          4,
+          4
+        ],
+        "observation/head_camera/extrinsic_cv": [
+          114,
+          3,
+          4
+        ],
+        "observation/head_camera/intrinsic_cv": [
+          114,
+          3,
+          3
+        ],
+        "observation/head_camera/rgb": [
+          114
+        ],
+        "pointcloud": [
+          114,
+          0
+        ]
+      },
+      "trajectory_file": "ep_0902/data/episode0.hdf5",
+      "trajectory_sha256": "4510f57e3aa0cf7842f5472554b313c88020678cc5eaa23f3e11f13a36025b92",
+      "native_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "036_cabinet/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "duration_seconds": 38.04779267683625
+    }
+  ],
+  "includes_rendering_recording_and_requested_replays": true
+}

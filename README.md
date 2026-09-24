@@ -1,6 +1,6 @@
 # Robot Stack
 
-**New: native ManiSkill / experimental RoboTwin action streaming, task-level coverage, and dozens of real animations embedded below.** [Coverage and launch commands](docs/task-coverage.md).
+**New: native ManiSkill / experimental RoboTwin action streaming, task-level coverage, and 119 real animations embedded below.** [Coverage and launch commands](docs/task-coverage.md).
 
 **Configurable multi-error schedules.** Choose source step / fraction / milestone, type, strength, duration, repetition and gap. [Interactive configuration & examples](https://pm1255.github.io/robot_stack/playground.html) · [10 launch recipes and Python API](docs/perturbations.md). All 50 MetaWorld task classes now have at least one verified correction sample across the documented experiments: the first sweep gave 69/100 qualified pairs across 48 tasks; a separate tool-task follow-up gave 18/40 and covered the remaining two. This is task-class coverage, not universal recovery or an MT50 benchmark score.
 

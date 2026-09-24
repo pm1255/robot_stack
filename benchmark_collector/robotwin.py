@@ -1,4 +1,4 @@
-"""Bounded RoboTwin native expert collection on fixed seeds (no success-seed search)."""
+"""Bounded RoboTwin native expert collection; optional success-target bootstrapping."""
 import argparse
 import copy
 import hashlib
@@ -54,9 +54,12 @@ def main():
     p.add_argument('--seed-start', type=int, default=100)
     p.add_argument('--episodes', type=int, default=3)
     p.add_argument('--replay-first', action='store_true')
+    p.add_argument('--success-target', type=int, help='Dataset bootstrapping: stop a task after this many successes; episodes remains the attempt cap')
     args = p.parse_args()
     if args.episodes < 1:
         p.error('episodes must be positive')
+    if args.success_target is not None and not 1 <= args.success_target <= args.episodes:
+        p.error('success-target must be in [1, episodes]')
     root, output = args.root.resolve(), args.output.resolve()
     if args.tasks == ['all']:
         from robot_stack.inventory import file_tasks
@@ -76,12 +79,13 @@ def main():
         'success_criterion': 'native check_success() after physical play_once(), and plan_success',
         'policy_source': 'upstream native scripted experts + cuRobo',
         'configuration': 'demo_clean, aloha-agilex, 320x240 head RGB, save_freq=30',
-        'seed_search': False, 'source_root': str(root),
+        'seed_search': args.success_target is not None, 'success_target': args.success_target, 'source_root': str(root),
         'source_hashes': {n: hashlib.sha256((root / n).read_bytes()).hexdigest() for n in sources}})
     records, started_all = [], time.monotonic()
     for task in args.tasks:
         directory = output / task
         directory.mkdir()
+        task_successes = 0
         for index in range(args.episodes):
             seed = args.seed_start + index
             episode_dir = directory / f'ep_{seed:04d}'
@@ -148,6 +152,9 @@ def main():
             records.append(result)
             print('ROBOT_STACK_RESULT', json.dumps({k: result.get(k) for k in
                 ('task', 'seed', 'status', 'native_frames', 'native_plan_replay_success', 'error')}), flush=True)
+            task_successes += int(result['success'])
+            if args.success_target is not None and task_successes >= args.success_target:
+                break
     by_task = {}
     for task in args.tasks:
         rows = [r for r in records if r['task'] == task]
@@ -157,10 +164,14 @@ def main():
                'successes': sum(r['success'] for r in records),
                'errors': sum(r['status'] == 'error' for r in records),
                'wall_seconds': time.monotonic() - started_all, 'results': records,
-               'includes_rendering_recording_and_requested_replays': True}
+               'includes_rendering_recording_and_requested_replays': True,
+               'seed_search': args.success_target is not None,
+               'success_target': args.success_target,
+               'success_targets_reached': (all(r['successes'] >= args.success_target for r in by_task.values())
+                                           if args.success_target is not None else None)}
     write_json(output / 'summary.json', summary)
     print(json.dumps(summary, indent=2), flush=True)
-    return int(summary['errors'] > 0)
+    return int(not summary['success_targets_reached']) if args.success_target is not None else int(summary['errors'] > 0)
 
 
 if __name__ == '__main__':

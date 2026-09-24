@@ -2,7 +2,7 @@
 
 Robot Stack aims to collect three related kinds of data for every supported task: successful source demonstrations, deliberate execution errors, and successful recovery from those errors. An adapter alone does not solve a task. The task needs a source policy, a native success oracle and a policy that can act from a disturbed state. The same collector, storage format, schedule and audit run across adapters; a separate collection pipeline is not required for every task.
 
-[Search the live coverage table and 50 examples](https://pm1255.github.io/robot_stack/gallery.html) · [Machine-readable coverage](evidence/task-coverage.json) · [Schedule API](perturbations.md)
+[Search the live coverage table and 119 animations](https://pm1255.github.io/robot_stack/gallery.html) · [Machine-readable coverage](evidence/task-coverage.json) · [Schedule API](perturbations.md)
 
 ## What “all tasks” means
 
@@ -69,6 +69,14 @@ python -m benchmark_collector.robotwin --root "$ROBOTWIN_ROOT" \
   --tasks all --episodes 1 --seed-start 900 --output outputs/robotwin-all-source
 ```
 
+For bounded dataset bootstrapping, specify a success target. `--episodes` remains the maximum number of attempted seeds **per task**; each task stops as soon as the target is reached. Every failed attempt remains in the output and the summary explicitly marks `seed_search: true`. This is curated source-data collection, not a fixed-seed benchmark score. The command returns a nonzero exit status if any task misses its target.
+
+```bash
+python -m benchmark_collector.robotwin --root "$ROBOTWIN_ROOT" \
+  --tasks all --episodes 10 --success-target 1 --seed-start 903 \
+  --output outputs/robotwin-bootstrap
+```
+
 For three-branch collection, supply the checkout path as JSON (replace the example absolute path):
 
 ```bash
@@ -84,6 +92,8 @@ python -m robot_stack.audit outputs/robotwin-carry --output outputs/robotwin-car
 The adapter yields at each native `scene.step()`, records motor targets, velocities, forces and gripper commands, and applies exactly one physical step per recorded action. Budgets are **physics steps**, not the downsampled frames in the original RoboTwin HDF5 files; 240 injected steps must not be compared directly with 15 ManiSkill control steps. Restarting `play_once()` from current poses is experimental: scripts can assume untouched objects or redo completed subgoals. Actor/articulation poses, velocities and joint positions are recorded, not a complete solver-internal SAPIEN snapshot. Independent replay is therefore required to test the practical determinism of a case.
 
 The first full RoboTwin source sweep attempted all 50 tasks at seed 900: **37 successful sources, nine task failures and four errors**. This is an unfiltered fixed-seed result, including setup instability and planning errors. [All source records](evidence/robotwin-all-summary.json).
+
+A separate two-seed follow-up attempted the 13 missing classes at seeds 901–902: **11 successful sources in 26 attempts**, expanding source coverage to **45/50 task classes**. Both successful and failed attempts are retained. This follow-up is separate from the first fixed-seed sweep. [Shard 0](evidence/robotwin-followup-0-summary.json), [shard 1](evidence/robotwin-followup-1-summary.json).
 
 The initial stack_blocks_two trial collected a successful source, effective disturbance and successful replanning, with identical prefix/error states. Its control also succeeded, so it yielded **zero qualified correction pairs**. This result is retained. Investigation found that both arms share one articulation in ALOHA; the earlier motor layout overwrote the left intervention with the second full motor vector. The adapter now records one vector per unique articulation and preserves both arms' edits. Old duplicated-vector files can still replay the command actually applied by that version. The fixed four-attempt stack_blocks_two experiment (seeds 100–101, two schedules) produced **4/4 successful sources and 3/4 qualified correction pairs**; all 12 trajectory files passed audit. [Results](evidence/robotwin-carry-summary.json), [audit](evidence/robotwin-carry-audit.json). The seed 101 second-carry triplet independently replayed with state error 0 on all three branches; recovery took 7,748 native physics steps. [Replay evidence](evidence/robotwin-carry-replay.json). Python task-source discovery also uses Python's declared encoding, independent of native libraries changing the process locale. Fixed-version experiments are reported separately.
 

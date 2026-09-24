@@ -1,6 +1,6 @@
 # Robot Stack
 
-**新增 ManiSkill 原生专家接入、RoboTwin 实验性逐步驱动、逐任务覆盖报告，以及下方直接展示的 数十个真实动图。** [覆盖边界与启动命令](docs/task-coverage.md)。
+**新增 ManiSkill 原生专家接入、RoboTwin 实验性逐步驱动、逐任务覆盖报告，以及下方直接展示的 119 个真实动图。** [覆盖边界与启动命令](docs/task-coverage.md)。
 
 **统一多扰动调度。** 支持插入步数、比例、源轨迹阶段事件，以及类型、强度、持续步数、次数和间隔。[配置器与真实案例](https://pm1255.github.io/robot_stack/playground.html) · [启动命令与 Python 接口](docs/perturbations.md)。MetaWorld 首轮 100 次尝试得到 69 组有效纠错，覆盖 48 类任务；独立工具任务补测 18/40，补齐其余两类，累计 50 类任务均有有效样本。这是任务类别覆盖，不代表所有任务实例、所有错误都能恢复，也不代表所有 benchmark 已全面适配。
 
