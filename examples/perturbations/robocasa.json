@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "fraction": 0.35
+      },
+      "type": "base_yaw",
+      "steps": 20
+    }
+  ]
+}

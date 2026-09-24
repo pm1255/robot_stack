@@ -1,5 +1,7 @@
 # Robot Stack
 
+**新增统一多扰动调度。** 支持插入步数、比例、源轨迹阶段事件，以及类型、强度、持续步数、次数和间隔。[配置器与真实案例](https://pm1255.github.io/robot_stack/playground.html) · [启动命令与 Python 接口](docs/perturbations.md)。MetaWorld 首轮 100 次尝试得到 69 组有效纠错，覆盖 48 类任务；独立工具任务补测 18/40，补齐其余两类，累计 50 类任务均有有效样本。这是任务类别覆盖，不代表所有任务实例、所有错误都能恢复，也不代表所有 benchmark 已全面适配。
+
 **在真实仿真动力学中采集成功示范、注入执行错误，并验证恢复。**
 
 [在线可视化](https://pm1255.github.io/robot_stack/) · [English](README.md) · [纠错协议与数据结构](docs/correction-protocol.md) · [多环境实测](docs/benchmarks.md) · [贡献指南](CONTRIBUTING.md)

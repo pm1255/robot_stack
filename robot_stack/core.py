@@ -56,10 +56,12 @@ class Episode:
     phases: list = field(default_factory=list)
     success_flags: list = field(default_factory=list)
     features: list = field(default_factory=list)
+    events: list = field(default_factory=list)
 
     @classmethod
     def start(cls, adapter):
-        return cls(states=[checked(adapter.state())], features=[checked(adapter.error_features())])
+        return cls(states=[checked(adapter.state())], features=[checked(adapter.error_features())],
+                   events=[list(getattr(adapter, 'events', lambda: [])())])
 
     @property
     def success(self):
@@ -75,6 +77,7 @@ class Episode:
         self.states.append(checked(adapter.state()))
         self.features.append(checked(adapter.error_features()))
         self.success_flags.append(bool(adapter.success()))
+        self.events.append(list(getattr(adapter, 'events', lambda: [])()))
 
 
 def checked(value):
@@ -104,6 +107,7 @@ def save_episode(folder, name, episode, metadata):
         f.create_dataset('actions_json', data=[json.dumps(a, allow_nan=False) for a in episode.actions], dtype=strings)
         f.create_dataset('phases', data=episode.phases, dtype=strings)
         f.create_dataset('success', data=episode.success_flags, dtype=np.bool_)
+        f.create_dataset('events_json', data=[json.dumps(e) for e in episode.events], dtype=strings)
     record = dict(metadata, success=episode.success, task_success=episode.success,
                   control_success=episode.success, execution_success=True,
                   validation_version=1, debug=False,
@@ -115,7 +119,11 @@ def save_episode(folder, name, episode, metadata):
 
 
 def collect_triplet(adapter, seed, folder, *, budget=500, branch_fraction=.35,
-                    perturb_steps=15, error_threshold=.03, replay_tolerance=1e-7):
+                    perturb_steps=15, error_threshold=.03, replay_tolerance=1e-7, schedule=None):
+    if schedule is not None:
+        from .scheduled import collect_scheduled
+        return collect_scheduled(adapter, seed, folder, schedule=schedule, budget=budget,
+                                 error_threshold=error_threshold, replay_tolerance=replay_tolerance)
     if not 0 < branch_fraction < 1 or perturb_steps < 1 or budget < 3:
         raise ValueError('Invalid branch or action budget')
     folder = Path(folder)

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "event": "waypoint:1:complete"
+      },
+      "type": "wrong_heading",
+      "steps": 3
+    },
+    {
+      "at": {
+        "event": "waypoint:3:complete"
+      },
+      "type": "wrong_heading",
+      "steps": 1
+    },
+    {
+      "at": {
+        "event": "waypoint:5:complete"
+      },
+      "type": "wrong_heading",
+      "steps": 3
+    }
+  ]
+}

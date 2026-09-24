@@ -6,6 +6,61 @@ from pathlib import Path
 import h5py
 import numpy as np
 from .core import write_json
+from .schedule import resolve_schedule
+
+
+def audit_scheduled(folder, source, control, recovery):
+    """Recompute each event from arrays, including commands and full source prefix."""
+    from types import SimpleNamespace
+    with h5py.File(folder/source['trajectory_file'], 'r') as src, \
+         h5py.File(folder/control['trajectory_file'], 'r') as a, \
+         h5py.File(folder/recovery['trajectory_file'], 'r') as b:
+        resolved = resolve_schedule(control['schedule'], SimpleNamespace(
+            actions=src['actions_json'][:], events=[json.loads(x) for x in src['events_json'].asstr()[:]]))
+        first, tolerance = resolved[0]['source_step'], recovery['replay_tolerance']
+        first_ends = []
+        for f, row in ((a,control),(b,recovery)):
+            # Sidecars must agree with metadata covered by the HDF5 checksum.
+            meta = json.loads(f.attrs['metadata'])
+            for key in ('schedule','resolved_schedule','perturbation_events','induced_error',
+                        'all_events_applied','requested_event_count','applied_event_count'):
+                if row[key] != meta[key]:
+                    raise ValueError('Scheduled sidecar disagrees with checksummed metadata')
+            if row['resolved_schedule'] != resolved or row['requested_event_count'] != len(resolved):
+                raise ValueError('Incorrect resolved schedule')
+            prefix = float(np.max(np.abs(f['states'][:first+1]-src['states'][:first+1])))
+            if prefix > tolerance or not np.array_equal(f['actions_json'][:first], src['actions_json'][:first]):
+                raise ValueError('Scheduled prefix does not match source')
+            logs = row['perturbation_events']
+            offset, induced_flags = 0, []
+            for i, event in enumerate(logs):
+                spec = resolved[i]
+                start, end = event['action_range']
+                if (event['id'] != spec['id'] or event['source_step'] != spec['source_step']
+                        or start != spec['source_step'] + offset or not start < end <= len(f['actions_json'])
+                        or end-start > spec['steps']):
+                    raise ValueError('Invalid scheduled event interval')
+                offset += end-start
+                if not all(x == 'perturbation' for x in f['phases'].asstr()[start:end]):
+                    raise ValueError('Missing perturbation phase labels')
+                displacement = float(np.linalg.norm(f['error_features'][end]-f['error_features'][start]))
+                induced = displacement >= event['threshold'] and not bool(f['success'][end-1])
+                if induced != event['induced_error'] or event['complete'] != (end-start == spec['steps']):
+                    raise ValueError('Scheduled error predicate disagrees with physical features')
+                induced_flags.append(induced)
+            applied = len(logs) == len(resolved) and all(e['complete'] for e in logs)
+            if applied != row['all_events_applied'] or (applied and all(induced_flags)) != row['induced_error']:
+                raise ValueError('Scheduled aggregate error predicate incorrect')
+            first_ends.append(logs[0]['action_range'][1] if logs else None)
+        for x,y in zip(control['perturbation_events'], recovery['perturbation_events']):
+            s,e = x['action_range']; t,u = y['action_range']
+            common = min(e-s, u-t)
+            if s != t or not np.array_equal(a['actions_json'][s:s+common], b['actions_json'][t:t+common]):
+                raise ValueError('Branch intervention commands differ')
+        same = (first_ends[0] is not None and first_ends[1] is not None and
+                np.max(np.abs(a['states'][first_ends[0]]-b['states'][first_ends[1]])) <= tolerance)
+        return bool(source['success'] and not control['success'] and recovery['success']
+                    and control['induced_error'] and recovery['induced_error'] and same)
 
 
 def audit(root):
@@ -39,6 +94,12 @@ def audit(root):
             raise ValueError('Broken correction provenance')
         for r in rows[1:]:
             if r['source_sha256']!=source['trajectory_sha256']:raise ValueError('Wrong source hash')
+        if verdict.get('protocol') == 'scheduled_interventions.v1':
+            eligible = audit_scheduled(folder, source, control, recovery)
+            if eligible != verdict['qualified_correction']:
+                raise ValueError('Correction verdict disagrees with saved evidence')
+            qualified += int(eligible)
+            continue
         # Recompute paired branch-state equality from the actual saved arrays.
         with h5py.File(folder/control['trajectory_file'],'r') as a, h5py.File(folder/recovery['trajectory_file'],'r') as b:
             end=control['perturbation_action_range'][1]

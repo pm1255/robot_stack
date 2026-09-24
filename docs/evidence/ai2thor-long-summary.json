@@ -1,0 +1,77 @@
+{
+  "backend": "ai2thor",
+  "task": "FloorPlan1",
+  "source_attempts": 3,
+  "successful_sources": 3,
+  "qualified_corrections": 3,
+  "errors": 0,
+  "wall_seconds": 33.03879043692723,
+  "results": [
+    {
+      "backend": "ai2thor",
+      "task": "FloorPlan1",
+      "seed": 700,
+      "source_demo_id": "23ccea280de5c64ef811",
+      "split_group": "45c1841e8c2c4db48c8e",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 3,
+      "applied_event_count": 3,
+      "branch_state_max_abs_errors": [
+        0.0,
+        2.5,
+        4.0
+      ],
+      "branch_step": 11,
+      "recovery_steps": 111
+    },
+    {
+      "backend": "ai2thor",
+      "task": "FloorPlan1",
+      "seed": 701,
+      "source_demo_id": "a7618fec5dfc3d7d66af",
+      "split_group": "45c1841e8c2c4db48c8e",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 3,
+      "applied_event_count": 3,
+      "branch_state_max_abs_errors": [
+        0.0,
+        90.0,
+        3.0
+      ],
+      "branch_step": 15,
+      "recovery_steps": 106
+    },
+    {
+      "backend": "ai2thor",
+      "task": "FloorPlan1",
+      "seed": 702,
+      "source_demo_id": "3c898814a9d53c649cbd",
+      "split_group": "45c1841e8c2c4db48c8e",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 3,
+      "applied_event_count": 3,
+      "branch_state_max_abs_errors": [
+        0.0,
+        90.0,
+        3.0
+      ],
+      "branch_step": 13,
+      "recovery_steps": 111
+    }
+  ]
+}

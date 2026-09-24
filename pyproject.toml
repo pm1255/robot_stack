@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "robot-stack"
-version = "0.2.0"
+version = "0.3.0"
 description = "Paired perturbation and recovery trajectories with native simulator evidence"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -22,6 +22,7 @@ Issues = "https://github.com/pm1255/robot_stack/issues"
 [project.scripts]
 robot-stack-collect = "robot_stack.collect:main"
 robot-stack-replay = "robot_stack.replay:main"
+robot-stack-suite = "robot_stack.suite:main"
 
 [tool.setuptools.packages.find]
 include = ["robot_stack*", "benchmark_collector*", "robosuite_collector*"]

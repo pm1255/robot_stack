@@ -1,0 +1,14 @@
+{
+  "backend": "metaworld",
+  "task": "pick-place-v3",
+  "seed": 610,
+  "steps": 103,
+  "max_abs_state_error": 0.0,
+  "success_trace_matches": true,
+  "final_success": true,
+  "tolerance": 1e-07,
+  "passed": true,
+  "replay_mode": "same_seed_reset_then_real_actions_no_state_restore",
+  "video_time_is_physics_time": false,
+  "video_stride": 1
+}

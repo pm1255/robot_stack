@@ -27,7 +27,8 @@ def main():
         actions=[json.loads(a) for a in f['actions_json'].asstr()[:]]
     if len(states)!=len(actions)+1 or len(flags)!=len(actions):
         raise ValueError('Trajectory alignment mismatch')
-    options=json.loads(args.adapter_options)
+    options=dict(metadata.get('adapter_options', {}))
+    options.update(json.loads(args.adapter_options))
     if metadata['backend'] == 'metaworld':
         for key in ('task_index', 'benchmark_seed'):
             options.setdefault(key, metadata[key])

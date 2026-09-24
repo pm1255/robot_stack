@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "fraction": 0.65
+      },
+      "type": "gripper_open",
+      "steps": 12
+    }
+  ]
+}

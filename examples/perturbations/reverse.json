@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "fraction": 0.45
+      },
+      "type": "action_reverse",
+      "steps": 15
+    }
+  ]
+}

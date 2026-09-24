@@ -1,0 +1,99 @@
+{
+  "videos": [
+    {
+      "file": "media/ai2thor-long-perturbed.mp4",
+      "bytes": 233589,
+      "sha256": "7a1f37de0648f5c173159c4917c23237814fdb99fd5af1a9f541c12eb8fe613f"
+    },
+    {
+      "file": "media/ai2thor-long-recovery.mp4",
+      "bytes": 353306,
+      "sha256": "42248e1fbc85088fbc2b645ad6a30c30d00854c2d81868ffc2d7230f87c0dac7"
+    },
+    {
+      "file": "media/ai2thor-long-source.mp4",
+      "bytes": 336475,
+      "sha256": "3b6550ccaf5f6118b464b69bcabac50bdcca153468daa0145a69772e55798829"
+    },
+    {
+      "file": "media/ai2thor-recovery.mp4",
+      "bytes": 61481,
+      "sha256": "4d9db40a4c7f5abb0441e8f72d5562176a302eb65cd3470d56e72f7581e79dd9"
+    },
+    {
+      "file": "media/maniskill-stack-cube.mp4",
+      "bytes": 196951,
+      "sha256": "b511e829385c13f6149df181b19081c2a6c760d7635aef3ac84eb9488fbd59fc"
+    },
+    {
+      "file": "media/metaworld-multi-perturbed.mp4",
+      "bytes": 83837,
+      "sha256": "c7480b3c23b7159dc297055452cb2ad52b23032457f03c8c0d53160078a0e2e2"
+    },
+    {
+      "file": "media/metaworld-multi-recovery.mp4",
+      "bytes": 95266,
+      "sha256": "b14a16a4e545df838d2934a1556b2a3ab3d62c006185b50016c52b58e4ba668e"
+    },
+    {
+      "file": "media/metaworld-multi-source.mp4",
+      "bytes": 60584,
+      "sha256": "5844130c54799b84425bd8d000d94bd3106dc769c6bd34e8d1b1ade59528b23c"
+    },
+    {
+      "file": "media/metaworld-pick-place.mp4",
+      "bytes": 60584,
+      "sha256": "5844130c54799b84425bd8d000d94bd3106dc769c6bd34e8d1b1ade59528b23c"
+    },
+    {
+      "file": "media/mimicgen-failure.mp4",
+      "bytes": 153622,
+      "sha256": "afe30ef60f66fdd3b6f3e0f1997528df27b433bf308063339a91bff40a790362"
+    },
+    {
+      "file": "media/mimicgen-success.mp4",
+      "bytes": 128893,
+      "sha256": "083ea4ddfe46cb6783cb904405e628b022d2d347c6eb3b5bb88093ff4aa2d8ec"
+    },
+    {
+      "file": "media/perturbed-0220.mp4",
+      "bytes": 76095,
+      "sha256": "a725e87997c0dfdb1bca6b0bf76c6e38eda1892cdd35f16245f8251842fd8b8c"
+    },
+    {
+      "file": "media/recovery-0220.mp4",
+      "bytes": 89522,
+      "sha256": "1eb3c6999b3966009c6dca814f985eaa2af2cc6b8c4c874187808cd86bb3c695"
+    },
+    {
+      "file": "media/robocasa-perturbed.mp4",
+      "bytes": 228501,
+      "sha256": "c1d440eb76c0c42a2a2a0ddf10fc6e3204274da5a7acc5bc5141efdc0c38c53f"
+    },
+    {
+      "file": "media/robocasa-recovery.mp4",
+      "bytes": 337451,
+      "sha256": "2a52a254c6a576cf74479678a2d19143d438b2812ab388d61fde86ca49a21687"
+    },
+    {
+      "file": "media/robocasa-source.mp4",
+      "bytes": 198137,
+      "sha256": "0c99a0d1f7c5da06272ab0dfc16eb545f7f3b95f67abf95b29609eb74f04829a"
+    },
+    {
+      "file": "media/robotwin-stack-blocks.mp4",
+      "bytes": 120028,
+      "sha256": "6c1bab841f173d1f0653fe1b06e724b2e93f94cc62243283597ad783b4b120b5"
+    },
+    {
+      "file": "media/source-0220.mp4",
+      "bytes": 60584,
+      "sha256": "5844130c54799b84425bd8d000d94bd3106dc769c6bd34e8d1b1ade59528b23c"
+    },
+    {
+      "file": "media/stick-pull-recovery.mp4",
+      "bytes": 182224,
+      "sha256": "44a7f4b5afe0d5f102ff70d2a8c007f5293ec5fa1984fc8a8ed4dd582b1522a1"
+    }
+  ]
+}

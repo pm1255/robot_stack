@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "fraction": 0.35
+      },
+      "type": "wrong_heading",
+      "steps": 3
+    }
+  ]
+}

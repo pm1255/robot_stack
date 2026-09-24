@@ -31,6 +31,21 @@ TASKS = {
 }
 
 
+@lru_cache(maxsize=1)
+def discover_tasks():
+    """Match the installed native registry to actual exported upstream experts."""
+    import metaworld
+    from metaworld import policies
+    normalize = lambda text: ''.join(c for c in text.lower() if c.isalnum())
+    experts = {normalize(n.removeprefix('Sawyer').removesuffix('Policy')): n
+               for n in dir(policies) if n.endswith('V3Policy')}
+    aliases = {'peg-insert-side-v3':'peginsertionsidev3', 'assembly-v3':'assemblyv3',
+               'disassemble-v3':'disassemblev3', 'sweep-into-v3':'sweepintov3'}
+    return {task: experts[aliases.get(task, normalize(task))]
+            for task in sorted(metaworld.ALL_V3_ENVIRONMENTS)
+            if aliases.get(task, normalize(task)) in experts}
+
+
 def state(env):
     import mujoco
     spec = mujoco.mjtState.mjSTATE_INTEGRATION

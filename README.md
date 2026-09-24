@@ -1,11 +1,13 @@
 # Robot Stack
 
+**New: configurable multi-error schedules.** Choose source step / fraction / milestone, type, strength, duration, repetition and gap. [Interactive configuration & examples](https://pm1255.github.io/robot_stack/playground.html) · [10 launch recipes and Python API](docs/perturbations.md). All 50 MetaWorld task classes now have at least one verified correction sample across the documented experiments: the first sweep gave 69/100 qualified pairs across 48 tasks; a separate tool-task follow-up gave 18/40 and covered the remaining two. This is task-class coverage, not universal recovery or an MT50 benchmark score.
+
 **Collect successful demonstrations, induce execution errors, and verify recovery in real simulator dynamics.**
 
 [![Collector contracts](https://github.com/pm1255/robot_stack/actions/workflows/ci.yml/badge.svg)](https://github.com/pm1255/robot_stack/actions/workflows/ci.yml)
 [Live dashboard](https://pm1255.github.io/robot_stack/) · [中文](README.zh-CN.md) · [Correction protocol](docs/correction-protocol.md) · [Collection results](docs/benchmarks.md) · [Contributing](CONTRIBUTING.md)
 
-Robot Stack is a research collection toolkit for **paired error-and-recovery data**. It separates simulator adapters, task policies, native success checks and dataset bookkeeping. It retains failed attempts, counts every injected/recovery action, and checks that both branches start from the same perturbed state.
+Robot Stack is a research collection toolkit for **paired error-and-recovery data**. It separates simulator adapters, task policies, native success checks and dataset bookkeeping. It retains failed attempts, counts every injected/recovery action, and checks the same first perturbed state. Later scheduled interventions match commands and nominal ticks; branch states may diverge after feedback starts.
 
 > Current controllers use privileged simulator state or upstream scripted experts. These are collection experiments, not learned-policy benchmark scores. New tasks still need a capable policy and an appropriate success oracle.
 
@@ -35,6 +37,7 @@ Both branches reconstruct the source prefix through actual actions. Recovery nev
 
 | Integration | Native collection evidence | Perturbation / recovery |
 | --- | --- | --- |
+| MetaWorld full task-class sweep | All 50 registered classes have qualified samples across first sweep + tool follow-up | First sweep **69/100**; separate follow-up **18/40**. One triplet per class: **150/150 native replays pass, state error 0**. [Full conditions](docs/scheduled-results.md) |
 | MetaWorld 3.1.1 | 8 selected tasks, **80/80** successful demonstrations | Generic three-branch protocol: **100/100 qualified pairs** across push and pick-place, 50 native task instances each |
 | robosuite Lift | 20/20 clean, 0/20 grasp-offset control, 20/20 recovery | Earlier bounded retry experiment; distinct from the new source-prefix branching protocol |
 | ManiSkill 3.0.1 | 4 tasks, **18/20** | Native expert collection and independent action replay; generic corrections not integrated yet |

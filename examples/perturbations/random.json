@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "fraction": 0.5
+      },
+      "type": "random_cartesian",
+      "steps": 15,
+      "strength": 0.8
+    }
+  ]
+}
