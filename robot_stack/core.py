@@ -128,6 +128,27 @@ def save_episode(folder, name, episode, metadata):
     return record
 
 
+def collect_source(adapter, seed, folder, *, budget=500):
+    """Measure a clean expert attempt without applying any intervention."""
+    if budget < 1:
+        raise ValueError('Positive action budget required')
+    folder = Path(folder).resolve()
+    folder.mkdir(parents=True, exist_ok=False)
+    adapter.reset(seed)
+    source = Episode.start(adapter)
+    split = hashlib.sha256((adapter.backend+'/'+adapter.task).encode()
+                           + source.states[0].tobytes()).hexdigest()[:20]
+    metadata = dict(adapter.metadata, backend=adapter.backend, task=adapter.task,
+                    seed=seed, label='source', max_steps=budget, split_group=split,
+                    protocol='clean_baseline.v1', oracle_policy=True,
+                    standard_benchmark_score=False)
+    rollout(adapter, source, budget, 'expert')
+    save_episode(folder, 'source', source, metadata)
+    return dict(backend=adapter.backend, task=adapter.task, seed=seed,
+                source_success=source.success, qualified_correction=False,
+                split_group=split, protocol='clean_baseline.v1', steps=len(source.actions))
+
+
 def collect_triplet(adapter, seed, folder, *, budget=500, branch_fraction=.35,
                     perturb_steps=15, error_threshold=.03, replay_tolerance=1e-7, schedule=None):
     if schedule is not None:

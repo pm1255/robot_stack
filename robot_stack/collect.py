@@ -4,7 +4,7 @@ import importlib
 from pathlib import Path
 import time
 import traceback
-from .core import collect_triplet, write_json
+from .core import collect_source, collect_triplet, write_json
 
 
 def load_adapter(backend, task, options):
@@ -45,7 +45,10 @@ def main():
     p.add_argument('--adapter-options', default='{}', help='JSON object of adapter-specific options')
     p.add_argument('--schedule', type=Path, help='JSON perturbation schedule (overrides branch-fraction/perturb-steps)')
     p.add_argument('--error-threshold', type=float, default=.03)
+    p.add_argument('--source-only', action='store_true', help='Clean baseline: save expert actions without any perturbation')
     args = p.parse_args()
+    if args.source_only and args.schedule:
+        p.error('source-only cannot be combined with schedule')
     if args.output is not None:
         args.output = args.output.resolve()
     import json
@@ -70,7 +73,10 @@ def main():
                     raise ValueError('A MetaWorld MT1 split supplies 50 distinct task indices')
                 episode_options['task_index'] = index
             adapter = load_adapter(args.backend, args.task, episode_options)
-            result = collect_triplet(adapter, seed, args.output / f'ep_{seed:04d}',
+            if args.source_only:
+                result = collect_source(adapter, seed, args.output / f'ep_{seed:04d}', budget=args.max_steps)
+            else:
+                result = collect_triplet(adapter, seed, args.output / f'ep_{seed:04d}',
                                      budget=args.max_steps, branch_fraction=args.branch_fraction,
                                      perturb_steps=args.perturb_steps, schedule=schedule,
                                      error_threshold=args.error_threshold)

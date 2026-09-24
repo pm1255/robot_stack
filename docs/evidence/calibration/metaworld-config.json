@@ -1,0 +1,154 @@
+{
+  "backend": "metaworld",
+  "tasks": [
+    "assembly-v3",
+    "basketball-v3",
+    "bin-picking-v3",
+    "box-close-v3",
+    "button-press-topdown-v3",
+    "button-press-topdown-wall-v3",
+    "button-press-v3",
+    "button-press-wall-v3",
+    "coffee-button-v3",
+    "coffee-pull-v3",
+    "coffee-push-v3",
+    "dial-turn-v3",
+    "disassemble-v3",
+    "door-close-v3",
+    "door-lock-v3",
+    "door-open-v3",
+    "door-unlock-v3",
+    "drawer-close-v3",
+    "drawer-open-v3",
+    "faucet-close-v3",
+    "faucet-open-v3",
+    "hammer-v3",
+    "hand-insert-v3",
+    "handle-press-side-v3",
+    "handle-press-v3",
+    "handle-pull-side-v3",
+    "handle-pull-v3",
+    "lever-pull-v3",
+    "peg-insert-side-v3",
+    "peg-unplug-side-v3",
+    "pick-out-of-hole-v3",
+    "pick-place-v3",
+    "pick-place-wall-v3",
+    "plate-slide-back-side-v3",
+    "plate-slide-back-v3",
+    "plate-slide-side-v3",
+    "plate-slide-v3",
+    "push-back-v3",
+    "push-v3",
+    "push-wall-v3",
+    "reach-v3",
+    "reach-wall-v3",
+    "shelf-place-v3",
+    "soccer-v3",
+    "stick-pull-v3",
+    "stick-push-v3",
+    "sweep-into-v3",
+    "sweep-v3",
+    "window-close-v3",
+    "window-open-v3"
+  ],
+  "train_seeds": [
+    2100,
+    2101,
+    2102,
+    2103,
+    2104
+  ],
+  "validation_seeds": [
+    3100,
+    3101,
+    3102,
+    3103,
+    3104
+  ],
+  "levels": [
+    {
+      "name": "level_00",
+      "scale": 0.25,
+      "schedule": {
+        "version": 1,
+        "events": [
+          {
+            "at": {
+              "fraction": 0.35
+            },
+            "type": "cartesian_offset",
+            "steps": 15,
+            "strength": 0.25,
+            "parameters": {
+              "direction": [
+                1,
+                -1,
+                1
+              ],
+              "gripper": -1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "level_01",
+      "scale": 0.5,
+      "schedule": {
+        "version": 1,
+        "events": [
+          {
+            "at": {
+              "fraction": 0.35
+            },
+            "type": "cartesian_offset",
+            "steps": 15,
+            "strength": 0.5,
+            "parameters": {
+              "direction": [
+                1,
+                -1,
+                1
+              ],
+              "gripper": -1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "level_02",
+      "scale": 1.0,
+      "schedule": {
+        "version": 1,
+        "events": [
+          {
+            "at": {
+              "fraction": 0.35
+            },
+            "type": "cartesian_offset",
+            "steps": 15,
+            "strength": 1.0,
+            "parameters": {
+              "direction": [
+                1,
+                -1,
+                1
+              ],
+              "gripper": -1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "axis": "strength",
+  "max_steps": 500,
+  "adapter_options": {},
+  "workers": 4,
+  "case_timeout": 90,
+  "min_source_rate": 0.8,
+  "min_recovery_rate": 0.5,
+  "min_validation_episodes": 5
+}

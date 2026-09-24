@@ -25,6 +25,7 @@ Issues = "https://github.com/pm1255/robot_stack/issues"
 robot-stack-collect = "robot_stack.collect:main"
 robot-stack-replay = "robot_stack.replay:main"
 robot-stack-suite = "robot_stack.suite:main"
+robot-stack-calibrate = "robot_stack.calibrate:main"
 
 [tool.setuptools.packages.find]
 include = ["robot_stack*", "benchmark_collector*", "robosuite_collector*"]

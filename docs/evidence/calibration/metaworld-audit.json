@@ -1,0 +1,920 @@
+{
+  "hdf5_verified": 3122,
+  "source_attempts": 1210,
+  "clean_baseline_attempts": 250,
+  "completed_correction_verdicts": 960,
+  "incomplete_source_attempts": 0,
+  "qualified_corrections": 849,
+  "passed": true,
+  "checks": [
+    "SHA256",
+    "finite_states",
+    "T+1_alignment",
+    "native_success_trace",
+    "budget",
+    "paired_error_state",
+    "provenance"
+  ],
+  "task_audits": {
+    "button-press-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 15,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "button-press-topdown-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "button-press-wall-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 19,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "button-press-topdown-wall-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "box-close-v3": {
+      "hdf5_verified": 57,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 16,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "bin-picking-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 14,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "basketball-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 13,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "assembly-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 16,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "coffee-pull-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "coffee-button-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 13,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "dial-turn-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "coffee-push-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "disassemble-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "door-close-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "door-open-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "door-lock-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "door-unlock-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 16,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "drawer-close-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "drawer-open-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 17,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "faucet-close-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "hand-insert-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "hammer-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 16,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "handle-press-side-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "faucet-open-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "handle-press-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "handle-pull-side-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 14,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "handle-pull-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "lever-pull-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 11,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "peg-insert-side-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 19,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "pick-place-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 19,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "pick-out-of-hole-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "peg-unplug-side-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 16,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "plate-slide-back-side-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "pick-place-wall-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 11,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "plate-slide-back-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "plate-slide-side-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 15,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "soccer-v3": {
+      "hdf5_verified": 5,
+      "source_attempts": 5,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 0,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 0,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "stick-pull-v3": {
+      "hdf5_verified": 5,
+      "source_attempts": 5,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 0,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 0,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "plate-slide-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "push-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "push-wall-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 19,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "push-back-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 19,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "reach-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "shelf-place-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 9,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "reach-wall-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "sweep-into-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 14,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "stick-push-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 9,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "window-close-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "sweep-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 19,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    },
+    "window-open-v3": {
+      "hdf5_verified": 65,
+      "source_attempts": 25,
+      "clean_baseline_attempts": 5,
+      "completed_correction_verdicts": 20,
+      "incomplete_source_attempts": 0,
+      "qualified_corrections": 20,
+      "checks": [
+        "SHA256",
+        "finite_states",
+        "T+1_alignment",
+        "native_success_trace",
+        "budget",
+        "paired_error_state",
+        "provenance"
+      ],
+      "passed": true
+    }
+  }
+}

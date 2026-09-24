@@ -1,0 +1,18 @@
+{
+  "hdf5_verified": 127,
+  "source_attempts": 49,
+  "clean_baseline_attempts": 10,
+  "completed_correction_verdicts": 39,
+  "incomplete_source_attempts": 0,
+  "qualified_corrections": 21,
+  "checks": [
+    "SHA256",
+    "finite_states",
+    "T+1_alignment",
+    "native_success_trace",
+    "budget",
+    "paired_error_state",
+    "provenance"
+  ],
+  "passed": true
+}

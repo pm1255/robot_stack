@@ -1,0 +1,1321 @@
+{
+  "scope": "Only profiles that passed the recorded held-out gate; not guarantees on other scenes.",
+  "profiles": [
+    {
+      "backend": "metaworld",
+      "task": "basketball-v3",
+      "schedule": "metaworld/basketball-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "bin-picking-v3",
+      "schedule": "metaworld/bin-picking-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 4,
+        "recovery_successes": 4,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 4,
+        "qualified_yield": 0.8,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "box-close-v3",
+      "schedule": "metaworld/box-close-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 4,
+        "source_success_rate": 0.8,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 4,
+        "source_success_rate": 0.8,
+        "completed_verdicts": 4,
+        "failed_controls": 4,
+        "recovery_successes": 4,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 4,
+        "qualified_yield": 0.8,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "coffee-button-v3",
+      "schedule": "metaworld/coffee-button-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 2,
+        "recovery_successes": 2,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 2,
+        "qualified_yield": 0.4,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "coffee-pull-v3",
+      "schedule": "metaworld/coffee-pull-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "coffee-push-v3",
+      "schedule": "metaworld/coffee-push-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "disassemble-v3",
+      "schedule": "metaworld/disassemble-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "drawer-close-v3",
+      "schedule": "metaworld/drawer-close-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "hammer-v3",
+      "schedule": "metaworld/hammer-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 3,
+        "recovery_success_rate": 0.6,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "hand-insert-v3",
+      "schedule": "metaworld/hand-insert-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "handle-press-v3",
+      "schedule": "metaworld/handle-press-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "handle-pull-v3",
+      "schedule": "metaworld/handle-pull-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "peg-insert-side-v3",
+      "schedule": "metaworld/peg-insert-side-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "peg-unplug-side-v3",
+      "schedule": "metaworld/peg-unplug-side-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 4,
+        "recovery_successes": 4,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 4,
+        "qualified_yield": 0.8,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "schedule": "metaworld/pick-place-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 4,
+        "recovery_successes": 4,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 4,
+        "qualified_yield": 0.8,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-wall-v3",
+      "schedule": "metaworld/pick-place-wall-v3.json",
+      "scale": 0.5,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 3,
+        "recovery_success_rate": 0.6,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-back-v3",
+      "schedule": "metaworld/push-back-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 4,
+        "recovery_successes": 4,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 4,
+        "qualified_yield": 0.8,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "schedule": "metaworld/push-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-wall-v3",
+      "schedule": "metaworld/push-wall-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "reach-v3",
+      "schedule": "metaworld/reach-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "reach-wall-v3",
+      "schedule": "metaworld/reach-wall-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "shelf-place-v3",
+      "schedule": "metaworld/shelf-place-v3.json",
+      "scale": 1.0,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 3,
+        "recovery_success_rate": 0.6,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "stick-push-v3",
+      "schedule": "metaworld/stick-push-v3.json",
+      "scale": 0.5,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 3,
+        "recovery_success_rate": 0.6,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "sweep-into-v3",
+      "schedule": "metaworld/sweep-into-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 4,
+        "recovery_successes": 3,
+        "recovery_success_rate": 0.75,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "metaworld",
+      "task": "sweep-v3",
+      "schedule": "metaworld/sweep-v3.json",
+      "scale": 0.25,
+      "adapter_options": {},
+      "max_steps": 500,
+      "calibration_seeds": [
+        2100,
+        2101,
+        2102,
+        2103,
+        2104
+      ],
+      "validation_seeds": [
+        3100,
+        3101,
+        3102,
+        3103,
+        3104
+      ],
+      "baseline": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/metaworld-summary.json"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "schedule": "maniskill/PickCube-v1.json",
+      "scale": 0.25,
+      "adapter_options": {
+        "native_horizon": 1200,
+        "max_replans": 4
+      },
+      "max_steps": 1000,
+      "calibration_seeds": [
+        810,
+        811
+      ],
+      "validation_seeds": [
+        1810,
+        1811,
+        1812,
+        1813,
+        1814
+      ],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 3,
+        "recovery_successes": 3,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/maniskill-summary.json"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "schedule": "maniskill/LiftPegUpright-v1.json",
+      "scale": 0.25,
+      "adapter_options": {
+        "native_horizon": 1200,
+        "max_replans": 4
+      },
+      "max_steps": 1000,
+      "calibration_seeds": [
+        810,
+        811
+      ],
+      "validation_seeds": [
+        1810,
+        1811,
+        1812,
+        1813,
+        1814
+      ],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/maniskill-summary.json"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "schedule": "maniskill/PullCubeTool-v1.json",
+      "scale": 0.125,
+      "adapter_options": {
+        "native_horizon": 1200,
+        "max_replans": 4
+      },
+      "max_steps": 1000,
+      "calibration_seeds": [
+        810,
+        811
+      ],
+      "validation_seeds": [
+        1810,
+        1811,
+        1812,
+        1813,
+        1814
+      ],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 3,
+        "recovery_success_rate": 0.6,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      },
+      "evidence": "../../docs/evidence/calibration/maniskill-summary.json"
+    }
+  ]
+}

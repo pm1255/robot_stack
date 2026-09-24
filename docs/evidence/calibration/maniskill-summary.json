@@ -1,0 +1,1903 @@
+{
+  "schema": "robot_stack.task_calibration.v1",
+  "backend": "maniskill",
+  "semantics": "Empirical task/severity profiles, not universal benchmark guarantees. Selection uses calibration only; all attempts including failures are retained.",
+  "config": {
+    "backend": "maniskill",
+    "tasks": [
+      "PickCube-v1",
+      "PlaceSphere-v1",
+      "LiftPegUpright-v1",
+      "PullCubeTool-v1",
+      "PlugCharger-v1"
+    ],
+    "train_seeds": [
+      810,
+      811
+    ],
+    "validation_seeds": [
+      1810,
+      1811,
+      1812,
+      1813,
+      1814
+    ],
+    "levels": [
+      {
+        "name": "level_00",
+        "scale": 0.125,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.125,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "level_01",
+        "scale": 0.25,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.25,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "level_02",
+        "scale": 0.5,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.5,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "axis": "strength",
+    "max_steps": 1000,
+    "adapter_options": {
+      "native_horizon": 1200,
+      "max_replans": 4
+    },
+    "workers": 4,
+    "case_timeout": 180,
+    "min_source_rate": 0.8,
+    "min_recovery_rate": 0.5,
+    "min_validation_episodes": 5
+  },
+  "tasks": {
+    "PickCube-v1": {
+      "task": "PickCube-v1",
+      "status": "passed_configured_validation",
+      "levels": [
+        {
+          "name": "level_00",
+          "scale": 0.125,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.125,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 0,
+            "recovery_successes": 0,
+            "recovery_success_rate": null,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_01",
+          "scale": 0.25,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.25,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 2,
+            "recovery_success_rate": 1.0,
+            "qualified_corrections": 2,
+            "qualified_yield": 1.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_02",
+          "scale": 0.5,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.5,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 1,
+            "recovery_success_rate": 0.5,
+            "qualified_corrections": 1,
+            "qualified_yield": 0.5,
+            "errors": 0
+          }
+        }
+      ],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "selected": {
+        "name": "level_01",
+        "scale": 0.25,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.25,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "attempts": 2,
+          "successful_sources": 2,
+          "source_success_rate": 1.0,
+          "completed_verdicts": 2,
+          "failed_controls": 2,
+          "recovery_successes": 2,
+          "recovery_success_rate": 1.0,
+          "qualified_corrections": 2,
+          "qualified_yield": 1.0,
+          "errors": 0
+        }
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 3,
+        "recovery_successes": 3,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      }
+    },
+    "PlaceSphere-v1": {
+      "task": "PlaceSphere-v1",
+      "status": "no_qualified_profile",
+      "levels": [
+        {
+          "name": "level_00",
+          "scale": 0.125,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.125,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 0,
+            "recovery_success_rate": 0.0,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_01",
+          "scale": 0.25,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.25,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 0,
+            "recovery_success_rate": 0.0,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_02",
+          "scale": 0.5,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.5,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 0,
+            "recovery_success_rate": 0.0,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        }
+      ],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      }
+    },
+    "LiftPegUpright-v1": {
+      "task": "LiftPegUpright-v1",
+      "status": "passed_configured_validation",
+      "levels": [
+        {
+          "name": "level_00",
+          "scale": 0.125,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.125,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 0,
+            "recovery_success_rate": 0.0,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_01",
+          "scale": 0.25,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.25,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 2,
+            "recovery_success_rate": 1.0,
+            "qualified_corrections": 2,
+            "qualified_yield": 1.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_02",
+          "scale": 0.5,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.5,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 1,
+            "recovery_success_rate": 0.5,
+            "qualified_corrections": 1,
+            "qualified_yield": 0.5,
+            "errors": 0
+          }
+        }
+      ],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "selected": {
+        "name": "level_01",
+        "scale": 0.25,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.25,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "attempts": 2,
+          "successful_sources": 2,
+          "source_success_rate": 1.0,
+          "completed_verdicts": 2,
+          "failed_controls": 2,
+          "recovery_successes": 2,
+          "recovery_success_rate": 1.0,
+          "qualified_corrections": 2,
+          "qualified_yield": 1.0,
+          "errors": 0
+        }
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 5,
+        "recovery_success_rate": 1.0,
+        "qualified_corrections": 5,
+        "qualified_yield": 1.0,
+        "errors": 0
+      }
+    },
+    "PullCubeTool-v1": {
+      "task": "PullCubeTool-v1",
+      "status": "passed_configured_validation",
+      "levels": [
+        {
+          "name": "level_00",
+          "scale": 0.125,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.125,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 2,
+            "recovery_success_rate": 1.0,
+            "qualified_corrections": 2,
+            "qualified_yield": 1.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_01",
+          "scale": 0.25,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.25,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 2,
+            "recovery_success_rate": 1.0,
+            "qualified_corrections": 2,
+            "qualified_yield": 1.0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "level_02",
+          "scale": 0.5,
+          "schedule": {
+            "version": 1,
+            "events": [
+              {
+                "at": {
+                  "fraction": 0.6
+                },
+                "type": "joint_offset",
+                "steps": 15,
+                "strength": 0.5,
+                "parameters": {
+                  "joint": 0,
+                  "offset": 0.8
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "attempts": 2,
+            "successful_sources": 2,
+            "source_success_rate": 1.0,
+            "completed_verdicts": 2,
+            "failed_controls": 2,
+            "recovery_successes": 0,
+            "recovery_success_rate": 0.0,
+            "qualified_corrections": 0,
+            "qualified_yield": 0.0,
+            "errors": 0
+          }
+        }
+      ],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 2,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      },
+      "selected": {
+        "name": "level_00",
+        "scale": 0.125,
+        "schedule": {
+          "version": 1,
+          "events": [
+            {
+              "at": {
+                "fraction": 0.6
+              },
+              "type": "joint_offset",
+              "steps": 15,
+              "strength": 0.125,
+              "parameters": {
+                "joint": 0,
+                "offset": 0.8
+              }
+            }
+          ]
+        },
+        "metrics": {
+          "attempts": 2,
+          "successful_sources": 2,
+          "source_success_rate": 1.0,
+          "completed_verdicts": 2,
+          "failed_controls": 2,
+          "recovery_successes": 2,
+          "recovery_success_rate": 1.0,
+          "qualified_corrections": 2,
+          "qualified_yield": 1.0,
+          "errors": 0
+        }
+      },
+      "validation": {
+        "attempts": 5,
+        "successful_sources": 5,
+        "source_success_rate": 1.0,
+        "completed_verdicts": 5,
+        "failed_controls": 5,
+        "recovery_successes": 3,
+        "recovery_success_rate": 0.6,
+        "qualified_corrections": 3,
+        "qualified_yield": 0.6,
+        "errors": 0
+      }
+    },
+    "PlugCharger-v1": {
+      "task": "PlugCharger-v1",
+      "status": "baseline_below_target",
+      "levels": [],
+      "baseline": {
+        "attempts": 2,
+        "successful_sources": 1,
+        "source_success_rate": 0.5,
+        "completed_verdicts": 0,
+        "failed_controls": 0,
+        "recovery_successes": 0,
+        "recovery_success_rate": null,
+        "qualified_corrections": 0,
+        "qualified_yield": 0.0,
+        "errors": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 810,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "2b9179082b3b5359b656",
+      "protocol": "clean_baseline.v1",
+      "steps": 163,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "LiftPegUpright-v1/baseline/clean/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 811,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "6c068f12deb5d51ffea3",
+      "protocol": "clean_baseline.v1",
+      "steps": 527,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "LiftPegUpright-v1/baseline/clean/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 810,
+      "source_demo_id": "4a509dfe32920c33365d",
+      "split_group": "2b9179082b3b5359b656",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 97,
+      "recovery_steps": 211,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "LiftPegUpright-v1/calibration/level_00/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 811,
+      "source_demo_id": "337d6e3e2af329a9ff8e",
+      "split_group": "6c068f12deb5d51ffea3",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 316,
+      "recovery_steps": 1000,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "LiftPegUpright-v1/calibration/level_00/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 810,
+      "source_demo_id": "f887d9b3943470e6f600",
+      "split_group": "2b9179082b3b5359b656",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 97,
+      "recovery_steps": 282,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "LiftPegUpright-v1/calibration/level_01/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 811,
+      "source_demo_id": "b8669b34081965db4ee4",
+      "split_group": "6c068f12deb5d51ffea3",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 316,
+      "recovery_steps": 440,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "LiftPegUpright-v1/calibration/level_01/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 810,
+      "source_demo_id": "014f3d2442b977a1a3f0",
+      "split_group": "2b9179082b3b5359b656",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 97,
+      "recovery_steps": 273,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "LiftPegUpright-v1/calibration/level_02/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 811,
+      "source_demo_id": "39a80853b6ff0881fa61",
+      "split_group": "6c068f12deb5d51ffea3",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 316,
+      "recovery_steps": 1000,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "LiftPegUpright-v1/calibration/level_02/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 1810,
+      "source_demo_id": "928bfa9cf3a226044225",
+      "split_group": "3fe69a165ccee6580028",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 91,
+      "recovery_steps": 200,
+      "worker_log": "case_1810_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "LiftPegUpright-v1/validation/level_01/case_1810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 1811,
+      "source_demo_id": "69e9bdaf06d9a468a145",
+      "split_group": "9ba7f0176ec0c7a44588",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 217,
+      "recovery_steps": 345,
+      "worker_log": "case_1811_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "LiftPegUpright-v1/validation/level_01/case_1811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 1812,
+      "source_demo_id": "96301393c0bc15ad09de",
+      "split_group": "20a4c806eec839b71eba",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 102,
+      "recovery_steps": 211,
+      "worker_log": "case_1812_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "LiftPegUpright-v1/validation/level_01/case_1812"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 1813,
+      "source_demo_id": "cd148737462b3ca46751",
+      "split_group": "f1e59fd69a243530fe55",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 99,
+      "recovery_steps": 281,
+      "worker_log": "case_1813_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "LiftPegUpright-v1/validation/level_01/case_1813"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 1814,
+      "source_demo_id": "1b2d8482f56692205e9e",
+      "split_group": "1118489f359936453a26",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 91,
+      "recovery_steps": 270,
+      "worker_log": "case_1814_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "LiftPegUpright-v1/validation/level_01/case_1814"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 810,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "8d22dca874701ad5ec8b",
+      "protocol": "clean_baseline.v1",
+      "steps": 76,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PickCube-v1/baseline/clean/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 811,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "02be538f280a53434e34",
+      "protocol": "clean_baseline.v1",
+      "steps": 72,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PickCube-v1/baseline/clean/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 810,
+      "source_demo_id": "dc1d7332b989a9c28a95",
+      "split_group": "8d22dca874701ad5ec8b",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 45,
+      "recovery_steps": 130,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PickCube-v1/calibration/level_00/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 811,
+      "source_demo_id": "2a781622d294546ddd7f",
+      "split_group": "02be538f280a53434e34",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 43,
+      "recovery_steps": 125,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PickCube-v1/calibration/level_00/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 810,
+      "source_demo_id": "1fb3eb0f5df98d2496e6",
+      "split_group": "8d22dca874701ad5ec8b",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 45,
+      "recovery_steps": 129,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PickCube-v1/calibration/level_01/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 811,
+      "source_demo_id": "9c30dbaefa6361b790d4",
+      "split_group": "02be538f280a53434e34",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 43,
+      "recovery_steps": 126,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PickCube-v1/calibration/level_01/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 810,
+      "source_demo_id": "44c43ffda47af59f1669",
+      "split_group": "8d22dca874701ad5ec8b",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 45,
+      "recovery_steps": 181,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "PickCube-v1/calibration/level_02/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 811,
+      "source_demo_id": "e6ab6e2e0cd987c9dc2f",
+      "split_group": "02be538f280a53434e34",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 43,
+      "recovery_steps": 1000,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "PickCube-v1/calibration/level_02/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 1810,
+      "source_demo_id": "5798f615a2391dd6b6c5",
+      "split_group": "c5f27172d4816c0622b5",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 41,
+      "recovery_steps": 117,
+      "worker_log": "case_1810_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PickCube-v1/validation/level_01/case_1810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 1811,
+      "source_demo_id": "7c29a6d04ca246318130",
+      "split_group": "c76fa128ac5a942349bc",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 43,
+      "recovery_steps": 119,
+      "worker_log": "case_1811_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PickCube-v1/validation/level_01/case_1811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 1812,
+      "source_demo_id": "7ff5e4c1d7cfcbf05c6b",
+      "split_group": "7f952c714333d30dcd03",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 54,
+      "recovery_steps": 133,
+      "worker_log": "case_1812_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PickCube-v1/validation/level_01/case_1812"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 1813,
+      "source_demo_id": "8d3974d4d2c3d84cd0d0",
+      "split_group": "685bd1776610d30a464c",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 42,
+      "recovery_steps": 135,
+      "worker_log": "case_1813_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PickCube-v1/validation/level_01/case_1813"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 1814,
+      "source_demo_id": "271ec38042c95d08496e",
+      "split_group": "51cf1b0b526f010501bd",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 47,
+      "recovery_steps": 138,
+      "worker_log": "case_1814_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PickCube-v1/validation/level_01/case_1814"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 810,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "7ad8783bd7f17a7e8ffc",
+      "protocol": "clean_baseline.v1",
+      "steps": 109,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PlaceSphere-v1/baseline/clean/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 811,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "1e9cb823ea708f7e2df1",
+      "protocol": "clean_baseline.v1",
+      "steps": 99,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PlaceSphere-v1/baseline/clean/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 810,
+      "source_demo_id": "85fd93d0f3f4cab6cfdc",
+      "split_group": "7ad8783bd7f17a7e8ffc",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 65,
+      "recovery_steps": 1000,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PlaceSphere-v1/calibration/level_00/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 811,
+      "source_demo_id": "0957630350a33f7bdc5e",
+      "split_group": "1e9cb823ea708f7e2df1",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 59,
+      "recovery_steps": 1000,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PlaceSphere-v1/calibration/level_00/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 810,
+      "source_demo_id": "a8f4a261f98e8055de4e",
+      "split_group": "7ad8783bd7f17a7e8ffc",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 65,
+      "recovery_steps": 1000,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PlaceSphere-v1/calibration/level_01/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 811,
+      "source_demo_id": "7c99ac05139ad2edb1eb",
+      "split_group": "1e9cb823ea708f7e2df1",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 59,
+      "recovery_steps": 1000,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PlaceSphere-v1/calibration/level_01/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 810,
+      "source_demo_id": "7903fd51b4d2ca1233df",
+      "split_group": "7ad8783bd7f17a7e8ffc",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 65,
+      "recovery_steps": 1000,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "PlaceSphere-v1/calibration/level_02/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 811,
+      "source_demo_id": "f1ddddebbdc71f0f1d95",
+      "split_group": "1e9cb823ea708f7e2df1",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 59,
+      "recovery_steps": 1000,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "PlaceSphere-v1/calibration/level_02/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlugCharger-v1",
+      "seed": 810,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "d98793ee77ae2102cdb1",
+      "protocol": "clean_baseline.v1",
+      "steps": 189,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PlugCharger-v1/baseline/clean/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlugCharger-v1",
+      "seed": 811,
+      "source_success": false,
+      "qualified_correction": false,
+      "split_group": "3384e6ff8cc80429748c",
+      "protocol": "clean_baseline.v1",
+      "steps": 614,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PlugCharger-v1/baseline/clean/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 810,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "9eedd5196f2fd4e6e940",
+      "protocol": "clean_baseline.v1",
+      "steps": 217,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PullCubeTool-v1/baseline/clean/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 811,
+      "source_success": true,
+      "qualified_correction": false,
+      "split_group": "ff713444bff6f4661ff9",
+      "protocol": "clean_baseline.v1",
+      "steps": 232,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "baseline",
+      "schedule_name": "clean",
+      "scale": null,
+      "evidence": "PullCubeTool-v1/baseline/clean/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 810,
+      "source_demo_id": "73a0b94e3e9fb9268875",
+      "split_group": "9eedd5196f2fd4e6e940",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 130,
+      "recovery_steps": 361,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PullCubeTool-v1/calibration/level_00/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 811,
+      "source_demo_id": "b06f2a5d46df8696cb01",
+      "split_group": "ff713444bff6f4661ff9",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 139,
+      "recovery_steps": 384,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PullCubeTool-v1/calibration/level_00/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 810,
+      "source_demo_id": "9261ea6f8d86c6acef91",
+      "split_group": "9eedd5196f2fd4e6e940",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 130,
+      "recovery_steps": 857,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PullCubeTool-v1/calibration/level_01/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 811,
+      "source_demo_id": "f28af10a570cacc009ee",
+      "split_group": "ff713444bff6f4661ff9",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 139,
+      "recovery_steps": 626,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_01",
+      "scale": 0.25,
+      "evidence": "PullCubeTool-v1/calibration/level_01/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 810,
+      "source_demo_id": "41511cad0b52bf3b8056",
+      "split_group": "9eedd5196f2fd4e6e940",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 130,
+      "recovery_steps": 1000,
+      "worker_log": "case_0810_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "PullCubeTool-v1/calibration/level_02/case_0810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 811,
+      "source_demo_id": "2d49117ac608b14272ef",
+      "split_group": "ff713444bff6f4661ff9",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 139,
+      "recovery_steps": 1000,
+      "worker_log": "case_0811_worker.log",
+      "isolated_worker": true,
+      "stage": "calibration",
+      "schedule_name": "level_02",
+      "scale": 0.5,
+      "evidence": "PullCubeTool-v1/calibration/level_02/case_0811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 1810,
+      "source_demo_id": "5e948ac37f8b90dee3fe",
+      "split_group": "5cb600c9a8889eabd687",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 129,
+      "recovery_steps": 353,
+      "worker_log": "case_1810_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PullCubeTool-v1/validation/level_00/case_1810"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 1811,
+      "source_demo_id": "713176ddf5b4fc0aa728",
+      "split_group": "9996ae70427893e5d836",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 145,
+      "recovery_steps": 392,
+      "worker_log": "case_1811_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PullCubeTool-v1/validation/level_00/case_1811"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 1812,
+      "source_demo_id": "64b5cb9399b75d349c46",
+      "split_group": "626cec263c0526ea0c94",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 125,
+      "recovery_steps": 363,
+      "worker_log": "case_1812_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PullCubeTool-v1/validation/level_00/case_1812"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 1813,
+      "source_demo_id": "04c97d2cf6851e27b691",
+      "split_group": "bede41e4e24e6a7533f2",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 133,
+      "recovery_steps": 964,
+      "worker_log": "case_1813_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PullCubeTool-v1/validation/level_00/case_1813"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 1814,
+      "source_demo_id": "c165620b3aad90b37a00",
+      "split_group": "f6f2b0f470169c7d432c",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 139,
+      "recovery_steps": 1000,
+      "worker_log": "case_1814_worker.log",
+      "isolated_worker": true,
+      "stage": "validation",
+      "schedule_name": "level_00",
+      "scale": 0.125,
+      "evidence": "PullCubeTool-v1/validation/level_00/case_1814"
+    }
+  ],
+  "wall_seconds": 389.1197460750118,
+  "task_count": 5,
+  "passed_tasks": 3
+}

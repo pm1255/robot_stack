@@ -11,17 +11,19 @@ from .core import collect_triplet, write_json
 from .schedule import validate_schedule
 
 
-def run_isolated(backend, task, seed, folder, *, budget, schedule, options, timeout):
+def run_isolated(backend, task, seed, folder, *, budget, schedule, options, timeout, source_only=False):
     """Contain native crashes/timeouts so the remaining task sweep can finish."""
     folder = Path(folder).resolve()
     folder.parent.mkdir(parents=True, exist_ok=True)
     spec = folder.with_name(folder.name + '_schedule.json')
     log = folder.with_name(folder.name + '_worker.log')
-    write_json(spec, schedule)
+    if not source_only:
+        write_json(spec, schedule)
     command = [sys.executable, '-m', 'robot_stack.collect', '--backend', backend,
         '--task', task, '--episodes', '1', '--seed-start', str(seed),
-        '--max-steps', str(budget), '--schedule', str(spec),
+        '--max-steps', str(budget),
         '--adapter-options', json.dumps(options), '--output', str(folder)]
+    command += ['--source-only'] if source_only else ['--schedule', str(spec)]
     with log.open('wb') as stream:
         try:
             process = subprocess.run(command, stdout=stream, stderr=subprocess.STDOUT,

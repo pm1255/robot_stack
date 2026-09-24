@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "fraction": 0.35
+      },
+      "type": "cartesian_offset",
+      "steps": 15,
+      "strength": 0.5,
+      "parameters": {
+        "direction": [
+          1,
+          -1,
+          1
+        ],
+        "gripper": -1
+      }
+    }
+  ]
+}

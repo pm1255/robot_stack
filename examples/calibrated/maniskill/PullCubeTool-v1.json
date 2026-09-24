@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "at": {
+        "fraction": 0.6
+      },
+      "type": "joint_offset",
+      "steps": 15,
+      "strength": 0.125,
+      "parameters": {
+        "joint": 0,
+        "offset": 0.8
+      }
+    }
+  ]
+}
