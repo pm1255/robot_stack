@@ -1,5 +1,21 @@
 # Robot Stack
 
+## Why we build Robot Stack
+
+**Robots need experience with unexpected situations, including what to do after an error.** During navigation and manipulation, a grasp can miss, a gripper can open unexpectedly, or the robot can drift away from its intended path. Small deviations can accumulate across a long task. Successful demonstrations show how a task should unfold, but by themselves do not provide examples of how to recover when execution leaves that path.
+
+Our goal is to build **controlled counterfactual datasets for error recognition and recovery**. Starting from a successful demonstration, we introduce deliberate, configurable disturbances and compare alternative continuations of the same task:
+
+1. **Successful source:** what happens without the injected disturbance?
+2. **Perturbed control:** after the disturbance, what happens if the robot continues the original remaining actions without feedback?
+3. **Recovery:** from the same verified first perturbed state, what happens if the robot observes the current state and changes its actions?
+
+These paired trajectories are intended to support research on detecting deviations, choosing corrective actions, replanning, and completing navigation and manipulation tasks despite interruptions. Users can vary when disturbances occur, their type, strength, duration and repetition, so the dataset includes more than one scripted failure case. Failed recoveries are retained to expose the limits of the current controller.
+
+Here, “counterfactual” means alternative executions constructed under controlled simulator conditions. A qualified correction requires a successful source, a verified deviation, a failed perturbed control and a successful recovery. The comparison does not establish a general causal effect or a learned model's robustness: training benefits and transfer to unseen errors or real robots still need separate evaluation. [Pairing protocol and evidence requirements](docs/correction-protocol.md).
+
+## Current progress
+
 **Five new task experts now have native successful sources.** YCB grasping: 4/5 new seeds; RoboCasa additions remain experimental. [Measured results and videos](https://pm1255.github.io/robot_stack/experts.html) · [Launch examples](docs/new-experts.md).
 
 [Success-source gaps and repair priorities](docs/source-backlog.md)

@@ -2,6 +2,14 @@
 
 The framework is task-independent; the policy and success oracle are not. A task name alone cannot supply a reliable expert. Current adapters use privileged simulator state, so results are collection checks rather than learned-policy evaluations.
 
+## Purpose and counterfactual interpretation
+
+Robot Stack aims to provide experience with unexpected execution states, alongside successful demonstrations. Its intended research uses include error recognition, corrective action selection and recovery during navigation, manipulation and long tasks. These are data and training objectives, not claims of measured learning gains.
+
+“Counterfactual” refers here to controlled alternative executions: a successful unperturbed source, an original-action continuation after intervention, and a feedback recovery from the same verified first post-intervention state. The source and control compare execution with and without an injected disturbance; control and recovery compare two continuations after that disturbance. The qualification rules below determine which comparisons actually demonstrate correction.
+
+For schedules with multiple interventions, the first post-intervention state is matched. Later interventions share commands and nominal ticks, but branch states can diverge after feedback begins; later states must not be described as identical. Numeric state checks are limited to what each adapter records. This construction does not establish a general causal effect, equalize controller computation, or demonstrate transfer to unseen failures or real robots. See the [project motivation](../README.md#why-we-build-robot-stack).
+
 ## What qualifies as a correction?
 
 1. Collect a successful source demonstration with real environment actions.
