@@ -50,6 +50,8 @@ There are **19 configurable action interventions across five adapters**, includi
 | MetaWorld | `cartesian_offset`, `random_cartesian`, `gripper_open`, `gripper_close`, `action_reverse`, `action_hold` | Cartesian direction `[x,y,z]` and gripper `[-1,1]` for `cartesian_offset`; seeded per-action Cartesian noise for `random_cartesian` |
 | RoboCasa NavigateKitchen | `base_yaw`, `base_translation`, `base_reverse`, `base_hold` | Translation direction `[x,y]`; bounded normalized base velocity |
 | AI2-THOR PointNav | `wrong_heading`, `backtrack`, `lateral_drift`, `navigation_hold` | Native RotateRight / MoveBack / MoveRight / Pass; discrete grid spacing |
+| ManiSkill | `joint_offset`, `gripper_open`, `gripper_close`, `joint_hold` | Joint index and bounded offset; arm-hold and gripper commands; stick embodiments reject gripper interventions |
+| RoboTwin | `joint_offset` | Joint index, bounded offset and `open_grippers`; duration counts physics steps |
 | Custom adapter | `make_perturbation(event, rng)` | Caller-defined physical action generator with strict action count |
 | Legacy adapter | `native_default` | Existing `perturbation_actions(steps)`, no strength scaling |
 
@@ -109,7 +111,7 @@ python -m robot_stack.replay outputs/pick-place-multi/ep_0600/recovery.hdf5 \
   --output outputs/multi-replay.json --video outputs/multi-recovery.mp4
 ```
 
-Use `--tasks push-v3 pick-place-v3` for a subset. Automatic `all` expert discovery currently applies to MetaWorld only. The original eight-task expert-only CLI remains compatible.
+Use `--tasks push-v3 pick-place-v3` for a subset. Automatic `all` expert discovery in the correction suite applies to MetaWorld and ManiSkill. RoboTwin source collection has a separate `--tasks all` command in [task coverage](task-coverage.md). The original eight-task expert-only CLI remains compatible.
 
 ## Multi-error evidence and causality
 

@@ -13,12 +13,12 @@ import traceback
 
 import h5py
 import numpy as np
-import yaml
 
 from robosuite_collector.collect import write_json
 
 
 def config(root, output, task):
+    import yaml
     cfg = yaml.safe_load((root / 'task_config/demo_clean.yml').read_text())
     embodiment = yaml.safe_load((root / 'task_config/_embodiment_config.yml').read_text())['aloha-agilex']['file_path']
     robot = yaml.safe_load((root / embodiment / 'config.yml').read_text())
