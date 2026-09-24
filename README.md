@@ -41,7 +41,7 @@ Both branches reconstruct the source prefix through actual actions. Recovery nev
 | RoboTwin | 3 tasks, **6/9** | Native expert collection and stored-path replay; generic corrections not integrated yet |
 | RoboCasa 1.0.1 | NavigateKitchen, layout/style 1, seeds 220–222 | **3/3 qualified navigation correction pairs**; seed 220 independently replayed with zero state error |
 | AI2-THOR 5.0.0 | Native FloorPlan1 PointNav, seeds 220–222 | **3/3 qualified navigation correction pairs**; independent recovery replay has zero pose error |
-| RoboDojo | Shared official assets and Isaac Sim 5.1 / IsaacLab environment located | Native startup validation ongoing; task policy success remains unverified |
+| RoboDojo | Shared official assets and Isaac Sim 5.1 / IsaacLab environment located | **Native stack_bowls reset + 10 physics steps verified**; task policy success remains unverified |
 | MimicGen | Official generator, two Lift sources → ten new trajectories | **7/10 successful**; all ten independently replayed; augmented demos, not correction pairs |
 
 The 100 MetaWorld pairs are a fixed-configuration experiment: task indices 0–49, reset seeds 300–349, a 15-step Cartesian error burst, and a 500-action cap. All failures and non-qualifying attempts remain in the dataset. This is not complete MT10/MT50 evaluation. See [data semantics](docs/correction-protocol.md) and [earlier benchmark conditions](docs/benchmarks.md).

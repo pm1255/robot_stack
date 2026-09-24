@@ -60,7 +60,7 @@ python -m robot_stack.replay outputs/pick-place/ep_0300/recovery.hdf5 \
 
 已实现 RoboCasa 原生 `NavigateKitchen` 移动底座适配、AI2-THOR 原生场景的栅格导航适配，以及 RoboDojo 官方 `EvalEnv` 桥接。它们的真实运行状态、安装条件和能力限制在 [导航接入说明](docs/navigation.md) 单独列出；写好接口不等于通过物理验证。
 
-RoboCasa 当前控制器不是完整避障/移动操作规划器。AI2-THOR 当前使用可达点真值地图，是自定义 PointNav 采集协议，不是官方 ObjectNav 分数。RoboDojo 需要完整 Isaac 环境、资产和真实策略，不能将其初始 `success=True` 当成任务完成。
+RoboCasa 当前控制器不是完整避障/移动操作规划器。AI2-THOR 当前使用可达点真值地图，是自定义 PointNav 采集协议，不是官方 ObjectNav 分数。RoboDojo 已复用完整共享 Isaac 环境和资产，完成 `stack_bowls` 原生 reset 与 10 个物理步；尚未验证真实策略完成任务，不能将其初始 `success=True` 当成任务完成。
 
 仓库附有一个可直接检查的[真实纠错三分支样本](examples/correction/)，无需仿真器即可运行 `python -m robot_stack.audit examples/correction --output /tmp/robot-stack-example-audit.json` 检查文件。
 

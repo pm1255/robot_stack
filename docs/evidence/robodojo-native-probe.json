@@ -1,0 +1,7 @@
+{
+  "native_reset": true,
+  "physics_steps": 10,
+  "task_success": null,
+  "task": "stack_bowls",
+  "upstream_commit": "726e9aabfaa642203722eb126f5eaf0f37f3e1ad"
+}

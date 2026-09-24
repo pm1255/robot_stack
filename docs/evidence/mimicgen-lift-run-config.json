@@ -1,0 +1,25 @@
+{
+  "source_sha256": "195c2ff8c321691b26d75f410912b0bffd0e9e81629fa625079ea3a752ace03d",
+  "versions": {
+    "numpy": "1.26.4",
+    "mujoco": "3.3.1",
+    "robosuite": "1.5.2",
+    "robomimic": "0.3.0",
+    "torch": "2.4.1"
+  },
+  "seed_start": 400,
+  "episodes": 10,
+  "max_steps": 600,
+  "task": "Lift",
+  "object_reference": "cube",
+  "subtasks": [
+    "grasp",
+    null
+  ],
+  "selection_strategy": "random",
+  "action_noise": 0.0,
+  "interpolation_steps": 5,
+  "transform_first_robot_pose": true,
+  "select_src_per_subtask": false,
+  "upstream_commit": "72bd767c255545f462e7ccfb2731f2e5d4c1d9bb"
+}

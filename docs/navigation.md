@@ -38,7 +38,7 @@ The success rule is distance <= 0.10 m from the chosen reachable point. This is 
 
 Checked against official [RoboDojo](https://github.com/RoboDojo-Benchmark/RoboDojo) commit `726e9aabfaa642203722eb126f5eaf0f37f3e1ad`. The current upstream release separates simulator evaluation from XPolicyLab policies. We do not ship a universal RoboDojo expert or claim a successful native rollout.
 
-A subsequent read-only inventory found a complete shared official RoboDojo checkout at the same upstream commit, including Robots, Object/RoboDojo, Eval_Layout/RoboDojo and Material assets, plus Python 3.11 / Isaac Sim 5.1 / IsaacLab 0.54.3. The assets are linked into a separate project-owned checkout; no third-party policy checkpoint is used. Initial GPU startup exposed a C++ ABI mismatch and duplicate Vulkan ICDs. Native task success remains unverified. `scripts/robodojo_native_probe.py` is a bounded reset/physics probe, not a task policy or a benchmark score.
+A subsequent read-only inventory found a complete shared official RoboDojo checkout at the same upstream commit, including Robots, Object/RoboDojo, Eval_Layout/RoboDojo and Material assets, plus Python 3.11 / Isaac Sim 5.1 / IsaacLab 0.54.3. The assets are linked into a separate project-owned checkout; no third-party policy checkpoint is used. Initial GPU startup exposed a C++ ABI mismatch and duplicate Vulkan ICDs. After process-scoped C++ library preloading, selecting one NVIDIA ICD and redirecting Kit cache/log directories, the native `stack_bowls` scene completed reset and ten physics steps on a 4090. [Probe result](evidence/robodojo-native-probe.json). This is a successful runtime check; it includes no policy rollout or task-success claim. `scripts/robodojo_native_probe.py` is a bounded reset/physics probe, not a task policy or a benchmark score.
 
 From a running native Isaac application, create a real `EvalEnv` and supply it through `env_factory` to `RoboDojoAdapter`. Supply a real policy callable, numeric `state_reader`, relevant `feature_reader`, a physical `perturbation` callback, and the upstream commit. Then call `collect_triplet(...)`. Each factory instance must reproduce the same seeded scene. GPU/PhysX nondeterminism can invalidate strict prefix equivalence; do not relax tolerances without measured justification.
 
@@ -52,3 +52,25 @@ The bridge requires one environment and uses native `take_action`. It rejects si
 - **Correction verified:** source success, induced error, failing control, matching branch state and successful physical recovery are all demonstrated.
 
 Keep these levels separate in issues, reports and PRs. Unit-test fixtures verify contracts, not simulator performance.
+
+## Reproduce the RoboDojo runtime probe
+
+Use the matching official RoboDojo source, assets and a working Isaac environment.
+Run the repository's `scripts/robodojo_native_probe.py` with the RoboDojo source on
+`PYTHONPATH`, from that source directory:
+
+```bash
+cd "$ROBODOJO_ROOT"
+PYTHONPATH="$ROBODOJO_ROOT" PYTHONDONTWRITEBYTECODE=1 \
+  "$ROBODOJO_PYTHON" /path/to/robot_stack/scripts/robodojo_native_probe.py \
+  --headless --enable_cameras --output /path/to/outputs/robodojo-probe.json \
+  --kit_args "--/renderer/multiGpu/enabled=false --/renderer/activeGpu=0 --/app/tokens/cache=/path/to/own/cache --/app/tokens/data=/path/to/own/data --/app/tokens/logs=/path/to/own/logs"
+```
+
+The environment must already be configured for the NVIDIA license terms. In our
+container, `LD_PRELOAD` selected the Isaac environment's `lib/libstdc++.so.6`, and
+`VK_ICD_FILENAMES` selected one installed `nvidia_icd.json` to resolve the measured
+ABI/duplicate-driver errors. Those are process settings, not changes to the shared
+installation. Use project-owned `XDG_CACHE_HOME` and `XDG_DATA_HOME`; do not copy
+another user's credentials or private policy weights. First startup and CuRobo
+kernel compilation took most of the 600-second probe budget.
