@@ -1,6 +1,6 @@
 # Robot Stack
 
-**New: native ManiSkill / experimental RoboTwin action streaming, task-level coverage, and 119 real animations embedded below.** [Coverage and launch commands](docs/task-coverage.md).
+**New: native ManiSkill / experimental RoboTwin action streaming, task-level coverage, and 132 real animations embedded below.** [Coverage and launch commands](docs/task-coverage.md).
 
 **Configurable multi-error schedules.** Choose source step / fraction / milestone, type, strength, duration, repetition and gap. [Interactive configuration & examples](https://pm1255.github.io/robot_stack/playground.html) · [10 launch recipes and Python API](docs/perturbations.md). All 50 MetaWorld task classes now have at least one verified correction sample across the documented experiments: the first sweep gave 69/100 qualified pairs across 48 tasks; a separate tool-task follow-up gave 18/40 and covered the remaining two. This is task-class coverage, not universal recovery or an MT50 benchmark score.
 
@@ -17,6 +17,8 @@ Robot Stack is a research collection toolkit for **paired error-and-recovery dat
 
 Native MetaWorld action replay: source / perturbed control / recovery. Rendered at a viewing frame rate; not physical-time playback.
 
+
+**RoboTwin now has successful sources for all 50 task classes.** Initial fixed-seed sweep: 37/50; separate follow-up: 11/26; final bounded bootstrapping: 5/13, retaining all failures. Recovery coverage remains one dual-arm stacking task, not all 50. [Evidence](docs/task-coverage.md).
 
 ## Watch real results directly in this repository
 
@@ -79,6 +81,21 @@ These are the 37 successful source tasks from the unfiltered 50-task sweep at se
 <tr><td align="center"><b>shake_bottle_horizontally</b><br><img width="240" src="docs/media/gallery/robotwin-sources/shake_bottle_horizontally.gif" alt="shake_bottle_horizontally successful source"><br>154 recorded frames · source</td><td align="center"><b>stack_blocks_three</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stack_blocks_three.gif" alt="stack_blocks_three successful source"><br>254 recorded frames · source</td><td align="center"><b>stack_blocks_two</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stack_blocks_two.gif" alt="stack_blocks_two successful source"><br>173 recorded frames · source</td></tr>
 <tr><td align="center"><b>stack_bowls_three</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stack_bowls_three.gif" alt="stack_bowls_three successful source"><br>270 recorded frames · source</td><td align="center"><b>stack_bowls_two</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stack_bowls_two.gif" alt="stack_bowls_two successful source"><br>183 recorded frames · source</td><td align="center"><b>stamp_seal</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stamp_seal.gif" alt="stamp_seal successful source"><br>77 recorded frames · source</td></tr>
 <tr><td align="center"><b>turn_switch</b><br><img width="240" src="docs/media/gallery/robotwin-sources/turn_switch.gif" alt="turn_switch successful source"><br>53 recorded frames · source</td></tr>
+</table>
+</details>
+
+
+<details>
+<summary>Expand 13 additional source-task successes from follow-up collection</summary>
+
+From separately reported fixed-seed follow-ups and bounded success-target collection. These source successes are not correction pairs or part of the initial sweep rate. Each animation links to its experiment report.
+
+<table>
+<tr><td align="center"><b>dump_bin_bigbin</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/dump_bin_bigbin.gif" alt="dump_bin_bigbin successful source"></a><br>seed 902 · 190 frames · source</td><td align="center"><b>move_pillbottle_pad</b><br><a href="docs/evidence/robotwin-followup-1-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/move_pillbottle_pad.gif" alt="move_pillbottle_pad successful source"></a><br>seed 901 · 85 frames · source</td><td align="center"><b>open_laptop</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/open_laptop.gif" alt="open_laptop successful source"></a><br>seed 901 · 84 frames · source</td></tr>
+<tr><td align="center"><b>open_microwave</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/open_microwave.gif" alt="open_microwave successful source"></a><br>seed 903 · 293 frames · source</td><td align="center"><b>pick_diverse_bottles</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/pick_diverse_bottles.gif" alt="pick_diverse_bottles successful source"></a><br>seed 905 · 68 frames · source</td><td align="center"><b>place_a2b_left</b><br><a href="docs/evidence/robotwin-followup-1-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_a2b_left.gif" alt="place_a2b_left successful source"></a><br>seed 901 · 82 frames · source</td></tr>
+<tr><td align="center"><b>place_bread_basket</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_bread_basket.gif" alt="place_bread_basket successful source"></a><br>seed 901 · 128 frames · source</td><td align="center"><b>place_bread_skillet</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_bread_skillet.gif" alt="place_bread_skillet successful source"></a><br>seed 903 · 96 frames · source</td><td align="center"><b>place_can_basket</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_can_basket.gif" alt="place_can_basket successful source"></a><br>seed 903 · 136 frames · source</td></tr>
+<tr><td align="center"><b>place_empty_cup</b><br><a href="docs/evidence/robotwin-followup-1-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_empty_cup.gif" alt="place_empty_cup successful source"></a><br>seed 902 · 102 frames · source</td><td align="center"><b>place_shoe</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_shoe.gif" alt="place_shoe successful source"></a><br>seed 901 · 102 frames · source</td><td align="center"><b>scan_object</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/scan_object.gif" alt="scan_object successful source"></a><br>seed 902 · 92 frames · source</td></tr>
+<tr><td align="center"><b>put_object_cabinet</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/put_object_cabinet.gif" alt="put_object_cabinet successful source"></a><br>seed 909 · 149 frames · source</td></tr>
 </table>
 </details>
 

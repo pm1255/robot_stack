@@ -93,7 +93,7 @@
       "tasks": 50,
       "registered": 50,
       "expert_available": 50,
-      "source_success": 45,
+      "source_success": 50,
       "induced_error": 1,
       "recovery_success": 1,
       "qualified_correction": 1
@@ -5923,13 +5923,14 @@
       "task": "open_microwave",
       "registered": true,
       "expert_available": true,
-      "source_success": false,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-1-summary.json"
+        "evidence/robotwin-followup-1-summary.json",
+        "evidence/robotwin-bootstrap-summary.json"
       ]
     },
     {
@@ -5937,13 +5938,14 @@
       "task": "pick_diverse_bottles",
       "registered": true,
       "expert_available": true,
-      "source_success": false,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-0-summary.json"
+        "evidence/robotwin-followup-0-summary.json",
+        "evidence/robotwin-bootstrap-summary.json"
       ]
     },
     {
@@ -6005,13 +6007,14 @@
       "task": "place_bread_skillet",
       "registered": true,
       "expert_available": true,
-      "source_success": false,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-1-summary.json"
+        "evidence/robotwin-followup-1-summary.json",
+        "evidence/robotwin-bootstrap-summary.json"
       ]
     },
     {
@@ -6032,13 +6035,14 @@
       "task": "place_can_basket",
       "registered": true,
       "expert_available": true,
-      "source_success": false,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-0-summary.json"
+        "evidence/robotwin-followup-0-summary.json",
+        "evidence/robotwin-bootstrap-summary.json"
       ]
     },
     {
@@ -6218,13 +6222,14 @@
       "task": "put_object_cabinet",
       "registered": true,
       "expert_available": true,
-      "source_success": false,
+      "source_success": true,
       "induced_error": false,
       "recovery_success": false,
       "qualified_correction": false,
       "evidence": [
         "evidence/robotwin-all-summary.json",
-        "evidence/robotwin-followup-1-summary.json"
+        "evidence/robotwin-followup-1-summary.json",
+        "evidence/robotwin-bootstrap-summary.json"
       ]
     },
     {

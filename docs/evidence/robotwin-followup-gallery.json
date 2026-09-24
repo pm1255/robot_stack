@@ -1,0 +1,118 @@
+[
+  {
+    "task": "dump_bin_bigbin",
+    "seed": 902,
+    "native_frames": 190,
+    "run": "robotwin_source_followup_0",
+    "video_sha256": "a96108ac2884ebcd4394232cf7d5a4278d2022a6bdcd5789a6ff6563b3ff1358",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_source_followup_0/dump_bin_bigbin/ep_0902/video/episode0.mp4",
+    "report": "evidence/robotwin-followup-0-summary.json"
+  },
+  {
+    "task": "move_pillbottle_pad",
+    "seed": 901,
+    "native_frames": 85,
+    "run": "robotwin_source_followup_1",
+    "video_sha256": "3005f28f824d5c0adf09bae813ce5fbda50015af7e5608473ae1bdf6d0d1dbf3",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_source_followup_1/move_pillbottle_pad/ep_0901/video/episode0.mp4",
+    "report": "evidence/robotwin-followup-1-summary.json"
+  },
+  {
+    "task": "open_laptop",
+    "seed": 901,
+    "native_frames": 84,
+    "run": "robotwin_source_followup_0",
+    "video_sha256": "53199e281157264b4b30275af1a1442e232c330dfe0d7b6cc01a34929a961060",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_source_followup_0/open_laptop/ep_0901/video/episode0.mp4",
+    "report": "evidence/robotwin-followup-0-summary.json"
+  },
+  {
+    "task": "open_microwave",
+    "seed": 903,
+    "native_frames": 293,
+    "run": "robotwin_bootstrap_v6",
+    "video_sha256": "0856340878989d2e7975799b1674aa7932bd9e774be25d8a74287d2635b40d54",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_bootstrap_v6/open_microwave/ep_0903/video/episode0.mp4",
+    "report": "evidence/robotwin-bootstrap-summary.json"
+  },
+  {
+    "task": "pick_diverse_bottles",
+    "seed": 905,
+    "native_frames": 68,
+    "run": "robotwin_bootstrap_v6",
+    "video_sha256": "18b90c16a4fd5aefa85000c9f78c5c73d34676c92e8c4f8711e027867bc45de8",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_bootstrap_v6/pick_diverse_bottles/ep_0905/video/episode0.mp4",
+    "report": "evidence/robotwin-bootstrap-summary.json"
+  },
+  {
+    "task": "place_a2b_left",
+    "seed": 901,
+    "native_frames": 82,
+    "run": "robotwin_source_followup_1",
+    "video_sha256": "0bd9d731fef8412b92c48311df8363abafc94270abd9396523839862d607be9f",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_source_followup_1/place_a2b_left/ep_0901/video/episode0.mp4",
+    "report": "evidence/robotwin-followup-1-summary.json"
+  },
+  {
+    "task": "place_bread_basket",
+    "seed": 901,
+    "native_frames": 128,
+    "run": "robotwin_source_followup_0",
+    "video_sha256": "53d69e53ffc8a533f5b90fc43419915956213cdcd0cba792db2b6d40ba4879dc",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_source_followup_0/place_bread_basket/ep_0901/video/episode0.mp4",
+    "report": "evidence/robotwin-followup-0-summary.json"
+  },
+  {
+    "task": "place_bread_skillet",
+    "seed": 903,
+    "native_frames": 96,
+    "run": "robotwin_bootstrap_v6",
+    "video_sha256": "02f4f6114c1259f82ea688bed80662a356f8da96e9719b24f36bb04eeb651164",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_bootstrap_v6/place_bread_skillet/ep_0903/video/episode0.mp4",
+    "report": "evidence/robotwin-bootstrap-summary.json"
+  },
+  {
+    "task": "place_can_basket",
+    "seed": 903,
+    "native_frames": 136,
+    "run": "robotwin_bootstrap_v6",
+    "video_sha256": "6f14d900e38ac3df10f6358f7585f2095b52b7c6f3db500abbea1e68fd45e841",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_bootstrap_v6/place_can_basket/ep_0903/video/episode0.mp4",
+    "report": "evidence/robotwin-bootstrap-summary.json"
+  },
+  {
+    "task": "place_empty_cup",
+    "seed": 902,
+    "native_frames": 102,
+    "run": "robotwin_source_followup_1",
+    "video_sha256": "ffcdfb5378c3e46f10e034b28684dfac77e5c4ff3c97d4c2a6d8c2f6795258d0",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_source_followup_1/place_empty_cup/ep_0902/video/episode0.mp4",
+    "report": "evidence/robotwin-followup-1-summary.json"
+  },
+  {
+    "task": "place_shoe",
+    "seed": 901,
+    "native_frames": 102,
+    "run": "robotwin_source_followup_0",
+    "video_sha256": "b3c2c2c0cb905bf07808bd3452771e4f94f898ad0a71da8294a97a3daf165df2",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_source_followup_0/place_shoe/ep_0901/video/episode0.mp4",
+    "report": "evidence/robotwin-followup-0-summary.json"
+  },
+  {
+    "task": "scan_object",
+    "seed": 902,
+    "native_frames": 92,
+    "run": "robotwin_source_followup_0",
+    "video_sha256": "a35072017cf45d74a474508b9501abc56cced9f15bc3b8561c58d678f1eb0f40",
+    "video": "/user/panmiao/workspace/robot_stack/outputs/robotwin_source_followup_0/scan_object/ep_0902/video/episode0.mp4",
+    "report": "evidence/robotwin-followup-0-summary.json"
+  },
+  {
+    "task": "put_object_cabinet",
+    "seed": 909,
+    "native_frames": 149,
+    "run": "robotwin_bootstrap_v6",
+    "video_sha256": "96b0831b46d6be2943db8801e1541285243bd79202b38c2b3c4374eab5ef79d1",
+    "report": "evidence/robotwin-bootstrap-summary.json"
+  }
+]

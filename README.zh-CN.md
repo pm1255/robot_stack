@@ -1,6 +1,6 @@
 # Robot Stack
 
-**新增 ManiSkill 原生专家接入、RoboTwin 实验性逐步驱动、逐任务覆盖报告，以及下方直接展示的 119 个真实动图。** [覆盖边界与启动命令](docs/task-coverage.md)。
+**新增 ManiSkill 原生专家接入、RoboTwin 实验性逐步驱动、逐任务覆盖报告，以及下方直接展示的 132 个真实动图。** [覆盖边界与启动命令](docs/task-coverage.md)。
 
 **统一多扰动调度。** 支持插入步数、比例、源轨迹阶段事件，以及类型、强度、持续步数、次数和间隔。[配置器与真实案例](https://pm1255.github.io/robot_stack/playground.html) · [启动命令与 Python 接口](docs/perturbations.md)。MetaWorld 首轮 100 次尝试得到 69 组有效纠错，覆盖 48 类任务；独立工具任务补测 18/40，补齐其余两类，累计 50 类任务均有有效样本。这是任务类别覆盖，不代表所有任务实例、所有错误都能恢复，也不代表所有 benchmark 已全面适配。
 
@@ -9,6 +9,8 @@
 [在线可视化](https://pm1255.github.io/robot_stack/) · [English](README.md) · [纠错协议与数据结构](docs/correction-protocol.md) · [多环境实测](docs/benchmarks.md) · [贡献指南](CONTRIBUTING.md)
 
 项目的核心是可复查的纠错数据，而不是仅让函数返回 `success=True`。环境接口负责动作与任务判定，策略负责选择动作，共用采集引擎负责预算、分叉、记录和配对。
+
+**RoboTwin 成功源覆盖已达 50/50 类。** 首轮固定种子 37/50；独立补测 11/26；最后限次补采 5/13，保留全部失败。纠错覆盖仍为双臂堆叠一类，不能从源覆盖外推。 [Evidence](docs/task-coverage.md).
 
 ## 现在代码还绑定具体任务吗？
 
@@ -82,6 +84,21 @@ seed 101；正常成功 3,935 个物理步，错误对照 4,175 步后失败，�
 <tr><td align="center"><b>shake_bottle_horizontally</b><br><img width="240" src="docs/media/gallery/robotwin-sources/shake_bottle_horizontally.gif" alt="shake_bottle_horizontally successful source"><br>154 recorded frames · source</td><td align="center"><b>stack_blocks_three</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stack_blocks_three.gif" alt="stack_blocks_three successful source"><br>254 recorded frames · source</td><td align="center"><b>stack_blocks_two</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stack_blocks_two.gif" alt="stack_blocks_two successful source"><br>173 recorded frames · source</td></tr>
 <tr><td align="center"><b>stack_bowls_three</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stack_bowls_three.gif" alt="stack_bowls_three successful source"><br>270 recorded frames · source</td><td align="center"><b>stack_bowls_two</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stack_bowls_two.gif" alt="stack_bowls_two successful source"><br>183 recorded frames · source</td><td align="center"><b>stamp_seal</b><br><img width="240" src="docs/media/gallery/robotwin-sources/stamp_seal.gif" alt="stamp_seal successful source"><br>77 recorded frames · source</td></tr>
 <tr><td align="center"><b>turn_switch</b><br><img width="240" src="docs/media/gallery/robotwin-sources/turn_switch.gif" alt="turn_switch successful source"><br>53 recorded frames · source</td></tr>
+</table>
+</details>
+
+
+<details>
+<summary>展开补采新增的 13 类成功源轨迹</summary>
+
+来自另外记录的固定种子补测与限次成功补采，不混入首轮成功率，也不计为纠错对。每张动图链接到对应实验报告。
+
+<table>
+<tr><td align="center"><b>dump_bin_bigbin</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/dump_bin_bigbin.gif" alt="dump_bin_bigbin successful source"></a><br>seed 902 · 190 frames · source</td><td align="center"><b>move_pillbottle_pad</b><br><a href="docs/evidence/robotwin-followup-1-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/move_pillbottle_pad.gif" alt="move_pillbottle_pad successful source"></a><br>seed 901 · 85 frames · source</td><td align="center"><b>open_laptop</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/open_laptop.gif" alt="open_laptop successful source"></a><br>seed 901 · 84 frames · source</td></tr>
+<tr><td align="center"><b>open_microwave</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/open_microwave.gif" alt="open_microwave successful source"></a><br>seed 903 · 293 frames · source</td><td align="center"><b>pick_diverse_bottles</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/pick_diverse_bottles.gif" alt="pick_diverse_bottles successful source"></a><br>seed 905 · 68 frames · source</td><td align="center"><b>place_a2b_left</b><br><a href="docs/evidence/robotwin-followup-1-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_a2b_left.gif" alt="place_a2b_left successful source"></a><br>seed 901 · 82 frames · source</td></tr>
+<tr><td align="center"><b>place_bread_basket</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_bread_basket.gif" alt="place_bread_basket successful source"></a><br>seed 901 · 128 frames · source</td><td align="center"><b>place_bread_skillet</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_bread_skillet.gif" alt="place_bread_skillet successful source"></a><br>seed 903 · 96 frames · source</td><td align="center"><b>place_can_basket</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_can_basket.gif" alt="place_can_basket successful source"></a><br>seed 903 · 136 frames · source</td></tr>
+<tr><td align="center"><b>place_empty_cup</b><br><a href="docs/evidence/robotwin-followup-1-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_empty_cup.gif" alt="place_empty_cup successful source"></a><br>seed 902 · 102 frames · source</td><td align="center"><b>place_shoe</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/place_shoe.gif" alt="place_shoe successful source"></a><br>seed 901 · 102 frames · source</td><td align="center"><b>scan_object</b><br><a href="docs/evidence/robotwin-followup-0-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/scan_object.gif" alt="scan_object successful source"></a><br>seed 902 · 92 frames · source</td></tr>
+<tr><td align="center"><b>put_object_cabinet</b><br><a href="docs/evidence/robotwin-bootstrap-summary.json"><img width="240" src="docs/media/gallery/robotwin-sources/put_object_cabinet.gif" alt="put_object_cabinet successful source"></a><br>seed 909 · 149 frames · source</td></tr>
 </table>
 </details>
 

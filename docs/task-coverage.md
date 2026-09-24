@@ -2,7 +2,7 @@
 
 Robot Stack aims to collect three related kinds of data for every supported task: successful source demonstrations, deliberate execution errors, and successful recovery from those errors. An adapter alone does not solve a task. The task needs a source policy, a native success oracle and a policy that can act from a disturbed state. The same collector, storage format, schedule and audit run across adapters; a separate collection pipeline is not required for every task.
 
-[Search the live coverage table and 119 animations](https://pm1255.github.io/robot_stack/gallery.html) · [Machine-readable coverage](evidence/task-coverage.json) · [Schedule API](perturbations.md)
+[Search the live coverage table and 132 animations](https://pm1255.github.io/robot_stack/gallery.html) · [Machine-readable coverage](evidence/task-coverage.json) · [Schedule API](perturbations.md)
 
 ## What “all tasks” means
 
@@ -94,6 +94,8 @@ The adapter yields at each native `scene.step()`, records motor targets, velocit
 The first full RoboTwin source sweep attempted all 50 tasks at seed 900: **37 successful sources, nine task failures and four errors**. This is an unfiltered fixed-seed result, including setup instability and planning errors. [All source records](evidence/robotwin-all-summary.json).
 
 A separate two-seed follow-up attempted the 13 missing classes at seeds 901–902: **11 successful sources in 26 attempts**, expanding source coverage to **45/50 task classes**. Both successful and failed attempts are retained. This follow-up is separate from the first fixed-seed sweep. [Shard 0](evidence/robotwin-followup-0-summary.json), [shard 1](evidence/robotwin-followup-1-summary.json).
+
+A final bounded bootstrapping run attempted the remaining five classes, stopping each after one success, with a cap of ten seeds per class starting at 903. It produced **five successes in 13 attempts** (six task failures and two errors), bringing source coverage to **50/50 classes**. `put_object_cabinet` first succeeded at seed 909. This explicitly selected source set is not a 100% episode success rate, and it does not establish all-task correction support. [Complete bootstrapping report](evidence/robotwin-bootstrap-summary.json). All 50 source classes have animations in the README.
 
 The initial stack_blocks_two trial collected a successful source, effective disturbance and successful replanning, with identical prefix/error states. Its control also succeeded, so it yielded **zero qualified correction pairs**. This result is retained. Investigation found that both arms share one articulation in ALOHA; the earlier motor layout overwrote the left intervention with the second full motor vector. The adapter now records one vector per unique articulation and preserves both arms' edits. Old duplicated-vector files can still replay the command actually applied by that version. The fixed four-attempt stack_blocks_two experiment (seeds 100–101, two schedules) produced **4/4 successful sources and 3/4 qualified correction pairs**; all 12 trajectory files passed audit. [Results](evidence/robotwin-carry-summary.json), [audit](evidence/robotwin-carry-audit.json). The seed 101 second-carry triplet independently replayed with state error 0 on all three branches; recovery took 7,748 native physics steps. [Replay evidence](evidence/robotwin-carry-replay.json). Python task-source discovery also uses Python's declared encoding, independent of native libraries changing the process locale. Fixed-version experiments are reported separately.
 
