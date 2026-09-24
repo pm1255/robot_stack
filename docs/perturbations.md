@@ -43,7 +43,7 @@ Use exactly one `at` field. Unknown fields, unsupported interventions, absent mi
 
 ## Native intervention catalog
 
-There are **14 configurable action interventions across three adapters**, including hold controls. These are not 14 demonstrated failure mechanisms; whether an intervention creates an error is measured per episode. No synthetic success flags, teleportation, forced attachment, or physics weakening are used.
+There are **19 configurable action interventions across five adapters**, including hold controls. These are not 19 demonstrated failure mechanisms; whether an intervention creates an error is measured per episode. No synthetic success flags, teleportation, forced attachment, or physics weakening are used.
 
 | Adapter | Types | Parameters |
 | --- | --- | --- |
@@ -125,6 +125,13 @@ The HDF5 alignment stays T actions / T+1 states. `events_json` stores T+1 milest
 
 For a working native adapter, pass `--adapter-options '{"adapter_factory":"my_package.adapters:make_adapter"}'`. The factory receives `(task, **options)` and must return the core Adapter protocol. `reset(seed)` must reproduce physics **and policy state**. `expert_action()` must be side-effect free with respect to physics. Expose `events()` for milestone labels and optionally `make_perturbation(event, rng)` for native interventions. Replay stores and reuses the factory/options.
 
-RoboDojo's existing bridge accepts a caller-provided native policy and state readers. ManiSkill and RoboTwin have expert collection examples in `benchmark_collector`, but their recovery policies are not yet connected to this scheduler. A method that only replays a successful action tape is not a general recovery expert. RoboCasa composite household manipulation and all-task RoboDojo recovery remain integration work. The six-goal AI2-THOR example is **longer sequential navigation, not a difficult navigation-plus-manipulation household benchmark**.
+RoboDojo's existing bridge accepts a caller-provided native policy and state readers. ManiSkill and RoboTwin now connect native experts to this scheduler through action streaming and current-state replanning; verified task coverage and remaining limitations are listed in [task coverage](task-coverage.md). A method that only replays a successful action tape is not a general recovery expert. RoboCasa composite household manipulation and all-task RoboDojo recovery remain integration work. The six-goal AI2-THOR example is **longer sequential navigation, not a difficult navigation-plus-manipulation household benchmark**.
 
 MimicGen's verified Lift example remains available in [mimicgen.md](mimicgen.md). New tasks require their own object-relative subtask definitions and environment interface. Generated successes are not automatically correction pairs; run perturbation/recovery validation separately and preserve source ancestry when splitting data.
+
+
+## Native ManiSkill and RoboTwin planners
+
+The same JSON schedule now supports ManiSkill (`joint_offset`, `gripper_open`, `gripper_close`, `joint_hold`) and experimental RoboTwin (`joint_offset`). Native experts are streamed into the collector one action at a time; after an intervention, replanning starts from current state. RoboTwin durations count individual physics steps; ManiSkill durations count control steps. The web configurator exposes both backends, JSON parameters, adapter options, budgets, episode counts and seeds. [Installation, all-expert commands and measured coverage](task-coverage.md).
+
+Use `examples/perturbations/maniskill-late.json`, `robotwin-carry.json` or `robotwin-first-carry.json` as task-specific starting points. A different task may require a different insertion time or recovery policy. Original experts are collection policies, not proof of arbitrary-error recovery.

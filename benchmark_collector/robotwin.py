@@ -58,6 +58,9 @@ def main():
     if args.episodes < 1:
         p.error('episodes must be positive')
     root, output = args.root.resolve(), args.output.resolve()
+    if args.tasks == ['all']:
+        from robot_stack.inventory import file_tasks
+        args.tasks = file_tasks(root / 'envs')
     output.mkdir(parents=True, exist_ok=False)
     os.chdir(root)
     sys.path.insert(0, str(root))
@@ -77,7 +80,6 @@ def main():
         'source_hashes': {n: hashlib.sha256((root / n).read_bytes()).hexdigest() for n in sources}})
     records, started_all = [], time.monotonic()
     for task in args.tasks:
-        cls = getattr(importlib.import_module('envs.' + task), task)
         directory = output / task
         directory.mkdir()
         for index in range(args.episodes):
@@ -93,6 +95,7 @@ def main():
             env, replay_env = None, None
             started = time.monotonic()
             try:
+                cls = getattr(importlib.import_module('envs.' + task), task)
                 random.seed(seed)
                 env = cls()
                 cfg = config(root, episode_dir, task)
@@ -153,7 +156,7 @@ def main():
     summary = {'backend': 'robotwin', 'by_task': by_task, 'episodes': len(records),
                'successes': sum(r['success'] for r in records),
                'errors': sum(r['status'] == 'error' for r in records),
-               'wall_seconds': time.monotonic() - started_all,
+               'wall_seconds': time.monotonic() - started_all, 'results': records,
                'includes_rendering_recording_and_requested_replays': True}
     write_json(output / 'summary.json', summary)
     print(json.dumps(summary, indent=2), flush=True)

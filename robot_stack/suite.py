@@ -1,12 +1,46 @@
 """Enumerate native MetaWorld experts and run a bounded task × schedule sweep."""
 import argparse
 import json
+import subprocess
+import sys
 from pathlib import Path
 import time
 import traceback
 from .collect import load_adapter
 from .core import collect_triplet, write_json
 from .schedule import validate_schedule
+
+
+def run_isolated(backend, task, seed, folder, *, budget, schedule, options, timeout):
+    """Contain native crashes/timeouts so the remaining task sweep can finish."""
+    folder = Path(folder).resolve()
+    folder.parent.mkdir(parents=True, exist_ok=True)
+    spec = folder.with_name(folder.name + '_schedule.json')
+    log = folder.with_name(folder.name + '_worker.log')
+    write_json(spec, schedule)
+    command = [sys.executable, '-m', 'robot_stack.collect', '--backend', backend,
+        '--task', task, '--episodes', '1', '--seed-start', str(seed),
+        '--max-steps', str(budget), '--schedule', str(spec),
+        '--adapter-options', json.dumps(options), '--output', str(folder)]
+    with log.open('wb') as stream:
+        try:
+            process = subprocess.run(command, stdout=stream, stderr=subprocess.STDOUT,
+                                     timeout=timeout)
+            error = f'Native worker exited with code {process.returncode}'
+        except subprocess.TimeoutExpired:
+            error = f'Native worker exceeded {timeout} seconds'
+    summary = folder/'summary.json'
+    if summary.exists():
+        row = json.loads(summary.read_text(encoding='utf-8'))['results'][0]
+    else:
+        row = dict(backend=backend, task=task, seed=seed, status='error',
+                   qualified_correction=False, error=error)
+        source = folder/f'ep_{seed:04d}'/'source_episode_result.json'
+        if source.exists():
+            row['source_success'] = json.loads(source.read_text(encoding='utf-8')).get('success') is True
+    row['worker_log'] = log.name
+    row['isolated_worker'] = True
+    return row
 
 
 def main():
@@ -20,12 +54,22 @@ def main():
     parser.add_argument('--seed-start', type=int, default=600)
     parser.add_argument('--max-steps', type=int, default=500)
     parser.add_argument('--adapter-options', default='{}')
+    parser.add_argument('--isolate', action='store_true', help='Run each attempt in a separate process (automatic for ManiSkill)')
+    parser.add_argument('--case-timeout', type=int, default=900, help='Seconds per isolated worker')
     args = parser.parse_args()
+    if args.output is not None:
+        args.output = args.output.resolve()
+    if args.case_timeout < 1:
+        parser.error('case-timeout must be positive')
+    isolated = args.isolate or args.backend == 'maniskill'
     tasks = args.tasks
     if tasks == ['all']:
-        if args.backend != 'metaworld':
-            parser.error('Automatic all-task expert discovery currently supports MetaWorld only')
-        from benchmark_collector.metaworld import discover_tasks
+        if args.backend == 'metaworld':
+            from benchmark_collector.metaworld import discover_tasks
+        elif args.backend == 'maniskill':
+            from .adapters.maniskill import discover_tasks
+        else:
+            parser.error('Automatic expert discovery supports MetaWorld and ManiSkill; other backends need explicit tasks')
         tasks = list(discover_tasks())
     if args.list:
         print(json.dumps({'backend':args.backend,'tasks':tasks,'count':len(tasks),
@@ -40,7 +84,8 @@ def main():
     args.output.mkdir(parents=True, exist_ok=False)
     write_json(args.output/'run_config.json', dict(backend=args.backend, tasks=tasks,
         schedules=dict(configs), episodes=args.episodes, seed_start=args.seed_start,
-        max_steps=args.max_steps, adapter_options=options))
+        max_steps=args.max_steps, adapter_options=options,
+        isolated_workers=isolated, case_timeout=args.case_timeout if isolated else None))
     started, rows = time.monotonic(), []
     for task in tasks:
         for name, schedule in configs:
@@ -50,9 +95,13 @@ def main():
                     kwargs = dict(options)
                     if args.backend == 'metaworld':
                         kwargs.setdefault('task_index', index)
-                    adapter = load_adapter(args.backend, task, kwargs)
-                    row = collect_triplet(adapter, seed, args.output/task/name/f'ep_{seed:04d}',
-                                          budget=args.max_steps, schedule=schedule)
+                    if isolated:
+                        row = run_isolated(args.backend, task, seed, args.output/task/name/f'case_{seed:04d}',
+                            budget=args.max_steps, schedule=schedule, options=kwargs, timeout=args.case_timeout)
+                    else:
+                        adapter = load_adapter(args.backend, task, kwargs)
+                        row = collect_triplet(adapter, seed, args.output/task/name/f'ep_{seed:04d}',
+                                              budget=args.max_steps, schedule=schedule)
                 except Exception as exc:
                     row = dict(task=task,seed=seed,status='error',qualified_correction=False,
                                error=repr(exc),traceback=traceback.format_exc())

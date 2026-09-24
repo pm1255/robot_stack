@@ -3,6 +3,8 @@ import numpy as np
 
 
 CATALOG = {
+    'robotwin': ['joint_offset'],
+    'maniskill': ['joint_offset','gripper_open','gripper_close','joint_hold'],
     'metaworld': ['cartesian_offset','random_cartesian','gripper_open','gripper_close','action_reverse','action_hold'],
     'robocasa': ['base_yaw','base_translation','base_reverse','base_hold'],
     'ai2thor': ['wrong_heading','backtrack','lateral_drift','navigation_hold'],

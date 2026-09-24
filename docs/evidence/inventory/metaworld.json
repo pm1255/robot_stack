@@ -1,0 +1,460 @@
+{
+  "backend": "metaworld",
+  "version": "3.1.1",
+  "task_count": 50,
+  "registered_expert_count": 50,
+  "scope": "installed native registry, not complete literature coverage",
+  "tasks": [
+    {
+      "task": "assembly-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "basketball-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "bin-picking-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "box-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "button-press-topdown-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "button-press-topdown-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "button-press-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "button-press-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "coffee-button-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "coffee-pull-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "coffee-push-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "dial-turn-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "disassemble-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "door-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "door-lock-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "door-open-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "door-unlock-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "drawer-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "drawer-open-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "faucet-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "faucet-open-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "hammer-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "hand-insert-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "handle-press-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "handle-press-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "handle-pull-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "handle-pull-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "lever-pull-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "peg-insert-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "peg-unplug-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pick-out-of-hole-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pick-place-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pick-place-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "plate-slide-back-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "plate-slide-back-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "plate-slide-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "plate-slide-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "push-back-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "push-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "push-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "reach-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "reach-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "shelf-place-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "soccer-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stick-pull-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stick-push-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "sweep-into-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "sweep-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "window-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "window-open-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    }
+  ],
+  "additional_adapter_tasks": []
+}

@@ -1,0 +1,676 @@
+{
+  "backend": "maniskill",
+  "version": "3.0.1",
+  "task_count": 74,
+  "registered_expert_count": 12,
+  "scope": "installed native registry, not complete literature coverage",
+  "tasks": [
+    {
+      "task": "AnymalC-Reach-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AnymalC-Spin-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArchitecTHOR_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AssemblingKits-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DrawSVG-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DrawTriangle-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "Empty-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FMBAssembly1Easy-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "InsertFlower-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LiftPegUpright-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-AntRun-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-AntWalk-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-CartpoleBalance-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-CartpoleSwingUp-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-HopperHop-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-HopperStand-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-HumanoidRun-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-HumanoidStand-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MS-HumanoidWalk-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenCabinetDoor-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenCabinetDrawer-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PegInsertionSide-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickClutterYCB-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickCube-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickCubeSO100-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickCubeWidowXAI-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickSingleYCB-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceSphere-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlugCharger-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PokeCube-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PullCube-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PullCubeTool-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PushCube-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PushT-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PutCarrotOnPlateInScene-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PutEggplantInBasketScene-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PutSpoonOnTableClothInScene-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReplicaCADPrepareGroceriesTrain_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReplicaCADPrepareGroceriesVal_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReplicaCADSetTableTrain_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReplicaCADSetTableVal_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReplicaCADTidyHouseTrain_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReplicaCADTidyHouseVal_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReplicaCAD_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RoboCasaKitchen-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RollBall-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateSingleObjectInHandLevel0-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateSingleObjectInHandLevel1-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateSingleObjectInHandLevel2-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateSingleObjectInHandLevel3-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateValveLevel0-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateValveLevel1-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateValveLevel2-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateValveLevel3-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotateValveLevel4-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SO100GraspCube-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StackCube-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StackGreenCubeOnYellowCubeBakedTexInScene-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StackPyramid-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TableTopFreeDraw-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TriFingerRotateCubeLevel0-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TriFingerRotateCubeLevel1-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TriFingerRotateCubeLevel2-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TriFingerRotateCubeLevel3-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TriFingerRotateCubeLevel4-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnFaucet-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TwoRobotPickCube-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TwoRobotStackCube-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "UnitreeG1PlaceAppleInBowl-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "UnitreeG1Stand-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "UnitreeG1TransportBox-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "UnitreeGo2-Reach-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "UnitreeH1Stand-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    }
+  ],
+  "additional_adapter_tasks": []
+}

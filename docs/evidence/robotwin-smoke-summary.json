@@ -1,0 +1,30 @@
+{
+  "backend": "robotwin",
+  "task": "stack_blocks_two",
+  "source_attempts": 1,
+  "successful_sources": 1,
+  "qualified_corrections": 0,
+  "errors": 0,
+  "wall_seconds": 232.8736349530518,
+  "results": [
+    {
+      "backend": "robotwin",
+      "task": "stack_blocks_two",
+      "seed": 100,
+      "source_demo_id": "d1d368e13062f1dede2a",
+      "source_success": true,
+      "qualified_correction": false,
+      "branch_step": 1942,
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "0818c4a2c9942cd5dd0a",
+      "recovery_action_range": [
+        2182,
+        5416
+      ]
+    }
+  ]
+}

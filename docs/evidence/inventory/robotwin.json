@@ -1,0 +1,460 @@
+{
+  "backend": "robotwin",
+  "version": "source_files_sha256:249c247010ad65743620ce5d11923a5c6dbb602f44387ab0f99269494091ec9f",
+  "task_count": 50,
+  "registered_expert_count": 50,
+  "additional_adapter_tasks": [],
+  "scope": "installed native registry, not complete literature coverage",
+  "tasks": [
+    {
+      "task": "adjust_bottle",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "beat_block_hammer",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "blocks_ranking_rgb",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "blocks_ranking_size",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "click_alarmclock",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "click_bell",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "dump_bin_bigbin",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "grab_roller",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "handover_block",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "handover_mic",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "hanging_mug",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "lift_pot",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "move_can_pot",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "move_pillbottle_pad",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "move_playingcard_away",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "move_stapler_pad",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "open_laptop",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "open_microwave",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pick_diverse_bottles",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pick_dual_bottles",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_a2b_left",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_a2b_right",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_bread_basket",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_bread_skillet",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_burger_fries",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_can_basket",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_cans_plasticbox",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_container_plate",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_dual_shoes",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_empty_cup",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_fan",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_mouse_pad",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_object_basket",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_object_scale",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_object_stand",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_phone_stand",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "place_shoe",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "press_stapler",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "put_bottles_dustbin",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "put_object_cabinet",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "rotate_qrcode",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "scan_object",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "shake_bottle",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "shake_bottle_horizontally",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_blocks_three",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_blocks_two",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_bowls_three",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_bowls_two",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stamp_seal",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "turn_switch",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    }
+  ]
+}

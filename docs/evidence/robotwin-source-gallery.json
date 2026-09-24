@@ -1,0 +1,224 @@
+[
+  {
+    "task": "adjust_bottle",
+    "seed": 900,
+    "native_frames": 82,
+    "trajectory_sha256": "881f28fce47c493edd0b8fc67b8b9690d63d5ef3249b6853b956bf4fc2be3a93"
+  },
+  {
+    "task": "beat_block_hammer",
+    "seed": 900,
+    "native_frames": 65,
+    "trajectory_sha256": "da82ae329650cb50d085fe40514e1271b88b02edfbeb33f260d2f649a4ab2f88"
+  },
+  {
+    "task": "blocks_ranking_rgb",
+    "seed": 900,
+    "native_frames": 254,
+    "trajectory_sha256": "7832ef5ca4c31f37062bcbbabe22496e4ddd7e54c29aca155b08d4988870397d"
+  },
+  {
+    "task": "blocks_ranking_size",
+    "seed": 900,
+    "native_frames": 264,
+    "trajectory_sha256": "759c9c08201e6d0ffaef0d150eab349ab176eba28b4d28bbee911516c67bba4e"
+  },
+  {
+    "task": "click_alarmclock",
+    "seed": 900,
+    "native_frames": 52,
+    "trajectory_sha256": "5e0ed85efa44c77d1ea395679d348a1a8e8f64a094970516245b9887cdded96d"
+  },
+  {
+    "task": "click_bell",
+    "seed": 900,
+    "native_frames": 44,
+    "trajectory_sha256": "9a678051cf9b2ea43055fe1c82f26f95f8f7a7511c740c290b13edbab623021b"
+  },
+  {
+    "task": "grab_roller",
+    "seed": 900,
+    "native_frames": 52,
+    "trajectory_sha256": "05d30a9ab76380cc9ed1d93f7f1fa025251c1a89f6006952c3844de04a617c72"
+  },
+  {
+    "task": "handover_block",
+    "seed": 900,
+    "native_frames": 169,
+    "trajectory_sha256": "09420e17d030f2fae8af6ceebe28ff72affa351a37aa040b2e2c116987c34d41"
+  },
+  {
+    "task": "handover_mic",
+    "seed": 900,
+    "native_frames": 124,
+    "trajectory_sha256": "7d81f35b52d5989e3e8a92c16145b10a1c80dba2aa0214d74d18e2734ed5cced"
+  },
+  {
+    "task": "hanging_mug",
+    "seed": 900,
+    "native_frames": 196,
+    "trajectory_sha256": "090cda47ef68d44c7b56b06df129ce91c1f2359d29d1f491109cfe5bdca7524e"
+  },
+  {
+    "task": "lift_pot",
+    "seed": 900,
+    "native_frames": 61,
+    "trajectory_sha256": "b0c046b0b12d35c874951e439922c62ee44587a9467c6edb7e6bf3e9972c873a"
+  },
+  {
+    "task": "move_can_pot",
+    "seed": 900,
+    "native_frames": 83,
+    "trajectory_sha256": "0817e781f8360aa64eb22b9eae57184ceea3f81b9639f7978e808cbb7f4b516d"
+  },
+  {
+    "task": "move_playingcard_away",
+    "seed": 900,
+    "native_frames": 63,
+    "trajectory_sha256": "7df2c1816d5700d6ffbddc456fb70c751315d7ae6f01ff855a67f8a1a1b87af2"
+  },
+  {
+    "task": "move_stapler_pad",
+    "seed": 900,
+    "native_frames": 80,
+    "trajectory_sha256": "ff999aacd61f60d7e3ff9d8d0b13d4463dcba4a37d11515c2812e79130ad68af"
+  },
+  {
+    "task": "pick_dual_bottles",
+    "seed": 900,
+    "native_frames": 70,
+    "trajectory_sha256": "92dd41f914d3642180741bced4c73c3ec5c7a3618d9b6113b8c9ceb017455e20"
+  },
+  {
+    "task": "place_a2b_right",
+    "seed": 900,
+    "native_frames": 81,
+    "trajectory_sha256": "02ec8e2e63de267a4f5d75b53334befffaf8d732702fc61e4fcd2a393da116bb"
+  },
+  {
+    "task": "place_burger_fries",
+    "seed": 900,
+    "native_frames": 132,
+    "trajectory_sha256": "9288999a7395801780958ad4569fe1c3465e5defccb1f2e8ccd7f0fc492a8ca1"
+  },
+  {
+    "task": "place_cans_plasticbox",
+    "seed": 900,
+    "native_frames": 159,
+    "trajectory_sha256": "8716d7807b5baa43ce5c05aeaffe021a58201484a086bab4f7d0e506b13b0348"
+  },
+  {
+    "task": "place_container_plate",
+    "seed": 900,
+    "native_frames": 89,
+    "trajectory_sha256": "1ad917f7a94f26e09ac0dce8f1a42d41d44942a6e12c1b22193ee0685164e44b"
+  },
+  {
+    "task": "place_dual_shoes",
+    "seed": 900,
+    "native_frames": 128,
+    "trajectory_sha256": "2a413da921115e9ea62dd2b941708cd8456692c4fbe31df131a1a301a6bc99e0"
+  },
+  {
+    "task": "place_fan",
+    "seed": 900,
+    "native_frames": 87,
+    "trajectory_sha256": "06465e65404638c192deda1733e13a76333baf9055be6d0db08369807949d63c"
+  },
+  {
+    "task": "place_mouse_pad",
+    "seed": 900,
+    "native_frames": 86,
+    "trajectory_sha256": "c643ed54c737beffb0c040c1c85ee98cdafd98fef836fbd8bf61096b4cacf5a9"
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 900,
+    "native_frames": 139,
+    "trajectory_sha256": "d8cfbc34b4f6b966e59bde226e27f082b4fbb900f6511958d4fae7696d0b4b8d"
+  },
+  {
+    "task": "place_object_scale",
+    "seed": 900,
+    "native_frames": 80,
+    "trajectory_sha256": "4ad31de95e0c5176440fb8eb2adc601758a7b5fcaf43c23f62bf9bcd49b5f6f3"
+  },
+  {
+    "task": "place_object_stand",
+    "seed": 900,
+    "native_frames": 77,
+    "trajectory_sha256": "d8be3ae90aa300569a03a3a56c2e5c2fa3fedcc9bd4e553458685f9e559506e4"
+  },
+  {
+    "task": "place_phone_stand",
+    "seed": 900,
+    "native_frames": 71,
+    "trajectory_sha256": "6b60bb75ef26a6735573777c36c4e4baad774c63a1df25468d564ed1b07eed46"
+  },
+  {
+    "task": "press_stapler",
+    "seed": 900,
+    "native_frames": 65,
+    "trajectory_sha256": "5b58e0833fb83c232ac1ec5daed2764a38f22958393d287e475b18932b8edf35"
+  },
+  {
+    "task": "put_bottles_dustbin",
+    "seed": 900,
+    "native_frames": 364,
+    "trajectory_sha256": "43bb1b8e38a1188028f03e65b8e6b76b05f277f76d91d7ae511e0462170c21e7"
+  },
+  {
+    "task": "rotate_qrcode",
+    "seed": 900,
+    "native_frames": 85,
+    "trajectory_sha256": "f83d5d9df573b838e42f92a3de7a969830e94b8431f96b5fe2ccf798bd4b80d2"
+  },
+  {
+    "task": "shake_bottle",
+    "seed": 900,
+    "native_frames": 136,
+    "trajectory_sha256": "3047c3fa2e5354e842bc4fb81ae2394f4b3d83cd9baf92148f74ccdfbe5070d6"
+  },
+  {
+    "task": "shake_bottle_horizontally",
+    "seed": 900,
+    "native_frames": 154,
+    "trajectory_sha256": "2d0ab3e29fd7d969e7c7b8a815f4881888c4a11605641b64cb29bb2fe9de7d23"
+  },
+  {
+    "task": "stack_blocks_three",
+    "seed": 900,
+    "native_frames": 254,
+    "trajectory_sha256": "9fabe2d4f47648ea2d0cc80b79dc569eea1cafeb1abfb61e4618d4326cf9c82b"
+  },
+  {
+    "task": "stack_blocks_two",
+    "seed": 900,
+    "native_frames": 173,
+    "trajectory_sha256": "ebca6941b53cf745ad858785b122c1edaf961d9da25d4d670cff7788736e1c97"
+  },
+  {
+    "task": "stack_bowls_three",
+    "seed": 900,
+    "native_frames": 270,
+    "trajectory_sha256": "7a9d342d97497dd17e46e769cd09ab8775811b81af1e2bfda499fcff01e67fa2"
+  },
+  {
+    "task": "stack_bowls_two",
+    "seed": 900,
+    "native_frames": 183,
+    "trajectory_sha256": "fdb6cb08a58ddd0e70087dfc2f1d04cd8226d516d9c92c337934352b281ccc60"
+  },
+  {
+    "task": "stamp_seal",
+    "seed": 900,
+    "native_frames": 77,
+    "trajectory_sha256": "be945b36dd6bce4ecdc281d1f152cd08b97feecc06b505c501ed0f62f8a85265"
+  },
+  {
+    "task": "turn_switch",
+    "seed": 900,
+    "native_frames": 53,
+    "trajectory_sha256": "92eac46b71641d004dd66c4c530761cc100c1ace3c244179a66951e5a1cd3825"
+  }
+]

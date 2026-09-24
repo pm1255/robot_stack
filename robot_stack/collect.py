@@ -18,6 +18,8 @@ def load_adapter(backend, task, options):
         adapter.metadata['adapter_options'] = dict(options, adapter_factory=factory)
         return adapter
     names = {'metaworld': ('metaworld', 'MetaWorldAdapter'),
+             'maniskill': ('maniskill', 'ManiSkillAdapter'),
+             'robotwin': ('robotwin', 'RoboTwinAdapter'),
              'robocasa': ('robocasa', 'RoboCasaNavigationAdapter'),
              'ai2thor': ('ai2thor', 'AI2ThorNavigationAdapter')}
     if backend not in names:
@@ -42,6 +44,8 @@ def main():
     p.add_argument('--schedule', type=Path, help='JSON perturbation schedule (overrides branch-fraction/perturb-steps)')
     p.add_argument('--error-threshold', type=float, default=.03)
     args = p.parse_args()
+    if args.output is not None:
+        args.output = args.output.resolve()
     import json
     options = json.loads(args.adapter_options)
     schedule = json.loads(args.schedule.read_text()) if args.schedule else None

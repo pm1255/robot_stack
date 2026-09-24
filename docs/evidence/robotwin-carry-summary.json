@@ -1,0 +1,95 @@
+{
+  "backend": "robotwin",
+  "task_count": 1,
+  "attempts": 4,
+  "successful_sources": 4,
+  "qualified_corrections": 3,
+  "errors": 0,
+  "wall_seconds": 343.01458731107414,
+  "results": [
+    {
+      "backend": "robotwin",
+      "task": "stack_blocks_two",
+      "seed": 100,
+      "source_demo_id": "5f98fd6fa147b7306940",
+      "split_group": "0818c4a2c9942cd5dd0a",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 3187,
+      "recovery_steps": 6175,
+      "schedule_name": "robotwin-carry"
+    },
+    {
+      "backend": "robotwin",
+      "task": "stack_blocks_two",
+      "seed": 101,
+      "source_demo_id": "409d03c68b3af7e239f6",
+      "split_group": "85f02ab2a65349f1ff7a",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 3226,
+      "recovery_steps": 7748,
+      "schedule_name": "robotwin-carry"
+    },
+    {
+      "backend": "robotwin",
+      "task": "stack_blocks_two",
+      "seed": 100,
+      "source_demo_id": "5af88d0d69abba6448fd",
+      "split_group": "0818c4a2c9942cd5dd0a",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 1245,
+      "recovery_steps": 5040,
+      "schedule_name": "robotwin-first-carry"
+    },
+    {
+      "backend": "robotwin",
+      "task": "stack_blocks_two",
+      "seed": 101,
+      "source_demo_id": "139af2949e4891f0eac0",
+      "split_group": "85f02ab2a65349f1ff7a",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 1262,
+      "recovery_steps": 5019,
+      "schedule_name": "robotwin-first-carry"
+    }
+  ]
+}

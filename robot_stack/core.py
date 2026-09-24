@@ -92,6 +92,16 @@ def rollout(adapter, episode, budget, phase):
         episode.step(adapter, adapter.expert_action(), phase, budget)
 
 
+def intervention_ended(adapter):
+    """Allow policy replanning; a notification must never alter physical state."""
+    callback = getattr(adapter, 'after_intervention', None)
+    if callback is not None:
+        before = checked(adapter.state())
+        callback()
+        if not np.array_equal(before, checked(adapter.state())):
+            raise ValueError('Intervention callback changed simulator state')
+
+
 def save_episode(folder, name, episode, metadata):
     import h5py
     if len(episode.states) != len(episode.actions) + 1:
@@ -126,7 +136,7 @@ def collect_triplet(adapter, seed, folder, *, budget=500, branch_fraction=.35,
                                  error_threshold=error_threshold, replay_tolerance=replay_tolerance)
     if not 0 < branch_fraction < 1 or perturb_steps < 1 or budget < 3:
         raise ValueError('Invalid branch or action budget')
-    folder = Path(folder)
+    folder = Path(folder).resolve()
     folder.mkdir(parents=True, exist_ok=False)
     adapter.reset(seed)
     base_meta = dict(adapter.metadata, backend=adapter.backend, task=adapter.task, seed=seed,
@@ -177,6 +187,7 @@ def collect_triplet(adapter, seed, folder, *, budget=500, branch_fraction=.35,
         displacement = float(np.linalg.norm(episode.features[-1] - source.features[branch]))
         induced_error = displacement >= error_threshold and not adapter.success()
         injected_states.append(episode.states[-1])
+        intervention_ended(adapter)
         if label == 'perturbed':
             for action in source.actions[branch:]:
                 if len(episode.actions) >= budget or adapter.terminal():

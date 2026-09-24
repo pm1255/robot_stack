@@ -1,0 +1,458 @@
+{
+  "backend": "maniskill",
+  "task_count": 12,
+  "attempts": 24,
+  "successful_sources": 19,
+  "qualified_corrections": 8,
+  "errors": 4,
+  "wall_seconds": 766.1792026169132,
+  "results": [
+    {
+      "task": "DrawTriangle-v1",
+      "seed": 810,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "TypeError('BaseMotionPlanningSolver.__init__() takes from 2 to 8 positional arguments but 9 were given')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/suite.py\", line 57, in main\n    row = collect_triplet(adapter, seed, args.output/task/name/f'ep_{seed:04d}',\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/core.py\", line 135, in collect_triplet\n    return collect_scheduled(adapter, seed, folder, schedule=schedule, budget=budget,\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/scheduled.py\", line 33, in collect_scheduled\n    rollout(adapter, source, budget, 'expert')\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/core.py\", line 92, in rollout\n    episode.step(adapter, adapter.expert_action(), phase, budget)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/adapters/maniskill.py\", line 93, in expert_action\n    action = self.stream.next_action(self.last_result)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/action_stream.py\", line 44, in next_action\n    value = self.worker.switch(previous_result) if self.started else self.worker.switch()\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/action_stream.py\", line 38, in _run\n    result = self.solve(self, seed=self.seed, debug=False, vis=False)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/examples/motionplanning/panda/solutions/draw_triangle.py\", line 9, in solve\n    planner = PandaStickMotionPlanningSolver(\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/examples/motionplanning/panda/motionplanner_stick.py\", line 23, in __init__\n    super().__init__(env, debug, vis, base_pose, visualize_target_grasp_pose, print_env_info, joint_vel_limits, joint_acc_limits)\nTypeError: BaseMotionPlanningSolver.__init__() takes from 2 to 8 positional arguments but 9 were given\n",
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "task": "DrawTriangle-v1",
+      "seed": 811,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "TypeError('BaseMotionPlanningSolver.__init__() takes from 2 to 8 positional arguments but 9 were given')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/suite.py\", line 57, in main\n    row = collect_triplet(adapter, seed, args.output/task/name/f'ep_{seed:04d}',\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/core.py\", line 135, in collect_triplet\n    return collect_scheduled(adapter, seed, folder, schedule=schedule, budget=budget,\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/scheduled.py\", line 33, in collect_scheduled\n    rollout(adapter, source, budget, 'expert')\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/core.py\", line 92, in rollout\n    episode.step(adapter, adapter.expert_action(), phase, budget)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/adapters/maniskill.py\", line 93, in expert_action\n    action = self.stream.next_action(self.last_result)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/action_stream.py\", line 44, in next_action\n    value = self.worker.switch(previous_result) if self.started else self.worker.switch()\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/action_stream.py\", line 38, in _run\n    result = self.solve(self, seed=self.seed, debug=False, vis=False)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/examples/motionplanning/panda/solutions/draw_triangle.py\", line 9, in solve\n    planner = PandaStickMotionPlanningSolver(\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/examples/motionplanning/panda/motionplanner_stick.py\", line 23, in __init__\n    super().__init__(env, debug, vis, base_pose, visualize_target_grasp_pose, print_env_info, joint_vel_limits, joint_acc_limits)\nTypeError: BaseMotionPlanningSolver.__init__() takes from 2 to 8 positional arguments but 9 were given\n",
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 810,
+      "source_demo_id": "b7ca1d1d58355a73aaf9",
+      "split_group": "8d22dca874701ad5ec8b",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 45,
+      "recovery_steps": 159,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 811,
+      "source_demo_id": "beb385a9eb3cdaf17d9c",
+      "split_group": "02be538f280a53434e34",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 43,
+      "recovery_steps": 1000,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "StackCube-v1",
+      "seed": 810,
+      "source_demo_id": "18fed190b21661064bf9",
+      "split_group": "a6fdb8fab933003bb932",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 56,
+      "recovery_steps": 169,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "StackCube-v1",
+      "seed": 811,
+      "source_demo_id": "2cf87c40b7487547e9a0",
+      "split_group": "a873329c677b284014d0",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 58,
+      "recovery_steps": 178,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PegInsertionSide-v1",
+      "seed": 810,
+      "source_demo_id": "f9180bd517fe80e4cc17",
+      "split_group": "8a38fc8c0abfbb00ffe9",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 69,
+      "recovery_steps": 168,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PegInsertionSide-v1",
+      "seed": 811,
+      "source_demo_id": "80defa1db2f3b0b21c6d",
+      "split_group": "28854af19d65e9def13a",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 77,
+      "recovery_steps": 474,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlugCharger-v1",
+      "seed": 810,
+      "source_demo_id": "b1567c68e9257714a542",
+      "split_group": "d98793ee77ae2102cdb1",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 113,
+      "recovery_steps": 775,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlugCharger-v1",
+      "seed": 811,
+      "source_demo_id": "ba2a4425e7131c8c9e8c",
+      "split_group": "3384e6ff8cc80429748c",
+      "source_success": false,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "reason": "No successful source with a nonempty prefix",
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 810,
+      "source_demo_id": "2034c8edf84f4ffdfc13",
+      "split_group": "7ad8783bd7f17a7e8ffc",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 65,
+      "recovery_steps": 1000,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 811,
+      "source_demo_id": "1009e95bc4d8837b9bd6",
+      "split_group": "1e9cb823ea708f7e2df1",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 59,
+      "recovery_steps": 1000,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PushCube-v1",
+      "seed": 810,
+      "source_demo_id": "bf60a2f1288ec50a0351",
+      "split_group": "a4343b1360110e6e39af",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 34,
+      "recovery_steps": 125,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PushCube-v1",
+      "seed": 811,
+      "source_demo_id": "a164ca9d857365f8b512",
+      "split_group": "43639330aca94f27ccda",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 39,
+      "recovery_steps": 136,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 810,
+      "source_demo_id": "221083350fc4747ecb36",
+      "split_group": "9eedd5196f2fd4e6e940",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 130,
+      "recovery_steps": 1000,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "seed": 811,
+      "source_demo_id": "8c7e3fff2bd12956a76d",
+      "split_group": "ff713444bff6f4661ff9",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 139,
+      "recovery_steps": 159,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 810,
+      "source_demo_id": "24bf5bb25b4e4c2fa3dd",
+      "split_group": "2b9179082b3b5359b656",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 97,
+      "recovery_steps": 579,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "seed": 811,
+      "source_demo_id": "e7179deb3a3a7c2c1759",
+      "split_group": "6c068f12deb5d51ffea3",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 316,
+      "recovery_steps": 1000,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCube-v1",
+      "seed": 810,
+      "source_demo_id": "ea616a63ab0ff684d170",
+      "split_group": "78c8c4a06b043d1d572c",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 33,
+      "recovery_steps": 123,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCube-v1",
+      "seed": 811,
+      "source_demo_id": "1c4ba0ed340daecd61c0",
+      "split_group": "2f513a43797d76178b78",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 48,
+      "recovery_steps": 169,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "task": "DrawSVG-v1",
+      "seed": 810,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "ImportError('svgpathtools not installed. Install with pip install svgpathtools')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/tasks/drawing/draw_svg.py\", line 109, in _load_scene\n    import svgpathtools\nModuleNotFoundError: No module named 'svgpathtools'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/suite.py\", line 57, in main\n    row = collect_triplet(adapter, seed, args.output/task/name/f'ep_{seed:04d}',\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/core.py\", line 135, in collect_triplet\n    return collect_scheduled(adapter, seed, folder, schedule=schedule, budget=budget,\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/scheduled.py\", line 23, in collect_scheduled\n    adapter.reset(seed)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/adapters/maniskill.py\", line 55, in reset\n    self.env = gym.make(self.task, obs_mode='state', control_mode='pd_joint_pos',\n  File \"/user/chenzilong/envs/robotwin/lib/python3.10/site-packages/gymnasium/envs/registration.py\", line 802, in make\n    env = env_creator(**env_spec_kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/registration.py\", line 182, in make\n    env = env_spec.make(**kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/registration.py\", line 79, in make\n    return self.cls(**_kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/tasks/drawing/draw_svg.py\", line 63, in __init__\n    super().__init__(*args, robot_uids=robot_uids, **kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/sapien_env.py\", line 327, in __init__\n    obs, _ = self.reset(seed=[2022 + i for i in range(self.num_envs)], options=dict(reconfigure=True))\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/sapien_env.py\", line 913, in reset\n    self._reconfigure(options)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/sapien_env.py\", line 743, in _reconfigure\n    self._load_scene(options)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/tasks/drawing/draw_svg.py\", line 112, in _load_scene\n    raise ImportError(\nImportError: svgpathtools not installed. Install with pip install svgpathtools\n",
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "task": "DrawSVG-v1",
+      "seed": 811,
+      "status": "error",
+      "qualified_correction": false,
+      "error": "ImportError('svgpathtools not installed. Install with pip install svgpathtools')",
+      "traceback": "Traceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/tasks/drawing/draw_svg.py\", line 109, in _load_scene\n    import svgpathtools\nModuleNotFoundError: No module named 'svgpathtools'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/suite.py\", line 57, in main\n    row = collect_triplet(adapter, seed, args.output/task/name/f'ep_{seed:04d}',\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/core.py\", line 135, in collect_triplet\n    return collect_scheduled(adapter, seed, folder, schedule=schedule, budget=budget,\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/scheduled.py\", line 23, in collect_scheduled\n    adapter.reset(seed)\n  File \"/user/panmiao/workspace/robot_stack/releases/expanded_v1/robot_stack/adapters/maniskill.py\", line 55, in reset\n    self.env = gym.make(self.task, obs_mode='state', control_mode='pd_joint_pos',\n  File \"/user/chenzilong/envs/robotwin/lib/python3.10/site-packages/gymnasium/envs/registration.py\", line 802, in make\n    env = env_creator(**env_spec_kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/registration.py\", line 182, in make\n    env = env_spec.make(**kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/utils/registration.py\", line 79, in make\n    return self.cls(**_kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/tasks/drawing/draw_svg.py\", line 63, in __init__\n    super().__init__(*args, robot_uids=robot_uids, **kwargs)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/sapien_env.py\", line 327, in __init__\n    obs, _ = self.reset(seed=[2022 + i for i in range(self.num_envs)], options=dict(reconfigure=True))\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/sapien_env.py\", line 913, in reset\n    self._reconfigure(options)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/sapien_env.py\", line 743, in _reconfigure\n    self._load_scene(options)\n  File \"/user/panmiao/workspace/robot_stack/runtime/maniskill-v1/lib/python3.10/site-packages/mani_skill/envs/tasks/drawing/draw_svg.py\", line 112, in _load_scene\n    raise ImportError(\nImportError: svgpathtools not installed. Install with pip install svgpathtools\n",
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "StackPyramid-v1",
+      "seed": 810,
+      "source_demo_id": "451ef2e6c40db0477c07",
+      "split_group": "3019dca6f673b1b7481b",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 93,
+      "recovery_steps": 230,
+      "schedule_name": "maniskill-late"
+    },
+    {
+      "backend": "maniskill",
+      "task": "StackPyramid-v1",
+      "seed": 811,
+      "source_demo_id": "76a529ae84f51d385484",
+      "split_group": "0e700b6e290708a903f8",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 105,
+      "recovery_steps": 208,
+      "schedule_name": "maniskill-late"
+    }
+  ]
+}

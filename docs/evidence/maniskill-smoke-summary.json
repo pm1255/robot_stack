@@ -1,0 +1,95 @@
+{
+  "backend": "maniskill",
+  "task_count": 4,
+  "attempts": 4,
+  "successful_sources": 4,
+  "qualified_corrections": 1,
+  "errors": 0,
+  "wall_seconds": 166.26425295695662,
+  "results": [
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "seed": 800,
+      "source_demo_id": "f461b3f8088978239904",
+      "split_group": "9b9e7839f18d549aead0",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 22,
+      "recovery_steps": 120,
+      "schedule_name": "maniskill-joint"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PushCube-v1",
+      "seed": 800,
+      "source_demo_id": "dbfc39a7e7ae8b25f93f",
+      "split_group": "b1bf997ac588e93b863e",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 15,
+      "recovery_steps": 114,
+      "schedule_name": "maniskill-joint"
+    },
+    {
+      "backend": "maniskill",
+      "task": "StackCube-v1",
+      "seed": 800,
+      "source_demo_id": "8a64f5f143d01632d5ba",
+      "split_group": "260d3d65d53834c06d16",
+      "source_success": true,
+      "qualified_correction": false,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": true,
+      "recovery_success": false,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 23,
+      "recovery_steps": 271,
+      "schedule_name": "maniskill-joint"
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "seed": 800,
+      "source_demo_id": "3037f7222c3b8c8bcf97",
+      "split_group": "3041c7db8a995eadfc3d",
+      "source_success": true,
+      "qualified_correction": true,
+      "protocol": "scheduled_interventions.v1",
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "requested_event_count": 1,
+      "applied_event_count": 1,
+      "branch_state_max_abs_errors": [
+        0.0
+      ],
+      "branch_step": 27,
+      "recovery_steps": 139,
+      "schedule_name": "maniskill-joint"
+    }
+  ]
+}

@@ -1,0 +1,6353 @@
+{
+  "schema": "robot_stack.task_coverage.v1",
+  "semantics": "At least one observed case per task; false means no positive evidence in these reports. Not success rates or all benchmark variants.",
+  "inventories": [
+    {
+      "backend": "maniskill",
+      "version": "3.0.1",
+      "task_count": 74,
+      "registered_expert_count": 12,
+      "scope": "installed native registry, not complete literature coverage",
+      "additional_adapter_tasks": []
+    },
+    {
+      "backend": "metaworld",
+      "version": "3.1.1",
+      "task_count": 50,
+      "registered_expert_count": 50,
+      "scope": "installed native registry, not complete literature coverage",
+      "additional_adapter_tasks": []
+    },
+    {
+      "backend": "robocasa",
+      "version": "1.0.1",
+      "task_count": 317,
+      "registered_expert_count": 1,
+      "scope": "installed native registry, not complete literature coverage",
+      "additional_adapter_tasks": []
+    },
+    {
+      "backend": "robodojo",
+      "version": "source_files_sha256:57e4158c70210b6f318e7c7a864261b7b40fca21632ec43f7aaa0404542c8c90",
+      "task_count": 54,
+      "registered_expert_count": 0,
+      "additional_adapter_tasks": [],
+      "scope": "installed native registry, not complete literature coverage"
+    },
+    {
+      "backend": "robotwin",
+      "version": "source_files_sha256:249c247010ad65743620ce5d11923a5c6dbb602f44387ab0f99269494091ec9f",
+      "task_count": 50,
+      "registered_expert_count": 50,
+      "additional_adapter_tasks": [],
+      "scope": "installed native registry, not complete literature coverage"
+    }
+  ],
+  "totals": {
+    "ai2thor": {
+      "tasks": 1,
+      "registered": 0,
+      "expert_available": 0,
+      "source_success": 1,
+      "induced_error": 1,
+      "recovery_success": 1,
+      "qualified_correction": 1
+    },
+    "maniskill": {
+      "tasks": 74,
+      "registered": 74,
+      "expert_available": 12,
+      "source_success": 10,
+      "induced_error": 10,
+      "recovery_success": 8,
+      "qualified_correction": 7
+    },
+    "metaworld": {
+      "tasks": 50,
+      "registered": 50,
+      "expert_available": 50,
+      "source_success": 50,
+      "induced_error": 50,
+      "recovery_success": 50,
+      "qualified_correction": 50
+    },
+    "robocasa": {
+      "tasks": 317,
+      "registered": 317,
+      "expert_available": 1,
+      "source_success": 1,
+      "induced_error": 1,
+      "recovery_success": 1,
+      "qualified_correction": 1
+    },
+    "robodojo": {
+      "tasks": 54,
+      "registered": 54,
+      "expert_available": 0,
+      "source_success": 0,
+      "induced_error": 0,
+      "recovery_success": 0,
+      "qualified_correction": 0
+    },
+    "robotwin": {
+      "tasks": 50,
+      "registered": 50,
+      "expert_available": 50,
+      "source_success": 38,
+      "induced_error": 1,
+      "recovery_success": 1,
+      "qualified_correction": 1
+    }
+  },
+  "tasks": [
+    {
+      "backend": "ai2thor",
+      "task": "FloorPlan1",
+      "registered": false,
+      "expert_available": false,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/ai2thor-long-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "AnymalC-Reach-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "AnymalC-Spin-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "ArchitecTHOR_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "AssemblingKits-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "DrawSVG-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "DrawTriangle-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "Empty-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "FMBAssembly1Easy-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "InsertFlower-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "LiftPegUpright-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-AntRun-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-AntWalk-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-CartpoleBalance-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-CartpoleSwingUp-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-HopperHop-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-HopperStand-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-HumanoidRun-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-HumanoidStand-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "MS-HumanoidWalk-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "OpenCabinetDoor-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "OpenCabinetDrawer-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PegInsertionSide-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickClutterYCB-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCube-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/maniskill-smoke-summary.json",
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCubeSO100-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickCubeWidowXAI-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PickSingleYCB-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlaceSphere-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/maniskill-smoke-summary.json",
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "PlugCharger-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "PokeCube-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCube-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "PullCubeTool-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "PushCube-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/maniskill-smoke-summary.json",
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "PushT-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PutCarrotOnPlateInScene-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PutEggplantInBasketScene-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "PutSpoonOnTableClothInScene-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "ReplicaCADPrepareGroceriesTrain_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "ReplicaCADPrepareGroceriesVal_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "ReplicaCADSetTableTrain_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "ReplicaCADSetTableVal_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "ReplicaCADTidyHouseTrain_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "ReplicaCADTidyHouseVal_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "ReplicaCAD_SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RoboCasaKitchen-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RollBall-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateSingleObjectInHandLevel0-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateSingleObjectInHandLevel1-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateSingleObjectInHandLevel2-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateSingleObjectInHandLevel3-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateValveLevel0-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateValveLevel1-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateValveLevel2-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateValveLevel3-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "RotateValveLevel4-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "SO100GraspCube-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "SceneManipulation-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "StackCube-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/maniskill-smoke-summary.json",
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "StackGreenCubeOnYellowCubeBakedTexInScene-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "StackPyramid-v1",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/maniskill-all-summary.json"
+      ]
+    },
+    {
+      "backend": "maniskill",
+      "task": "TableTopFreeDraw-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "TriFingerRotateCubeLevel0-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "TriFingerRotateCubeLevel1-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "TriFingerRotateCubeLevel2-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "TriFingerRotateCubeLevel3-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "TriFingerRotateCubeLevel4-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "TurnFaucet-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "TwoRobotPickCube-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "TwoRobotStackCube-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "UnitreeG1PlaceAppleInBowl-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "UnitreeG1Stand-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "UnitreeG1TransportBox-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "UnitreeGo2-Reach-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "maniskill",
+      "task": "UnitreeH1Stand-v1",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "metaworld",
+      "task": "assembly-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "basketball-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "bin-picking-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "box-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "button-press-topdown-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "button-press-topdown-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "button-press-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "button-press-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "coffee-button-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "coffee-pull-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "coffee-push-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "dial-turn-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "disassemble-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "door-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "door-lock-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "door-open-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json",
+        "evidence/metaworld-diversity-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "door-unlock-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "drawer-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "drawer-open-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "faucet-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "faucet-open-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "hammer-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json",
+        "evidence/metaworld-diversity-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "hand-insert-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "handle-press-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "handle-press-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "handle-pull-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "handle-pull-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "lever-pull-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "peg-insert-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "peg-unplug-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-out-of-hole-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json",
+        "evidence/metaworld-diversity-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "plate-slide-back-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "plate-slide-back-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "plate-slide-side-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "plate-slide-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-back-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json",
+        "evidence/metaworld-diversity-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "reach-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "reach-wall-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "shelf-place-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "soccer-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "stick-pull-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json",
+        "evidence/metaworld-tools-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "stick-push-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json",
+        "evidence/metaworld-tools-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "sweep-into-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "sweep-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "window-close-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "window-open-v3",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/metaworld50-scheduled-summary.json"
+      ]
+    },
+    {
+      "backend": "robocasa",
+      "task": "AddIceCubes",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AddLemonToFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AddMarshmallow",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AddSugarCubes",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AddSweetener",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AdjustHeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AdjustToasterOvenTemperature",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AdjustWaterTemperature",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AfterwashSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AirDryFruit",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AlcoholServingPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AlignSilverware",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ArrangeBreadBasket",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ArrangeBreadBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ArrangeBuffetDessert",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ArrangeDrinkware",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ArrangeTea",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ArrangeTeaAccompaniments",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ArrangeUtensilsByType",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ArrangeVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "AssembleCookingArray",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BalancedMealPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BeverageOrganization",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BeverageSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BlendIngredients",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BlendMarinade",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BowlAndCup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BreadAndCheese",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BreadSelection",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BreadSetupSlicing",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "BuildAppetizerPlate",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ButterOnPan",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CandleCleanup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CategorizeCondiments",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CerealAndBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CheesyBread",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ChooseMeasuringCup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ChooseRipeFruit",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CleanBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CleanMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ClearClutter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ClearCuttingBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ClearFoodWaste",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ClearFreezer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ClearReceptaclesForCleaning",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ClearSink",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ClearSinkArea",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ClearSinkSpace",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseBlenderLid",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseCabinet",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseDishwasher",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseElectricKettleLid",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseFridgeDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseStandMixerHead",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CloseToasterOvenDoor",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CoffeeServeMug",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CoffeeSetupMug",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CollectWashingSupplies",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ColorfulSalsa",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CondimentCollection",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CookieDoughPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CoolBakedCake",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CoolKettle",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CreateChildFriendlyFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CupcakeCleanup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CutBuffetPizza",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "CuttingToolSelection",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DateNight",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DefrostByCategory",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DeliverBrewedCoffee",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DeliverStraw",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DessertAssembly",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DessertUpgrade",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DisplayMeatVariety",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DistributeChicken",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DivideBasins",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DivideBuffetTrays",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DrainVeggies",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DrinkwareConsolidation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DryDishes",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DryDrinkware",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "DumpLeftovers",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FillBlenderJug",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FillKettle",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FilterMicrowavableItem",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FoodCleanup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FreezeBottledWaters",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FreezeCookedFood",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FreezeIceTray",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FreshProduceOrganization",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "FryingPanAdjustment",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "GarnishCupcake",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "GarnishPancake",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "GatherCuttingTools",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "GatherMarinadeIngredients",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "GatherTableware",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "GatherVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "GetToastedBread",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "HeatKebabSandwich",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "HeatMug",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "HeatMultipleWater",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "HotDogSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "JuiceFruitReamer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "KettleBoiling",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "LemonSeasoningFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "LineUpCondiments",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "LoadCondimentsInFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "LoadDishwasher",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "LoadFridgeByType",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "LoadFridgeFifo",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "LoadPreparedFood",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "LowerHeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MakeFruitBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MakeIceLemonade",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MakeIcedCoffee",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MakeLoadedPotato",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MatchCupAndDrink",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MaximizeFreezerSpace",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MealPrepStaging",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MeatSkewerAssembly",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MeatTransfer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MicrowaveCorrectMeal",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MicrowaveDefrostMeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MicrowaveThawing",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MicrowaveThawingFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MixCakeFrosting",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MixedFruitPlatter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MoveFreezerToFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MoveFridgeToFreezer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MoveToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MoveToFreezerDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "MultistepSteaming",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "NavigateKitchen",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/robocasa-nav-summary.json"
+      ]
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenBlenderLid",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenCabinet",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenDishwasher",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenElectricKettleLid",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenFridgeDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenStandMixerHead",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OpenToasterOvenDoor",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OrganizeBakingIngredients",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OrganizeCleaningSupplies",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OrganizeCoffeeCondiments",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OrganizeCondiments",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OrganizeMetallicUtensils",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OrganizeMugsByHandle",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OrganizeVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "OvenBroilFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PackDessert",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PackFoodByTemp",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PackFruitContainer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PackIdenticalLunches",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PanTransfer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PastryDisplay",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCabinetToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToBlender",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToCabinet",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToSink",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToStandMixer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToStove",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceCounterToToasterOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceDrawerToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceFridgeDrawerToShelf",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceFridgeShelfToDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceMicrowaveToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceSinkToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceStoveToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceToasterOvenToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PickPlaceToasterToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceBeveragesTogether",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceDishesBySink",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceEqualIceCubes",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceFoodInBowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceIceInCup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceMeatInMarinade",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceMicrowaveSafeItem",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceOnDishRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceStraw",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceVegetablesEvenly",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlaceVeggiesInDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlateSteakMeal",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PlateStoreDinner",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PortionFruitBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PortionHotDogs",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PortionInTupperware",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PortionOnSize",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PortionYogurt",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PreRinseStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PreSoakPan",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PreheatOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PreheatPot",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepForSanitizing",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepForTenderizing",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepFridgeForCleaning",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepMarinatingMeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepSinkForCleaning",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareBroilingStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareCheeseStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareCocktailStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareCoffee",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareDishwasher",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareDrinkStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareSausageCheese",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareSmoothie",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareSoupServing",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareStoringLeftovers",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrepareToast",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PressChicken",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrewashFoodAssembly",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "PrewashFoodSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "QuickThaw",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RearrangeFridgeItems",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RecycleBottlesBySize",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RecycleBottlesByType",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RecycleSodaCans",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RecycleStackedYogurt",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RefillCondimentStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ReheatMeal",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RemoveBroiledFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RemoveCuttingBoardItems",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ReorganizeFrozenVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ResetCabinetDoors",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RestockBowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RestockCannedFood",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RestockPantry",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RestockSinkSupplies",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RetrieveIceTray",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RetrieveMeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ReturnHeatedFood",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ReturnWashingSupplies",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RinseBowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RinseCuttingBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RinseSinkBasin",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "RotatePan",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SanitizePrepCuttingBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ScalePortioning",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ScrubBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ScrubCuttingBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SearingMeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SeasoningSpiceSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SeasoningSteak",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SeparateFreezerRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ServeSteak",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ServeTea",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ServeWarmCroissant",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetBowlsForSoup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetUpCuttingStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetUpSpiceStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetupBowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetupButterPlate",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetupFruitBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetupFrying",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetupSodaBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SetupWineGlasses",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ShakePan",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SimmeringSauce",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SizeSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SlideDishwasherRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SlideOvenRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SlideToasterOvenRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SnackSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SoakSponge",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SortingCleanup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SpicyMarinade",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StackBowlsCabinet",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StackBowlsInSink",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StackCans",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StartCoffeeMachine",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StartElectricKettle",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SteamInMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StirVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StockingBreakfastFoods",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StoreDumplings",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StoreLeftoversByType",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StoreLeftoversInBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "StrainerSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SweetSavoryToastSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SweetenCoffee",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "SweetenHotChocolate",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ThawInSink",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TiltPan",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ToastBagel",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ToastBaguette",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "ToastOnCorrectRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TongBuffetSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TransportCookware",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOffMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOffSimmeredSauceHeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOffSinkFaucet",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOffStove",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOnBlender",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOnElectricKettle",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOnMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOnSinkFaucet",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOnStove",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOnToaster",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnOnToasterOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "TurnSinkSpout",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "VeggieDipPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "WaffleReheat",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "WarmCroissant",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "WashFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "WashFruitColander",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "WashLettuce",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "WeighIngredients",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robocasa",
+      "task": "YogurtDelightPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "align_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "arrange_largest_number",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "arrange_largest_number_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "build_tower",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "classify_objects",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "classify_objects_by_language",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "cover_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "deposit_coin",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "fasten_screws",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "fill_egg_holder",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "fill_pen_holder",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "fold_clothes",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "fold_clothes_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "general_pickup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "hang_mugs",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "hang_mugs_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "imitate_sorting_sequence",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "insert_key",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "insert_tubes",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "make_kong",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "make_toast",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "make_toast_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "match_and_pick_from_conveyor",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "organize_table",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "pack_objects_into_box",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "pack_objects_into_box_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "pick_from_conveyor_by_image",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "play_Xylophone",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "play_stacking_toy",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "play_tic_tac_toe",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "plug_in_charger",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "pour_balls_into_vase",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "pour_by_language",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "pour_liquid_into_cup",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "pour_liquid_into_cup_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "press_by_number",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "push_T",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "push_T_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "put_bottles_into_dustbin",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "solve_equation",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "sort_nesting_dolls_by_size",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "sort_nesting_dolls_by_size_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "stack_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "stack_blocks_by_language",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "stack_blocks_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "stack_bowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "stack_bowls_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "store_laptop_and_headphones",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "store_laptop_and_headphones_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "store_tools_in_toolbox",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "swap_T",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "swap_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "sweep_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robodojo",
+      "task": "sweep_blocks_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": []
+    },
+    {
+      "backend": "robotwin",
+      "task": "adjust_bottle",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "beat_block_hammer",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "blocks_ranking_rgb",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "blocks_ranking_size",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "click_alarmclock",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "click_bell",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "dump_bin_bigbin",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "grab_roller",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "handover_block",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "handover_mic",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "hanging_mug",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "lift_pot",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "move_can_pot",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "move_pillbottle_pad",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "move_playingcard_away",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "move_stapler_pad",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "open_laptop",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "open_microwave",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "pick_diverse_bottles",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "pick_dual_bottles",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_a2b_left",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_a2b_right",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_bread_basket",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_bread_skillet",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_burger_fries",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_can_basket",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_cans_plasticbox",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_container_plate",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_dual_shoes",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_empty_cup",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json",
+        "evidence/robotwin-earlier-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_fan",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_mouse_pad",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_object_basket",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_object_scale",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_object_stand",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_phone_stand",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "place_shoe",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "press_stapler",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "put_bottles_dustbin",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "put_object_cabinet",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "rotate_qrcode",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "scan_object",
+      "registered": true,
+      "expert_available": true,
+      "source_success": false,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "shake_bottle",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "shake_bottle_horizontally",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "stack_blocks_three",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "stack_blocks_two",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": true,
+      "recovery_success": true,
+      "qualified_correction": true,
+      "evidence": [
+        "evidence/robotwin-all-summary.json",
+        "evidence/robotwin-smoke-summary.json",
+        "evidence/robotwin-carry-summary.json",
+        "evidence/robotwin-earlier-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "stack_bowls_three",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "stack_bowls_two",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "stamp_seal",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json"
+      ]
+    },
+    {
+      "backend": "robotwin",
+      "task": "turn_switch",
+      "registered": true,
+      "expert_available": true,
+      "source_success": true,
+      "induced_error": false,
+      "recovery_success": false,
+      "qualified_correction": false,
+      "evidence": [
+        "evidence/robotwin-all-summary.json",
+        "evidence/robotwin-earlier-summary.json"
+      ]
+    }
+  ]
+}

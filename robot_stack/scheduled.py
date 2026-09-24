@@ -8,7 +8,7 @@ import hashlib
 import json
 from pathlib import Path
 import numpy as np
-from .core import Episode, jsonable, rollout, save_episode, write_json
+from .core import Episode, jsonable, rollout, save_episode, write_json, intervention_ended
 from .schedule import validate_schedule, resolve_schedule
 from .perturbations import make_actions
 
@@ -18,7 +18,7 @@ def collect_scheduled(adapter, seed, folder, *, schedule, budget=500,
     validate_schedule(schedule)
     if budget < 3 or not np.isfinite(error_threshold) or error_threshold <= 0:
         raise ValueError('Positive error threshold and action budget >= 3 required')
-    folder = Path(folder)
+    folder = Path(folder).resolve()
     folder.mkdir(parents=True, exist_ok=False)
     adapter.reset(seed)
     source = Episode.start(adapter)
@@ -78,6 +78,7 @@ def collect_scheduled(adapter, seed, folder, *, schedule, budget=500,
                                  complete=end-start == event['steps'],
                                  feature_displacement=displacement, threshold=error_threshold,
                                  induced_error=displacement >= error_threshold and not adapter.success()))
+                intervention_ended(adapter)
                 cursor += 1
                 if adapter.terminal() or len(episode.actions) >= budget:
                     break

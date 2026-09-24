@@ -1,0 +1,15 @@
+{
+  "hdf5_verified": 12,
+  "source_attempts": 4,
+  "qualified_corrections": 3,
+  "checks": [
+    "SHA256",
+    "finite_states",
+    "T+1_alignment",
+    "native_success_trace",
+    "budget",
+    "paired_error_state",
+    "provenance"
+  ],
+  "passed": true
+}

@@ -1,0 +1,496 @@
+{
+  "backend": "robodojo",
+  "version": "source_files_sha256:57e4158c70210b6f318e7c7a864261b7b40fca21632ec43f7aaa0404542c8c90",
+  "task_count": 54,
+  "registered_expert_count": 0,
+  "additional_adapter_tasks": [],
+  "scope": "installed native registry, not complete literature coverage",
+  "tasks": [
+    {
+      "task": "align_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "arrange_largest_number",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "arrange_largest_number_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "build_tower",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "classify_objects",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "classify_objects_by_language",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "cover_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "deposit_coin",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "fasten_screws",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "fill_egg_holder",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "fill_pen_holder",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "fold_clothes",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "fold_clothes_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "general_pickup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "hang_mugs",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "hang_mugs_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "imitate_sorting_sequence",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "insert_key",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "insert_tubes",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "make_kong",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "make_toast",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "make_toast_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "match_and_pick_from_conveyor",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "organize_table",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pack_objects_into_box",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pack_objects_into_box_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pick_from_conveyor_by_image",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "play_Xylophone",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "play_stacking_toy",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "play_tic_tac_toe",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "plug_in_charger",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pour_balls_into_vase",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pour_by_language",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pour_liquid_into_cup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "pour_liquid_into_cup_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "press_by_number",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "push_T",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "push_T_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "put_bottles_into_dustbin",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "solve_equation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "sort_nesting_dolls_by_size",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "sort_nesting_dolls_by_size_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_blocks_by_language",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_blocks_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_bowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "stack_bowls_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "store_laptop_and_headphones",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "store_laptop_and_headphones_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "store_tools_in_toolbox",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "swap_T",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "swap_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "sweep_blocks",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "sweep_blocks_random",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    }
+  ]
+}

@@ -1,0 +1,502 @@
+[
+  {
+    "task": "assembly-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 219,
+    "gif": "media/gallery/metaworld50/assembly-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/assembly-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "basketball-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 174,
+    "gif": "media/gallery/metaworld50/basketball-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/basketball-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "bin-picking-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 220,
+    "gif": "media/gallery/metaworld50/bin-picking-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/bin-picking-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "box-close-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 158,
+    "gif": "media/gallery/metaworld50/box-close-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/box-close-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "button-press-topdown-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 104,
+    "gif": "media/gallery/metaworld50/button-press-topdown-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/button-press-topdown-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "button-press-topdown-wall-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 94,
+    "gif": "media/gallery/metaworld50/button-press-topdown-wall-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/button-press-topdown-wall-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "button-press-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 97,
+    "gif": "media/gallery/metaworld50/button-press-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/button-press-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "button-press-wall-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 110,
+    "gif": "media/gallery/metaworld50/button-press-wall-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/button-press-wall-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "coffee-button-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 79,
+    "gif": "media/gallery/metaworld50/coffee-button-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/coffee-button-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "coffee-pull-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 103,
+    "gif": "media/gallery/metaworld50/coffee-pull-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/coffee-pull-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "coffee-push-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 91,
+    "gif": "media/gallery/metaworld50/coffee-push-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/coffee-push-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "dial-turn-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 117,
+    "gif": "media/gallery/metaworld50/dial-turn-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/dial-turn-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "disassemble-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 203,
+    "gif": "media/gallery/metaworld50/disassemble-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/disassemble-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "door-close-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 73,
+    "gif": "media/gallery/metaworld50/door-close-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/door-close-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "door-lock-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 115,
+    "gif": "media/gallery/metaworld50/door-lock-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/door-lock-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "door-open-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 121,
+    "gif": "media/gallery/metaworld50/door-open-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/door-open-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "door-unlock-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 88,
+    "gif": "media/gallery/metaworld50/door-unlock-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/door-unlock-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "drawer-close-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 108,
+    "gif": "media/gallery/metaworld50/drawer-close-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/drawer-close-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "drawer-open-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 149,
+    "gif": "media/gallery/metaworld50/drawer-open-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/drawer-open-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "faucet-close-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 95,
+    "gif": "media/gallery/metaworld50/faucet-close-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/faucet-close-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "faucet-open-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 92,
+    "gif": "media/gallery/metaworld50/faucet-open-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/faucet-open-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "hammer-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 103,
+    "gif": "media/gallery/metaworld50/hammer-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/hammer-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "hand-insert-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 95,
+    "gif": "media/gallery/metaworld50/hand-insert-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/hand-insert-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "handle-press-side-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 80,
+    "gif": "media/gallery/metaworld50/handle-press-side-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/handle-press-side-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "handle-press-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 79,
+    "gif": "media/gallery/metaworld50/handle-press-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/handle-press-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "handle-pull-side-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 115,
+    "gif": "media/gallery/metaworld50/handle-pull-side-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/handle-pull-side-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "handle-pull-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 156,
+    "gif": "media/gallery/metaworld50/handle-pull-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/handle-pull-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "lever-pull-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 105,
+    "gif": "media/gallery/metaworld50/lever-pull-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/lever-pull-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "peg-insert-side-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 125,
+    "gif": "media/gallery/metaworld50/peg-insert-side-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/peg-insert-side-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "peg-unplug-side-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 151,
+    "gif": "media/gallery/metaworld50/peg-unplug-side-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/peg-unplug-side-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "pick-out-of-hole-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 178,
+    "gif": "media/gallery/metaworld50/pick-out-of-hole-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/pick-out-of-hole-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "pick-place-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 88,
+    "gif": "media/gallery/metaworld50/pick-place-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/pick-place-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "pick-place-wall-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 183,
+    "gif": "media/gallery/metaworld50/pick-place-wall-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/pick-place-wall-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "plate-slide-back-side-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 95,
+    "gif": "media/gallery/metaworld50/plate-slide-back-side-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/plate-slide-back-side-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "plate-slide-back-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 81,
+    "gif": "media/gallery/metaworld50/plate-slide-back-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/plate-slide-back-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "plate-slide-side-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 213,
+    "gif": "media/gallery/metaworld50/plate-slide-side-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/plate-slide-side-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "plate-slide-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 88,
+    "gif": "media/gallery/metaworld50/plate-slide-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/plate-slide-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "push-back-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 116,
+    "gif": "media/gallery/metaworld50/push-back-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/push-back-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "push-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 96,
+    "gif": "media/gallery/metaworld50/push-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/push-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "push-wall-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 151,
+    "gif": "media/gallery/metaworld50/push-wall-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/push-wall-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "reach-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 65,
+    "gif": "media/gallery/metaworld50/reach-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/reach-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "reach-wall-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 68,
+    "gif": "media/gallery/metaworld50/reach-wall-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/reach-wall-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "shelf-place-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 150,
+    "gif": "media/gallery/metaworld50/shelf-place-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/shelf-place-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "soccer-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 143,
+    "gif": "media/gallery/metaworld50/soccer-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/soccer-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "stick-pull-v3",
+    "backend": "metaworld",
+    "seed": 621,
+    "steps": 186,
+    "gif": "media/gallery/metaworld50/stick-pull-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/stick-pull-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "stick-push-v3",
+    "backend": "metaworld",
+    "seed": 622,
+    "steps": 105,
+    "gif": "media/gallery/metaworld50/stick-push-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/stick-push-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "sweep-into-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 114,
+    "gif": "media/gallery/metaworld50/sweep-into-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/sweep-into-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "sweep-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 144,
+    "gif": "media/gallery/metaworld50/sweep-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/sweep-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "window-close-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 114,
+    "gif": "media/gallery/metaworld50/window-close-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/window-close-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  },
+  {
+    "task": "window-open-v3",
+    "backend": "metaworld",
+    "seed": 600,
+    "steps": 122,
+    "gif": "media/gallery/metaworld50/window-open-v3.gif",
+    "evidence": "evidence/metaworld50-gallery/window-open-v3.json",
+    "type": "qualified_recovery",
+    "state_error": 0
+  }
+]

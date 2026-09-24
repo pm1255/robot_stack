@@ -1,5 +1,6 @@
 # 多环境采集验证
 
+> 本页保留早期原生专家基线。最新全任务扫描、三分支纠错、独立回放和启动命令见 [逐任务覆盖](task-coverage.md)。
 2026-09-24，在 eval 服务器完成 15 类任务、109 次固定种子物理执行：104 成功，5 失败，0 采集异常。成功来自各环境原生任务判定器，并要求实际执行完成。没有用成功状态替换物理执行，也没有先搜索容易成功的种子。
 
 | 环境 | 任务 | 成功 / 总数 |
@@ -67,6 +68,6 @@ python -m benchmark_collector.replay_robotwin \
 
 本轮墙钟：MetaWorld 25.96 秒，ManiSkill 59.40 秒，RoboTwin 457.42 秒。前两项包含环境创建、规划或控制、物理执行和保存，排除导入、排队、渲染；RoboTwin 还包含原生图像/视频保存及两次抽样回放。这些配置不同，不能直接比较吞吐或外推长期成功条数/小时。
 
-后续优先处理 RoboTwin 空杯放置和 ManiSkill 球体放置的自然失败，加入有总步数限制的状态反馈恢复，再做同种子对照。新三种环境尚未实现成功轨迹中段扰动、错误区间标注、恢复分支及 MimicGen datagen_info。现有 HDF5 不能直接宣称已支持 MimicGen 扩增。
+后续优先处理 RoboTwin 空杯放置和 ManiSkill 球体放置的自然失败，加入有总步数限制的状态反馈恢复，再做同种子对照。本页早期实验尚未实现中段扰动和恢复分支；后续版本已为 MetaWorld、ManiSkill 和实验性 RoboTwin 接入统一三分支协议，最新结果单独报告。跨任务 MimicGen datagen_info 仍需适配。现有 HDF5 不能直接宣称已支持 MimicGen 扩增。
 
 参考：[MetaWorld 官方专家](https://metaworld.farama.org/benchmark/expert_trajectories/)、[ManiSkill 运动规划](https://maniskill.readthedocs.io/en/latest/user_guide/data_collection/motionplanning.html)、[RoboTwin 配置](https://robotwin-platform.github.io/doc/usage/configurations.html)。

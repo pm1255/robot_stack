@@ -1,0 +1,2863 @@
+{
+  "backend": "robocasa",
+  "version": "1.0.1",
+  "task_count": 317,
+  "registered_expert_count": 1,
+  "scope": "installed native registry, not complete literature coverage",
+  "tasks": [
+    {
+      "task": "AddIceCubes",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AddLemonToFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AddMarshmallow",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AddSugarCubes",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AddSweetener",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AdjustHeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AdjustToasterOvenTemperature",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AdjustWaterTemperature",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AfterwashSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AirDryFruit",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AlcoholServingPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AlignSilverware",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArrangeBreadBasket",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArrangeBreadBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArrangeBuffetDessert",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArrangeDrinkware",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArrangeTea",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArrangeTeaAccompaniments",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArrangeUtensilsByType",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ArrangeVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "AssembleCookingArray",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BalancedMealPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BeverageOrganization",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BeverageSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BlendIngredients",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BlendMarinade",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BowlAndCup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BreadAndCheese",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BreadSelection",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BreadSetupSlicing",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "BuildAppetizerPlate",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ButterOnPan",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CandleCleanup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CategorizeCondiments",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CerealAndBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CheesyBread",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ChooseMeasuringCup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ChooseRipeFruit",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CleanBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CleanMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ClearClutter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ClearCuttingBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ClearFoodWaste",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ClearFreezer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ClearReceptaclesForCleaning",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ClearSink",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ClearSinkArea",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ClearSinkSpace",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseBlenderLid",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseCabinet",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseDishwasher",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseElectricKettleLid",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseFridgeDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseStandMixerHead",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CloseToasterOvenDoor",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CoffeeServeMug",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CoffeeSetupMug",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CollectWashingSupplies",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ColorfulSalsa",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CondimentCollection",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CookieDoughPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CoolBakedCake",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CoolKettle",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CreateChildFriendlyFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CupcakeCleanup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CutBuffetPizza",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "CuttingToolSelection",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DateNight",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DefrostByCategory",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DeliverBrewedCoffee",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DeliverStraw",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DessertAssembly",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DessertUpgrade",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DisplayMeatVariety",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DistributeChicken",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DivideBasins",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DivideBuffetTrays",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DrainVeggies",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DrinkwareConsolidation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DryDishes",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DryDrinkware",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "DumpLeftovers",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FillBlenderJug",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FillKettle",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FilterMicrowavableItem",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FoodCleanup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FreezeBottledWaters",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FreezeCookedFood",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FreezeIceTray",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FreshProduceOrganization",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "FryingPanAdjustment",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "GarnishCupcake",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "GarnishPancake",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "GatherCuttingTools",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "GatherMarinadeIngredients",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "GatherTableware",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "GatherVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "GetToastedBread",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "HeatKebabSandwich",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "HeatMug",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "HeatMultipleWater",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "HotDogSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "JuiceFruitReamer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "KettleBoiling",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LemonSeasoningFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LineUpCondiments",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LoadCondimentsInFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LoadDishwasher",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LoadFridgeByType",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LoadFridgeFifo",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LoadPreparedFood",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "LowerHeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MakeFruitBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MakeIceLemonade",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MakeIcedCoffee",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MakeLoadedPotato",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MatchCupAndDrink",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MaximizeFreezerSpace",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MealPrepStaging",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MeatSkewerAssembly",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MeatTransfer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MicrowaveCorrectMeal",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MicrowaveDefrostMeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MicrowaveThawing",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MicrowaveThawingFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MixCakeFrosting",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MixedFruitPlatter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MoveFreezerToFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MoveFridgeToFreezer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MoveToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MoveToFreezerDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "MultistepSteaming",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "NavigateKitchen",
+      "registered": true,
+      "expert_available": true,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenBlenderLid",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenCabinet",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenDishwasher",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenElectricKettleLid",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenFridge",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenFridgeDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenStandMixerHead",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OpenToasterOvenDoor",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OrganizeBakingIngredients",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OrganizeCleaningSupplies",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OrganizeCoffeeCondiments",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OrganizeCondiments",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OrganizeMetallicUtensils",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OrganizeMugsByHandle",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OrganizeVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "OvenBroilFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PackDessert",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PackFoodByTemp",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PackFruitContainer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PackIdenticalLunches",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PanTransfer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PastryDisplay",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCabinetToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToBlender",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToCabinet",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToSink",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToStandMixer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToStove",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceCounterToToasterOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceDrawerToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceFridgeDrawerToShelf",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceFridgeShelfToDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceMicrowaveToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceSinkToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceStoveToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceToasterOvenToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PickPlaceToasterToCounter",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceBeveragesTogether",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceDishesBySink",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceEqualIceCubes",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceFoodInBowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceIceInCup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceMeatInMarinade",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceMicrowaveSafeItem",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceOnDishRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceStraw",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceVegetablesEvenly",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlaceVeggiesInDrawer",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlateSteakMeal",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PlateStoreDinner",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PortionFruitBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PortionHotDogs",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PortionInTupperware",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PortionOnSize",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PortionYogurt",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PreRinseStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PreSoakPan",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PreheatOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PreheatPot",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepForSanitizing",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepForTenderizing",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepFridgeForCleaning",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepMarinatingMeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepSinkForCleaning",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareBroilingStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareCheeseStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareCocktailStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareCoffee",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareDishwasher",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareDrinkStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareSausageCheese",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareSmoothie",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareSoupServing",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareStoringLeftovers",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrepareToast",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PressChicken",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrewashFoodAssembly",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "PrewashFoodSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "QuickThaw",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RearrangeFridgeItems",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RecycleBottlesBySize",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RecycleBottlesByType",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RecycleSodaCans",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RecycleStackedYogurt",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RefillCondimentStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReheatMeal",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RemoveBroiledFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RemoveCuttingBoardItems",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReorganizeFrozenVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ResetCabinetDoors",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RestockBowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RestockCannedFood",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RestockPantry",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RestockSinkSupplies",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RetrieveIceTray",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RetrieveMeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReturnHeatedFood",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ReturnWashingSupplies",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RinseBowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RinseCuttingBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RinseSinkBasin",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "RotatePan",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SanitizePrepCuttingBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ScalePortioning",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ScrubBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ScrubCuttingBoard",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SearingMeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SeasoningSpiceSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SeasoningSteak",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SeparateFreezerRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ServeSteak",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ServeTea",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ServeWarmCroissant",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetBowlsForSoup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetUpCuttingStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetUpSpiceStation",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetupBowls",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetupButterPlate",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetupFruitBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetupFrying",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetupSodaBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SetupWineGlasses",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ShakePan",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SimmeringSauce",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SizeSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SlideDishwasherRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SlideOvenRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SlideToasterOvenRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SnackSorting",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SoakSponge",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SortingCleanup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SpicyMarinade",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StackBowlsCabinet",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StackBowlsInSink",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StackCans",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StartCoffeeMachine",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StartElectricKettle",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SteamInMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StirVegetables",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StockingBreakfastFoods",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StoreDumplings",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StoreLeftoversByType",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StoreLeftoversInBowl",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "StrainerSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SweetSavoryToastSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SweetenCoffee",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "SweetenHotChocolate",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ThawInSink",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TiltPan",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ToastBagel",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ToastBaguette",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "ToastOnCorrectRack",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TongBuffetSetup",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TransportCookware",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOffMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOffSimmeredSauceHeat",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOffSinkFaucet",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOffStove",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOnBlender",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOnElectricKettle",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOnMicrowave",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOnSinkFaucet",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOnStove",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOnToaster",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnOnToasterOven",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "TurnSinkSpout",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "VeggieDipPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "WaffleReheat",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "WarmCroissant",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "WashFish",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "WashFruitColander",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "WashLettuce",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "WeighIngredients",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    },
+    {
+      "task": "YogurtDelightPrep",
+      "registered": true,
+      "expert_available": false,
+      "source_success_verified": false,
+      "perturbation_verified": false,
+      "recovery_success_verified": false,
+      "status": "not_evaluated_by_inventory"
+    }
+  ],
+  "additional_adapter_tasks": []
+}

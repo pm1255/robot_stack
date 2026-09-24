@@ -4,13 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "robot-stack"
-version = "0.3.0"
+version = "0.4.0"
 description = "Paired perturbation and recovery trajectories with native simulator evidence"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.24,<3", "h5py>=3.10"]
 
 [project.optional-dependencies]
+robotwin-bridge = ["greenlet==3.2.4", "PyYAML>=6"]
+maniskill = ["mani_skill==3.0.1", "mplib==0.1.1", "svgpathtools==1.7.1", "numpy<2", "greenlet==3.2.4"]
 metaworld = ["metaworld==3.1.1", "mujoco==3.3.0"]
 ai2thor = ["ai2thor==5.0.0", "numpy<2"]
 mimicgen = ["numpy>=1.26,<2", "mujoco==3.3.1", "robosuite==1.5.2", "robomimic==0.3.0", "mimicgen @ git+https://github.com/NVlabs/mimicgen.git@72bd767c255545f462e7ccfb2731f2e5d4c1d9bb"]
