@@ -1,0 +1,106 @@
+{
+  "backend": "metaworld",
+  "task": "pick-place-v3",
+  "source_attempts": 5,
+  "successful_sources": 5,
+  "qualified_corrections": 5,
+  "errors": 0,
+  "wall_seconds": 19.452287923544645,
+  "results": [
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 220,
+      "source_demo_id": "f6d284e27b7c80306c22",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8dcc8be167e6864b430f",
+      "recovery_action_range": [
+        32,
+        88
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 221,
+      "source_demo_id": "72b322ad90d283505cfb",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "81061d66ffd29cbd177e",
+      "recovery_action_range": [
+        33,
+        101
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 222,
+      "source_demo_id": "775b85f61c8f812440c7",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "cb5048c03bd3806d57c3",
+      "recovery_action_range": [
+        34,
+        96
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 223,
+      "source_demo_id": "ff237f0f210dc2511519",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "2d7a61de65722ddd59a3",
+      "recovery_action_range": [
+        32,
+        90
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 224,
+      "source_demo_id": "9bc20341121ab5b1338f",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "b2b733b23322d4f0b022",
+      "recovery_action_range": [
+        34,
+        97
+      ]
+    }
+  ]
+}

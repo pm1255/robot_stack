@@ -1,0 +1,106 @@
+{
+  "backend": "metaworld",
+  "task": "push-v3",
+  "source_attempts": 5,
+  "successful_sources": 5,
+  "qualified_corrections": 5,
+  "errors": 0,
+  "wall_seconds": 16.401538522914052,
+  "results": [
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 220,
+      "source_demo_id": "c7ce792ab39db1aa6112",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "94ec44c59219b23247ed",
+      "recovery_action_range": [
+        34,
+        96
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 221,
+      "source_demo_id": "f66a4b597a1e6785bc43",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "08f82639e57dcc0d1c10",
+      "recovery_action_range": [
+        34,
+        113
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 222,
+      "source_demo_id": "91f76318745762a431ba",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "28b0b49b1cc024bce126",
+      "recovery_action_range": [
+        35,
+        100
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 223,
+      "source_demo_id": "38f2602facddfd51d9db",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8509273c7894b120ae54",
+      "recovery_action_range": [
+        34,
+        97
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 224,
+      "source_demo_id": "9611fc3f051d615b014f",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 23,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "cb8f2187113fa186bea1",
+      "recovery_action_range": [
+        38,
+        111
+      ]
+    }
+  ]
+}

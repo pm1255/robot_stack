@@ -1,0 +1,21 @@
+name: Simulator or data bug
+description: Report a reproducible collection, replay or annotation problem
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Simulator and Python versions, OS, GPU, task, seed and repository commit. Do not paste tokens.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction command and observed result
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result and available evidence
+      description: Include the native success oracle, replay error and sanitized metadata if relevant.

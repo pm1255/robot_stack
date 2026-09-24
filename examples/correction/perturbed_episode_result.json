@@ -1,0 +1,49 @@
+{
+  "task_index": 0,
+  "benchmark_seed": 20260924,
+  "versions": {
+    "metaworld": "3.1.1",
+    "mujoco": "3.3.0",
+    "numpy": "2.2.5"
+  },
+  "state_kind": "mujoco.mjSTATE_INTEGRATION",
+  "error_features": "end_effector_xyz_metres",
+  "perturbation_type": "bounded_cartesian_action_burst_open_gripper",
+  "backend": "metaworld",
+  "task": "pick-place-v3",
+  "seed": 220,
+  "max_steps": 500,
+  "state_reconstruction": "same_seed_real_action_prefix",
+  "oracle_policy": true,
+  "standard_benchmark_score": false,
+  "source_demo_id": "f6d284e27b7c80306c22",
+  "split_group": "8dcc8be167e6864b430f",
+  "label": "perturbed",
+  "source_trajectory": "source.hdf5",
+  "source_sha256": "13247cc338e43720856830beb80915a6fc123f21b9b7351cda86f850d935fd65",
+  "branch_step": 17,
+  "perturbation_action_range": [
+    17,
+    32
+  ],
+  "recovery_action_range": null,
+  "perturbation": {
+    "type": "bounded_cartesian_action_burst_open_gripper",
+    "requested_steps": 15,
+    "seed": 220,
+    "feature_displacement": 0.19370510931244558,
+    "threshold": 0.03
+  },
+  "induced_error": true,
+  "prefix_max_abs_error": 0.0,
+  "success": false,
+  "task_success": false,
+  "control_success": false,
+  "execution_success": true,
+  "validation_version": 1,
+  "debug": false,
+  "status": "task_failed",
+  "steps": 65,
+  "trajectory_file": "perturbed.hdf5",
+  "trajectory_sha256": "3dfd885c4291504fb2f8a72de9f47d77e2f4ebf2f42379768da07f18f93dc251"
+}

@@ -11,6 +11,7 @@ __pycache__/
 
 # robot pipeline data
 *.npz
+*.hdf5
 *.npy
 *.pkl
 *.pickle
@@ -43,3 +44,17 @@ third_party/
 # local backup files
 *.bak*
 *.backup*
+
+# Small verified samples intentionally included in the static dashboard
+!docs/media/*.mp4
+*.h5
+
+# Local environments and build products
+.venv/
+.runtime/
+*.egg-info/
+build/
+dist/
+
+# One small native correction triplet for offline schema inspection
+!examples/correction/*.hdf5

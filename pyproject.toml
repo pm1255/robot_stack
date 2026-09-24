@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robot-stack"
+version = "0.2.0"
+description = "Paired perturbation and recovery trajectories with native simulator evidence"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "h5py>=3.10"]
+
+[project.optional-dependencies]
+metaworld = ["metaworld==3.1.1", "mujoco==3.3.0"]
+ai2thor = ["ai2thor==5.0.0", "numpy<2"]
+
+[project.urls]
+Repository = "https://github.com/pm1255/robot_stack"
+Issues = "https://github.com/pm1255/robot_stack/issues"
+
+[project.scripts]
+robot-stack-collect = "robot_stack.collect:main"
+robot-stack-replay = "robot_stack.replay:main"
+
+[tool.setuptools.packages.find]
+include = ["robot_stack*", "benchmark_collector*", "robosuite_collector*"]

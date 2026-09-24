@@ -1369,11 +1369,17 @@ def execute_curobo_plan_on_a2d(
     if steps_per_position < 1:
         steps_per_position = 1
 
-    positions = positions[::speed_stride]
+    from isaac_collector.runtime.execution_checks import sample_trajectory
+    positions = sample_trajectory(positions, speed_stride)
 
     dc = replay_controller["dc"]
     mapping = replay_controller["joint_mapping"]
     joint_names = replay_controller["curobo_joint_names"]
+    plan_names = list(plan.get("joint_names", []))
+    if (len(plan_names) != positions.shape[1] or len(set(plan_names)) != len(plan_names)
+            or set(plan_names) != set(joint_names)):
+        raise ValueError("Plan joints do not match replay controller")
+    positions = positions[:, [plan_names.index(name) for name in joint_names]]
 
     attach_enabled = (
         stage is not None

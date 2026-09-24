@@ -1,0 +1,21 @@
+name: New task or simulator adapter
+description: Propose an adapter with a policy, oracle and reproducible smoke test
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Simulator, task and upstream project
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Policy, action space and task success criterion
+      description: Explain where the expert or policy comes from and how success will be verified.
+    validations:
+      required: true
+  - type: textarea
+    id: perturbation
+    attributes:
+      label: Perturbation and recovery proposal
+      description: Describe an executable error injection and an observable error predicate.

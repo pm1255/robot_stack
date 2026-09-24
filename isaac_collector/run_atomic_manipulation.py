@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import argparse
 import sys
+import os
+import time
 from pathlib import Path
 import numpy as np
 
@@ -14,7 +16,7 @@ def parse_args():
         )
     )
 
-    parser.add_argument("--project-root", default="/home/pm/Desktop/Project/robot_stack")
+    parser.add_argument("--project-root", default=str(Path(__file__).resolve().parents[1]))
     parser.add_argument("--scene-usd", required=True)
     parser.add_argument(
         "--scene-registry-json",
@@ -199,6 +201,8 @@ def _select_feasible_grasp_with_curobo(
       selected_index, selected_grasp_result, pickup_target_robot,
       place_target_robot, pickup_plan, candidate_logs
     """
+    from isaac_collector.runtime.execution_checks import terminal_robot_state
+
     raw_candidates = grasp_result.get("candidates", None)
 
     if raw_candidates:
@@ -209,6 +213,8 @@ def _select_feasible_grasp_with_curobo(
         print("[FEASIBILITY] no candidates field; fallback to top-1 grasp_result", flush=True)
 
     max_try = int(__import__("os").environ.get("MAX_GRASP_CANDIDATES", "20"))
+    if max_try < 1:
+        raise ValueError("MAX_GRASP_CANDIDATES must be positive")
     candidates = candidates[:max_try]
 
     candidate_logs = []
@@ -263,11 +269,25 @@ def _select_feasible_grasp_with_curobo(
                     "pickup_target_robot": pickup_target_robot.tolist(),
                     "place_target_robot": place_target_robot.tolist(),
                     "pickup_plan_summary": plan_summary,
-                    "success": bool(pickup_plan.get("success", False)),
+                    "success": False,  # Both pickup and place must be feasible.
                 }
             )
 
             if pickup_plan.get("success", False):
+                # Filter grasps that can be picked but cannot reach the place goal.
+                if getattr(args, "curobo_mode", "real") == "mock":
+                    candidate_logs[-1]["debug_only"] = True
+                    return (i, cand_result, pickup_target_robot, place_target_robot,
+                            pickup_plan, candidate_logs)
+                predicted_state = terminal_robot_state(pickup_plan, robot_state["joint_names"])
+                place_preview = _plan_curobo(
+                    curobo_service, task="putdown", robot_state=predicted_state,
+                    target_robot=place_target_robot,
+                )
+                candidate_logs[-1]["place_preview_summary"] = summarize_plan(place_preview)
+                candidate_logs[-1]["success"] = bool(place_preview.get("success", False))
+                if not candidate_logs[-1]["success"]:
+                    continue
                 print(f"[FEASIBILITY] selected candidate {i}", flush=True)
                 return (
                     i,
@@ -317,6 +337,12 @@ def main():
 
     project_root = Path(args.project_root).expanduser().resolve()
     _ensure_project_on_path(project_root)
+
+    if args.num_episodes < 1:
+        raise ValueError("num-episodes must be positive")
+    from isaac_collector.runtime.execution_checks import (
+        read_robot_state, terminal_robot_state, classify_outcome,
+    )
 
     # Existing stable helpers from your current monolithic script.
     # We reuse them first, then gradually move them into runtime/ modules later.
@@ -475,6 +501,7 @@ def main():
         )
 
         robot_state = load_retract_robot_state(args.curobo_robot_config)
+        reset_state = robot_state.copy()
         print("[STATE] robot_state joint_names:", robot_state.get("joint_names", []), flush=True)
 
         # Important:
@@ -520,244 +547,286 @@ def main():
             print("=" * 80, flush=True)
 
             ep_dir = output_dir
-            if args.reset_robot_root_each_episode:
-                print("[RESET] reset robot root to initial USD pose", flush=True)
-                set_prim_world_matrix(stage, args.robot_path, initial_robot_world)
+            result_path = ep_dir / f"ep_{ep:04d}_episode_result.json"
+            if result_path.exists():
+                raise FileExistsError(f"Refusing to overwrite episode: {result_path}; use a new output-dir")
+            started = time.monotonic()
+            phase = "reset"
+            # Persist an attempt before work begins so interrupted runs are visible.
+            save_json(result_path, {"episode": ep, "status": "incomplete", "success": False,
+                                   "validation_version": 1})
+            try:
+                if args.reset_robot_root_each_episode:
+                    print("[RESET] reset robot root to initial USD pose", flush=True)
+                    set_prim_world_matrix(stage, args.robot_path, initial_robot_world)
 
-            if args.reset_target_each_episode:
-                print("[RESET] reset target object to initial USD pose", flush=True)
-                set_prim_world_matrix(stage, target_path, initial_target_world)
+                if args.reset_target_each_episode:
+                    print("[RESET] reset target object to initial USD pose", flush=True)
+                    set_prim_world_matrix(stage, target_path, initial_target_world)
 
-            wait_frames(simulation_app, 10)
+                wait_frames(simulation_app, 10)
 
-            if replay_enabled and not args.no_reset_joints:
-                reset_a2d_joints_to_robot_state(
-                    simulation_app=simulation_app,
-                    replay_controller=replay_controller,
-                    robot_state=robot_state,
-                    hold_frames=60,
-                )
-            elif args.plan_only:
-                print("[PLAN_ONLY] skip reset_a2d_joints_to_robot_state", flush=True)
-            elif args.no_reset_joints:
-                print("[NO_RESET_JOINTS] skip reset_a2d_joints_to_robot_state", flush=True)
+                if replay_enabled and not args.no_reset_joints:
+                    reset_a2d_joints_to_robot_state(
+                        simulation_app=simulation_app,
+                        replay_controller=replay_controller,
+                        robot_state=reset_state,
+                        hold_frames=60,
+                    )
+                elif args.plan_only:
+                    print("[PLAN_ONLY] skip reset_a2d_joints_to_robot_state", flush=True)
+                elif args.no_reset_joints:
+                    print("[NO_RESET_JOINTS] skip reset_a2d_joints_to_robot_state", flush=True)
 
-            wait_frames(simulation_app, 20)
+                wait_frames(simulation_app, 20)
 
-            target_pose_world = np.asarray(get_prim_world_matrix(stage, target_path), dtype=float).copy()
-            robot_world = np.asarray(get_prim_world_matrix(stage, args.robot_path), dtype=float).copy()
+                if replay_enabled:
+                    robot_state = read_robot_state(replay_controller)
+                else:
+                    robot_state = reset_state.copy()
+                save_json(ep_dir / f"ep_{ep:04d}_pickup_start_state.json", robot_state)
+                phase = "pickup_planning"
+                target_pose_world = np.asarray(get_prim_world_matrix(stage, target_path), dtype=float).copy()
+                robot_world = np.asarray(get_prim_world_matrix(stage, args.robot_path), dtype=float).copy()
 
-            obs_path = ep_dir / f"ep_{ep:04d}_target_cloud_world.npz"
-            obs_meta = save_sim_target_cloud_npz(
-                stage,
-                target_path,
-                obs_path,
-                target_class=target.class_name,
-                n_points=args.target_cloud_npoints,
-                seed=args.target_cloud_seed + ep,
-                extra_meta={
-                    "episode": ep,
-                    "target_resolution": target.to_dict(),
-                    "scene_usd": str(args.scene_usd),
-                    "observation_mode": args.observation_mode,
-                },
-            )
-            save_json(ep_dir / f"ep_{ep:04d}_target_cloud_meta.json", obs_meta)
-            print("[OBS] saved simulator target point cloud:", obs_path, flush=True)
-            print("[OBS] bbox_center:", obs_meta.get("bbox_center"), flush=True)
-            print("[OBS] bbox_extent:", obs_meta.get("bbox_extent"), flush=True)
-
-            print("[8] GraspNet predict", flush=True)
-            grasp_result = _call_graspnet(
-                grasp_service,
-                target_path=target_path,
-                target_pose_world=target_pose_world,
-                observation_npz=obs_path,
-            )
-            save_json(ep_dir / f"ep_{ep:04d}_grasp.json", grasp_result)
-            print("[GRASP] source:", grasp_result.get("source"), flush=True)
-            print("[GRASP] keys:", list(grasp_result.keys()), flush=True)
-
-            place_offset_robot = (
-                place_action.offset_robot
-                if place_action.offset_robot is not None
-                else args.place_offset_robot
-            )
-
-            print("[9] cuRobo feasibility filter over GraspNet candidates", flush=True)
-            (
-                selected_candidate_index,
-                selected_grasp_result,
-                pickup_target_robot,
-                place_target_robot,
-                pickup_plan,
-                candidate_logs,
-            ) = _select_feasible_grasp_with_curobo(
-                grasp_result=grasp_result,
-                curobo_service=curobo_service,
-                robot_state=robot_state,
-                robot_world=robot_world,
-                place_offset_robot=place_offset_robot,
-                args=args,
-                make_targets_from_graspnet_result=make_targets_from_graspnet_result,
-                summarize_plan=summarize_plan,
-                place_action=place_action,
-            )
-
-            save_json(ep_dir / f"ep_{ep:04d}_grasp_candidate_plans.json", candidate_logs)
-
-            if pickup_plan is None or not pickup_plan.get("success", False):
-                save_json(
-                    ep_dir / f"ep_{ep:04d}_planner_result.json",
-                    {
-                        "success": False,
-                        "status": "no_feasible_grasp",
-                        "num_candidates_tried": len(candidate_logs),
-                        "candidate_logs": candidate_logs,
+                obs_path = ep_dir / f"ep_{ep:04d}_target_cloud_world.npz"
+                obs_meta = save_sim_target_cloud_npz(
+                    stage,
+                    target_path,
+                    obs_path,
+                    target_class=target.class_name,
+                    n_points=args.target_cloud_npoints,
+                    seed=args.target_cloud_seed + ep,
+                    extra_meta={
+                        "episode": ep,
+                        "target_resolution": target.to_dict(),
+                        "scene_usd": str(args.scene_usd),
+                        "observation_mode": args.observation_mode,
                     },
                 )
-                raise RuntimeError("Pickup plan failed: no feasible GraspNet candidate found by cuRobo")
+                save_json(ep_dir / f"ep_{ep:04d}_target_cloud_meta.json", obs_meta)
+                print("[OBS] saved simulator target point cloud:", obs_path, flush=True)
+                print("[OBS] bbox_center:", obs_meta.get("bbox_center"), flush=True)
+                print("[OBS] bbox_extent:", obs_meta.get("bbox_extent"), flush=True)
 
-            # From here on, use the selected candidate as the episode grasp.
-            grasp_result = selected_grasp_result
+                print("[8] GraspNet predict", flush=True)
+                grasp_result = _call_graspnet(
+                    grasp_service,
+                    target_path=target_path,
+                    target_pose_world=target_pose_world,
+                    observation_npz=obs_path,
+                )
+                save_json(ep_dir / f"ep_{ep:04d}_grasp.json", grasp_result)
+                print("[GRASP] source:", grasp_result.get("source"), flush=True)
+                print("[GRASP] keys:", list(grasp_result.keys()), flush=True)
 
-            save_json(
-                ep_dir / f"ep_{ep:04d}_selected_grasp.json",
-                {
-                    "selected_candidate_index": selected_candidate_index,
-                    "selected_grasp_result": selected_grasp_result,
+                place_offset_robot = (
+                    place_action.offset_robot
+                    if place_action.offset_robot is not None
+                    else args.place_offset_robot
+                )
+
+                print("[9] cuRobo feasibility filter over GraspNet candidates", flush=True)
+                (
+                    selected_candidate_index,
+                    selected_grasp_result,
+                    pickup_target_robot,
+                    place_target_robot,
+                    pickup_plan,
+                    candidate_logs,
+                ) = _select_feasible_grasp_with_curobo(
+                    grasp_result=grasp_result,
+                    curobo_service=curobo_service,
+                    robot_state=robot_state,
+                    robot_world=robot_world,
+                    place_offset_robot=place_offset_robot,
+                    args=args,
+                    make_targets_from_graspnet_result=make_targets_from_graspnet_result,
+                    summarize_plan=summarize_plan,
+                    place_action=place_action,
+                )
+
+                save_json(ep_dir / f"ep_{ep:04d}_grasp_candidate_plans.json", candidate_logs)
+
+                if pickup_plan is None or not pickup_plan.get("success", False):
+                    save_json(
+                        ep_dir / f"ep_{ep:04d}_planner_result.json",
+                        {
+                            "success": False,
+                            "status": "no_feasible_grasp",
+                            "num_candidates_tried": len(candidate_logs),
+                            "candidate_logs": candidate_logs,
+                        },
+                    )
+                    raise RuntimeError("Pickup plan failed: no feasible GraspNet candidate found by cuRobo")
+
+                # From here on, use the selected candidate as the episode grasp.
+                grasp_result = selected_grasp_result
+
+                save_json(
+                    ep_dir / f"ep_{ep:04d}_selected_grasp.json",
+                    {
+                        "selected_candidate_index": selected_candidate_index,
+                        "selected_grasp_result": selected_grasp_result,
+                        "pickup_target_robot": matrix_to_list(pickup_target_robot),
+                        "place_target_robot": matrix_to_list(place_target_robot),
+                        "place_offset_robot": place_offset_robot,
+                    },
+                )
+
+                save_json(
+                    ep_dir / f"ep_{ep:04d}_targets.json",
+                    {
+                        "selected_candidate_index": selected_candidate_index,
+                        "pickup_target_robot": matrix_to_list(pickup_target_robot),
+                        "place_target_robot": matrix_to_list(place_target_robot),
+                        "place_offset_robot": place_offset_robot,
+                    },
+                )
+
+                save_json(ep_dir / f"ep_{ep:04d}_pickup_plan.json", pickup_plan)
+                print("[PLAN] pickup:", summarize_plan(pickup_plan), flush=True)
+
+                phase = "pickup_execution"
+                pickup_executed = {}
+                if args.plan_only:
+                    print("[PLAN_ONLY] skip A2D pickup replay", flush=True)
+                elif args.execution_mode == "a2d_replay":
+                    pickup_executed = execute_curobo_plan_on_a2d(
+                        simulation_app=simulation_app,
+                        replay_controller=replay_controller,
+                        plan=pickup_plan,
+                        name="pickup",
+                        steps_per_position=args.steps_per_position,
+                        speed_stride=args.speed_stride,
+                        stage=stage if args.save_executed_trajectory else None,
+                        cup_path=target_path if args.save_executed_trajectory else None,
+                        ee_path=args.ee_path if args.save_executed_trajectory else None,
+                        save_stride=args.trajectory_save_stride,
+                    )
+                elif args.execution_mode == "debug_object":
+                    lift_world = np.asarray(grasp_result.get("lift_pose_world", target_pose_world), dtype=float)
+                    execute_cartesian_debug_on_object(
+                        simulation_app=simulation_app,
+                        stage=stage,
+                        cup_path=target_path,
+                        target_pose_world=lift_world,
+                        frames=80,
+                    )
+
+                wait_frames(simulation_app, 20)
+
+                target_offset = None
+                if replay_enabled and args.attach_target_during_place:
+                    target_offset = compute_cup_to_ee_translation_offset(
+                        stage,
+                        replay_controller,
+                        cup_path=target_path,
+                        ee_path=args.ee_path,
+                    )
+                    print("[ATTACH] target attached to EE by translation following", flush=True)
+                elif args.plan_only and args.attach_target_during_place:
+                    print("[PLAN_ONLY] skip target attachment offset computation", flush=True)
+
+                phase = "place_planning"
+                # Replan from measured state after replay, not the old retract state.
+                place_start_state = (read_robot_state(replay_controller) if replay_enabled
+                                     else (robot_state if args.curobo_mode == "mock"
+                                           else terminal_robot_state(pickup_plan, robot_state["joint_names"])))
+                save_json(ep_dir / f"ep_{ep:04d}_place_start_state.json", place_start_state)
+                print("[10] cuRobo plan place", flush=True)
+                place_plan = _plan_curobo(
+                    curobo_service,
+                    task="putdown",
+                    robot_state=place_start_state,
+                    target_robot=place_target_robot,
+                    attached_object=target_path,
+                )
+                save_json(ep_dir / f"ep_{ep:04d}_place_plan.json", place_plan)
+                print("[PLAN] place:", summarize_plan(place_plan), flush=True)
+
+                if not place_plan.get("success", False):
+                    raise RuntimeError(f"Place plan failed: {place_plan.get('status')}")
+
+                phase = "place_execution"
+                place_executed = {}
+                if args.plan_only:
+                    print("[PLAN_ONLY] skip A2D place replay", flush=True)
+                elif args.execution_mode == "a2d_replay":
+                    place_executed = execute_curobo_plan_on_a2d(
+                        simulation_app=simulation_app,
+                        replay_controller=replay_controller,
+                        plan=place_plan,
+                        name="place",
+                        steps_per_position=args.steps_per_position,
+                        speed_stride=args.speed_stride,
+                        stage=stage if (args.attach_target_during_place or args.save_executed_trajectory) else None,
+                        cup_path=target_path if (args.attach_target_during_place or args.save_executed_trajectory) else None,
+                        ee_path=args.ee_path if (args.attach_target_during_place or args.save_executed_trajectory) else None,
+                        cup_offset=target_offset if args.attach_target_during_place else None,
+                        save_stride=args.trajectory_save_stride,
+                    )
+                elif args.execution_mode == "debug_object":
+                    current = np.asarray(get_prim_world_matrix(stage, target_path), dtype=float)
+                    place_world = make_place_pose(current, axis="y", distance=float(place_offset_robot[1]))
+                    execute_cartesian_debug_on_object(
+                        simulation_app=simulation_app,
+                        stage=stage,
+                        cup_path=target_path,
+                        target_pose_world=place_world,
+                        frames=80,
+                    )
+
+                wait_frames(simulation_app, 30)
+
+                final_target_world = np.asarray(get_prim_world_matrix(stage, target_path), dtype=float).copy()
+                episode_result = {
+                    "episode": ep,
+                    **classify_outcome(
+                        planning_success=pickup_plan.get("success") and place_plan.get("success"),
+                        execution_success=pickup_executed.get("success") and place_executed.get("success"),
+                        plan_only=args.plan_only,
+                        debug=(args.execution_mode == "debug_object" or args.attach_target_during_place
+                               or args.grasp_mode == "mock" or args.curobo_mode == "mock"
+                               or args.teleport_robot_for_debug
+                               or os.environ.get("DEBUG_FORCE_REACHABLE_PICK", "0") != "0"),
+                        task_success=None,  # No physical task oracle exists in this Isaac runner yet.
+                    ),
+                    "duration_seconds": time.monotonic() - started,
+                    "backend": "isaac",
+                    "validation_note": "Physical grasp/release oracle not implemented; do not train from planner success alone.",
+                    "target": target.to_dict(),
+                    "observation_npz": str(obs_path),
+                    "initial_target_pose": matrix_to_list(target_pose_world),
+                    "initial_target_xyz": translation_row(target_pose_world),
+                    "final_target_pose": matrix_to_list(final_target_world),
+                    "final_target_xyz": translation_row(final_target_world),
+                    "pickup_plan": summarize_plan(pickup_plan),
+                    "place_plan": summarize_plan(place_plan),
                     "pickup_target_robot": matrix_to_list(pickup_target_robot),
                     "place_target_robot": matrix_to_list(place_target_robot),
-                    "place_offset_robot": place_offset_robot,
-                },
-            )
-
-            save_json(
-                ep_dir / f"ep_{ep:04d}_targets.json",
-                {
-                    "selected_candidate_index": selected_candidate_index,
-                    "pickup_target_robot": matrix_to_list(pickup_target_robot),
-                    "place_target_robot": matrix_to_list(place_target_robot),
-                    "place_offset_robot": place_offset_robot,
-                },
-            )
-
-            save_json(ep_dir / f"ep_{ep:04d}_pickup_plan.json", pickup_plan)
-            print("[PLAN] pickup:", summarize_plan(pickup_plan), flush=True)
-
-            pickup_executed = {}
-            if args.plan_only:
-                print("[PLAN_ONLY] skip A2D pickup replay", flush=True)
-            elif args.execution_mode == "a2d_replay":
-                pickup_executed = execute_curobo_plan_on_a2d(
-                    simulation_app=simulation_app,
-                    replay_controller=replay_controller,
-                    plan=pickup_plan,
-                    name="pickup",
-                    steps_per_position=args.steps_per_position,
-                    speed_stride=args.speed_stride,
-                    stage=stage if args.save_executed_trajectory else None,
-                    cup_path=target_path if args.save_executed_trajectory else None,
-                    ee_path=args.ee_path if args.save_executed_trajectory else None,
-                    save_stride=args.trajectory_save_stride,
-                )
-            elif args.execution_mode == "debug_object":
-                lift_world = np.asarray(grasp_result.get("lift_pose_world", target_pose_world), dtype=float)
-                execute_cartesian_debug_on_object(
-                    simulation_app=simulation_app,
-                    stage=stage,
-                    cup_path=target_path,
-                    target_pose_world=lift_world,
-                    frames=80,
-                )
-
-            wait_frames(simulation_app, 20)
-
-            target_offset = None
-            if replay_enabled and args.attach_target_during_place:
-                target_offset = compute_cup_to_ee_translation_offset(
-                    stage,
-                    replay_controller,
-                    cup_path=target_path,
-                    ee_path=args.ee_path,
-                )
-                print("[ATTACH] target attached to EE by translation following", flush=True)
-            elif args.plan_only and args.attach_target_during_place:
-                print("[PLAN_ONLY] skip target attachment offset computation", flush=True)
-
-            print("[10] cuRobo plan place", flush=True)
-            place_plan = _plan_curobo(
-                curobo_service,
-                task="putdown",
-                robot_state=robot_state,
-                target_robot=place_target_robot,
-                attached_object=target_path,
-            )
-            save_json(ep_dir / f"ep_{ep:04d}_place_plan.json", place_plan)
-            print("[PLAN] place:", summarize_plan(place_plan), flush=True)
-
-            if not place_plan.get("success", False):
-                raise RuntimeError(f"Place plan failed: {place_plan.get('status')}")
-
-            place_executed = {}
-            if args.plan_only:
-                print("[PLAN_ONLY] skip A2D place replay", flush=True)
-            elif args.execution_mode == "a2d_replay":
-                place_executed = execute_curobo_plan_on_a2d(
-                    simulation_app=simulation_app,
-                    replay_controller=replay_controller,
-                    plan=place_plan,
-                    name="place",
-                    steps_per_position=args.steps_per_position,
-                    speed_stride=args.speed_stride,
-                    stage=stage if (args.attach_target_during_place or args.save_executed_trajectory) else None,
-                    cup_path=target_path if (args.attach_target_during_place or args.save_executed_trajectory) else None,
-                    ee_path=args.ee_path if (args.attach_target_during_place or args.save_executed_trajectory) else None,
-                    cup_offset=target_offset if args.attach_target_during_place else None,
-                    save_stride=args.trajectory_save_stride,
-                )
-            elif args.execution_mode == "debug_object":
-                current = np.asarray(get_prim_world_matrix(stage, target_path), dtype=float)
-                place_world = make_place_pose(current, axis="y", distance=float(place_offset_robot[1]))
-                execute_cartesian_debug_on_object(
-                    simulation_app=simulation_app,
-                    stage=stage,
-                    cup_path=target_path,
-                    target_pose_world=place_world,
-                    frames=80,
-                )
-
-            wait_frames(simulation_app, 30)
-
-            final_target_world = np.asarray(get_prim_world_matrix(stage, target_path), dtype=float).copy()
-            episode_result = {
-                "episode": ep,
-                "success": bool(pickup_plan.get("success", False) and place_plan.get("success", False)),
-                "target": target.to_dict(),
-                "observation_npz": str(obs_path),
-                "initial_target_pose": matrix_to_list(target_pose_world),
-                "initial_target_xyz": translation_row(target_pose_world),
-                "final_target_pose": matrix_to_list(final_target_world),
-                "final_target_xyz": translation_row(final_target_world),
-                "pickup_plan": summarize_plan(pickup_plan),
-                "place_plan": summarize_plan(place_plan),
-                "pickup_target_robot": matrix_to_list(pickup_target_robot),
-                "place_target_robot": matrix_to_list(place_target_robot),
-                "trajectory_files": {},
-            }
-
-            if args.save_executed_trajectory and replay_enabled:
-                pickup_traj_path = ep_dir / f"ep_{ep:04d}_pickup_executed_trajectory.json"
-                place_traj_path = ep_dir / f"ep_{ep:04d}_place_executed_trajectory.json"
-                save_json(pickup_traj_path, pickup_executed)
-                save_json(place_traj_path, place_executed)
-                episode_result["trajectory_files"] = {
-                    "pickup_executed": str(pickup_traj_path),
-                    "place_executed": str(place_traj_path),
+                    "trajectory_files": {},
                 }
 
-            save_json(ep_dir / f"ep_{ep:04d}_episode_result.json", episode_result)
-            print("[EP DONE]", episode_result, flush=True)
+                if args.save_executed_trajectory and replay_enabled:
+                    pickup_traj_path = ep_dir / f"ep_{ep:04d}_pickup_executed_trajectory.json"
+                    place_traj_path = ep_dir / f"ep_{ep:04d}_place_executed_trajectory.json"
+                    save_json(pickup_traj_path, pickup_executed)
+                    save_json(place_traj_path, place_executed)
+                    episode_result["trajectory_files"] = {
+                        "pickup_executed": str(pickup_traj_path),
+                        "place_executed": str(place_traj_path),
+                    }
+
+                save_json(ep_dir / f"ep_{ep:04d}_episode_result.json", episode_result)
+                print("[EP DONE]", episode_result, flush=True)
+            except Exception as exc:
+                save_json(result_path, {
+                    "episode": ep, "success": False, "status": "error",
+                    "validation_version": 1, "phase": phase, "error": repr(exc),
+                    "duration_seconds": time.monotonic() - started, "backend": "isaac",
+                })
+                raise
 
         print("[DONE] atomic manipulation runner finished", flush=True)
 
