@@ -2,7 +2,7 @@
 
 ## RoboCasa 1.0.1
 
-`RoboCasaNavigationAdapter` uses the native `NavigateKitchen` task, PandaOmron's base action vector, and RoboCasa's own position/orientation success condition. It does not substitute a toy kitchen. The bundled target-pose feedback controller is experimental and is not a collision-aware route planner.
+`RoboCasaNavigationAdapter` uses the native `NavigateKitchen` task, PandaOmron's base action vector, and RoboCasa's own position/orientation success condition. It does not substitute a toy kitchen. The controller uses the native base Jacobian and bounded friction compensation. It does not change model friction, teleport the robot, or relax native success thresholds. It remains a target-pose controller, not a general collision-aware route planner.
 
 Install the matching [official RoboCasa source and assets](https://robocasa.ai/docs/build/html/introduction/installation.html) in a dedicated environment. Do not mix the earlier MetaWorld MuJoCo pin into this environment.
 
@@ -14,7 +14,9 @@ MUJOCO_GL=egl PYNPUT_BACKEND=dummy OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
   --adapter-options '{"layout":1,"style":1}'
 ```
 
-The current server originally lacked Lightwheel fixtures; reset failed before any robot action. The official asset URL returned HTTP 404 on 2026-09-24. Any mirror download must record its revision and verify the entire SHA256 before installation. Import success is not a passed reset, and a passed reset is not a successful navigation episode.
+The current server originally lacked Lightwheel fixtures; reset failed before any robot action. The official asset URL returned HTTP 404 on 2026-09-24. Both missing Lightwheel packs were installed into an isolated source directory after full SHA256 verification; their pinned provenance is in [asset-manifest.json](asset-manifest.json). Import success is not a passed reset, and a passed reset is not a successful navigation episode.
+
+The original uncompensated controller failed seed 220 after 500 real actions. With the same layout/style, seed and budget, the corrected controller succeeded. A fixed three-seed check (220–222, layout/style 1, 20 perturbation actions, 500 total actions) then produced **3/3 qualified correction pairs**: all sources/recoveries succeeded and all open-loop perturbed controls failed. Prefix and paired error states matched exactly. Independent action replay of seed 220's source, perturbed and recovery trajectories had zero integration-state error and identical success labels (136/156/183 actions). Video rendering samples every five actions; replay still verifies every state. This is a three-seed smoke check, not an all-layout navigation benchmark.
 
 ## AI2-THOR 5.0.0
 
@@ -28,7 +30,7 @@ AI2THOR_CACHE_DIR=/path/to/writable/thor-cache \
   --perturb-steps 3 --max-steps 160
 ```
 
-Use a Linux container with the required Vulkan/GPU driver. Python installation alone does not install or validate the Unity executable. The pinned PyPI package uses official build `f0825767cd50d69f666c7f282e54abfe58f1e917`. The adapter allows a caller-selected cache directory and does not require putting runtime files in the repository.
+Use a Linux container with the required Vulkan/GPU driver. Python installation alone does not install or validate the Unity executable. The pinned PyPI package uses official build `f0825767cd50d69f666c7f282e54abfe58f1e917`. The adapter allows a caller-selected cache directory or `executable_path` for a verified preinstalled build, and does not require runtime files in the repository. Official public downloads use HTTPS. On 2026-09-24, Python imports passed but repeated official Unity-download TLS/time limits left the archive incomplete. No native AI2-THOR rollout or success is claimed; the prepared cctl job was dry-run only.
 
 The success rule is distance <= 0.10 m from the chosen reachable point. This is an explicitly defined oracle PointNav task, not AI2-THOR's official ObjectNav evaluation. Agent pose is sufficient for this static navigation replay check, but it is not a complete save/restore state for arbitrary object manipulation.
 

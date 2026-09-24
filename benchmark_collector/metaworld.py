@@ -4,6 +4,7 @@ This is a selected-task collection check, not the complete MT10/MT50 evaluation.
 """
 import argparse
 import hashlib
+from functools import lru_cache
 import importlib
 from importlib.metadata import version
 import json
@@ -40,11 +41,20 @@ def state(env):
     return result
 
 
-def create(task, benchmark_seed, task_index, reset_seed, render=False):
+@lru_cache(maxsize=16)
+def task_bank(task, benchmark_seed):
+    """Cache task definitions only; each branch still gets fresh native dynamics."""
     import metaworld
     benchmark = metaworld.MT1(task, seed=benchmark_seed)
-    env = benchmark.train_classes[task](render_mode='rgb_array' if render else None)
-    native_task = benchmark.train_tasks[task_index]
+    return benchmark.train_classes[task], tuple(benchmark.train_tasks)
+
+
+def create(task, benchmark_seed, task_index, reset_seed, render=False):
+    env_class, tasks = task_bank(task, benchmark_seed)
+    if not 0 <= task_index < len(tasks):
+        raise ValueError('task_index outside the native task bank')
+    env = env_class(render_mode='rgb_array' if render else None)
+    native_task = tasks[task_index]
     env.set_task(native_task)
     obs, _ = env.reset(seed=reset_seed)
     return env, obs, native_task

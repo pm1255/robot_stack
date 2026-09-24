@@ -15,7 +15,7 @@ class RoboCasaNavigationAdapter:
                          'versions':{n:version(n) for n in ('mujoco','numpy')},
                          'state_kind':'mujoco.mjSTATE_INTEGRATION',
                          'error_features':'base_xy_metres_and_yaw_cos_sin',
-                         'policy':'privileged target-pose base velocity feedback',
+                         'policy':'native base Jacobian feedback with bounded friction compensation',
                          'perturbation_type':'wrong_base_yaw_velocity_burst'}
 
     def reset(self, seed):
@@ -61,10 +61,33 @@ class RoboCasaNavigationAdapter:
         x,y,yaw=self.pose()
         delta=self.env.target_pos[:2]-[x,y]
         desired=(self.env.target_ori[2]-yaw+np.pi)%(2*np.pi)-np.pi
-        # Convert desired world translation into the current base frame.
-        c,s=np.cos(yaw),np.sin(yaw)
-        local=np.array([c*delta[0]+s*delta[1],-s*delta[0]+c*delta[1]])
-        return self.action(np.r_[np.clip(1.5*local,-.35,.35),np.clip(1.5*desired,-.7,.7)])
+        # Solve in the actual model's joint axes, then invert the upstream
+        # controller's current-to-initial-frame action transform.
+        import mujoco
+        from robosuite.utils.transform_utils import mat2euler
+        sim = self.env.sim
+        model, data = sim.model._model, sim.data._data
+        controller = self.env.robots[0].composite_controller.part_controllers['base']
+        jp, jr = np.zeros((3, model.nv)), np.zeros((3, model.nv))
+        mujoco.mj_jacBody(model, data, jp, jr, self.body)
+        jac = np.vstack((jp[:2], jr[2:3]))[:, controller.qvel_index]
+        velocity = np.r_[np.clip(1.5 * delta, -.35, .35), np.clip(1.5 * desired, -.5, .5)]
+        velocity[np.abs(velocity) < .02] = 0
+        qvel = np.linalg.solve(jac, velocity)
+        actuator_ids = [next(i for i in range(model.nu)
+            if model.actuator_trnid[i, 0] == joint and model.actuator_trntype[i] == 0)
+            for joint in controller.joint_index]
+        gain = model.actuator_gainprm[actuator_ids, 0]
+        # The native Omron model has substantial joint friction. Compensate
+        # through bounded physical velocity commands, without changing physics.
+        friction = model.dof_frictionloss[controller.qvel_index] / gain
+        weight = (controller.actuator_max - controller.actuator_min) / 2
+        command = (qvel + np.sign(qvel) * friction) / weight
+        theta = mat2euler(controller.get_base_pose()[1])[2] - mat2euler(controller.init_ori)[2]
+        c, sn = np.cos(theta), np.sin(theta)
+        command[:2] = [c * command[0] - sn * command[1], sn * command[0] + c * command[1]]
+        command /= max(1., np.max(np.abs(command)) / .95)
+        return self.action(command)
 
     def step(self, action):
         a=np.asarray(action,dtype=float).copy()

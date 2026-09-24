@@ -28,14 +28,17 @@
 
 | 已实测内容 | 结果 | 边界 |
 | --- | --- | --- |
-| MetaWorld 推物纠错 | 5/5 有效纠错对 | 原生任务实例 0–4，seed 220–224 |
-| MetaWorld 抓取放置纠错 | 5/5 有效纠错对 | 原生任务实例 0–4，seed 220–224 |
+| MetaWorld 推物纠错 | 50/50 有效纠错对 | 原生任务实例 0–49，seed 300–349 |
+| MetaWorld 抓取放置纠错 | 50/50 有效纠错对 | 原生任务实例 0–49，seed 300–349 |
+| RoboCasa 厨房导航纠错 | 3/3 有效纠错对 | NavigateKitchen，layout/style 1，seed 220–222，500 步预算 |
 | 之前的 robosuite Lift | 正常 20/20，抓偏对照 0/20，恢复 20/20 | 有界重试实验，与新分叉协议分别统计 |
 | MetaWorld 原生专家采集 | 8 类任务，80/80 | 小规模采集验证 |
 | ManiSkill 原生专家采集 | 4 类任务，18/20 | 尚未接入通用纠错 |
 | RoboTwin 原生专家采集 | 3 类任务，6/9 | 尚未接入通用纠错 |
 
 新三分支实验使用 15 步笛卡尔动作扰动、500 步总预算。不同 reset seed 可能产生相同 MetaWorld 任务实例，因此默认同时更换原生 task_index；相同任务初态仍通过 `split_group` 分到同一数据划分。
+
+MetaWorld 共 100 组有效纠错对、300 条轨迹，不重复计算之前 10 组试采样和性能对照运行。仅缓存任务定义后，两项任务的采集耗时由约 155/150 秒降至 43/45 秒；优化前后 300 个轨迹文件的状态、动作、阶段和成功标签完全一致。此为共享服务器并行运行的观测，非独占资源性能基准。[审计与效率证据](docs/evidence/metaworld-cache-comparison.json)。
 
 ## 快速复现
 
@@ -45,9 +48,9 @@ source .venv/bin/activate
 pip install -e '.[metaworld]'
 MUJOCO_GL=egl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
   python -m robot_stack.collect --backend metaworld --task pick-place-v3 \
-  --output outputs/pick-place --episodes 5 --seed-start 220 --perturb-steps 15
+  --output outputs/pick-place --episodes 50 --seed-start 300 --perturb-steps 15
 python -m robot_stack.audit outputs/pick-place --output outputs/audit.json
-python -m robot_stack.replay outputs/pick-place/ep_0220/recovery.hdf5 \
+python -m robot_stack.replay outputs/pick-place/ep_0300/recovery.hdf5 \
   --output outputs/replay.json --video outputs/recovery.mp4
 ```
 

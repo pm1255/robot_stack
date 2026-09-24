@@ -1,0 +1,961 @@
+{
+  "backend": "metaworld",
+  "task": "push-v3",
+  "source_attempts": 50,
+  "successful_sources": 50,
+  "qualified_corrections": 50,
+  "errors": 0,
+  "wall_seconds": 42.62010712735355,
+  "results": [
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 300,
+      "source_demo_id": "a28cceaafc60dc0e9ce5",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "94ec44c59219b23247ed",
+      "recovery_action_range": [
+        34,
+        96
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 301,
+      "source_demo_id": "8981bf676729c15b17ca",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "08f82639e57dcc0d1c10",
+      "recovery_action_range": [
+        34,
+        113
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 302,
+      "source_demo_id": "3ae64419236ab37fe640",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "28b0b49b1cc024bce126",
+      "recovery_action_range": [
+        35,
+        100
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 303,
+      "source_demo_id": "0859b74e30cc8e424fdb",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8509273c7894b120ae54",
+      "recovery_action_range": [
+        34,
+        97
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 304,
+      "source_demo_id": "5f5085e3ea00eab6d759",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 23,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "cb8f2187113fa186bea1",
+      "recovery_action_range": [
+        38,
+        111
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 305,
+      "source_demo_id": "4b66996caef9f7b2163a",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "ab60aa5205270f4d68da",
+      "recovery_action_range": [
+        36,
+        102
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 306,
+      "source_demo_id": "a32b0f271ac223bb0a72",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "eaf759c142b122d6c29d",
+      "recovery_action_range": [
+        33,
+        101
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 307,
+      "source_demo_id": "6c4d9420c7cd18073fa5",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "0dc3cad494c0ac2f63a4",
+      "recovery_action_range": [
+        35,
+        98
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 308,
+      "source_demo_id": "b8d41cb34f0864701681",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 22,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "706e4a83f9e052b60088",
+      "recovery_action_range": [
+        37,
+        106
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 309,
+      "source_demo_id": "700bf0e1d4b91ed01420",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8b05537207b331389167",
+      "recovery_action_range": [
+        36,
+        104
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 310,
+      "source_demo_id": "1ce9513e65d69959a087",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "5e46babc75bc44a32896",
+      "recovery_action_range": [
+        36,
+        102
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 311,
+      "source_demo_id": "c048463c837330de64cb",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "47b8002054b0e1bb71ca",
+      "recovery_action_range": [
+        36,
+        107
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 312,
+      "source_demo_id": "87491b75d691a0595373",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "1b31f822956a1152be96",
+      "recovery_action_range": [
+        35,
+        98
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 313,
+      "source_demo_id": "69ee32908d0deafe4dd5",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 23,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "2b97927038abf6eafdcb",
+      "recovery_action_range": [
+        38,
+        110
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 314,
+      "source_demo_id": "c91fcbea06d26a3bc59f",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "f0e75a85bd15d21a34da",
+      "recovery_action_range": [
+        35,
+        97
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 315,
+      "source_demo_id": "47527be6ec81b57ee5ca",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 23,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "1da97ec2bc2dace8df99",
+      "recovery_action_range": [
+        38,
+        110
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 316,
+      "source_demo_id": "a9bf2fcc7e4b58e5d93e",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "9e7a1512a963ffc30377",
+      "recovery_action_range": [
+        34,
+        100
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 317,
+      "source_demo_id": "4e839b3ec52b63813467",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "a0581b1cb231093ee055",
+      "recovery_action_range": [
+        34,
+        96
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 318,
+      "source_demo_id": "8aff551128d6c3adeae6",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "043d4c7d290be258a71b",
+      "recovery_action_range": [
+        36,
+        108
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 319,
+      "source_demo_id": "af4cee099e3f99e60067",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 23,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "c5d1eb1eb56bd12921f4",
+      "recovery_action_range": [
+        38,
+        112
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 320,
+      "source_demo_id": "2979d0b74ca10f47fb19",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "55cdc62a469610be719d",
+      "recovery_action_range": [
+        36,
+        103
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 321,
+      "source_demo_id": "f5de6f5cf21173e1aa48",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "cc3869da83a85b6ed3af",
+      "recovery_action_range": [
+        36,
+        102
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 322,
+      "source_demo_id": "e9968ff4b120d7693e6e",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 22,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "f06d705b7959356eb937",
+      "recovery_action_range": [
+        37,
+        107
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 323,
+      "source_demo_id": "525e47a353861d8e88d7",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "db4df59a1cfd40c5c523",
+      "recovery_action_range": [
+        34,
+        102
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 324,
+      "source_demo_id": "ee0ea31289b83e18eb90",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "183d08865047de066e7b",
+      "recovery_action_range": [
+        35,
+        104
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 325,
+      "source_demo_id": "6d39aace8ae44d88e508",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "7d897d025ceb1ecc7998",
+      "recovery_action_range": [
+        36,
+        104
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 326,
+      "source_demo_id": "b339d50def3a9db9773c",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "30d998c5a0cb1a88a736",
+      "recovery_action_range": [
+        34,
+        99
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 327,
+      "source_demo_id": "c8a84763df90e84e3f4a",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8362accb66634616a5ba",
+      "recovery_action_range": [
+        35,
+        109
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 328,
+      "source_demo_id": "f690ff26a68d8b7ed13f",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "313e246b85ef49978584",
+      "recovery_action_range": [
+        34,
+        98
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 329,
+      "source_demo_id": "25ce852ba5daded9be83",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "9e939052b83afb58ab5a",
+      "recovery_action_range": [
+        33,
+        95
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 330,
+      "source_demo_id": "cf151fedbdd944f5bf77",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 22,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "ed90deca1ab8086354ff",
+      "recovery_action_range": [
+        37,
+        109
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 331,
+      "source_demo_id": "be90ec55c2ef3d4e2f67",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 24,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "e66174ac94782f7b4d49",
+      "recovery_action_range": [
+        39,
+        113
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 332,
+      "source_demo_id": "c76b4107038b957c0a18",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 24,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "9bc3a9565b13397eb033",
+      "recovery_action_range": [
+        39,
+        115
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 333,
+      "source_demo_id": "3c7de21e1c9ebeb785b0",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "ff6ea5a2d1f6cad57228",
+      "recovery_action_range": [
+        35,
+        116
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 334,
+      "source_demo_id": "464ade65f09250313f93",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 22,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "c87cff4d95218055fff2",
+      "recovery_action_range": [
+        37,
+        106
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 335,
+      "source_demo_id": "aa73819ef0a7b8da78dc",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "96cfc6db79a1456a36a5",
+      "recovery_action_range": [
+        34,
+        100
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 336,
+      "source_demo_id": "b426be3da0fe4f98fff3",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 22,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "0b46749de7de0125aae0",
+      "recovery_action_range": [
+        37,
+        110
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 337,
+      "source_demo_id": "4fef026f2942b0ce7a44",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "34b1f4d1093de3562b55",
+      "recovery_action_range": [
+        33,
+        96
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 338,
+      "source_demo_id": "fbf9013a6df4d6fe90b4",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 15,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "f336c75a59ec585fd5e9",
+      "recovery_action_range": [
+        30,
+        99
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 339,
+      "source_demo_id": "bb8994bca7c00b204def",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "cf6b7054d9d0cc1471ec",
+      "recovery_action_range": [
+        35,
+        99
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 340,
+      "source_demo_id": "4dc08e21eb18a8e56496",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "6bcd604a4412f92a3d01",
+      "recovery_action_range": [
+        34,
+        97
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 341,
+      "source_demo_id": "631edac912bec87d2ca0",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 23,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "2bae90b6b93e85af63f4",
+      "recovery_action_range": [
+        38,
+        110
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 342,
+      "source_demo_id": "c152813fc5d0dd555a75",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "700257868506a88e47b8",
+      "recovery_action_range": [
+        36,
+        104
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 343,
+      "source_demo_id": "4587fd0f460d02ff6882",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "dcb5c675f192b97371da",
+      "recovery_action_range": [
+        36,
+        107
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 344,
+      "source_demo_id": "20fb2967b7dcea14235d",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "d4d285bda957644afce5",
+      "recovery_action_range": [
+        36,
+        103
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 345,
+      "source_demo_id": "8d6c29596c8f24003b3b",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "7cea0f5792d2e2d51799",
+      "recovery_action_range": [
+        36,
+        110
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 346,
+      "source_demo_id": "03d8b70669d19e8f5859",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "864d9955134520f2976a",
+      "recovery_action_range": [
+        35,
+        105
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 347,
+      "source_demo_id": "a215121fd379717f389c",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "97254d06b715f28a4b20",
+      "recovery_action_range": [
+        32,
+        106
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 348,
+      "source_demo_id": "c66d0d525c01ec5541c8",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 22,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "960bd636fd67b0a5b66d",
+      "recovery_action_range": [
+        37,
+        107
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "push-v3",
+      "seed": 349,
+      "source_demo_id": "befa80a47a275c012d67",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "ed0814ed96aa2d566867",
+      "recovery_action_range": [
+        35,
+        100
+      ]
+    }
+  ]
+}

@@ -14,9 +14,11 @@ def main():
     p.add_argument('trajectory',type=Path)
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--video',type=Path)
+    p.add_argument('--video-stride',type=int,default=1,help='Render every N actions; verify every state regardless')
     p.add_argument('--adapter-options',default='{}')
     p.add_argument('--tolerance',type=float,default=1e-7)
     args=p.parse_args()
+    if args.video_stride < 1: p.error("video-stride must be positive")
     with h5py.File(args.trajectory,'r') as f:
         if f.attrs['schema'] != 'robot_stack.correction.v1':
             raise ValueError('Unsupported trajectory schema')
@@ -43,7 +45,7 @@ def main():
             adapter.step(action)
             error=max(error,float(np.max(np.abs(adapter.state()-states[index+1]))))
             observed.append(adapter.success())
-            if args.video:
+            if args.video and ((index + 1) % args.video_stride == 0 or index == len(actions)-1):
                 frame=adapter.render()
                 if writer is None:
                     args.video.parent.mkdir(parents=True,exist_ok=True)
@@ -57,7 +59,7 @@ def main():
                 'final_success':bool(adapter.success()),'tolerance':args.tolerance,
                 'passed':bool(np.isfinite(error) and error<=args.tolerance and matched),
                 'replay_mode':'same_seed_reset_then_real_actions_no_state_restore',
-                'video_time_is_physics_time':False}
+                'video_time_is_physics_time':False,'video_stride':args.video_stride}
         args.output.parent.mkdir(parents=True,exist_ok=True)
         write_json(args.output,result)
         print(json.dumps(result),flush=True)

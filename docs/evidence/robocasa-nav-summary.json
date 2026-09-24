@@ -1,0 +1,68 @@
+{
+  "backend": "robocasa",
+  "task": "NavigateKitchen",
+  "source_attempts": 3,
+  "successful_sources": 3,
+  "qualified_corrections": 3,
+  "errors": 0,
+  "wall_seconds": 91.6472503375262,
+  "results": [
+    {
+      "backend": "robocasa",
+      "task": "NavigateKitchen",
+      "seed": 220,
+      "source_demo_id": "452ba75792ca8410c076",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 47,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "e4363416ab9bf8550c17",
+      "recovery_action_range": [
+        67,
+        183
+      ]
+    },
+    {
+      "backend": "robocasa",
+      "task": "NavigateKitchen",
+      "seed": 221,
+      "source_demo_id": "e3b7b506506e85a8e040",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 50,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "154682da5fe59c4a50b0",
+      "recovery_action_range": [
+        70,
+        163
+      ]
+    },
+    {
+      "backend": "robocasa",
+      "task": "NavigateKitchen",
+      "seed": 222,
+      "source_demo_id": "27f66b3064bf05788a2a",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 33,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "d2a8a10ae5b717c19fa6",
+      "recovery_action_range": [
+        53,
+        137
+      ]
+    }
+  ]
+}

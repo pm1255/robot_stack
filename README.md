@@ -35,15 +35,17 @@ Both branches reconstruct the source prefix through actual actions. Recovery nev
 
 | Integration | Native collection evidence | Perturbation / recovery |
 | --- | --- | --- |
-| MetaWorld 3.1.1 | 8 selected tasks, **80/80** successful demonstrations | Generic three-branch protocol: **10/10 qualified pairs** across push and pick-place, five distinct task instances each |
+| MetaWorld 3.1.1 | 8 selected tasks, **80/80** successful demonstrations | Generic three-branch protocol: **100/100 qualified pairs** across push and pick-place, 50 native task instances each |
 | robosuite Lift | 20/20 clean, 0/20 grasp-offset control, 20/20 recovery | Earlier bounded retry experiment; distinct from the new source-prefix branching protocol |
 | ManiSkill 3.0.1 | 4 tasks, **18/20** | Native expert collection and independent action replay; generic corrections not integrated yet |
 | RoboTwin | 3 tasks, **6/9** | Native expert collection and stored-path replay; generic corrections not integrated yet |
-| RoboCasa 1.0.1 | Native NavigateKitchen adapter implemented; asset/runtime validation in progress | Experimental, no verified success claim yet |
+| RoboCasa 1.0.1 | NavigateKitchen, layout/style 1, seeds 220–222 | **3/3 qualified navigation correction pairs**; seed 220 independently replayed with zero state error |
 | AI2-THOR 5.0.0 | Native grid-navigation adapter implemented; Unity runtime validation in progress | Experimental, no verified success claim yet |
 | RoboDojo | Bridge checked against official EvalEnv API, upstream commit `726e9aab` | Contract-tested only; requires Isaac runtime, assets and a real policy |
 
-The 10 MetaWorld pairs are a small, fixed-configuration experiment: task indices 0–4, reset seeds 220–224, a 15-step Cartesian error burst, and a 500-action cap. All failures and non-qualifying attempts remain in the dataset. This is not complete MT10/MT50 evaluation. See [data semantics](docs/correction-protocol.md) and [earlier benchmark conditions](docs/benchmarks.md).
+The 100 MetaWorld pairs are a fixed-configuration experiment: task indices 0–49, reset seeds 300–349, a 15-step Cartesian error burst, and a 500-action cap. All failures and non-qualifying attempts remain in the dataset. This is not complete MT10/MT50 evaluation. See [data semantics](docs/correction-protocol.md) and [earlier benchmark conditions](docs/benchmarks.md).
+
+Caching task definitions reduced measured collection time from 155 to 43 seconds (push) and 150 to 45 seconds (pick-place), including reconstruction and saving. All 300 trajectory files had identical states, actions, phases and success labels before/after the optimization. These concurrent shared-server measurements are not isolated throughput benchmarks. [Audit and timing evidence](docs/evidence/metaworld-cache-comparison.json). The repeated timing baseline and earlier 10-pair pilot are excluded from the 100-pair total.
 
 ## Reproduce a correction experiment
 
@@ -58,11 +60,11 @@ pip install -e '.[metaworld]'
 
 MUJOCO_GL=egl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
   robot-stack-collect --backend metaworld --task pick-place-v3 \
-  --output outputs/pick-place --episodes 5 --seed-start 220 \
+  --output outputs/pick-place --episodes 50 --seed-start 300 \
   --max-steps 500 --perturb-steps 15
 
 python -m robot_stack.audit outputs/pick-place --output outputs/pick-place-audit.json
-robot-stack-replay outputs/pick-place/ep_0220/recovery.hdf5 \
+robot-stack-replay outputs/pick-place/ep_0300/recovery.hdf5 \
   --output outputs/replay.json --video outputs/recovery.mp4
 ```
 
@@ -86,7 +88,7 @@ The HDF5 files contain T actions, T post-action success labels and T+1 states. P
 
 The new adapter API is in [`robot_stack/core.py`](robot_stack/core.py). A policy chooses actions; an adapter executes them, returns numeric state and evaluates the task. The core handles branching, provenance, budgets and paired labels. Implement an adapter and call `collect_triplet(...)` to use a different policy or task.
 
-- **RoboCasa:** the current controller targets native `NavigateKitchen` using PandaOmron base velocities and the environment's position/orientation success check. It requires matching kitchen assets. It is not yet a general collision-aware mobile manipulation planner.
+- **RoboCasa:** the current controller targets native `NavigateKitchen` using the native base Jacobian, bounded friction compensation and PandaOmron base velocities and the environment's position/orientation success check. It requires matching kitchen assets. It is not yet a general collision-aware mobile manipulation planner.
 - **AI2-THOR:** the current adapter performs oracle PointNav in a native `FloorPlan` scene using `GetReachablePositions`, grid planning, physical moves and rotations. This is not official ObjectNav evaluation. It records agent pose in a static scene, not a full Unity snapshot.
 - **RoboDojo:** the bridge accepts a caller-created official `EvalEnv`, a real policy callback, a state reader and a perturbation generator. `success=True` alone is insufficient: native completion and actual execution are also required. See [integration setup](docs/navigation.md).
 

@@ -1,0 +1,31 @@
+{
+  "conditions": "Same server and seeds 300\u2013349; native task indices 0\u201349. Shared-system concurrent runs, not isolated throughput benchmarking. Counts exclude repeated timing baseline and earlier pilot.",
+  "results": [
+    {
+      "task": "push-v3",
+      "attempts": 50,
+      "successful_sources": 50,
+      "qualified_corrections": 50,
+      "errors": 0,
+      "baseline_wall_seconds": 154.7011838015169,
+      "cached_wall_seconds": 42.62010712735355,
+      "observed_speedup": 3.629769942606029,
+      "compared_hdf5": 150,
+      "max_state_error": 0.0,
+      "action_phase_success_equal": true
+    },
+    {
+      "task": "pick-place-v3",
+      "attempts": 50,
+      "successful_sources": 50,
+      "qualified_corrections": 50,
+      "errors": 0,
+      "baseline_wall_seconds": 150.01191636919975,
+      "cached_wall_seconds": 44.61604628711939,
+      "observed_speedup": 3.3622861919189835,
+      "compared_hdf5": 150,
+      "max_state_error": 0.0,
+      "action_phase_success_equal": true
+    }
+  ]
+}

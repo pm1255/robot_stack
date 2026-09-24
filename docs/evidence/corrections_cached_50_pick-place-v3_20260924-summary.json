@@ -1,0 +1,961 @@
+{
+  "backend": "metaworld",
+  "task": "pick-place-v3",
+  "source_attempts": 50,
+  "successful_sources": 50,
+  "qualified_corrections": 50,
+  "errors": 0,
+  "wall_seconds": 44.61604628711939,
+  "results": [
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 300,
+      "source_demo_id": "0b280f2502e0c685c673",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8dcc8be167e6864b430f",
+      "recovery_action_range": [
+        32,
+        88
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 301,
+      "source_demo_id": "c32c2a55a31f58367ce9",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "81061d66ffd29cbd177e",
+      "recovery_action_range": [
+        33,
+        101
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 302,
+      "source_demo_id": "40f2d671a3f3bb127580",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "cb5048c03bd3806d57c3",
+      "recovery_action_range": [
+        34,
+        96
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 303,
+      "source_demo_id": "b0db0d9c73e6fb38ca8b",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "2d7a61de65722ddd59a3",
+      "recovery_action_range": [
+        32,
+        90
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 304,
+      "source_demo_id": "422c528caff0c2695e1c",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "b2b733b23322d4f0b022",
+      "recovery_action_range": [
+        34,
+        97
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 305,
+      "source_demo_id": "784f55b8cd1295971a73",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "9e4a54c4f0c9bc6f158c",
+      "recovery_action_range": [
+        34,
+        95
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 306,
+      "source_demo_id": "77ff0019068f141ce6ae",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "f3a1fd09089203f6d6b6",
+      "recovery_action_range": [
+        32,
+        94
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 307,
+      "source_demo_id": "6b706343fc0ea34ce97e",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 20,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "7560b315cce153e63fb8",
+      "recovery_action_range": [
+        35,
+        99
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 308,
+      "source_demo_id": "efd6007e22cfc7b4f4d9",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "06d02e871020266a5124",
+      "recovery_action_range": [
+        33,
+        92
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 309,
+      "source_demo_id": "7f2f044af1a8d4ae5931",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 21,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "6470e4b5c0a5934b9a97",
+      "recovery_action_range": [
+        36,
+        102
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 310,
+      "source_demo_id": "d69d0cb9d28a2a05c3a2",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "90b214f55a4a9deb6e85",
+      "recovery_action_range": [
+        33,
+        94
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 311,
+      "source_demo_id": "21cb006f36e28bfa1872",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "2f321fb7c62688d57cb4",
+      "recovery_action_range": [
+        33,
+        93
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 312,
+      "source_demo_id": "cc5212b23f544653e07b",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "12f2a1c4ef6801f7f9b7",
+      "recovery_action_range": [
+        34,
+        97
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 313,
+      "source_demo_id": "94fc6b6bc3c61e64ab7e",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "5c6c7971817f1d272183",
+      "recovery_action_range": [
+        34,
+        96
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 314,
+      "source_demo_id": "1977c0af12733bbcb3c7",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 16,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "336c01bc8d972c21ca00",
+      "recovery_action_range": [
+        31,
+        84
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 315,
+      "source_demo_id": "e87edad9a45252afae35",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "71741df98fb24d680432",
+      "recovery_action_range": [
+        34,
+        95
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 316,
+      "source_demo_id": "847a7da412e3ff8bec6b",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "9530545422e9a4506b6e",
+      "recovery_action_range": [
+        32,
+        92
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 317,
+      "source_demo_id": "7d2cde24bb3723c80ff5",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 16,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "11f7638b69d996db0ce8",
+      "recovery_action_range": [
+        31,
+        85
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 318,
+      "source_demo_id": "24cf9d6edbecfcaec260",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "e7982a01d4af391c7703",
+      "recovery_action_range": [
+        34,
+        99
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 319,
+      "source_demo_id": "fe9d3a696fcd704e203b",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "918ddebf2ddc7c4e0506",
+      "recovery_action_range": [
+        33,
+        95
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 320,
+      "source_demo_id": "1de0fa1eafa2f6d6ddc3",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "777d5ce228dfd26f5aba",
+      "recovery_action_range": [
+        32,
+        89
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 321,
+      "source_demo_id": "ac54dec3aa59000ca5be",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "cd6169d5170d69d6c34d",
+      "recovery_action_range": [
+        32,
+        88
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 322,
+      "source_demo_id": "31c59bac6a34adcd4652",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "b47ec00c8f8448f4e46e",
+      "recovery_action_range": [
+        33,
+        92
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 323,
+      "source_demo_id": "c4198ae4cb902e127b07",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 16,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "1323b1abf10604208976",
+      "recovery_action_range": [
+        31,
+        88
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 324,
+      "source_demo_id": "ff9dcb67341ce23e318b",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "6b3d3231401b71303508",
+      "recovery_action_range": [
+        34,
+        100
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 325,
+      "source_demo_id": "ca88995f5c899a4e4980",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "3ea00e0e18cb56faa59e",
+      "recovery_action_range": [
+        33,
+        94
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 326,
+      "source_demo_id": "0b71be505b6dced8034c",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "ce35efbfbf1e54dcccb1",
+      "recovery_action_range": [
+        32,
+        92
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 327,
+      "source_demo_id": "7063fcdd0093b256312a",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "0968281419a3bf75f2ea",
+      "recovery_action_range": [
+        33,
+        98
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 328,
+      "source_demo_id": "16f51296eb1e54c616ca",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "9c09982fe2e3acda10ac",
+      "recovery_action_range": [
+        32,
+        88
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 329,
+      "source_demo_id": "80ba471170c2973593eb",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "2be9583d0ec4f51d4b78",
+      "recovery_action_range": [
+        33,
+        92
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 330,
+      "source_demo_id": "60a16447beca911b1cb8",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "e2eba3469b5497901ed9",
+      "recovery_action_range": [
+        33,
+        93
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 331,
+      "source_demo_id": "95de04d8b0a9f61ff8ae",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "7a715d74040a11418fa1",
+      "recovery_action_range": [
+        34,
+        96
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 332,
+      "source_demo_id": "dd77bae21df895def1ea",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "7a024d6066444f767420",
+      "recovery_action_range": [
+        34,
+        98
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 333,
+      "source_demo_id": "8f45961003cd76b43b04",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "32322cb5ab5d247478a4",
+      "recovery_action_range": [
+        33,
+        102
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 334,
+      "source_demo_id": "0ee7eac9dce7e35daaba",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "0603e468a9c441adb1c7",
+      "recovery_action_range": [
+        33,
+        92
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 335,
+      "source_demo_id": "aee0699f61e3d527fb2b",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "7f9f25ef82d4025b8b3f",
+      "recovery_action_range": [
+        32,
+        93
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 336,
+      "source_demo_id": "f94ae9968fe2d8b2eeea",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "60478bb128d8e85860c0",
+      "recovery_action_range": [
+        34,
+        101
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 337,
+      "source_demo_id": "bf14d0c036d7a84c683f",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 16,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "b7c266cba02fcb2cb949",
+      "recovery_action_range": [
+        31,
+        85
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 338,
+      "source_demo_id": "78367dac9c917b52effe",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 15,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "4b9f30c667c5af18a284",
+      "recovery_action_range": [
+        30,
+        90
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 339,
+      "source_demo_id": "26034e994f216cc5bf65",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 16,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "bc284293ebbf9ed644e4",
+      "recovery_action_range": [
+        31,
+        86
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 340,
+      "source_demo_id": "0accaff5d3e109d7ad18",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 16,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "613b59d4ec2c587936a2",
+      "recovery_action_range": [
+        31,
+        85
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 341,
+      "source_demo_id": "c68c244cd0f0f50d10fb",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "917f589a2a31989d9db9",
+      "recovery_action_range": [
+        33,
+        94
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 342,
+      "source_demo_id": "661d5ffc344bb94146bc",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "1e65bc352139638c16da",
+      "recovery_action_range": [
+        32,
+        89
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 343,
+      "source_demo_id": "6b3d162192ffbbea4a31",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8ef522b5b92b8b51c523",
+      "recovery_action_range": [
+        32,
+        92
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 344,
+      "source_demo_id": "016021128adac4797473",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 17,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "d5163bdb55af8d8d10bc",
+      "recovery_action_range": [
+        32,
+        89
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 345,
+      "source_demo_id": "776bc2ad860c5f5be451",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "a8873393836a548b4334",
+      "recovery_action_range": [
+        34,
+        102
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 346,
+      "source_demo_id": "65e72ee32246f383f4c1",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 19,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "dab0638eecc1955ee05e",
+      "recovery_action_range": [
+        34,
+        102
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 347,
+      "source_demo_id": "94c30530c4a2b702033f",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 16,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "9cf72e8ade4812360138",
+      "recovery_action_range": [
+        31,
+        94
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 348,
+      "source_demo_id": "ce35af3575ffe9ccba4e",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "b6ce0521267a67008b33",
+      "recovery_action_range": [
+        33,
+        93
+      ]
+    },
+    {
+      "backend": "metaworld",
+      "task": "pick-place-v3",
+      "seed": 349,
+      "source_demo_id": "255257e1bf61c4f6a93e",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 18,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "0e82453d122a586254cb",
+      "recovery_action_range": [
+        33,
+        94
+      ]
+    }
+  ]
+}
