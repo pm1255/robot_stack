@@ -72,6 +72,6 @@ python -m http.server 8000 --directory docs
 python -m unittest discover -s tests -v
 ```
 
-网页展示真实结果和视频，CI 检查轻量契约。后续优先完善碰撞感知导航、任务策略、自然失败的状态反馈恢复，以及 MimicGen 的环境/子任务标注。**当前还没有跑通 MimicGen 扩增**，不能仅凭 HDF5 文件声称兼容。
+网页展示真实结果和视频，CI 检查轻量契约。后续优先完善碰撞感知导航、任务策略、自然失败的状态反馈恢复，以及 MimicGen 的环境/子任务标注。**MimicGen 已通过原生 Lift 验证：2 条源示范生成 10 条新轨迹，7 条成功，3 条失败保留，全部 10 条通过独立动作重放。** 详见 [复现命令与适用边界](docs/mimicgen.md)。这些扩增示范尚不属于新的纠错对。AI2-THOR FloorPlan1 也已完成 3/3 组原生导航纠错验证。
 
 上游项目、完整边界与贡献方式见 [英文首页](README.md)。

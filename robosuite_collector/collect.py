@@ -17,13 +17,13 @@ def write_json(path, value):
     tmp.replace(path)
 
 
-def make_env(seed, max_steps):
+def make_env(seed, max_steps, *, render=False):
     import robosuite
     from robosuite.controllers import load_composite_controller_config
     cfg = load_composite_controller_config(robot='Panda')
     cfg['body_parts']['right']['input_ref_frame'] = 'world'
     config = dict(robots='Panda', controller_configs=cfg, has_renderer=False,
-                  has_offscreen_renderer=False, use_camera_obs=False, use_object_obs=True,
+                  has_offscreen_renderer=render, use_camera_obs=False, use_object_obs=True,
                   initialization_noise=None, seed=seed, horizon=max_steps + 1,
                   ignore_done=False, control_freq=20)
     env = robosuite.make('Lift', **config)

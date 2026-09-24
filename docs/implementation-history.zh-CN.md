@@ -1,3 +1,5 @@
+> 历史记录：下文保留早期阶段的能力边界。最新纠错协议、导航实测和 MimicGen 接入请查看 [README](../README.zh-CN.md) 与 [MimicGen 文档](mimicgen.md)。
+
 # Robot Stack
 
 函数调用式机器人操作与数据采集。原有代码是 **Isaac Sim / IsaacLab + A2D + GraspNet + cuRobo**；现新增 **robosuite Lift / Panda、MetaWorld、ManiSkill、RoboTwin** 采集后端。尚未包含可运行的 RoboCasa 场景后端。静态采集看板位于 `docs/index.html`。

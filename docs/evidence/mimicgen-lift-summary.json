@@ -1,0 +1,8 @@
+{
+  "attempts": 10,
+  "successful": 7,
+  "errors": 0,
+  "wall_seconds": 29.16667953133583,
+  "definition": "native Lift + two-sided grasp + 10cm gain for final 10 steps",
+  "correction_pairs": false
+}

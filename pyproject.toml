@@ -13,6 +13,7 @@ dependencies = ["numpy>=1.24,<3", "h5py>=3.10"]
 [project.optional-dependencies]
 metaworld = ["metaworld==3.1.1", "mujoco==3.3.0"]
 ai2thor = ["ai2thor==5.0.0", "numpy<2"]
+mimicgen = ["numpy>=1.26,<2", "mujoco==3.3.1", "robosuite==1.5.2", "robomimic==0.3.0", "mimicgen @ git+https://github.com/NVlabs/mimicgen.git@72bd767c255545f462e7ccfb2731f2e5d4c1d9bb"]
 
 [project.urls]
 Repository = "https://github.com/pm1255/robot_stack"

@@ -1,0 +1,52 @@
+[
+  {
+    "file": "ep_0400.hdf5",
+    "verified": true,
+    "success": true
+  },
+  {
+    "file": "ep_0401.hdf5",
+    "verified": true,
+    "success": false
+  },
+  {
+    "file": "ep_0402.hdf5",
+    "verified": true,
+    "success": true
+  },
+  {
+    "file": "ep_0403.hdf5",
+    "verified": true,
+    "success": true
+  },
+  {
+    "file": "ep_0404.hdf5",
+    "verified": true,
+    "success": true
+  },
+  {
+    "file": "ep_0405.hdf5",
+    "verified": true,
+    "success": false
+  },
+  {
+    "file": "ep_0406.hdf5",
+    "verified": true,
+    "success": false
+  },
+  {
+    "file": "ep_0407.hdf5",
+    "verified": true,
+    "success": true
+  },
+  {
+    "file": "ep_0408.hdf5",
+    "verified": true,
+    "success": true
+  },
+  {
+    "file": "ep_0409.hdf5",
+    "verified": true,
+    "success": true
+  }
+]

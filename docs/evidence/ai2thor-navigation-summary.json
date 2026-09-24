@@ -1,0 +1,68 @@
+{
+  "backend": "ai2thor",
+  "task": "FloorPlan1",
+  "source_attempts": 3,
+  "successful_sources": 3,
+  "qualified_corrections": 3,
+  "errors": 0,
+  "wall_seconds": 31.449679504148662,
+  "results": [
+    {
+      "backend": "ai2thor",
+      "task": "FloorPlan1",
+      "seed": 220,
+      "source_demo_id": "9577b73101b8f06ed798",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 7,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8165fb04ffa62a67bf03",
+      "recovery_action_range": [
+        10,
+        24
+      ]
+    },
+    {
+      "backend": "ai2thor",
+      "task": "FloorPlan1",
+      "seed": 221,
+      "source_demo_id": "d6c3855d2ff7607b5901",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 7,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8165fb04ffa62a67bf03",
+      "recovery_action_range": [
+        10,
+        26
+      ]
+    },
+    {
+      "backend": "ai2thor",
+      "task": "FloorPlan1",
+      "seed": 222,
+      "source_demo_id": "0bbbdd3514da99916685",
+      "source_success": true,
+      "qualified_correction": true,
+      "branch_step": 3,
+      "perturbed_success": false,
+      "recovery_success": true,
+      "induced_error": true,
+      "prefix_max_abs_error": 0.0,
+      "branch_state_max_abs_error": 0.0,
+      "split_group": "8165fb04ffa62a67bf03",
+      "recovery_action_range": [
+        6,
+        15
+      ]
+    }
+  ]
+}

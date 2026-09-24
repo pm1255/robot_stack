@@ -40,8 +40,9 @@ Both branches reconstruct the source prefix through actual actions. Recovery nev
 | ManiSkill 3.0.1 | 4 tasks, **18/20** | Native expert collection and independent action replay; generic corrections not integrated yet |
 | RoboTwin | 3 tasks, **6/9** | Native expert collection and stored-path replay; generic corrections not integrated yet |
 | RoboCasa 1.0.1 | NavigateKitchen, layout/style 1, seeds 220–222 | **3/3 qualified navigation correction pairs**; seed 220 independently replayed with zero state error |
-| AI2-THOR 5.0.0 | Native grid-navigation adapter implemented; Unity runtime validation in progress | Experimental, no verified success claim yet |
-| RoboDojo | Bridge checked against official EvalEnv API, upstream commit `726e9aab` | Contract-tested only; requires Isaac runtime, assets and a real policy |
+| AI2-THOR 5.0.0 | Native FloorPlan1 PointNav, seeds 220–222 | **3/3 qualified navigation correction pairs**; independent recovery replay has zero pose error |
+| RoboDojo | Shared official assets and Isaac Sim 5.1 / IsaacLab environment located | Native startup validation ongoing; task policy success remains unverified |
+| MimicGen | Official generator, two Lift sources → ten new trajectories | **7/10 successful**; all ten independently replayed; augmented demos, not correction pairs |
 
 The 100 MetaWorld pairs are a fixed-configuration experiment: task indices 0–49, reset seeds 300–349, a 15-step Cartesian error burst, and a 500-action cap. All failures and non-qualifying attempts remain in the dataset. This is not complete MT10/MT50 evaluation. See [data semantics](docs/correction-protocol.md) and [earlier benchmark conditions](docs/benchmarks.md).
 
@@ -106,6 +107,8 @@ python -m unittest discover -s tests -v
 
 The static dashboard shows real records and local videos, and can be deployed with the GitHub Pages workflow. CI runs lightweight contract tests; native simulator checks are separate and must not be inferred from a green CI badge.
 
-Next milestones are collision-aware navigation, more task policies, controlled natural-failure recovery, and environment-specific MimicGen subtask annotations. **MimicGen generation is not implemented yet.** A simulator name or HDF5 extension is not a compatibility guarantee.
+MimicGen now has a native **prepare → generate → replay** path for Panda Lift. Preparation verifies source dynamics and derives grasp/lift subtask annotations; generation retains failures and checks final stable success. [Reproduction commands and measured limits](docs/mimicgen.md). Extending it to another task still requires its object frames, action conversion and subtask boundaries.
 
-We build on [robosuite](https://github.com/ARISE-Initiative/robosuite), [MetaWorld](https://github.com/Farama-Foundation/Metaworld), [ManiSkill](https://github.com/haosulab/ManiSkill), [RoboTwin](https://github.com/RoboTwin-Platform/RoboTwin), [RoboCasa](https://github.com/robocasa/robocasa), [RoboDojo](https://github.com/RoboDojo-Benchmark/RoboDojo), and [AI2-THOR](https://github.com/allenai/ai2thor). Their code, assets and policies retain their upstream terms and attribution.
+Next milestones are collision-aware navigation, more task policies, controlled natural-failure recovery and MimicGen integration for additional tasks. A simulator name or HDF5 extension is not a compatibility guarantee.
+
+We build on [robosuite](https://github.com/ARISE-Initiative/robosuite), [MetaWorld](https://github.com/Farama-Foundation/Metaworld), [ManiSkill](https://github.com/haosulab/ManiSkill), [RoboTwin](https://github.com/RoboTwin-Platform/RoboTwin), [RoboCasa](https://github.com/robocasa/robocasa), [RoboDojo](https://github.com/RoboDojo-Benchmark/RoboDojo), [AI2-THOR](https://github.com/allenai/ai2thor), and [MimicGen](https://github.com/NVlabs/mimicgen). Their code, assets and policies retain their upstream terms and attribution.
